@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>testing id</title>
+    <style>
+      h1 {
+        color: red;
+        font-size: 40px;
+      }
+
+      h2 {
+        color: orange;
+        font-size: 20px;
+      }
+
+      p {
+        color: blue;
+      }
+
+      #myparagraph {
+        color: green;
+        font-size: 16px;
+      }
+
+      div {
+        background-color: #f0f0f0;
+        padding: 10px;
+        border: 1px solid gray;
+      }
+
+      section {
+        background-color: #e0ffe0;
+        padding: 10px;
+        border: 1px dashed green;
+      }
+
+      .highlight {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Testing div and section</h1>
+      <div>
+        <h2>Inside a div</h2>
+        <p>This paragraph is inside a div. Div is generic container.</p>
+      </div>
+      <section>
+        <h2>Inside a section</h2>
+        <p>This paragraph is inside a section. Section is used for meaningful content grouping.</p>
+      </section>
+      <div class="highlight">
+        <h2>Class Highlight</h2>
+        <p>This div has a class "highlight".</p>
+      </div>
+      <section class="highlight">
+        <p>This section also has a class "highlight".</p>
+      </section>
+      <p id="myparagraph">A paragraph with specific ID styling (green color).</p>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,88 @@
+[
+  {
+    "title": "HTML",
+    "order": 1,
+    "subtopics": [
+      {
+        "title": "Basic HTML",
+        "order": 1,
+        "lessons": [
+          {
+            "title": "What is HTML?",
+            "filename": "lesson-0001.html"
+          },
+          {
+            "title": "HTML Tag Attributes",
+            "filename": "lesson-0002.html"
+          },
+          {
+            "title": "Link Element",
+            "filename": "lesson-0003.html"
+          },
+          {
+            "title": "Boilerplate",
+            "filename": "lesson-0004.html"
+          },
+          {
+            "title": "UTF-8",
+            "filename": "lesson-0005.html"
+          },
+          {
+            "title": "Div Eement",
+            "filename": "lesson-0006.html"
+          },
+          {
+            "title": "ID Element",
+            "filename": "lesson-0007.html"
+          },
+          {
+            "title": "HTML Entities",
+            "filename": "lesson-0008.html"
+          },
+          {
+            "title": "Script",
+            "filename": "lesson-0009.html"
+          },
+          {
+            "title": "Meta description",
+            "filename": "lesson-0010.html"
+          },
+          {
+            "title": "Open Graph",
+            "filename": "lesson-0011.html"
+          },
+          {
+            "title": "Replaced Elements",
+            "filename": "lesson-0012.html"
+          }
+        ]
+      },
+      {
+        "title": "Semantic",
+        "order": 2,
+        "lessons": [
+          {
+            "title": "Untitled",
+            "filename": "lesson-0013.html"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "CSS",
+    "order": 2,
+    "subtopics": [
+      {
+        "title": "first example",
+        "order": 1,
+        "lessons": [
+          {
+            "title": "Untitled",
+            "filename": "lesson-0014.html"
+          }
+        ]
+      }
+    ]
+  }
+]
