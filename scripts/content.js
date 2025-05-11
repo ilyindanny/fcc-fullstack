@@ -4,7 +4,7 @@ const path = require('path');
 const treePath = path.join(__dirname, '../data/tree.json');
 const tree = JSON.parse(fs.readFileSync(treePath, 'utf-8'));
 
-const OUTPUT_DIR = path.join(__dirname, '../public');
+const OUTPUT_DIR = path.join(__dirname, '../docs');
 
 // ====== INDEX PAGE ======
 
@@ -35,7 +35,7 @@ function saveIndexHtml(content) {
   const template = fs.readFileSync(templatePath, 'utf-8');
   const filled = template.replace('{{ content }}', content);
   fs.writeFileSync(path.join(OUTPUT_DIR, 'index.html'), filled, 'utf-8');
-  console.log('[index] Created: public/index.html');
+  console.log('[index] Created: docs/index.html');
 }
 
 // ====== ALL PAGE ======
@@ -86,7 +86,7 @@ function saveAllHtml(content, lessons) {
     .replace('{{lessons}}', lessons);
 
   fs.writeFileSync(path.join(OUTPUT_DIR, 'all.html'), filled, 'utf-8');
-  console.log('[index] Created: public/all.html');
+  console.log('[index] Created: docs/all.html');
 }
 
 // ====== EXECUTION ======

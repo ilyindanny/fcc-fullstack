@@ -4,7 +4,7 @@ const matter = require('gray-matter');
 
 const CONTENT_DIR = path.join(__dirname, '../content');
 const TEMPLATE_FILE = path.join(__dirname, '../templates/lesson.html');
-const OUTPUT_DIR = path.join(__dirname, '../public/lessons');
+const OUTPUT_DIR = path.join(__dirname, '../docs/lessons');
 const TREE_FILE = path.join(__dirname, '../data/tree.json');
 
 // Удаляет лишние символы и пробелы

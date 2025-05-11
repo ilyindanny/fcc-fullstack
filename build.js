@@ -7,7 +7,7 @@ require('./scripts/parser.js');
 
 
 // Путь к директории, где будут храниться сгенерированные HTML файлы
-const publicDir = path.join(__dirname, 'public');
+const publicDir = path.join(__dirname, 'docs');
 
 const server = http.createServer((req, res) => {
     let filePath = path.join(publicDir, req.url === '/' ? 'index.html' : req.url);

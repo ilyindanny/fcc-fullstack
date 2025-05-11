@@ -8,7 +8,7 @@ const fs = require('fs');
 const path = require('path');
 
 // Путь к папке с уроками
-const lessonsDir = path.join(__dirname, '..', 'public', 'lessons');
+const lessonsDir = path.join(__dirname, '..', 'docs', 'lessons');
 
 // Получаем список всех файлов .html
 const files = fs.readdirSync(lessonsDir).filter(file => file.endsWith('.html'));

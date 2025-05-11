@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 const TREE_PATH = path.join(__dirname, '../data/tree.json');
-const LESSONS_DIR = path.join(__dirname, '../public/lessons');
+const LESSONS_DIR = path.join(__dirname, '../docs/lessons');
 
 const tree = JSON.parse(fs.readFileSync(TREE_PATH, 'utf-8'));
 
