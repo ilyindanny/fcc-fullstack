@@ -18,7 +18,7 @@ function generateIndexContent() {
       content += `<li><strong>${subtopic.title}</strong><ul>`;
       
       subtopic.lessons.forEach(lesson => {
-        content += `<li><a href="/lessons/${lesson.filename}">${lesson.title}</a></li>`;
+        content += `<li><a href="lessons/${lesson.filename}">${lesson.title}</a></li>`;
       });
 
       content += `</ul></li>`;

@@ -35,9 +35,9 @@ allLessons.forEach((lesson, index) => {
   const next = allLessons[index + 1];
 
   // Генерируем ссылки навигации
-  const prevLink = prev ? `<a class="prev" href="/lessons/${prev.filename}">&larr; ${prev.title}</a>` : '<span class="empty"></span>';
-  const homeLink = `<a class="home" href="/index.html">Home</a>`;
-  const nextLink = next ? `<a class="next" href="/lessons/${next.filename}">${next.title} &rarr;</a>` : '<span class="empty"></span>';
+  const prevLink = prev ? `<a class="prev" href="lessons/${prev.filename}">&larr; ${prev.title}</a>` : '<span class="empty"></span>';
+  const homeLink = `<a class="home" href="../index.html">Home</a>`;
+  const nextLink = next ? `<a class="next" href="lessons/${next.filename}">${next.title} &rarr;</a>` : '<span class="empty"></span>';
 
   const navHtml = `
     <section class="navigation">
