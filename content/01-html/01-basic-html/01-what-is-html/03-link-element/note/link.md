@@ -2,24 +2,23 @@
 title: Link Element
 ---
 
-Link Element
-============
+## Link Element
 
 The `<link>` element is used to link to external resources
 
 Often times you will see multiple link elements inside a professional codebase that link to different stylesheets, fonts, and icons.
 
-Code\_Example
--------------
+**Code Example:**
 
+```html
     <link rel="stylesheet" href="./styles.css" />
+```
 
-rel attribute
--------------
+**rel attribute:**
 
 The `rel` attribute (short for "relationship") defines the type of relationship between the current HTML document and the linked external resource. This helps the browser understand the purpose of the link.
 
-### Common rel values:
+**Common rel values:**
 
 *       stylesheet
     
@@ -40,7 +39,6 @@ The `rel` attribute (short for "relationship") defines the type of relationship 
     
     – links to a web app manifest file
 
-href attribute
---------------
+**href attribute**
 
 The `href` attribute is used to specify the location of the URL for the external resource.

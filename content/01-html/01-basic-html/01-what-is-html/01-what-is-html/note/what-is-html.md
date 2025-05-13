@@ -2,23 +2,23 @@
 title: What is HTML?
 ---
 
-# What Is HTML
+## What is HTML
 
 **Hypertext Markup Language** — a way to create structured web pages with text, links, images, and more.
 
-## Paragraph Example
+**Paragraph Example:**
 
 ```html
 <p>Hello, World!</p>
 ```
 
-## Image Example
+**Image Example:**
 
 ```html
 <img src="img-url" alt="description">
 ```
 
-## Path Types in Attributes
+**Path Types in Attributes**
 
 ### Absolute URL
 

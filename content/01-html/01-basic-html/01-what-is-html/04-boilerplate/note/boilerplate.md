@@ -2,13 +2,13 @@
 title: Boilerplate
 ---
 
-Boilerplate
-===========
+## Boilerplate
 
 It's a'template for webpages
 
+
 Example:
---------
+```
 
     <!DOCTYPE html>
     <html lang="en">
@@ -23,3 +23,4 @@ Example:
       <body>
       </body>
     </html>
+```

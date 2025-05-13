@@ -3,16 +3,37 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Lesson 13</title>
+  <title>Optimize Media Asets</title>
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
 
   <main>
-    <article><h1>What is HTML?</h1>
-<p>HTML stands for HyperText Markup Language.</p>
-<pre><code class="language-html">&lt;h1&gt;Hello, world!&lt;/h1&gt;
-</code></pre>
+    <article><h2>Optimize Media Assets</h2>
+<p>To optimize media like images, consider:</p>
+<p><strong>1. Size</strong></p>
+<ul>
+<li>Resize images to match display size.</li>
+<li>Avoid large-resolution images scaled down with CSS.</li>
+<li>Use <code>srcset</code> and <code>sizes</code> for responsive images.</li>
+</ul>
+<p><strong>2. Format</strong></p>
+<ul>
+<li>Use modern formats: <code>WEBP</code> or <code>AVIF</code> instead of <code>JPG</code> or <code>PNG</code>.</li>
+<li>Use <code>SVG</code> for icons and simple graphics.</li>
+</ul>
+<p><strong>3. Compression</strong></p>
+<ul>
+<li>Use compression tools: <code>pngcrush</code>, <code>jpegoptim</code>, <code>squoosh</code>.</li>
+<li>Lossy formats like <code>JPG</code> degrade quality.</li>
+<li>Remove metadata to reduce file size.</li>
+</ul>
+<p><strong>Tips</strong></p>
+<ul>
+<li>Use <code>loading=&quot;lazy&quot;</code> for lazy loading.</li>
+<li>Use Image CDNs for automatic optimization.</li>
+<li>Always include <code>alt</code> attributes for accessibility.</li>
+</ul>
 </article>
   </main> 
 	

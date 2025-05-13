@@ -22,21 +22,20 @@
         <main>
             <section>
                 <h2>Content:</h2>
-                <nav><h2>HTML</h2><ul><li><strong>Basic HTML</strong><ul><li><a href="#lesson-0001">What is HTML?</a></li><li><a href="#lesson-0002">HTML Tag Attributes</a></li><li><a href="#lesson-0003">Link Element</a></li><li><a href="#lesson-0004">Boilerplate</a></li><li><a href="#lesson-0005">UTF-8</a></li><li><a href="#lesson-0006">Div Eement</a></li><li><a href="#lesson-0007">ID Element</a></li><li><a href="#lesson-0008">HTML Entities</a></li><li><a href="#lesson-0009">Script</a></li><li><a href="#lesson-0010">Meta description</a></li><li><a href="#lesson-0011">Open Graph</a></li><li><a href="#lesson-0012">Replaced Elements</a></li></ul></li><li><strong>Semantic</strong><ul><li><a href="#lesson-0013">Untitled</a></li></ul></li></ul><h2>CSS</h2><ul><li><strong>first example</strong><ul><li><a href="#lesson-0014">Untitled</a></li></ul></li></ul></nav>
+                <nav><h2>HTML</h2><ul><li><strong>Basic HTML</strong><ul><li><a href="#lesson-0001">What is HTML?</a></li><li><a href="#lesson-0002">HTML Tag Attributes</a></li><li><a href="#lesson-0003">Link Element</a></li><li><a href="#lesson-0004">Boilerplate</a></li><li><a href="#lesson-0005">UTF-8</a></li><li><a href="#lesson-0006">Div Eement</a></li><li><a href="#lesson-0007">ID Element</a></li><li><a href="#lesson-0008">HTML Entities</a></li><li><a href="#lesson-0009">Script</a></li><li><a href="#lesson-0010">Meta description</a></li><li><a href="#lesson-0011">Open Graph</a></li><li><a href="#lesson-0012">Replaced Elements</a></li><li><a href="#lesson-0013">Optimize Media Asets</a></li></ul></li><li><strong>Semantic</strong><ul><li><a href="#lesson-0014">Untitled</a></li></ul></li></ul><h2>CSS</h2><ul><li><strong>first example</strong><ul><li><a href="#lesson-0015">Untitled</a></li></ul></li></ul></nav>
             </section>
             <section>
           <article id="lesson-0001">
-            <h2>What is HTML?</h2>
             
-    <article><h1>What Is HTML</h1>
+    <article><h2>What is HTML</h2>
 <p><strong>Hypertext Markup Language</strong> — a way to create structured web pages with text, links, images, and more.</p>
-<h2>Paragraph Example</h2>
+<p><strong>Paragraph Example:</strong></p>
 <pre><code class="language-html">&lt;p&gt;Hello, World!&lt;/p&gt;
 </code></pre>
-<h2>Image Example</h2>
+<p><strong>Image Example:</strong></p>
 <pre><code class="language-html">&lt;img src=&quot;img-url&quot; alt=&quot;description&quot;&gt;
 </code></pre>
-<h2>Path Types in Attributes</h2>
+<p><strong>Path Types in Attributes</strong></p>
 <h3>Absolute URL</h3>
 <p><code>https://example.com/path/to/resource</code></p>
 <h3>Relative URL</h3>
@@ -52,58 +51,49 @@
           <hr class="lesson-divider">
         
           <article id="lesson-0002">
-            <h2>HTML Tag Attributes</h2>
             
-    <article><h1>HTML Tag Attributes</h1>
+    <article><h2>HTML Tag Attributes</h2>
 <p>An attribute is a value placed inside the opening tag of an HTML element. Attributes provide additional information about the element or specify how the element should behave.</p>
-<pre><code>&lt;tag attribute=&quot;value&quot;&gt;
+<pre><code>`&lt;tag attribute=&quot;value&quot;&gt;`
 </code></pre>
-<h2>Common HTML Attributes:</h2>
-<h3>&lt;a&gt;</h3>
+<h3>Common HTML Attributes:</h3>
+<p><strong>&lt;a&gt;</strong></p>
 <ul>
 <li>
-<pre><code>  &lt;a href=&quot;https://www.example-website.com&quot;&gt;
+<pre><code>  `&lt;a href=&quot;https://www.example-website.com&quot;&gt;`
 </code></pre>
 </li>
 </ul>
-<h3>&lt;img&gt;</h3>
+<p><strong>&lt;img&gt;</strong></p>
 <ul>
 <li>
-<pre><code>  &lt;img src=&quot;image.jpg&quot; alt=&quot;A beautiful image&quot; /&gt;
+<pre><code>  `&lt;img src=&quot;image.jpg&quot; alt=&quot;A beautiful image&quot; /&gt;`
 </code></pre>
 </li>
 </ul>
-<h3>&lt;input&gt;</h3>
+<p><strong>&lt;input&gt;</strong></p>
 <ul>
 <li>
-<pre><code>  &lt;input type=&quot;checkbox&quot; checked&gt;
+<pre><code>  `&lt;input type=&quot;checkbox&quot; checked&gt;` — checkbox is checked
 </code></pre>
-<p>— checkbox is checked</p>
 </li>
 <li>
-<pre><code>  &lt;input type=&quot;text&quot; disabled&gt;
+<pre><code>  `&lt;input type=&quot;text&quot; disabled&gt;` — not editable
 </code></pre>
-<p>— not editable</p>
 </li>
 <li>
-<pre><code>  &lt;input type=&quot;text&quot; readonly&gt;
+<pre><code>  `&lt;input type=&quot;text&quot; readonly&gt;` — visible but unchangeable
 </code></pre>
-<p>— visible but unchangeable</p>
 </li>
 <li>
-<pre><code>  &lt;input type=&quot;text&quot; required&gt;
+<pre><code>  `&lt;input type=&quot;text&quot; required&gt;` — must be filled
 </code></pre>
-<p>— must be filled</p>
 </li>
 </ul>
 <h3>Boolean Attributes</h3>
 <ul>
 <li>
-<pre><code>  &lt;input checked&gt;
-</code></pre>
-<p>=</p>
-<pre><code>  &lt;input checked=&quot;checked&quot;&gt;
-</code></pre>
+<p><code>&lt;input checked&gt;</code> = <code>&lt;input checked=&quot;checked&quot;&gt;</code></p>
 </li>
 <li>
 <p>If present = <strong>true</strong>, if missing = <strong>false</strong></p>
@@ -115,17 +105,16 @@
           <hr class="lesson-divider">
         
           <article id="lesson-0003">
-            <h2>Link Element</h2>
             
-    <article><h1>Link Element</h1>
+    <article><h2>Link Element</h2>
 <p>The <code>&lt;link&gt;</code> element is used to link to external resources</p>
 <p>Often times you will see multiple link elements inside a professional codebase that link to different stylesheets, fonts, and icons.</p>
-<h2>Code_Example</h2>
-<pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;./styles.css&quot; /&gt;
+<p><strong>Code Example:</strong></p>
+<pre><code class="language-html">    &lt;link rel=&quot;stylesheet&quot; href=&quot;./styles.css&quot; /&gt;
 </code></pre>
-<h2>rel attribute</h2>
+<p><strong>rel attribute:</strong></p>
 <p>The <code>rel</code> attribute (short for &quot;relationship&quot;) defines the type of relationship between the current HTML document and the linked external resource. This helps the browser understand the purpose of the link.</p>
-<h3>Common rel values:</h3>
+<p><strong>Common rel values:</strong></p>
 <ul>
 <li>
 <pre><code>  stylesheet
@@ -158,7 +147,7 @@
 <p>– links to a web app manifest file</p>
 </li>
 </ul>
-<h2>href attribute</h2>
+<p><strong>href attribute</strong></p>
 <p>The <code>href</code> attribute is used to specify the location of the URL for the external resource.</p>
 </article>
   
@@ -166,24 +155,24 @@
           <hr class="lesson-divider">
         
           <article id="lesson-0004">
-            <h2>Boilerplate</h2>
             
-    <article><h1>Boilerplate</h1>
+    <article><h2>Boilerplate</h2>
 <p>It's a'template for webpages</p>
-<h2>Example:</h2>
-<pre><code>&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-  &lt;head&gt;
-    &lt;meta charset=&quot;utf-8&quot; /&gt;
-    &lt;meta
-       name=&quot;viewport&quot;
-       content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
-    &lt;title&gt;freeCodeCamp&lt;/title&gt;
-    &lt;link rel=&quot;stylesheet&quot; href=&quot;./styles.css&quot; /&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
+<p>Example:</p>
+<pre><code>
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang=&quot;en&quot;&gt;
+      &lt;head&gt;
+        &lt;meta charset=&quot;utf-8&quot; /&gt;
+        &lt;meta
+           name=&quot;viewport&quot;
+           content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+        &lt;title&gt;freeCodeCamp&lt;/title&gt;
+        &lt;link rel=&quot;stylesheet&quot; href=&quot;./styles.css&quot; /&gt;
+      &lt;/head&gt;
+      &lt;body&gt;
+      &lt;/body&gt;
+    &lt;/html&gt;
 </code></pre>
 </article>
   
@@ -191,18 +180,17 @@
           <hr class="lesson-divider">
         
           <article id="lesson-0005">
-            <h2>UTF-8</h2>
             
-    <article><h1>What is UTF-8</h1>
+    <article><h2>What is UTF-8</h2>
 <p>UTF-8, or UCS Transformation Format 8, is a standardized character encoding widely used on the web.</p>
-<h2>Example:</h2>
+<p><strong>Example:</strong></p>
 <p>HTML source code:</p>
-<pre><code>&lt;p&gt;café&lt;/p&gt;
+<pre><code>`&lt;p&gt;café&lt;/p&gt;`
 </code></pre>
 <p>Rendered output:</p>
 <p><strong>café</strong></p>
-<h2>Required Meta element for UTF-8</h2>
-<pre><code>&lt;meta charset=&quot;UTF-8&quot;&gt;
+<p><strong>Required Meta element for UTF-8</strong></p>
+<pre><code>`&lt;meta charset=&quot;UTF-8&quot;&gt;`
 </code></pre>
 <p>By setting the character encoding to UTF-8, it ensures that the accented &quot;e&quot; character (<code>é</code>) is displayed correctly on the page.</p>
 </article>
@@ -211,14 +199,13 @@
           <hr class="lesson-divider">
         
           <article id="lesson-0006">
-            <h2>Div Eement</h2>
             
-    <article><h1>Content Division Element</h1>
+    <article><h2>Content Division Element</h2>
 <p>The <code>&lt;div&gt;</code> element is a generic container used to group other HTML elements. Unlike <code>&lt;section&gt;</code> or <code>&lt;article&gt;</code>, it has no semantic meaning by default.</p>
 <h2>Purpose:</h2>
 <p><code>&lt;div&gt;</code> is commonly used for styling and layout purposes, especially when working with CSS or JavaScript.</p>
-<h2>Example:</h2>
-<pre><code>&lt;div&gt;This is a generic container&lt;/div&gt;
+<p>Example:</p>
+<pre><code>`&lt;div&gt;This is a generic container&lt;/div&gt;`
 </code></pre>
 <p>This is a generic container</p>
 </article>
@@ -227,21 +214,20 @@
           <hr class="lesson-divider">
         
           <article id="lesson-0007">
-            <h2>ID Element</h2>
             
-    <article><h1>ID Element</h1>
+    <article><h2>ID Element</h2>
 <p>The <code>id</code> attribute assigns a unique identifier to an HTML element. It must be unique across the entire page and can be used to reference the element via CSS, JavaScript, or anchor links.</p>
-<pre><code>&lt;h1 id=&quot;title&quot;&gt;Movie Review Page&lt;/h1&gt;
+<pre><code>`&lt;h1 id=&quot;title&quot;&gt;Movie Review Page&lt;/h1&gt;`
 </code></pre>
-<h2>Purpose</h2>
+<h3>Purpose</h3>
 <p>You can reference the <code>id</code> name <code>title</code> within your CSS or JavaScript. Here's a CSS example referencing the <code>id</code> to change the text <code>color</code> to <code>red</code>:</p>
-<pre><code>#title {
-  color: red;
-}
+<pre><code class="language-html">    #title {
+      color: red;
+    }
 </code></pre>
-<h2>Linking to an ID</h2>
+<h3>Linking to an ID</h3>
 <p>You can use an <code>id</code> in a link to jump to a specific section of a page:</p>
-<pre><code>&lt;a href=&quot;#title&quot;&gt;Jump to Title&lt;/a&gt;
+<pre><code>`&lt;a href=&quot;#title&quot;&gt;Jump to Title&lt;/a&gt;`
 </code></pre>
 </article>
   
@@ -249,15 +235,14 @@
           <hr class="lesson-divider">
         
           <article id="lesson-0008">
-            <h2>HTML Entities</h2>
             
-    <article><h1>HTML Entities</h1>
+    <article><h2>HTML Entities</h2>
 <p>HTML entities are used to represent reserved characters in HTML, such as <code>&lt;</code>, <code>&gt;</code>, <code>&quot;</code>, and <code>&amp;</code>.</p>
 <p>To display the following HTML code on a webpage as plain text:</p>
-<pre><code>&lt;div class=&quot;example&quot;&gt;Hello &amp; welcome!&lt;/div&gt;
+<pre><code>`&lt;div class=&quot;example&quot;&gt;Hello &amp; welcome!&lt;/div&gt;`
 </code></pre>
 <p>you need to write it in the HTML source like this:</p>
-<pre><code>&amp;lt;div class=&amp;quot;example&amp;quot;&amp;gt;Hello &amp;amp; welcome!&amp;lt;/div&amp;gt;
+<pre><code>`&amp;lt;div class=&amp;quot;example&amp;quot;&amp;gt;Hello &amp;amp; welcome!&amp;lt;/div&amp;gt;`
 </code></pre>
 <h3>Types of HTML Entities</h3>
 <ul>
@@ -271,11 +256,10 @@
           <hr class="lesson-divider">
         
           <article id="lesson-0009">
-            <h2>Script</h2>
             
-    <article><h1>Why do we need Script?</h1>
+    <article><h2>Why do we need Script?</h2>
 <p>The script element is used to embed executable code</p>
-<p>Example:
+<p><strong>Example:</strong>
 alert('Welcome to freeCodeCamp')</p>
 <pre><code class="language-html">&lt;body&gt;
   &lt;script&gt;
@@ -283,18 +267,17 @@ alert('Welcome to freeCodeCamp')</p>
   &lt;/script&gt;
 &lt;/body&gt;
 </code></pre>
-<h2>How to use</h2>
+<p><strong>How to use</strong></p>
 <p>While you can technically write all of your JavaScript code inside the script tags, it is considered best practice to link to an external JavaScript file instead. Here is an example of using the script element to link to an external JavaScript file:</p>
 <pre><code class="language-html">&lt;script src=&quot;path-to-javascript-file.js&quot;&gt;&lt;/script&gt;
 </code></pre>
-<h2>A small tip:</h2>
-<hr>
+<p><strong>A small tip:</strong></p>
 <p>In order not to get confused in the file paths with a more complex structure, always remember:</p>
 <ul>
-<li>src=&quot;something.js&quot; — it searches in the same folder where index.html</li>
-<li>src=&quot;folder/something.js&quot; — searches in a subfolder</li>
-<li>src=&quot;../something.js&quot; — goes up a level</li>
-<li>=&quot;/something.js&quot; — it searches in the root of the server, not the project (it doesn't work on the locale without a server!)</li>
+<li><code>src=&quot;something.js&quot;</code> — it searches in the same folder where index.html</li>
+<li><code>src=&quot;folder/something.js&quot;</code> — searches in a subfolder</li>
+<li><code>src=&quot;../something.js&quot;</code> — goes up a level</li>
+<li><code>&quot;/something.js&quot;</code> — it searches in the root of the server, not the project (it doesn't work on the locale without a server!)</li>
 </ul>
 </article>
   
@@ -302,11 +285,10 @@ alert('Welcome to freeCodeCamp')</p>
           <hr class="lesson-divider">
         
           <article id="lesson-0010">
-            <h2>Meta description</h2>
             
-    <article><h1>Meta description</h1>
+    <article><h2>Meta description</h2>
 <p>SEO, or Search Engine Optimization, is a practice that optimizes web pages so they become more visible and rank higher on search engines. One way to improve your site's SEO, is to provide a short description for the web page using the meta element.</p>
-<h3>Example:</h3>
+<p><strong>Example:</strong></p>
 <pre><code class="language-html">&lt;meta
   name=&quot;description&quot;
   content=&quot;Discover expert tips and techniques for gardening in small spaces, choosing the right plants, and maintaining a thriving garden.&quot;
@@ -318,15 +300,14 @@ alert('Welcome to freeCodeCamp')</p>
           <hr class="lesson-divider">
         
           <article id="lesson-0011">
-            <h2>Open Graph</h2>
             
-    <article><h1>What Is Open Graph</h1>
+    <article><h2>What Is Open Graph</h2>
 <p>This is a protocol to control how your website's content appears across various social media platforms, such as Facebook, LinkedIn, and many more.</p>
-<h2>Example</h2>
+<p><strong>Example</strong></p>
 <p>The first important OG property to include would be the title. Here is an example of setting the OG title for the freeCodeCamp homepage:</p>
 <pre><code class="language-html">&lt;meta content=&quot;freeCodeCamp.org&quot; property=&quot;og:title&quot; /&gt;
 </code></pre>
-<h2>The whole Head:</h2>
+<p><strong>The whole Head:</strong></p>
 <pre><code class="language-html">    &lt;head&gt;
         &lt;meta charset=&quot;utf-8&quot;&gt;
         &lt;title&gt;Test&lt;/title&gt;
@@ -347,16 +328,15 @@ alert('Welcome to freeCodeCamp')</p>
           <hr class="lesson-divider">
         
           <article id="lesson-0012">
-            <h2>Replaced Elements</h2>
             
-    <article><h1>What Are Replaced Elements</h1>
+    <article><h2>What Are Replaced Elements</h2>
 <p>A replaced element is an element whose content is determined by an external resource rather than by CSS itself.</p>
-<h3>The image element, which embeds an <code>image</code> on your web page:</h3>
+<p><strong>The image element, which embeds an <code>image</code> on your web page:</strong></p>
 <p><code>&lt;img src=&quot;example-img-url&quot; alt=&quot;Descriptive text goes here&quot;&gt;</code></p>
 <p>(The element itself is replaced with the external object: the <code>image</code>).</p>
-<h3>A more robust example might be the <code>iframe</code> element, which embeds an external site on your web page:</h3>
+<p><strong>A more robust example might be the <code>iframe</code> element, which embeds an external site on your web page:</strong></p>
 <p><code>&lt;iframe src=&quot;https://www.example.com&quot; title=&quot;Example Site&quot;&gt;&lt;/iframe&gt;</code></p>
-<h3>An <code>input</code> element with the <code>type</code> attribute set to <code>image</code>:</h3>
+<p><strong>An <code>input</code> element with the <code>type</code> attribute set to <code>image</code>:</strong></p>
 <p><code>&lt;input type=&quot;image&quot; alt=&quot;Descriptive text goes here&quot; src=&quot;example-img-url&quot;&gt;</code></p>
 </article>
   
@@ -364,7 +344,38 @@ alert('Welcome to freeCodeCamp')</p>
           <hr class="lesson-divider">
         
           <article id="lesson-0013">
-            <h2>Untitled</h2>
+            
+    <article><h2>Optimize Media Assets</h2>
+<p>To optimize media like images, consider:</p>
+<p><strong>1. Size</strong></p>
+<ul>
+<li>Resize images to match display size.</li>
+<li>Avoid large-resolution images scaled down with CSS.</li>
+<li>Use <code>srcset</code> and <code>sizes</code> for responsive images.</li>
+</ul>
+<p><strong>2. Format</strong></p>
+<ul>
+<li>Use modern formats: <code>WEBP</code> or <code>AVIF</code> instead of <code>JPG</code> or <code>PNG</code>.</li>
+<li>Use <code>SVG</code> for icons and simple graphics.</li>
+</ul>
+<p><strong>3. Compression</strong></p>
+<ul>
+<li>Use compression tools: <code>pngcrush</code>, <code>jpegoptim</code>, <code>squoosh</code>.</li>
+<li>Lossy formats like <code>JPG</code> degrade quality.</li>
+<li>Remove metadata to reduce file size.</li>
+</ul>
+<p><strong>Tips</strong></p>
+<ul>
+<li>Use <code>loading=&quot;lazy&quot;</code> for lazy loading.</li>
+<li>Use Image CDNs for automatic optimization.</li>
+<li>Always include <code>alt</code> attributes for accessibility.</li>
+</ul>
+</article>
+  
+          </article>
+          <hr class="lesson-divider">
+        
+          <article id="lesson-0014">
             
     <article><h1>What is HTML?</h1>
 <p>HTML stands for HyperText Markup Language.</p>
@@ -375,8 +386,7 @@ alert('Welcome to freeCodeCamp')</p>
           </article>
           <hr class="lesson-divider">
         
-          <article id="lesson-0014">
-            <h2>Untitled</h2>
+          <article id="lesson-0015">
             
     <article><h1>What is HTML?</h1>
 <p>HTML stands for HyperText Markup Language.</p>

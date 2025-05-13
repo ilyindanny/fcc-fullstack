@@ -2,11 +2,11 @@
 title: Open Graph
 ---
 
-# What Is Open Graph
+## What Is Open Graph
 
 This is a protocol to control how your website's content appears across various social media platforms, such as Facebook, LinkedIn, and many more.
 
-## Example
+**Example**
 
 The first important OG property to include would be the title. Here is an example of setting the OG title for the freeCodeCamp homepage:
 
@@ -14,7 +14,7 @@ The first important OG property to include would be the title. Here is an exampl
 <meta content="freeCodeCamp.org" property="og:title" />
 ```
 
-## The whole Head:
+**The whole Head:**
 
 ```html
     <head>

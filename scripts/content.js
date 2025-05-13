@@ -61,7 +61,6 @@ function generateAllContentAndLessons() {
 
         lessons += `
           <article id="${anchorId}">
-            <h2>${lesson.title}</h2>
             ${inner}
           </article>
           <hr class="lesson-divider">
