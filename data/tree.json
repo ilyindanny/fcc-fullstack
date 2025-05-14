@@ -58,6 +58,14 @@
           {
             "title": "Optimize Media Asets",
             "filename": "lesson-0013.html"
+          },
+          {
+            "title": "Image licenses",
+            "filename": "lesson-0014.html"
+          },
+          {
+            "title": "SVG",
+            "filename": "lesson-0015.html"
           }
         ]
       },
@@ -67,7 +75,7 @@
         "lessons": [
           {
             "title": "Untitled",
-            "filename": "lesson-0014.html"
+            "filename": "lesson-0016.html"
           }
         ]
       }
@@ -83,7 +91,7 @@
         "lessons": [
           {
             "title": "Untitled",
-            "filename": "lesson-0015.html"
+            "filename": "lesson-0017.html"
           }
         ]
       }

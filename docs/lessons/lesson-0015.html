@@ -3,24 +3,85 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Lesson 15</title>
+  <title>SVG</title>
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
 
   <main>
-    <article><h1>What is HTML?</h1>
-<p>HTML stands for HyperText Markup Language.</p>
-<pre><code class="language-html">&lt;h1&gt;Hello, world!&lt;/h1&gt;
+    <article><h2>SVG (Scalable Vector Graphics)</h2>
+<p>SVG is a <strong>vector image format</strong> — unlike raster formats (<code>JPG</code>, <code>PNG</code>), which are <strong>pixel-based</strong>.</p>
+<h3>Advantages</h3>
+<ul>
+<li><strong>Scales infinitely</strong> without losing quality.</li>
+<li>Defined in <strong>XML</strong>, so can be embedded directly into HTML.</li>
+<li><strong>Styleable</strong> with CSS (e.g. fill, stroke, size).</li>
+<li><strong>Lightweight</strong> for simple graphics and icons.</li>
+</ul>
+<h3>When to Use</h3>
+<ul>
+<li>Icons and UI elements.</li>
+<li>Logos and diagrams.</li>
+<li>Custom bullets and decorative shapes.</li>
+</ul>
+<h3>Use Cases (How to Use SVG)</h3>
+<h4>1. Inline SVG — directly in HTML</h4>
+<pre><code class="language-html">&lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;
+  &lt;circle cx=&quot;12&quot; cy=&quot;12&quot; r=&quot;10&quot; fill=&quot;red&quot; /&gt;
+&lt;/svg&gt;
 </code></pre>
+<ul>
+<li>Full control via CSS (<code>fill</code>, <code>stroke</code>) and JavaScript.</li>
+<li>Part of the DOM.</li>
+<li>Ideal for interactive or animated graphics.</li>
+</ul>
+<hr>
+<h4>2. External SVG — as a regular image</h4>
+<pre><code class="language-html">&lt;img src=&quot;https://example.com/icon.svg&quot; alt=&quot;icon&quot; /&gt;
+</code></pre>
+<ul>
+<li>Used like any image (<code>&lt;img&gt;</code> tag).</li>
+<li>No access to internal SVG structure.</li>
+<li>Best for simple, static icons.</li>
+</ul>
+<hr>
+<h4>3. SVG via Icon Library — using Font Awesome</h4>
+<p><strong>From CDN:</strong></p>
+<pre><code class="language-html">&lt;head&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;i class=&quot;fas fa-camera&quot;&gt;&lt;/i&gt;
+&lt;/body&gt;
+</code></pre>
+<p><strong>From local install (npm):</strong></p>
+<pre><code class="language-bash">npm install @fortawesome/fontawesome-free
+</code></pre>
+<pre><code class="language-js">import '@fortawesome/fontawesome-free/css/all.min.css';
+</code></pre>
+<ul>
+<li>Useful for many ready-to-use icons.</li>
+<li>Easy to style with CSS:</li>
+</ul>
+<pre><code class="language-html">&lt;i class=&quot;fas fa-star&quot; style=&quot;color: gold; font-size: 24px;&quot;&gt;&lt;/i&gt;
+</code></pre>
+<hr>
+<h3>Tools &amp; Libraries</h3>
+<ul>
+<li><a href="https://fontawesome.com">Font Awesome</a> – icon library based on SVG.</li>
+<li>Inkscape, Figma, Illustrator – for creating and editing SVG files.</li>
+</ul>
+<hr>
+<h3>Tip</h3>
+<p>Open an <code>.svg</code> file in a text editor — it's just readable XML code!</p>
 </article>
   </main> 
 	
     <section class="navigation">
       <nav class="lesson-nav">
-        <a class="prev" href="lesson-0014.html">&larr; Untitled</a>
+        <a class="prev" href="lesson-0014.html">&larr; Image licenses</a>
         <a class="home" href="../index.html">Home</a>
-        <span class="empty"></span>
+        <a class="next" href="lesson-0016.html">Untitled &rarr;</a>
       </nav>
     </section>
   
