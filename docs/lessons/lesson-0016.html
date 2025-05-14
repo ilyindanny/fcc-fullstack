@@ -3,16 +3,101 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Lesson 16</title>
+  <title>Audio  Video</title>
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
 
   <main>
-    <article><h1>What is HTML?</h1>
-<p>HTML stands for HyperText Markup Language.</p>
-<pre><code class="language-html">&lt;h1&gt;Hello, world!&lt;/h1&gt;
+    <article><h2>HTML Media Elements: Audio &amp; Video</h2>
+<h3>1. Purpose</h3>
+<p>The <code>&lt;audio&gt;</code> and <code>&lt;video&gt;</code> elements embed sound and video into webpages using native HTML tags.</p>
+<hr>
+<h3>2. Supported Formats and MIME Types</h3>
+<p><strong>Audio:</strong></p>
+<ul>
+<li>.mp3 — <code>audio/mpeg</code></li>
+<li>.wav — <code>audio/wav</code></li>
+<li>.ogg — <code>audio/ogg</code></li>
+<li>.m4a — <code>audio/mp4</code> or <code>audio/x-m4a</code></li>
+</ul>
+<p><strong>Video:</strong></p>
+<ul>
+<li>.mp4 — <code>video/mp4</code></li>
+<li>.webm — <code>video/webm</code></li>
+<li>.ogg — <code>video/ogg</code></li>
+</ul>
+<p><strong>Example:</strong></p>
+<pre><code class="language-html">&lt;audio controls&gt;
+  &lt;source src=&quot;sound.ogg&quot; type=&quot;audio/ogg&quot; /&gt;
+  &lt;source src=&quot;sound.mp3&quot; type=&quot;audio/mpeg&quot; /&gt;
+&lt;/audio&gt;
 </code></pre>
+<h3>3. Common Attributes (<code>&lt;audio&gt;</code> and <code>&lt;video&gt;</code>)</h3>
+<ul>
+<li><code>src</code> (URL): Path to media file. Optional if you use &lt;source&gt; elements inside the tag.</li>
+<li><code>controls</code> (boolean): Displays built-in play/pause/etc. controls.</li>
+<li><code>autoplay</code> (boolean): Starts playback automatically. Usually works only if muted is also set.</li>
+<li><code>loop</code> (boolean): Repeats the media file indefinitely.</li>
+<li><code>muted</code> (boolean): Starts the media in a muted state.</li>
+<li><code>preload</code> (none, metadata, auto): Suggests how much data the browser should preload:
+<ul>
+<li><code>none</code> — don’t preload anything</li>
+<li><code>metadata</code> — preload only metadata (like duration)</li>
+<li><code>auto</code> — let the browser decide</li>
+</ul>
+</li>
+</ul>
+<p><strong>Example:</strong></p>
+<p><code>&lt;audio src=&quot;file.mp3&quot; controls loop muted preload=&quot;auto&quot;&gt;&lt;/audio&gt;</code></p>
+<h3>4. <code>&lt;video&gt;</code>-only Attributes</h3>
+<ul>
+<li><code>poster</code>: Image shown before video loads or plays</li>
+<li><code>width</code>: Width in pixels</li>
+<li><code>height</code>: Height in pixels</li>
+</ul>
+<p><strong>Example:</strong></p>
+<p><code>&lt;video src=&quot;video.mp4&quot; controls poster=&quot;cover.jpg&quot; width=&quot;640&quot;&gt;&lt;/video&gt;</code></p>
+<h3>5. Using <code>&lt;source&gt;</code> for Fallback</h3>
+<p>The browser picks the first supported format:</p>
+<pre><code class="language-html">&lt;video controls&gt;
+  &lt;source src=&quot;movie.webm&quot; type=&quot;video/webm&quot; /&gt;
+  &lt;source src=&quot;movie.mp4&quot; type=&quot;video/mp4&quot; /&gt;
+&lt;/video&gt;
+</code></pre>
+<h3>6. YouTube / Vimeo Embeds</h3>
+<p>Use <code>&lt;iframe&gt;</code> to embed external players:</p>
+<pre><code class="language-html">&lt;iframe
+  width=&quot;560&quot;
+  height=&quot;315&quot;
+  src=&quot;https://www.youtube.com/embed/3Z7ddmHlbdU&quot;
+  allow=&quot;autoplay; encrypted-media&quot;
+  allowfullscreen&gt;
+&lt;/iframe&gt;
+</code></pre>
+<h3>7. JavaScript API (basics)</h3>
+<pre><code class="language-javascript">audio.play();
+audio.pause();
+audio.currentTime = 0;
+audio.volume = 0.5;
+audio.muted = true;
+</code></pre>
+<h3>8. Media Events (examples)</h3>
+<ul>
+<li><code>play</code>:Starts playing</li>
+<li><code>pause</code>: Playback paused</li>
+<li><code>ended</code>: Playback finished</li>
+<li><code>timeupdate</code>: Playback time changes</li>
+</ul>
+<p><strong>Example:</strong></p>
+<p><code>video.addEventListener(&quot;ended&quot;, () =&gt; alert(&quot;Video finished&quot;));</code></p>
+<h3>9. Summary</h3>
+<ul>
+<li>Use <code>&lt;audio&gt;</code> for music/sound, <code>&lt;video&gt;</code> for movies.</li>
+<li>Use <code>&lt;source&gt;</code> for format fallback.</li>
+<li>Use <code>&lt;iframe&gt;</code> for hosted content like YouTube.</li>
+<li>Attributes are mostly shared; <code>poster</code>, <code>width</code>, and <code>height</code> are video-specific.</li>
+</ul>
 </article>
   </main> 
 	

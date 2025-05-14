@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Lesson_Title</title>
+        <meta name="lesson-title" content="Lesson_Title" />
+        <meta name="description" content="Lesson_Description" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="stylesheet" href="/assets/css/style.css" />
+    </head>
+
+    <body>
+        <main>
+            <h1>Audio And Video</h1>
+            <strong>tests:</strong>
+
+            <section>
+                <h2>test audio basic tag</h2>
+                <audio src="track.m4a" controls></audio>
+            </section>
+
+            <section>
+                <h2>test audio sourses</h2>
+                <audio controls>
+                    <source src="track.m4a" type="audio/mp4" />
+                    <source src="track.mp3" type="audio/mpeg" />
+                    Your browser does not support the audio element.
+                </audio>
+            </section>
+            <section>
+                <h2>test loop attribute</h2>
+                <audio src="track.mp3" controls loop></audio>
+            </section>
+
+            <section>
+                <h2>test preload attribute</h2>
+                <audio src="track.mp3" preload="auto" controls></audio>
+            </section>
+
+            <section>
+                <h2>test video</h2>
+                <video
+                    src="movie.mp4"
+                    controls
+                    poster="poster-2.png"
+                    width="100"
+                    height="130"></video>
+            </section>
+
+            <section>
+                <h2>test video autoplay + muted</h2>
+                <!-- <video src="movie.mp4" controls autoplay muted></video> -->
+            </section>
+
+            <section>
+                <h2>test poster</h2>
+                <video src="movie.mp4" controls poster="poster.png"></video>
+            </section>
+
+            <section>
+                <h2>YouTube video</h2>
+                <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/3Z7ddmHlbdU"
+                    frameborder="0"
+                    allow="autoplay; encrypted-media"
+                    allowfullscreen>
+                </iframe>
+            </section>
+        </main>
+    </body>
+</html>

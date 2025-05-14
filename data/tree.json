@@ -66,6 +66,10 @@
           {
             "title": "SVG",
             "filename": "lesson-0015.html"
+          },
+          {
+            "title": "Audio & Video",
+            "filename": "lesson-0016.html"
           }
         ]
       },
@@ -75,7 +79,7 @@
         "lessons": [
           {
             "title": "Untitled",
-            "filename": "lesson-0016.html"
+            "filename": "lesson-0017.html"
           }
         ]
       }
@@ -91,7 +95,7 @@
         "lessons": [
           {
             "title": "Untitled",
-            "filename": "lesson-0017.html"
+            "filename": "lesson-0018.html"
           }
         ]
       }
