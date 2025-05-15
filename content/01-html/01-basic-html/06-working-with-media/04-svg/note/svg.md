@@ -31,7 +31,6 @@ SVG is a **vector image format** — unlike raster formats (`JPG`, `PNG`), which
 - Part of the DOM.
 - Ideal for interactive or animated graphics.
 
----
 
 #### 2. External SVG — as a regular image
 
@@ -43,7 +42,6 @@ SVG is a **vector image format** — unlike raster formats (`JPG`, `PNG`), which
 - No access to internal SVG structure.
 - Best for simple, static icons.
 
----
 
 #### 3. SVG via Icon Library — using Font Awesome
 
@@ -75,13 +73,11 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 <i class="fas fa-star" style="color: gold; font-size: 24px;"></i>
 ```
 
----
 
 ### Tools & Libraries
 - [Font Awesome](https://fontawesome.com) – icon library based on SVG.
 - Inkscape, Figma, Illustrator – for creating and editing SVG files.
 
----
 
 ### Tip
 Open an `.svg` file in a text editor — it's just readable XML code!

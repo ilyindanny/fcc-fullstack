@@ -8,8 +8,6 @@ title: Audio & Video
 
 The `<audio>` and `<video>` elements embed sound and video into webpages using native HTML tags.
 
----
-
 ### 2. Supported Formats and MIME Types
 
 **Audio:**
