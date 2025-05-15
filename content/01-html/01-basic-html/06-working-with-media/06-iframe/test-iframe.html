@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Iframe Tests</title>
+  <!-- <style>
+    body {
+      font-family: sans-serif;
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      line-height: 1.6;
+    }
+
+    h2 {
+      font-size: 1.3rem;
+      margin-top: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    section {
+      margin-bottom: 2.5rem;
+    }
+
+    iframe {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      border: 1px solid #ccc;
+    }
+
+    /* Optional: constrain different sizes */
+    .iframe-560x315 { width: 560px; height: 315px; }
+    .iframe-425x350 { width: 425px; height: 350px; }
+    .iframe-400x400 { width: 400px; height: 400px; }
+    .iframe-640x320 { width: 640px; height: 320px; }
+    .iframe-400x200 { width: 400px; height: 200px; }
+  </style>
+  -->
+  <link rel="stylesheet" href="file:///var/mobile/Containers/Data/Application/5B18BE4B-5EDE-4C52-B637-C5B70C14FD77/Documents/root/courses/fcc-fullstack.git/docs/css/style.css">
+
+</head>
+<body>
+
+  <section>
+    <h2>YouTube Embed</h2>
+    <iframe
+      class="iframe-560x315"
+      src="https://www.youtube.com/embed/Fhc4o_FBccU?autoplay=1&mute=1"
+      title="YouTube video"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen>
+    </iframe>
+  </section>
+
+  <section>
+    <h2>OpenStreetMap Embed</h2>
+    <iframe
+      class="iframe-425x350"
+      src="https://www.openstreetmap.org/export/embed.html?bbox=44.7,41.7,44.9,41.8&layer=mapnik"
+      title="OpenStreetMap">
+    </iframe>
+  </section>
+
+  <section>
+    <h2>Another YouTube Video</h2>
+    <iframe
+      class="iframe-400x400"
+      src="https://www.youtube.com/embed/ywNFmSO7e0E"
+      title="Test iframe"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+  </section>
+
+  <section>
+    <h2>My GitHub Site</h2>
+    <iframe
+      class="iframe-640x320"
+      src="https://ilyindanny.github.io/fcc-fullstack/index.html"
+      title="My site">
+    </iframe>
+  </section>
+
+  <section>
+    <h2>Local HTML with srcdoc</h2>
+    <iframe
+      class="iframe-400x200"
+      srcdoc='
+        <style>
+          body { font-family: sans-serif; background: #f9f9f9; padding: 1rem; }
+          h1 { color: #444; }
+        </style>
+        <h1>Hello, World!</h1>
+        <p>This is embedded HTML.</p>
+      '
+      title="Local HTML">
+    </iframe>
+  </section>
+
+</body>
+</html>

@@ -1,24 +1,294 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Lesson 17</title>
-  <link rel="stylesheet" href="../css/style.css">
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Iframe Element</title>
+        <link rel="stylesheet" href="../css/style.css" />
+    </head>
+    <body>
+        <main>
+            <article>
+                <h2>iframe Element</h2>
+                <h3>Basic Syntax and Key Attributes</h3>
+                <pre><code class="language-html">&lt;iframe src=&quot;...&quot; width=&quot;...&quot; height=&quot;...&quot; title=&quot;...&quot; allowfullscreen&gt;&lt;/iframe&gt;
+</code></pre>
+                <ul>
+                    <li><code>src</code>: URL of the embedded resource.</li>
+                    <li>
+                        <code>width</code>, <code>height</code>: Size of the
+                        embedded frame.
+                    </li>
+                    <li><code>title</code>: Improves accessibility and SEO.</li>
+                    <li>
+                        <code>allowfullscreen</code>: Enables full-screen mode.
+                    </li>
+                </ul>
+                <h3>Important Attributes</h3>
+                <ul>
+                    <li>
+                        <code>allow</code>: Grants permissions to iframe (e.g.,
+                        <code>autoplay</code>, <code>fullscreen</code>,
+                        <code>clipboard-write</code>).
+                    </li>
+                    <li>
+                        <code>referrerpolicy</code>: Controls the Referer
+                        header.
+                        <ul>
+                            <li>
+                                Examples: <code>no-referrer</code>,
+                                <code>origin</code>,
+                                <code>origin-when-cross-origin</code>.
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <code>sandbox</code>: Applies restrictions for security.
+                        <ul>
+                            <li>
+                                Useful flags:
+                                <ul>
+                                    <li><code>allow-scripts</code></li>
+                                    <li><code>allow-same-origin</code></li>
+                                    <li><code>allow-popups</code></li>
+                                    <li><code>allow-forms</code></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <h3>Accessibility and SEO</h3>
+                <ul>
+                    <li>
+                        Always provide a <code>title</code> for screen readers.
+                    </li>
+                    <li>
+                        Prefer meaningful descriptions if content is important.
+                    </li>
+                    <li>
+                        Search engines usually
+                        <strong>don’t index</strong> iframe content.
+                    </li>
+                </ul>
+                <h3>Embedding Videos</h3>
+                <h4>YouTube</h4>
+                <ul>
+                    <li>
+                        Use format:
+                        <code>https://www.youtube.com/embed/VIDEO_ID</code>
+                    </li>
+                    <li>
+                        Common query parameters:
+                        <ul>
+                            <li><code>autoplay=1</code></li>
+                            <li><code>mute=1</code></li>
+                            <li><code>start=30</code></li>
+                            <li><code>controls=0</code></li>
+                            <li><code>loop=1&amp;playlist=VIDEO_ID</code></li>
+                        </ul>
+                    </li>
+                    <li>Not all videos allow embedding (may be restricted).</li>
+                </ul>
+                <h4>Short vs Embed Links</h4>
+                <ul>
+                    <li>
+                        <code>https://youtu.be/VIDEO_ID</code> → shareable link,
+                        <strong>not for iframe</strong>
+                    </li>
+                    <li>
+                        <code>https://www.youtube.com/embed/VIDEO_ID</code> →
+                        correct iframe format
+                    </li>
+                </ul>
+                <p>
+                    Note: Parameters like <code>?si=...</code> sometimes appear
+                    in shared links but don’t always affect iframe embedding.
+                </p>
+                <h4>Other Platforms</h4>
+                <ul>
+                    <li>
+                        Vimeo →
+                        <code>https://player.vimeo.com/video/VIDEO_ID</code>
+                    </li>
+                    <li>Pexels / Pixabay → Provide full iframe code</li>
+                    <li>
+                        Check each platform’s documentation for correct
+                        <code>allow</code> values
+                    </li>
+                </ul>
+                <h3>Maps and Other Content</h3>
+                <h4>Maps (e.g., OpenStreetMap)</h4>
+                <p>Use a bounding box:</p>
+                <pre><code class="language-html">https://www.openstreetmap.org/export/embed.html?bbox=minLon,minLat,maxLon,maxLat
+</code></pre>
+                <p>
+                    To set a specific location, calculate the bbox around a
+                    center coordinate.
+                </p>
+                <h4>srcdoc</h4>
+                <p>Inline HTML in iframe:</p>
+                <pre><code class="language-html">&lt;iframe srcdoc=&quot;&lt;p&gt;Hello&lt;/p&gt;&quot; sandbox&gt;&lt;/iframe&gt;
+</code></pre>
+                <p>Good for small self-contained content.</p>
+                <h3>CORS and Security Policies</h3>
+                <ul>
+                    <li>
+                        Sites can block iframes with HTTP headers:
+                        <ul>
+                            <li>
+                                <code>X-Frame-Options: DENY</code> or
+                                <code>SAMEORIGIN</code>
+                            </li>
+                            <li>
+                                Content-Security-Policy (CSP)
+                                <code>frame-ancestors 'none'</code>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>Check DevTools console if iframe fails.</li>
+                    <li>
+                        JavaScript cannot access content across domains
+                        (Same-Origin Policy).
+                    </li>
+                </ul>
+                <h3>Geolocation and Dynamic Maps</h3>
+                <p>
+                    iframes don’t detect geolocation themselves. Use JavaScript:
+                </p>
+                <pre><code class="language-js">navigator.geolocation.getCurrentPosition(function(pos) {
+  const lat = pos.coords.latitude;
+  const lon = pos.coords.longitude;
+  document.getElementById(&quot;map&quot;).src =
+    `https://www.openstreetmap.org/export/embed.html?bbox=${lon-0.01},${lat-0.01},${lon+0.01},${lat+0.01}`;
+});
+</code></pre>
+                <p>Attach to iframe like:</p>
+                <pre><code class="language-html">&lt;iframe id=&quot;map&quot; width=&quot;600&quot; height=&quot;400&quot;&gt;&lt;/iframe&gt;
+</code></pre>
+                <h3>Troubleshooting</h3>
+                <ul>
+                    <li>Check for errors in the browser console.</li>
+                    <li>Ensure iframe source allows embedding.</li>
+                    <li>
+                        Confirm correct URL format (especially for YouTube).
+                    </li>
+                    <li>
+                        Some videos or domains simply can’t be embedded due to
+                        restrictions.
+                    </li>
+                </ul>
+                <h2>iframe Code Snippets (Examples)</h2>
+                <h3>YouTube Video with Autoplay and No Controls</h3>
+                <pre><code class="language-html">&lt;iframe
+  width=&quot;560&quot;
+  height=&quot;315&quot;
+  src=&quot;https://www.youtube.com/embed/Fhc4o_FBccU?autoplay=1&amp;mute=1&amp;controls=0&amp;loop=1&amp;playlist=Fhc4o_FBccU&quot;
+  title=&quot;YouTube video&quot;
+  frameborder=&quot;0&quot;
+  allow=&quot;autoplay; fullscreen&quot;
+  allowfullscreen&gt;
+&lt;/iframe&gt;
+</code></pre>
+                <h3>Vimeo Video</h3>
+                <pre><code class="language-html">&lt;iframe
+  src=&quot;https://player.vimeo.com/video/76979871&quot;
+  width=&quot;640&quot;
+  height=&quot;360&quot;
+  frameborder=&quot;0&quot;
+  allow=&quot;autoplay; fullscreen; picture-in-picture&quot;
+  allowfullscreen
+  title=&quot;Vimeo video&quot;&gt;
+&lt;/iframe&gt;
+</code></pre>
+                <h3>OpenStreetMap Centered on Location (Tbilisi Example)</h3>
+                <pre><code class="language-html">&lt;iframe
+  width=&quot;600&quot;
+  height=&quot;450&quot;
+  frameborder=&quot;0&quot;
+  scrolling=&quot;no&quot;
+  marginheight=&quot;0&quot;
+  marginwidth=&quot;0&quot;
+  src=&quot;https://www.openstreetmap.org/export/embed.html?bbox=44.775,41.690,44.845,41.730&amp;layer=mapnik&quot;
+  title=&quot;OpenStreetMap - Tbilisi&quot;&gt;
+&lt;/iframe&gt;
+</code></pre>
+                <h3>Inline HTML with <code>srcdoc</code></h3>
+                <pre><code class="language-html">&lt;iframe
+  srcdoc=&quot;
+    &lt;style&gt;
+      body { font-family: sans-serif; background: #fafafa; text-align: center; }
+    &lt;/style&gt;
+    &lt;h1&gt;Hello from iframe&lt;/h1&gt;
+    &lt;p&gt;This content is defined in srcdoc.&lt;/p&gt;&quot;
+  width=&quot;400&quot;
+  height=&quot;200&quot;
+  sandbox
+  title=&quot;Inline content&quot;&gt;
+&lt;/iframe&gt;
+</code></pre>
+                <h3>Embedded PDF File</h3>
+                <pre><code class="language-html">&lt;iframe
+  src=&quot;https://example.com/sample.pdf&quot;
+  width=&quot;100%&quot;
+  height=&quot;600&quot;
+  title=&quot;PDF Document&quot;
+  frameborder=&quot;0&quot;&gt;
+&lt;/iframe&gt;
+</code></pre>
+                <blockquote>
+                    <p>
+                        🔒 It depends on whether the browser supports PDF
+                        viewing and whether the site allows opening in an
+                        iframe.
+                    </p>
+                </blockquote>
+                <h3>
+                    Embedded GitHub README (as raw HTML preview via third-party
+                    service)
+                </h3>
+                <pre><code class="language-html">&lt;iframe
+  src=&quot;https://htmlpreview.github.io/?https://github.com/user/repo/blob/main/README.md&quot;
+  width=&quot;100%&quot;
+  height=&quot;600&quot;
+  frameborder=&quot;0&quot;
+  title=&quot;GitHub README Preview&quot;&gt;
+&lt;/iframe&gt;
+</code></pre>
+                <blockquote>
+                    <p>
+                        ⚠️ This method only works with an open public repository
+                        and via GitHub Pages or special preview services.
+                    </p>
+                </blockquote>
+                <h3>Fallback Message (for unsupported browsers)</h3>
+                <pre><code class="language-html">&lt;iframe
+  src=&quot;https://example.com&quot;
+  width=&quot;600&quot;
+  height=&quot;400&quot;
+  title=&quot;Fallback Demo&quot;&gt;
+  Your browser does not support iframes.
+&lt;/iframe&gt;
+</code></pre>
 
-  <main>
-    <article></article>
-  </main> 
-	
-    <section class="navigation">
-      <nav class="lesson-nav">
-        <a class="prev" href="lesson-0016.html">&larr; Audio & Video</a>
-        <a class="home" href="../index.html">Home</a>
-        <a class="next" href="lesson-0018.html">Untitled &rarr;</a>
-      </nav>
-    </section>
-  
-</body>
+    <section>
+    <h2>YouTube Video</h2>
+    <iframe
+      class="iframe-400x400"
+      src="https://youtube.com/embed/pzSyPtnrf9M"
+      title="Test iframe"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen>
+    </iframe>
+  </section>
+            </article>
+        </main>
+
+        <section class="navigation">
+            <nav class="lesson-nav">
+                <a class="prev" href="lesson-0016.html">&larr; Audio & Video</a>
+                <a class="home" href="../index.html">Home</a>
+                <a class="next" href="lesson-0018.html">Untitled &rarr;</a>
+            </nav>
+        </section>
+    </body>
 </html>
