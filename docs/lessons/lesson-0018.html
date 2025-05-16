@@ -3,16 +3,42 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Lesson 18</title>
+  <title>Target Attribute</title>
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
 
   <main>
-    <article><h1>What is HTML?</h1>
-<p>HTML stands for HyperText Markup Language.</p>
-<pre><code class="language-html">&lt;h1&gt;Hello, world!&lt;/h1&gt;
+    <article><h2>Target Attribute</h2>
+<p>Specifies <strong>where</strong> a link or form opens — same tab, new tab, or frame.</p>
+<h3>Values</h3>
+<ul>
+<li><code>_self</code> – default, opens in the <strong>same tab</strong>.</li>
+<li><code>_blank</code> – opens in a <strong>new tab</strong> (add <code>rel=&quot;noopener&quot;</code>).</li>
+<li><code>_parent</code> – opens in the <strong>parent frame</strong>.</li>
+<li><code>_top</code> – opens in the <strong>top-level window</strong>.</li>
+<li><code>_unfencedTop</code> – experimental, for Fenced Frames.</li>
+</ul>
+<h3>Example</h3>
+<pre><code class="language-html">&lt;a href=&quot;https://example.com&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;New Tab&lt;/a&gt;
 </code></pre>
+<p><strong>Named Targets</strong></p>
+<p>Named targets allow you to open a link or form submission into a specific <code>&lt;iframe&gt;</code> or window by using its <code>name</code> attribute. If an element like <code>&lt;iframe name=&quot;myFrame&quot;&gt;</code> exists, <code>target=&quot;myFrame&quot;</code> will load the page inside it. If no such target exists, the browser may open a new window with that name.</p>
+<pre><code class="language-html">&lt;iframe name=&quot;myFrame&quot;&gt;&lt;/iframe&gt;
+&lt;a href=&quot;page.html&quot; target=&quot;myFrame&quot;&gt;Open in Frame&lt;/a&gt;
+</code></pre>
+<p><strong>Forms</strong></p>
+<p>Using <code>target=&quot;_blank&quot;</code> in a <code>&lt;form&gt;</code> makes the form submission result open in a new tab or window. This can be useful when you don’t want to navigate away from the current page after submitting.</p>
+<pre><code class="language-html">&lt;form action=&quot;/submit&quot; target=&quot;_blank&quot;&gt;...&lt;/form&gt;
+</code></pre>
+<p><strong>Note</strong></p>
+<p>Use <code>rel=&quot;noopener&quot;</code> with <code>_blank</code> for security.</p>
+<h3>Security Note</h3>
+<p>When using <code>target=&quot;_blank&quot;</code>, always add <code>rel=&quot;noopener&quot;</code> (or <code>rel=&quot;noreferrer&quot;</code>) to prevent the new page from having access to the original page via <code>window.opener</code>. This helps avoid potential security vulnerabilities such as phishing attacks.</p>
+<h3>Named Targets</h3>
+<p>The <code>target</code> attribute can refer to any named window or frame, not just the predefined keywords. For example, if an <code>&lt;iframe&gt;</code> or window has a <code>name</code> attribute, links or forms can target that specific window by name.</p>
+<h3>Modern Usage</h3>
+<p>Named frames are less common in modern web development. Today, developers often prefer using JavaScript frameworks and SPA architecture, reducing reliance on frames and multiple windows for navigation.</p>
 </article>
   </main> 
 	
@@ -20,7 +46,7 @@
       <nav class="lesson-nav">
         <a class="prev" href="lesson-0017.html">&larr; Iframe Element</a>
         <a class="home" href="../index.html">Home</a>
-        <a class="next" href="lesson-0019.html">Untitled &rarr;</a>
+        <a class="next" href="lesson-0019.html">Absolute vs Relative Paths &rarr;</a>
       </nav>
     </section>
   

@@ -3,24 +3,63 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Lesson 19</title>
+  <title>Absolute vs Relative Paths</title>
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
 
   <main>
-    <article><h1>What is HTML?</h1>
-<p>HTML stands for HyperText Markup Language.</p>
-<pre><code class="language-html">&lt;h1&gt;Hello, world!&lt;/h1&gt;
-</code></pre>
+    <article><h2>Paths in Web Development</h2>
+<p>Paths define location of resources (files, images, pages).</p>
+<p>Types: <em>absolute</em>, <em>relative</em>, <em>root-relative</em>.</p>
+<p><em>Absolute path</em></p>
+<ul>
+<li>Starts from root or full URL (<code>https://...</code> or <code>file:///...</code>).</li>
+<li>Used for external links or fixed locations.</li>
+<li><code>file:///</code> is for local files; <code>https://</code> is for web addresses.</li>
+</ul>
+<p><em>Relative path</em></p>
+<ul>
+<li>Based on current file.</li>
+<li>Compact and flexible — ideal for internal links.</li>
+<li>Adapts better when moving files or folders.</li>
+</ul>
+<p>Examples:<br>
+<code>about.html</code> — same folder<br>
+<code>../index.html</code> — one level up<br>
+<code>../../img/logo.svg</code> — two levels up<br>
+<code>./style.css</code> — current folder (often optional)</p>
+<p><em>Root-relative path</em></p>
+<ul>
+<li>Starts with <code>/</code>, from website root.</li>
+<li>Works with HTTP servers only (not with <code>file://</code>).</li>
+</ul>
+<p><em>Base URL</em></p>
+<ul>
+<li>The <code>&lt;base&gt;</code> tag can define a base path for all relative URLs in a document.</li>
+</ul>
+<p><strong>Best practices:</strong></p>
+<ul>
+<li>Use <em>absolute</em> for external.</li>
+<li>Use <em>relative</em> during development.</li>
+<li>Use <em>root-relative</em> when structure is stable.</li>
+<li>Don’t mix styles unless needed.</li>
+</ul>
+<p><strong>Common mistakes:</strong></p>
+<ul>
+<li>Confusing <code>https://...</code> (web) with <code>file:///...</code> (local).</li>
+<li>Expecting <code>/path</code> to work with <code>file://</code>.</li>
+<li>Wrong paths in <code>CSS</code> (they are relative to the CSS file).</li>
+<li><code>../</code> moves up one folder.</li>
+</ul>
 </article>
   </main> 
 	
     <section class="navigation">
       <nav class="lesson-nav">
-        <a class="prev" href="lesson-0018.html">&larr; Untitled</a>
+        <a class="prev" href="lesson-0018.html">&larr; Target Attribute</a>
         <a class="home" href="../index.html">Home</a>
-        <span class="empty"></span>
+        <a class="next" href="lesson-0020.html">Untitled &rarr;</a>
       </nav>
     </section>
   

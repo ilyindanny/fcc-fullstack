@@ -74,6 +74,14 @@
           {
             "title": "Iframe Element",
             "filename": "lesson-0017.html"
+          },
+          {
+            "title": "Target Attribute",
+            "filename": "lesson-0018.html"
+          },
+          {
+            "title": "Absolute vs Relative Paths",
+            "filename": "lesson-0019.html"
           }
         ]
       },
@@ -83,7 +91,7 @@
         "lessons": [
           {
             "title": "Untitled",
-            "filename": "lesson-0018.html"
+            "filename": "lesson-0020.html"
           }
         ]
       }
@@ -99,7 +107,7 @@
         "lessons": [
           {
             "title": "Untitled",
-            "filename": "lesson-0019.html"
+            "filename": "lesson-0021.html"
           }
         ]
       }
