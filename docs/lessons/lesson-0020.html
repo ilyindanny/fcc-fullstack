@@ -3,15 +3,40 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Lesson 20</title>
+  <title>Localhost vs File</title>
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
 
   <main>
-    <article><h1>What is HTML?</h1>
-<p>HTML stands for HyperText Markup Language.</p>
-<pre><code class="language-html">&lt;h1&gt;Hello, world!&lt;/h1&gt;
+    <article><h2>Difference Between <code>file://</code> and <code>http://localhost</code></h2>
+<p>When you open an HTML file directly (<code>file://</code>), the browser runs without a server. When opened via <code>localhost</code> (like <code>http://127.0.0.1</code>), it uses a server.</p>
+<h3>Where is the &quot;root&quot;?</h3>
+<ul>
+<li>In <code>file://</code> mode, paths are relative to the folder where the file is located.</li>
+<li>In <code>localhost</code> mode, paths are relative to the folder defined as the server's root (e.g., <code>docs/</code>).</li>
+</ul>
+<h3>Link Behavior</h3>
+<ul>
+<li><code>href=&quot;/lessons/page.html&quot;</code> — works <strong>only</strong> when the file is opened via server, since the path is from the server root.</li>
+<li><code>href=&quot;lessons/page.html&quot;</code> — a relative path, works in both <code>file://</code> and <code>localhost</code> modes if the folder structure matches.</li>
+<li><code>href=&quot;http://127.0.0.1/lessons/page.html&quot;</code> — an absolute URL using the server, works as long as the server is running, regardless of how the file was opened.</li>
+</ul>
+<h3>Practical Notes</h3>
+<ul>
+<li>Even if the server is running, the browser won’t treat a file as served unless it was opened via the server.</li>
+<li>To use root-relative paths (<code>/something.html</code>), the file must be served via <code>localhost</code>.</li>
+<li>Relative paths (<code>../folder/file.html</code>) work, but they are based on the current file's location, not the server root.</li>
+<li>Absolute URLs with <code>http://127.0.0.1/...</code> always work if the server is running, even from a <code>file://</code> page.</li>
+</ul>
+<pre><code class="language-html">&lt;!-- Only works in localhost mode --&gt;
+&lt;a href=&quot;/lessons/lesson-0002.html&quot;&gt;Next Lesson&lt;/a&gt;
+
+&lt;!-- Works if folder structure matches --&gt;
+&lt;a href=&quot;lesson-0002.html&quot;&gt;Next Lesson&lt;/a&gt;
+
+&lt;!-- Always works if server is running --&gt;
+&lt;a href=&quot;http://127.0.0.1/lessons/lesson-0002.html&quot;&gt;Next Lesson&lt;/a&gt;
 </code></pre>
 </article>
   </main> 

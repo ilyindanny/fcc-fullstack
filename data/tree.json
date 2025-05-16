@@ -82,6 +82,10 @@
           {
             "title": "Absolute vs Relative Paths",
             "filename": "lesson-0019.html"
+          },
+          {
+            "title": "Localhost vs File://",
+            "filename": "lesson-0020.html"
           }
         ]
       },
@@ -91,7 +95,7 @@
         "lessons": [
           {
             "title": "Untitled",
-            "filename": "lesson-0020.html"
+            "filename": "lesson-0021.html"
           }
         ]
       }
@@ -107,7 +111,7 @@
         "lessons": [
           {
             "title": "Untitled",
-            "filename": "lesson-0021.html"
+            "filename": "lesson-0022.html"
           }
         ]
       }
