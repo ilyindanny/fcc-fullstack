@@ -1,0 +1,22 @@
+a:link {
+  color: blue;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:visited {
+  color: gray;
+  text-decoration: line-through;
+}
+
+a:hover {
+  color: orange;
+}
+
+a:focus {
+  outline: 2px dashed orange;
+}
+
+a:active {
+  color: red;
+}

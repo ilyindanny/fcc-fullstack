@@ -3,49 +3,62 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Localhost vs File</title>
+  <title>Link States in CSS</title>
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
 
   <main>
-    <article><h2>Difference Between <code>file://</code> and <code>http://localhost</code></h2>
-<p>When you open an HTML file directly (<code>file://</code>), the browser runs without a server. When opened via <code>localhost</code> (like <code>http://127.0.0.1</code>), it uses a server.</p>
-<h3>Where is the &quot;root&quot;?</h3>
+    <article><h2>What Are Link States?</h2>
+<p>Links can exist in different <strong>states</strong> depending on how the user interacts with them.<br>
+These pseudo-classes allow dynamic styling, which improves UX and accessibility.</p>
+<blockquote>
+<p><code>:focus</code> is not the same as <code>:hover</code>.<br>
+Focus means the element is active for <strong>keyboard interaction</strong> (e.g., selected via Tab), not just hovered.</p>
+</blockquote>
+<hr>
+<h3>Link States Overview</h3>
 <ul>
-<li>In <code>file://</code> mode, paths are relative to the folder where the file is located.</li>
-<li>In <code>localhost</code> mode, paths are relative to the folder defined as the server's root (e.g., <code>docs/</code>).</li>
+<li><code>:link</code> — the link has <strong>not</strong> been visited yet</li>
+<li><code>:visited</code> — the link <strong>has</strong> been opened before</li>
+<li><code>:hover</code> — the mouse is hovering over the link</li>
+<li><code>:focus</code> — the link is <strong>focused</strong> (via Tab or mouse click)</li>
+<li><code>:active</code> — the link is being activated (usually during <strong>mouse-down</strong>)</li>
 </ul>
-<h3>Link Behavior</h3>
-<ul>
-<li><code>href=&quot;/lessons/page.html&quot;</code> — works <strong>only</strong> when the file is opened via server, since the path is from the server root.</li>
-<li><code>href=&quot;lessons/page.html&quot;</code> — a relative path, works in both <code>file://</code> and <code>localhost</code> modes if the folder structure matches.</li>
-<li><code>href=&quot;http://127.0.0.1/lessons/page.html&quot;</code> — an absolute URL using the server, works as long as the server is running, regardless of how the file was opened.</li>
-</ul>
-<h3>Practical Notes</h3>
-<ul>
-<li>Even if the server is running, the browser won’t treat a file as served unless it was opened via the server.</li>
-<li>To use root-relative paths (<code>/something.html</code>), the file must be served via <code>localhost</code>.</li>
-<li>Relative paths (<code>../folder/file.html</code>) work, but they are based on the current file's location, not the server root.</li>
-<li>Absolute URLs with <code>http://127.0.0.1/...</code> always work if the server is running, even from a <code>file://</code> page.</li>
-</ul>
-<pre><code class="language-html">&lt;!-- Only works in localhost mode --&gt;
-&lt;a href=&quot;/lessons/lesson-0002.html&quot;&gt;Next Lesson&lt;/a&gt;
+<p><strong>Correct CSS order</strong>:<br>
+<code>link → visited → hover → focus → active</code></p>
+<p>Mnemonic: <strong>LoVe FAt HAir</strong></p>
+<h3>CSS Example</h3>
+<pre><code class="language-css">a:link {
+  color: blue;
+  text-decoration: none;
+}
 
-&lt;!-- Works if folder structure matches --&gt;
-&lt;a href=&quot;lesson-0002.html&quot;&gt;Next Lesson&lt;/a&gt;
+a:visited {
+  color: gray;
+}
 
-&lt;!-- Always works if server is running --&gt;
-&lt;a href=&quot;http://127.0.0.1/lessons/lesson-0002.html&quot;&gt;Next Lesson&lt;/a&gt;
+a:hover {
+  color: orange;
+  text-decoration: underline;
+}
+
+a:focus {
+  outline: 2px dashed orange;
+}
+
+a:active {
+  color: red;
+}
 </code></pre>
 </article>
   </main> 
 	
     <section class="navigation">
       <nav class="lesson-nav">
-        <a class="prev" href="lesson-0019.html">&larr; Absolute vs Relative Paths</a>
+        <a class="prev" href="lesson-0019.html">&larr; File Paths</a>
         <a class="home" href="../index.html">Home</a>
-        <a class="next" href="lesson-0021.html">Untitled &rarr;</a>
+        <a class="next" href="lesson-0021.html">Basic HTML Review &rarr;</a>
       </nav>
     </section>
   

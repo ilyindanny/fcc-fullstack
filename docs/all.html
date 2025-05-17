@@ -22,7 +22,7 @@
         <main>
             <section>
                 <h2>Content:</h2>
-                <nav><h2>HTML</h2><ul><li><strong>Basic HTML</strong><ul><li><a href="#lesson-0001">What is HTML?</a></li><li><a href="#lesson-0002">HTML Tag Attributes</a></li><li><a href="#lesson-0003">Link Element</a></li><li><a href="#lesson-0004">Boilerplate</a></li><li><a href="#lesson-0005">UTF-8</a></li><li><a href="#lesson-0006">Div Eement</a></li><li><a href="#lesson-0007">ID Element</a></li><li><a href="#lesson-0008">HTML Entities</a></li><li><a href="#lesson-0009">Script</a></li><li><a href="#lesson-0010">Meta description</a></li><li><a href="#lesson-0011">Open Graph</a></li><li><a href="#lesson-0012">Replaced Elements</a></li><li><a href="#lesson-0013">Optimize Media Asets</a></li><li><a href="#lesson-0014">Image licenses</a></li><li><a href="#lesson-0015">SVG</a></li><li><a href="#lesson-0016">Audio & Video</a></li><li><a href="#lesson-0017">Iframe Element</a></li><li><a href="#lesson-0018">Target Attribute</a></li><li><a href="#lesson-0019">Absolute vs Relative Paths</a></li><li><a href="#lesson-0020">Localhost vs File://</a></li></ul></li><li><strong>Semantic</strong><ul><li><a href="#lesson-0021">Untitled</a></li></ul></li></ul><h2>CSS</h2><ul><li><strong>first example</strong><ul><li><a href="#lesson-0022">Untitled</a></li></ul></li></ul></nav>
+                <nav><h2>HTML</h2><ul><li><strong>Basic HTML</strong><ul><li><a href="#lesson-0001">What is HTML?</a></li><li><a href="#lesson-0002">HTML Tag Attributes</a></li><li><a href="#lesson-0003">Link Element</a></li><li><a href="#lesson-0004">Boilerplate</a></li><li><a href="#lesson-0005">UTF-8</a></li><li><a href="#lesson-0006">Div Eement</a></li><li><a href="#lesson-0007">ID Element</a></li><li><a href="#lesson-0008">HTML Entities</a></li><li><a href="#lesson-0009">Script</a></li><li><a href="#lesson-0010">Meta description</a></li><li><a href="#lesson-0011">Open Graph</a></li><li><a href="#lesson-0012">Replaced Elements</a></li><li><a href="#lesson-0013">Optimize Media Asets</a></li><li><a href="#lesson-0014">Image licenses</a></li><li><a href="#lesson-0015">SVG</a></li><li><a href="#lesson-0016">Audio & Video</a></li><li><a href="#lesson-0017">Iframe Element</a></li><li><a href="#lesson-0018">Target Attribute</a></li><li><a href="#lesson-0019">File Paths</a></li><li><a href="#lesson-0020">Link States in CSS</a></li><li><a href="#lesson-0021">Basic HTML Review</a></li></ul></li><li><strong>Semantic</strong><ul><li><a href="#lesson-0022">Untitled</a></li></ul></li></ul><h2>CSS</h2><ul><li><strong>first example</strong><ul><li><a href="#lesson-0023">Untitled</a></li></ul></li></ul></nav>
             </section>
             <section>
           <article id="lesson-0001">
@@ -814,48 +814,83 @@ audio.muted = true;
         
           <article id="lesson-0019">
             
-    <article><h2>Paths in Web Development</h2>
-<p>Paths define location of resources (files, images, pages).</p>
-<p>Types: <em>absolute</em>, <em>relative</em>, <em>root-relative</em>.</p>
-<p><em>Absolute path</em></p>
+    <article><h2>What Is a Path?</h2>
+<p>A <strong>path</strong> shows the location of a resource (file, image, page) in the file system or website structure.</p>
+<p>Types of paths:</p>
 <ul>
-<li>Starts from root or full URL (<code>https://...</code> or <code>file:///...</code>).</li>
-<li>Used for external links or fixed locations.</li>
-<li><code>file:///</code> is for local files; <code>https://</code> is for web addresses.</li>
+<li><strong>Absolute</strong></li>
+<li><strong>Relative</strong></li>
+<li><strong>Root-relative</strong></li>
 </ul>
-<p><em>Relative path</em></p>
+<h3>Absolute Path</h3>
+<p>A full address to a file — starts from the <strong>root</strong>.</p>
 <ul>
-<li>Based on current file.</li>
-<li>Compact and flexible — ideal for internal links.</li>
-<li>Adapts better when moving files or folders.</li>
+<li>
+<p><strong>Web</strong>: Includes protocol + domain<br>
+<code>https://example.com/img/logo.png</code></p>
+</li>
+<li>
+<p><strong>Local file (macOS)</strong>:<br>
+<code>file:///Users/Daniel/Desktop/site/pages/about.html</code></p>
+</li>
+<li>
+<p><strong>Local file (Windows)</strong>:<br>
+<code>file:///C:/Users/Daniel/Desktop/site/pages/about.html</code></p>
+</li>
 </ul>
-<p>Examples:<br>
-<code>about.html</code> — same folder<br>
-<code>../index.html</code> — one level up<br>
-<code>../../img/logo.svg</code> — two levels up<br>
-<code>./style.css</code> — current folder (often optional)</p>
-<p><em>Root-relative path</em></p>
+<h3>Relative Path</h3>
+<p>Relative to the <strong>current file's folder</strong>. Shorter and flexible.</p>
+<p>Examples:</p>
 <ul>
-<li>Starts with <code>/</code>, from website root.</li>
-<li>Works with HTTP servers only (not with <code>file://</code>).</li>
+<li><code>about.html</code> — same folder</li>
+<li><code>../index.html</code> — one level up</li>
+<li><code>../../img/logo.svg</code> — two levels up</li>
+<li><code>./style.css</code> — current folder (optional <code>./</code>)</li>
 </ul>
-<p><em>Base URL</em></p>
+<p>Works in both <code>file://</code> and <code>localhost</code> modes if folder structure is correct.</p>
+<h3>Root-Relative Path</h3>
+<p>Starts with <code>/</code> — relative to the <strong>site root</strong>, not current file.</p>
+<p>Example:<br>
+<code>/assets/css/main.css</code></p>
 <ul>
-<li>The <code>&lt;base&gt;</code> tag can define a base path for all relative URLs in a document.</li>
+<li>Works only in <strong>localhost</strong> or live server.</li>
+<li>Does <strong>not</strong> work in <code>file://</code> mode.</li>
 </ul>
-<p><strong>Best practices:</strong></p>
+<h3>Base URL (optional)</h3>
+<p>The <code>&lt;base href=&quot;/assets/&quot;&gt;</code> tag in <code>&lt;head&gt;</code> changes how all relative paths are resolved. Use carefully.</p>
+<h3>Link Behavior Examples</h3>
+<p><strong>Absolute web URL</strong></p>
+<p><code>&lt;a href=&quot;https://example.com/style.css&quot;&gt;External&lt;/a&gt;</code></p>
+<p><strong>Relative to current file</strong></p>
+<p><code>&lt;a href=&quot;about.html&quot;&gt;Same folder&lt;/a&gt;</code></p>
+<p><code>&lt;a href=&quot;../index.html&quot;&gt;Up one level&lt;/a&gt;</code></p>
+<p><strong>Root-relative (server only)</strong></p>
+<p><code>&lt;a href=&quot;/pages/lesson.html&quot;&gt;From site root&lt;/a&gt;</code></p>
+<p><strong>Localhost absolute URL</strong></p>
+<p><code>&lt;a href=&quot;http://127.0.0.1/lessons/lesson.html&quot;&gt;Always works if server runs&lt;/a&gt;</code></p>
+<h3>Common Mistake</h3>
 <ul>
-<li>Use <em>absolute</em> for external.</li>
-<li>Use <em>relative</em> during development.</li>
-<li>Use <em>root-relative</em> when structure is stable.</li>
-<li>Don’t mix styles unless needed.</li>
+<li>Mixing styles (absolute / relative / root-relative) inconsistently</li>
 </ul>
-<p><strong>Common mistakes:</strong></p>
+<h3>Best Practices</h3>
 <ul>
-<li>Confusing <code>https://...</code> (web) with <code>file:///...</code> (local).</li>
-<li>Expecting <code>/path</code> to work with <code>file://</code>.</li>
-<li>Wrong paths in <code>CSS</code> (they are relative to the CSS file).</li>
-<li><code>../</code> moves up one folder.</li>
+<li>Use absolute paths for external sites.</li>
+<li>Use relative paths for internal links during development.</li>
+<li>Use root-relative when served from a server and structure is stable.</li>
+<li>Test root-relative paths only under localhost.</li>
+</ul>
+<h3>OS Path Formats vs browser format</h3>
+<p><strong>macOS:</strong></p>
+<ul>
+<li><code>/Users/Daniel/Desktop/project/index.html</code></li>
+<li>Browser path:<br>
+<code>file:///Users/Daniel/Desktop/project/index.html</code></li>
+</ul>
+<p><strong>Windows:</strong></p>
+<ul>
+<li><code>C:\Users\Daniel\Desktop\project\index.html</code></li>
+<li>Browser path:<br>
+<code>file:///C:/Users/Daniel/Desktop/project/index.html</code></li>
 </ul>
 </article>
   
@@ -864,34 +899,47 @@ audio.muted = true;
         
           <article id="lesson-0020">
             
-    <article><h2>Difference Between <code>file://</code> and <code>http://localhost</code></h2>
-<p>When you open an HTML file directly (<code>file://</code>), the browser runs without a server. When opened via <code>localhost</code> (like <code>http://127.0.0.1</code>), it uses a server.</p>
-<h3>Where is the &quot;root&quot;?</h3>
+    <article><h2>What Are Link States?</h2>
+<p>Links can exist in different <strong>states</strong> depending on how the user interacts with them.<br>
+These pseudo-classes allow dynamic styling, which improves UX and accessibility.</p>
+<blockquote>
+<p><code>:focus</code> is not the same as <code>:hover</code>.<br>
+Focus means the element is active for <strong>keyboard interaction</strong> (e.g., selected via Tab), not just hovered.</p>
+</blockquote>
+<hr>
+<h3>Link States Overview</h3>
 <ul>
-<li>In <code>file://</code> mode, paths are relative to the folder where the file is located.</li>
-<li>In <code>localhost</code> mode, paths are relative to the folder defined as the server's root (e.g., <code>docs/</code>).</li>
+<li><code>:link</code> — the link has <strong>not</strong> been visited yet</li>
+<li><code>:visited</code> — the link <strong>has</strong> been opened before</li>
+<li><code>:hover</code> — the mouse is hovering over the link</li>
+<li><code>:focus</code> — the link is <strong>focused</strong> (via Tab or mouse click)</li>
+<li><code>:active</code> — the link is being activated (usually during <strong>mouse-down</strong>)</li>
 </ul>
-<h3>Link Behavior</h3>
-<ul>
-<li><code>href=&quot;/lessons/page.html&quot;</code> — works <strong>only</strong> when the file is opened via server, since the path is from the server root.</li>
-<li><code>href=&quot;lessons/page.html&quot;</code> — a relative path, works in both <code>file://</code> and <code>localhost</code> modes if the folder structure matches.</li>
-<li><code>href=&quot;http://127.0.0.1/lessons/page.html&quot;</code> — an absolute URL using the server, works as long as the server is running, regardless of how the file was opened.</li>
-</ul>
-<h3>Practical Notes</h3>
-<ul>
-<li>Even if the server is running, the browser won’t treat a file as served unless it was opened via the server.</li>
-<li>To use root-relative paths (<code>/something.html</code>), the file must be served via <code>localhost</code>.</li>
-<li>Relative paths (<code>../folder/file.html</code>) work, but they are based on the current file's location, not the server root.</li>
-<li>Absolute URLs with <code>http://127.0.0.1/...</code> always work if the server is running, even from a <code>file://</code> page.</li>
-</ul>
-<pre><code class="language-html">&lt;!-- Only works in localhost mode --&gt;
-&lt;a href=&quot;/lessons/lesson-0002.html&quot;&gt;Next Lesson&lt;/a&gt;
+<p><strong>Correct CSS order</strong>:<br>
+<code>link → visited → hover → focus → active</code></p>
+<p>Mnemonic: <strong>LoVe FAt HAir</strong></p>
+<h3>CSS Example</h3>
+<pre><code class="language-css">a:link {
+  color: blue;
+  text-decoration: none;
+}
 
-&lt;!-- Works if folder structure matches --&gt;
-&lt;a href=&quot;lesson-0002.html&quot;&gt;Next Lesson&lt;/a&gt;
+a:visited {
+  color: gray;
+}
 
-&lt;!-- Always works if server is running --&gt;
-&lt;a href=&quot;http://127.0.0.1/lessons/lesson-0002.html&quot;&gt;Next Lesson&lt;/a&gt;
+a:hover {
+  color: orange;
+  text-decoration: underline;
+}
+
+a:focus {
+  outline: 2px dashed orange;
+}
+
+a:active {
+  color: red;
+}
 </code></pre>
 </article>
   
@@ -899,6 +947,15 @@ audio.muted = true;
           <hr class="lesson-divider">
         
           <article id="lesson-0021">
+            
+    <article><h2>Basic HTML Review</h2>
+<p><a href="https://www.freecodecamp.org/learn/full-stack-developer/review-basic-html/basic-html-review">freeCodeCamp - Basic HTML Rewiew Page</a></p>
+</article>
+  
+          </article>
+          <hr class="lesson-divider">
+        
+          <article id="lesson-0022">
             
     <article><h1>What is HTML?</h1>
 <p>HTML stands for HyperText Markup Language.</p>
@@ -909,7 +966,7 @@ audio.muted = true;
           </article>
           <hr class="lesson-divider">
         
-          <article id="lesson-0022">
+          <article id="lesson-0023">
             
     <article><h1>What is HTML?</h1>
 <p>HTML stands for HyperText Markup Language.</p>

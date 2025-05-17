@@ -3,54 +3,89 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Absolute vs Relative Paths</title>
+  <title>File Paths</title>
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
 
   <main>
-    <article><h2>Paths in Web Development</h2>
-<p>Paths define location of resources (files, images, pages).</p>
-<p>Types: <em>absolute</em>, <em>relative</em>, <em>root-relative</em>.</p>
-<p><em>Absolute path</em></p>
+    <article><h2>What Is a Path?</h2>
+<p>A <strong>path</strong> shows the location of a resource (file, image, page) in the file system or website structure.</p>
+<p>Types of paths:</p>
 <ul>
-<li>Starts from root or full URL (<code>https://...</code> or <code>file:///...</code>).</li>
-<li>Used for external links or fixed locations.</li>
-<li><code>file:///</code> is for local files; <code>https://</code> is for web addresses.</li>
+<li><strong>Absolute</strong></li>
+<li><strong>Relative</strong></li>
+<li><strong>Root-relative</strong></li>
 </ul>
-<p><em>Relative path</em></p>
+<h3>Absolute Path</h3>
+<p>A full address to a file — starts from the <strong>root</strong>.</p>
 <ul>
-<li>Based on current file.</li>
-<li>Compact and flexible — ideal for internal links.</li>
-<li>Adapts better when moving files or folders.</li>
+<li>
+<p><strong>Web</strong>: Includes protocol + domain<br>
+<code>https://example.com/img/logo.png</code></p>
+</li>
+<li>
+<p><strong>Local file (macOS)</strong>:<br>
+<code>file:///Users/Daniel/Desktop/site/pages/about.html</code></p>
+</li>
+<li>
+<p><strong>Local file (Windows)</strong>:<br>
+<code>file:///C:/Users/Daniel/Desktop/site/pages/about.html</code></p>
+</li>
 </ul>
-<p>Examples:<br>
-<code>about.html</code> — same folder<br>
-<code>../index.html</code> — one level up<br>
-<code>../../img/logo.svg</code> — two levels up<br>
-<code>./style.css</code> — current folder (often optional)</p>
-<p><em>Root-relative path</em></p>
+<h3>Relative Path</h3>
+<p>Relative to the <strong>current file's folder</strong>. Shorter and flexible.</p>
+<p>Examples:</p>
 <ul>
-<li>Starts with <code>/</code>, from website root.</li>
-<li>Works with HTTP servers only (not with <code>file://</code>).</li>
+<li><code>about.html</code> — same folder</li>
+<li><code>../index.html</code> — one level up</li>
+<li><code>../../img/logo.svg</code> — two levels up</li>
+<li><code>./style.css</code> — current folder (optional <code>./</code>)</li>
 </ul>
-<p><em>Base URL</em></p>
+<p>Works in both <code>file://</code> and <code>localhost</code> modes if folder structure is correct.</p>
+<h3>Root-Relative Path</h3>
+<p>Starts with <code>/</code> — relative to the <strong>site root</strong>, not current file.</p>
+<p>Example:<br>
+<code>/assets/css/main.css</code></p>
 <ul>
-<li>The <code>&lt;base&gt;</code> tag can define a base path for all relative URLs in a document.</li>
+<li>Works only in <strong>localhost</strong> or live server.</li>
+<li>Does <strong>not</strong> work in <code>file://</code> mode.</li>
 </ul>
-<p><strong>Best practices:</strong></p>
+<h3>Base URL (optional)</h3>
+<p>The <code>&lt;base href=&quot;/assets/&quot;&gt;</code> tag in <code>&lt;head&gt;</code> changes how all relative paths are resolved. Use carefully.</p>
+<h3>Link Behavior Examples</h3>
+<p><strong>Absolute web URL</strong></p>
+<p><code>&lt;a href=&quot;https://example.com/style.css&quot;&gt;External&lt;/a&gt;</code></p>
+<p><strong>Relative to current file</strong></p>
+<p><code>&lt;a href=&quot;about.html&quot;&gt;Same folder&lt;/a&gt;</code></p>
+<p><code>&lt;a href=&quot;../index.html&quot;&gt;Up one level&lt;/a&gt;</code></p>
+<p><strong>Root-relative (server only)</strong></p>
+<p><code>&lt;a href=&quot;/pages/lesson.html&quot;&gt;From site root&lt;/a&gt;</code></p>
+<p><strong>Localhost absolute URL</strong></p>
+<p><code>&lt;a href=&quot;http://127.0.0.1/lessons/lesson.html&quot;&gt;Always works if server runs&lt;/a&gt;</code></p>
+<h3>Common Mistake</h3>
 <ul>
-<li>Use <em>absolute</em> for external.</li>
-<li>Use <em>relative</em> during development.</li>
-<li>Use <em>root-relative</em> when structure is stable.</li>
-<li>Don’t mix styles unless needed.</li>
+<li>Mixing styles (absolute / relative / root-relative) inconsistently</li>
 </ul>
-<p><strong>Common mistakes:</strong></p>
+<h3>Best Practices</h3>
 <ul>
-<li>Confusing <code>https://...</code> (web) with <code>file:///...</code> (local).</li>
-<li>Expecting <code>/path</code> to work with <code>file://</code>.</li>
-<li>Wrong paths in <code>CSS</code> (they are relative to the CSS file).</li>
-<li><code>../</code> moves up one folder.</li>
+<li>Use absolute paths for external sites.</li>
+<li>Use relative paths for internal links during development.</li>
+<li>Use root-relative when served from a server and structure is stable.</li>
+<li>Test root-relative paths only under localhost.</li>
+</ul>
+<h3>OS Path Formats vs browser format</h3>
+<p><strong>macOS:</strong></p>
+<ul>
+<li><code>/Users/Daniel/Desktop/project/index.html</code></li>
+<li>Browser path:<br>
+<code>file:///Users/Daniel/Desktop/project/index.html</code></li>
+</ul>
+<p><strong>Windows:</strong></p>
+<ul>
+<li><code>C:\Users\Daniel\Desktop\project\index.html</code></li>
+<li>Browser path:<br>
+<code>file:///C:/Users/Daniel/Desktop/project/index.html</code></li>
 </ul>
 </article>
   </main> 
@@ -59,7 +94,7 @@
       <nav class="lesson-nav">
         <a class="prev" href="lesson-0018.html">&larr; Target Attribute</a>
         <a class="home" href="../index.html">Home</a>
-        <a class="next" href="lesson-0020.html">Localhost vs File:// &rarr;</a>
+        <a class="next" href="lesson-0020.html">Link States in CSS &rarr;</a>
       </nav>
     </section>
   
