@@ -17,6 +17,9 @@ Text with two spaces␣␣  — manual line break
 - Item — unordered list  
 1. Item — ordered list  
 
+Term 1
+:  Definition - description list
+
 [link text](url) — hyperlink  
 <https://url.com> — autolink  
 

@@ -2,13 +2,16 @@
 
 const MarkdownIt = require('markdown-it')
 const markdownItAttrs = require('markdown-it-attrs')
+const markdownItDeflist = require('markdown-it-deflist')
 
 function convertMarkdownToHtml(markdown) {
     markdown = markdown.replace(/\t/g, '    ') // заменить табы на 4 пробела
 
     const md = new MarkdownIt({
         html: true // 👈 разрешаем встроенный HTML
-    }).use(markdownItAttrs)
+    })
+	.use(markdownItAttrs)
+	.use(markdownItDeflist)
 
     const html = md.render(markdown)
 

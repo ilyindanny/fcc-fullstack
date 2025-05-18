@@ -116,6 +116,10 @@
           {
             "title": "Strong vs B Element",
             "filename": "lesson-0026.html"
+          },
+          {
+            "title": "Description List",
+            "filename": "lesson-0027.html"
           }
         ]
       }
@@ -131,7 +135,7 @@
         "lessons": [
           {
             "title": "CSS example",
-            "filename": "lesson-0027.html"
+            "filename": "lesson-0028.html"
           }
         ]
       }
