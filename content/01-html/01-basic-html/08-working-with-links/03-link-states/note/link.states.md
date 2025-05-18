@@ -10,7 +10,6 @@ These pseudo-classes allow dynamic styling, which improves UX and accessibility.
 > `:focus` is not the same as `:hover`.  
 > Focus means the element is active for **keyboard interaction** (e.g., selected via Tab), not just hovered.
 
----
 
 ##### Link States Overview
 
@@ -20,7 +19,8 @@ These pseudo-classes allow dynamic styling, which improves UX and accessibility.
 - `:focus` — the link is **focused** (via Tab or mouse click)  
 - `:active` — the link is being activated (usually during **mouse-down**)
 
-**Correct CSS order**:  
+Correct CSS order: {.marker}  
+
 `link → visited → hover → focus → active`
 
 Mnemonic: **LoVe FAt HAir**

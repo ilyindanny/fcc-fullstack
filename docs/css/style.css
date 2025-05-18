@@ -48,6 +48,13 @@ h5 {
   color: #ffffff; /* White */
 }
 
+h6 {
+  font-size: 1.1em;
+  margin-top: 1rem;
+  margin-bottom: 0.6rem;
+  color: #ffffff; /* White */
+}
+
 ul {
   padding-left: 2rem;
 }
@@ -132,6 +139,14 @@ header {
   text-transform: lowercase;
 }
 
+.marker {
+  font-size: 1.1em;
+  margin-top: 1rem;
+  margin-bottom: 0.6rem;
+  color: #ffffff; /* White */
+}
+
+
 /* ===== CONTENT LAYOUT ===== */
 section {
   margin-bottom: 2rem;
@@ -156,14 +171,18 @@ section {
 }
 
 /* ===== CODE BLOCKS ===== */
-pre, code {
+
+code {
   background-color: #272822; /* VS Code Code Background */
   color: #f8f8f2; /* VS Code Code Text */
-  padding: 0.5rem;
+  /*padding: 0.5rem;*/
   border-radius: 5px;
   font-family: 'Courier New', Courier, monospace;
   overflow-x: auto;
 }
+
+*/
+
 
 /* ===== NAVIGATION ===== */
 .lesson-navigation {

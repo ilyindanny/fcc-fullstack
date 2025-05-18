@@ -6,10 +6,11 @@ title: File Paths
 
 A **path** shows the location of a resource (file, image, page) in the file system or website structure.
 
-Types of paths:
-- **Absolute**
-- **Relative**
-- **Root-relative**
+Types of paths: {.marker}  
+
+- Absolute
+- Relative
+- Root-relative
 
 ##### Absolute Path
 
@@ -29,7 +30,8 @@ A full address to a file — starts from the **root**.
 
 Relative to the **current file's folder**. Shorter and flexible.
 
-Examples:
+Examples: {.marker}  
+
 - `about.html` — same folder  
 - `../index.html` — one level up  
 - `../../img/logo.svg` — two levels up  
@@ -41,7 +43,8 @@ Works in both `file://` and `localhost` modes if folder structure is correct.
 
 Starts with `/` — relative to the **site root**, not current file.
 
-Example:  
+Example: {.marker}  
+
 `/assets/css/main.css`
 
 - Works only in **localhost** or live server.  
@@ -49,30 +52,32 @@ Example:
 
 ##### Base URL (optional)
 
-The `<base href="/assets/">` tag in `<head>` changes how all relative paths are resolved. Use carefully.
+The `<base href="/assets/">`{.language-html} tag in `<head>` changes how all relative paths are resolved. Use carefully.
 
 
 ##### Link Behavior Examples
 
-**Absolute web URL**
+Absolute web URL:  
 
-`<a href="https://example.com/style.css">External</a>`
-
-
-**Relative to current file**
-
-`<a href="about.html">Same folder</a>`
-
-`<a href="../index.html">Up one level</a>`
+`<a href="https://example.com/style.css">External</a>` {.language-html}
 
 
-**Root-relative (server only)**
+Relative to current file:  
 
-`<a href="/pages/lesson.html">From site root</a>`
+`<a href="about.html">Same folder</a>` {.language-html}
 
-**Localhost absolute URL**
+`<a href="../index.html">Up one level</a>` {.language-html}
 
-`<a href="http://127.0.0.1/lessons/lesson.html">Always works if server runs</a>`
+
+Root-relative (server only):  
+
+`<a href="/pages/lesson.html">From site root</a>` {.language-html}
+
+
+Localhost absolute URL:  
+
+`<a href="http://127.0.0.1/lessons/lesson.html">Always works if server runs</a>` {.language-html}
+
 
 ##### Common Mistake
 
@@ -89,12 +94,13 @@ The `<base href="/assets/">` tag in `<head>` changes how all relative paths are 
 
 ##### OS Path Formats vs browser format
 
-**macOS:**
+macOS:  
+
 - `/Users/Daniel/Desktop/project/index.html`  
 - Browser path:  
   `file:///Users/Daniel/Desktop/project/index.html`
 
-**Windows:**
+Windows:  
 - `C:\Users\Daniel\Desktop\project\index.html`  
 - Browser path:  
   `file:///C:/Users/Daniel/Desktop/project/index.html`

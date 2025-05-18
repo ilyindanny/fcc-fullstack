@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Link States in CSS</title>
   <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="/css/prism.css" />
 </head>
 <body>
 
@@ -16,7 +17,6 @@ These pseudo-classes allow dynamic styling, which improves UX and accessibility.
 <p><code>:focus</code> is not the same as <code>:hover</code>.<br>
 Focus means the element is active for <strong>keyboard interaction</strong> (e.g., selected via Tab), not just hovered.</p>
 </blockquote>
-<hr>
 <h5>Link States Overview</h5>
 <ul>
 <li><code>:link</code> — the link has <strong>not</strong> been visited yet</li>
@@ -25,8 +25,8 @@ Focus means the element is active for <strong>keyboard interaction</strong> (e.g
 <li><code>:focus</code> — the link is <strong>focused</strong> (via Tab or mouse click)</li>
 <li><code>:active</code> — the link is being activated (usually during <strong>mouse-down</strong>)</li>
 </ul>
-<p><strong>Correct CSS order</strong>:<br>
-<code>link → visited → hover → focus → active</code></p>
+<p class="marker">Correct CSS order:</p>
+<p><code>link → visited → hover → focus → active</code></p>
 <p>Mnemonic: <strong>LoVe FAt HAir</strong></p>
 <h5>CSS Example</h5>
 <pre><code class="language-css">a:link {
@@ -62,5 +62,7 @@ a:active {
       </nav>
     </section>
   
+	
+	<script src="/js/prism.js"></script>
 </body>
 </html>

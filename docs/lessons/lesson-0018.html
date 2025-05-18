@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Target Attribute</title>
   <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="/css/prism.css" />
 </head>
 <body>
 
@@ -19,19 +20,17 @@
 <li><code>_top</code> – opens in the <strong>top-level window</strong>.</li>
 <li><code>_unfencedTop</code> – experimental, for Fenced Frames.</li>
 </ul>
-<h5>Example</h5>
-<pre><code class="language-html">&lt;a href=&quot;https://example.com&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;New Tab&lt;/a&gt;
-</code></pre>
-<p><strong>Named Targets</strong></p>
+<p class="marker">Example:</p>
+<p class="language-html"><code>&lt;a href=&quot;https://example.com&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;New Tab&lt;/a&gt;</code></p>
+<h5>Named Targets</h5>
 <p>Named targets allow you to open a link or form submission into a specific <code>&lt;iframe&gt;</code> or window by using its <code>name</code> attribute. If an element like <code>&lt;iframe name=&quot;myFrame&quot;&gt;</code> exists, <code>target=&quot;myFrame&quot;</code> will load the page inside it. If no such target exists, the browser may open a new window with that name.</p>
 <pre><code class="language-html">&lt;iframe name=&quot;myFrame&quot;&gt;&lt;/iframe&gt;
 &lt;a href=&quot;page.html&quot; target=&quot;myFrame&quot;&gt;Open in Frame&lt;/a&gt;
 </code></pre>
-<p><strong>Forms</strong></p>
+<h5>Forms</h5>
 <p>Using <code>target=&quot;_blank&quot;</code> in a <code>&lt;form&gt;</code> makes the form submission result open in a new tab or window. This can be useful when you don’t want to navigate away from the current page after submitting.</p>
-<pre><code class="language-html">&lt;form action=&quot;/submit&quot; target=&quot;_blank&quot;&gt;...&lt;/form&gt;
-</code></pre>
-<p><strong>Note</strong></p>
+<p class="language-html"><code>&lt;form action=&quot;/submit&quot; target=&quot;_blank&quot;&gt;...&lt;/form&gt;</code></p>
+<p>Note:</p>
 <p>Use <code>rel=&quot;noopener&quot;</code> with <code>_blank</code> for security.</p>
 <h5>Security Note</h5>
 <p>When using <code>target=&quot;_blank&quot;</code>, always add <code>rel=&quot;noopener&quot;</code> (or <code>rel=&quot;noreferrer&quot;</code>) to prevent the new page from having access to the original page via <code>window.opener</code>. This helps avoid potential security vulnerabilities such as phishing attacks.</p>
@@ -50,5 +49,7 @@
       </nav>
     </section>
   
+	
+	<script src="/js/prism.js"></script>
 </body>
 </html>

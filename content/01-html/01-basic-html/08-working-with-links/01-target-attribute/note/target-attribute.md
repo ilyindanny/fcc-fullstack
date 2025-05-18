@@ -14,12 +14,11 @@ Specifies **where** a link or form opens — same tab, new tab, or frame.
 - `_top` – opens in the **top-level window**.
 - `_unfencedTop` – experimental, for Fenced Frames.
 
-##### Example
-```html
-<a href="https://example.com" target="_blank" rel="noopener">New Tab</a>
-```
+Example: {.marker}  
 
-**Named Targets**
+`<a href="https://example.com" target="_blank" rel="noopener">New Tab</a>` {.language-html}
+
+##### Named Targets
 
 Named targets allow you to open a link or form submission into a specific `<iframe>` or window by using its `name` attribute. If an element like `<iframe name="myFrame">` exists, `target="myFrame"` will load the page inside it. If no such target exists, the browser may open a new window with that name.
 
@@ -29,15 +28,14 @@ Named targets allow you to open a link or form submission into a specific `<ifra
 ```
 
 
-**Forms**
+##### Forms
 
 Using `target="_blank"` in a `<form>` makes the form submission result open in a new tab or window. This can be useful when you don’t want to navigate away from the current page after submitting.
 
-```html
-<form action="/submit" target="_blank">...</form>
-```
+`<form action="/submit" target="_blank">...</form>` {.language-html}
 
-**Note**
+
+Note:
 
 Use `rel="noopener"` with `_blank` for security.
 

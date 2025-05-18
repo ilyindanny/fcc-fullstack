@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Semantic HTML</title>
   <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="/css/prism.css" />
 </head>
 <body>
 
@@ -12,8 +13,8 @@
     <article><h4>Difference Between Presentational and Semantic HTML</h4>
 <p>Presentational HTML focuses on how content looks (appearance and style). Now this approach is deprecated.</p>
 <p>Semantic HTML focuses on the meaning and structure of the content. It uses elements that describe the role of the content clearly.</p>
-<h4>Modern Best Practices for Text Highlighting and Emphasis</h4>
-<p><strong>Common semantic tags for emphasis and meaning:</strong></p>
+<h5>Modern Best Practices for Text Highlighting and Emphasis</h5>
+<p class="marker">Common semantic tags for emphasis and meaning:</p>
 <ul>
 <li><code>&lt;strong&gt;</code> — for important or strong emphasis (typically bold)</li>
 <li><code>&lt;em&gt;</code> — for stressed or emphasized text (typically italic)</li>
@@ -25,22 +26,22 @@
 <li><code>&lt;sub&gt;</code> and <code>&lt;sup&gt;</code> — for subscripts and superscripts (e.g., chemical formulas or exponents)</li>
 <li><code>&lt;i&gt;</code> - highlighting alternative voice or mood, idiomatic terms from another language, technical terms, and thoughts: <code>&lt;p&gt;There is a certain &lt;i lang=&quot;fr&quot;&gt;je ne sais quoi&lt;/i&gt; in the air.&lt;/p&gt;</code></li>
 </ul>
-<p>Example:</p>
-<pre><code>&lt;p&gt;Please &lt;strong&gt;read&lt;/strong&gt; the &lt;em&gt;instructions&lt;/em&gt; carefully.&lt;/p&gt;
+<p class="marker">Example:</p>
+<pre><code class="language-html">&lt;p&gt;Please &lt;strong&gt;read&lt;/strong&gt; the &lt;em&gt;instructions&lt;/em&gt; carefully.&lt;/p&gt;
 &lt;p&gt;Old price: &lt;del&gt;$50&lt;/del&gt;, New price: &lt;ins&gt;$40&lt;/ins&gt;&lt;/p&gt;
 &lt;p&gt;Submit your form &lt;mark&gt;by Friday&lt;/mark&gt;.&lt;/p&gt;
 &lt;p&gt;Water formula: H&lt;sub&gt;2&lt;/sub&gt;O, Einstein’s equation: E = mc&lt;sup&gt;2&lt;/sup&gt;.&lt;/p&gt;
 &lt;p&gt;Use the &lt;code&gt;printf()&lt;/code&gt; function in your C program.&lt;/p&gt;
 </code></pre>
 <p>To style a specific part of text visually without adding meaning, use <code>&lt;span&gt;</code> with CSS:</p>
-<pre><code>&lt;p&gt;This is a &lt;span class=&quot;highlight&quot;&gt;highlighted&lt;/span&gt; word.&lt;/p&gt;
-
-.highlight {
+<pre><code class="language-html">&lt;p&gt;This is a &lt;span class=&quot;highlight&quot;&gt;highlighted&lt;/span&gt; word.&lt;/p&gt;
+</code></pre>
+<pre><code class="language-css">.highlight {
   background-color: yellow;
   font-weight: bold;
 }
 </code></pre>
-<p><strong>Deprecated Presentational Tags</strong></p>
+<h5>Deprecated Presentational Tags</h5>
 <ul>
 <li><code>&lt;font&gt;</code> — for font size and color</li>
 <li><code>&lt;center&gt;</code> — for centering content</li>
@@ -59,5 +60,7 @@
       </nav>
     </section>
   
+	
+	<script src="/js/prism.js"></script>
 </body>
 </html>

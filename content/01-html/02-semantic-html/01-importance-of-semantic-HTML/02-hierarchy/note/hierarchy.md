@@ -11,8 +11,9 @@ title: Hierarchy in HTML
 - `h3`: sub-subheading, must follow `h2` (never skip levels like `h1` → `h3`).
 - Multiple headings at the same level are allowed (e.g., multiple `h2`).
   
-**Example of correct heading order:**  
-```
+Example of correct heading order: {.marker}  
+
+```html
 <section>
   <h1>freeCodeCamp</h1>
   <h2>Learn Front-End Development</h2>
@@ -20,8 +21,9 @@ title: Hierarchy in HTML
 </section>
 ```
 
-**Incorrect example (`h3` before `h2`):** 
-```
+Incorrect example (`h3` before `h2`): {.marker}  
+
+```html
 <section>
   <h1>freeCodeCamp</h1>
   <h3>Learn Front-End Development</h3>

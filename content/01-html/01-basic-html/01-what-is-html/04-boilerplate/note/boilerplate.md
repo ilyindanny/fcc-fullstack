@@ -7,9 +7,9 @@ title: Boilerplate
 It's a'template for webpages
 
 
-Example:
-```
+Example: {.marker}  
 
+```html
     <!DOCTYPE html>
     <html lang="en">
       <head>

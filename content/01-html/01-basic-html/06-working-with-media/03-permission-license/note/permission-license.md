@@ -6,26 +6,29 @@ title: Image licenses
 
 Images are intellectual property and protected by copyright. By default — **all rights reserved**.
 
-You can legally use an image if:
+You can legally use an image if: {.marker}  
 
 - You have **written permission** from the author.
 - You **purchased a license** (e.g. from stock sites).
 - Your use qualifies as **fair use** (limited, transformative, not harming the owner).
 
-##### Fair Use
+Fair Use: {.marker}  
+
 - Allows use without permission if your usage is **transformative** (e.g. commentary, parody).
 - Risky: not always legally safe.
 
 ##### License Types
 
-**Creative Commons (CC)**
+Creative Commons (CC): {.marker}  
+
 - `CC BY` – free use with **attribution**.
 - `CC BY-SA` – must use the **same license**.
 - `CC BY-ND` – **no modifications** allowed.
 - `CC BY-NC` – **non-commercial use** only.
 - `CC0` – **public domain**, no restrictions.
 
-**Other**
+Other: {.marker}  
+
 - **BSD** – permissive, used mostly for code.
 - **Public Domain** – no copyright, full freedom to use.
 

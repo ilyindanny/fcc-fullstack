@@ -4,7 +4,8 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>All Lectures</title>
-        <link rel="stylesheet" href="./css/style.css" />
+        <link rel="stylesheet" href="/css/style.css" />
+		<link rel="stylesheet" href="/css/prism.css" />
     </head>
     <body>
         <header>
@@ -24,29 +25,18 @@
             <p>All Notes on the One Page</p>
             <section>
                 <h2>Content:</h2>
-                <nav><h2>HTML</h2><ul><li><strong>Basic HTML</strong><ul><li><a href="#lesson-0001">What is HTML?</a></li><li><a href="#lesson-0002">HTML Tag Attributes</a></li><li><a href="#lesson-0003">Link Element</a></li><li><a href="#lesson-0004">Boilerplate</a></li><li><a href="#lesson-0005">UTF-8</a></li><li><a href="#lesson-0006">Div Eement</a></li><li><a href="#lesson-0007">ID Element</a></li><li><a href="#lesson-0008">HTML Entities</a></li><li><a href="#lesson-0009">Script</a></li><li><a href="#lesson-0010">Meta description</a></li><li><a href="#lesson-0011">Open Graph</a></li><li><a href="#lesson-0012">Replaced Elements</a></li><li><a href="#lesson-0013">Optimize Media Asets</a></li><li><a href="#lesson-0014">Image licenses</a></li><li><a href="#lesson-0015">SVG</a></li><li><a href="#lesson-0016">Audio & Video</a></li><li><a href="#lesson-0017">Iframe Element</a></li><li><a href="#lesson-0018">Target Attribute</a></li><li><a href="#lesson-0019">File Paths</a></li><li><a href="#lesson-0020">Link States in CSS</a></li><li><a href="#lesson-0021">Basic HTML Review</a></li></ul></li><li><strong>HTML Semantic</strong><ul><li><a href="#lesson-0022">Semantic HTML</a></li><li><a href="#lesson-0023">Hierarchy in HTML</a></li><li><a href="#lesson-0024">Semantic HTML</a></li><li><a href="#lesson-0025">I Emphasis Element</a></li></ul></li></ul><h2>CSS</h2><ul><li><strong>first example</strong><ul><li><a href="#lesson-0026">CSS example</a></li></ul></li></ul></nav>
+                <nav><h2>HTML</h2><ul><li><strong>Basic HTML</strong><ul><li><a href="#lesson-0001">What is HTML?</a></li><li><a href="#lesson-0002">HTML Tag Attributes</a></li><li><a href="#lesson-0003">Link Element</a></li><li><a href="#lesson-0004">Boilerplate</a></li><li><a href="#lesson-0005">UTF-8</a></li><li><a href="#lesson-0006">Div Eement</a></li><li><a href="#lesson-0007">ID Element</a></li><li><a href="#lesson-0008">HTML Entities</a></li><li><a href="#lesson-0009">Script</a></li><li><a href="#lesson-0010">Meta description</a></li><li><a href="#lesson-0011">Open Graph</a></li><li><a href="#lesson-0012">Replaced Elements</a></li><li><a href="#lesson-0013">Optimize Media Asets</a></li><li><a href="#lesson-0014">Image licenses</a></li><li><a href="#lesson-0015">SVG</a></li><li><a href="#lesson-0016">Audio & Video</a></li><li><a href="#lesson-0017">Iframe Element</a></li><li><a href="#lesson-0018">Target Attribute</a></li><li><a href="#lesson-0019">File Paths</a></li><li><a href="#lesson-0020">Link States in CSS</a></li><li><a href="#lesson-0021">Basic HTML Review</a></li></ul></li><li><strong>HTML Semantic</strong><ul><li><a href="#lesson-0022">Semantic HTML</a></li><li><a href="#lesson-0023">Hierarchy in HTML</a></li><li><a href="#lesson-0024">Semantic HTML</a></li><li><a href="#lesson-0025">I Emphasis Element</a></li><li><a href="#lesson-0026">Strong vs B Element</a></li></ul></li></ul><h2>CSS</h2><ul><li><strong>first example</strong><ul><li><a href="#lesson-0027">CSS example</a></li></ul></li></ul></nav>
             </section>
             <section><h2 class="topic">HTML</h2><h3 class="subtopic">Basic HTML</h3>
           <article id="lesson-0001">
             
     <article><h4>What is HTML</h4>
 <p><strong>Hypertext Markup Language</strong> — a way to create structured web pages with text, links, images, and more.</p>
-<p><strong>Paragraph Example:</strong></p>
-<pre><code class="language-html">&lt;p&gt;Hello, World!&lt;/p&gt;
-</code></pre>
-<p><strong>Image Example:</strong></p>
-<pre><code class="language-html">&lt;img src=&quot;img-url&quot; alt=&quot;description&quot;&gt;
-</code></pre>
-<p><strong>Path Types in Attributes</strong></p>
-<h5>Absolute URL</h5>
-<p><code>https://example.com/path/to/resource</code></p>
-<h5>Relative URL</h5>
-<p><code>img/pic.jpg</code> — relative to current folder</p>
-<p><code>./img/pic.jpg</code> — explicit current folder</p>
-<p><code>./img/pic.jpg</code></p>
-<p><code>../img/pic.jpg</code> — one folder up</p>
-<p><code>../../img/pic.jpg</code> — two folders up, then into &quot;img&quot;</p>
-<p><code>/img/pic.jpg</code> — root-relative from server root</p>
+<p class="marker">Paragraph Example:</p>
+<p><code class="language-html">&lt;p&gt;Hello, World!&lt;/p&gt;</code></p>
+<p>Hello, World!</p>
+<p class="marker">Image Example:</p>
+<p><code class="language-html">&lt;img src=&quot;img-url&quot; alt=&quot;description&quot;&gt;</code></p>
 </article>
   
           </article>
@@ -56,28 +46,27 @@
             
     <article><h4>HTML Tag Attributes</h4>
 <p>An attribute is a value placed inside the opening tag of an HTML element. Attributes provide additional information about the element or specify how the element should behave.</p>
-<pre><code>`&lt;tag attribute=&quot;value&quot;&gt;`
-</code></pre>
+<p class="language-html"><code>&lt;tag attribute=&quot;value&quot;&gt;</code></p>
 <h5>Common HTML Attributes:</h5>
-<p><strong><code>&lt;a&gt;</code></strong></p>
+<p><code class="marker">&lt;a&gt;</code></p>
 <ul>
-<li><code>&lt;a href=&quot;https://www.example-website.com&quot;&gt;</code></li>
+<li class="language-html"><code>&lt;a href=&quot;https://www.example-website.com&quot;&gt;</code></li>
 </ul>
-<p><strong><code>&lt;img&gt;</code></strong></p>
+<p><code class="marker">&lt;img&gt;</code></p>
 <ul>
-<li><code>&lt;img src=&quot;image.jpg&quot; alt=&quot;A beautiful image&quot; /&gt;</code></li>
+<li class="language-html"><code>&lt;img src=&quot;image.jpg&quot; alt=&quot;A beautiful image&quot; /&gt;</code></li>
 </ul>
-<p><strong><code>&lt;input&gt;</code></strong></p>
+<p><code class="marker">&lt;input&gt;</code></p>
 <ul>
-<li><code>&lt;input type=&quot;checkbox&quot; checked&gt;</code> — checkbox is checked</li>
-<li><code>&lt;input type=&quot;text&quot; disabled&gt;</code> — not editable</li>
-<li><code>&lt;input type=&quot;text&quot; readonly&gt;</code> — visible but unchangeable</li>
-<li><code>&lt;input type=&quot;text&quot; required&gt;</code> — must be filled</li>
+<li><code class="language-html">&lt;input type=&quot;checkbox&quot; checked&gt;</code> — checkbox is checked</li>
+<li><code class="language-html">&lt;input type=&quot;text&quot; disabled&gt;</code> — not editable</li>
+<li><code class="language-html">&lt;input type=&quot;text&quot; readonly&gt;</code> — visible but unchangeable</li>
+<li><code class="language-html">&lt;input type=&quot;text&quot; required&gt;</code> — must be filled</li>
 </ul>
 <h5>Boolean Attributes</h5>
 <ul>
 <li>
-<p><code>&lt;input checked&gt;</code> = <code>&lt;input checked=&quot;checked&quot;&gt;</code></p>
+<p><code class="language-html">&lt;input checked&gt;</code> = <code class="language-html">&lt;input checked=&quot;checked&quot;&gt;</code></p>
 </li>
 <li>
 <p>If present = <strong>true</strong>, if missing = <strong>false</strong></p>
@@ -93,12 +82,11 @@
     <article><h4>Link Element</h4>
 <p>The <code>&lt;link&gt;</code> element is used to link to external resources</p>
 <p>Often times you will see multiple link elements inside a professional codebase that link to different stylesheets, fonts, and icons.</p>
-<p><strong>Code Example:</strong></p>
-<pre><code class="language-html">    &lt;link rel=&quot;stylesheet&quot; href=&quot;./styles.css&quot; /&gt;
-</code></pre>
-<p><strong>rel attribute:</strong></p>
+<p class="marker">Code Example:</p>
+<p class="language-html"><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;./styles.css&quot; /&gt;</code></p>
+<p class="marker">rel attribute:</p>
 <p>The <code>rel</code> attribute (short for &quot;relationship&quot;) defines the type of relationship between the current HTML document and the linked external resource. This helps the browser understand the purpose of the link.</p>
-<p><strong>Common rel values:</strong></p>
+<p class="marker">Common rel values:</p>
 <ul>
 <li><code>stylesheet</code> – links to an external CSS file</li>
 <li><code>icon</code> – specifies a favicon (browser tab icon)</li>
@@ -107,7 +95,7 @@
 <li><code>alternate</code> – indicates an alternative version of the page (e.g., RSS feed)</li>
 <li><code>manifest</code> – links to a web app manifest file</li>
 </ul>
-<p><strong>href attribute</strong></p>
+<p class="marker">href attribute</p>
 <p>The <code>href</code> attribute is used to specify the location of the URL for the external resource.</p>
 </article>
   
@@ -118,9 +106,8 @@
             
     <article><h4>Boilerplate</h4>
 <p>It's a'template for webpages</p>
-<p>Example:</p>
-<pre><code>
-    &lt;!DOCTYPE html&gt;
+<p class="marker">Example:</p>
+<pre><code class="language-html">    &lt;!DOCTYPE html&gt;
     &lt;html lang=&quot;en&quot;&gt;
       &lt;head&gt;
         &lt;meta charset=&quot;utf-8&quot; /&gt;
@@ -143,13 +130,17 @@
             
     <article><h4>What is UTF-8</h4>
 <p>UTF-8, or UCS Transformation Format 8, is a standardized character encoding widely used on the web.</p>
-<p><strong>Example:</strong></p>
+<p class="marker">Example:</p>
 <p>HTML source code:</p>
-<p><code>&lt;p&gt;café&lt;/p&gt;</code></p>
+<ul>
+<li class="language-html"><code>&lt;p&gt;café&lt;/p&gt;</code></li>
+</ul>
 <p>Rendered output:</p>
-<p><strong>café</strong></p>
-<p><strong>Required Meta element for UTF-8</strong></p>
-<p><code>&lt;meta charset=&quot;UTF-8&quot;&gt;</code></p>
+<ul>
+<li><strong>café</strong></li>
+</ul>
+<p class="marker">Required Meta element for UTF-8:</p>
+<p class="language-html"><code>&lt;meta charset=&quot;UTF-8&quot;&gt;</code></p>
 <p>By setting the character encoding to UTF-8, it ensures that the accented &quot;e&quot; character (<code>é</code>) is displayed correctly on the page.</p>
 </article>
   
@@ -160,10 +151,10 @@
             
     <article><h4>Content Division Element</h4>
 <p>The <code>&lt;div&gt;</code> element is a generic container used to group other HTML elements. Unlike <code>&lt;section&gt;</code> or <code>&lt;article&gt;</code>, it has no semantic meaning by default.</p>
-<h2>Purpose:</h2>
+<h5>Purpose:</h5>
 <p><code>&lt;div&gt;</code> is commonly used for styling and layout purposes, especially when working with CSS or JavaScript.</p>
-<p>Example:</p>
-<p><code>&lt;div&gt;This is a generic container&lt;/div&gt;</code></p>
+<p class="marker">Example:</p>
+<p><code class="language-html">&lt;div&gt;This is a generic container&lt;/div&gt;</code></p>
 <p>This is a generic container</p>
 </article>
   
@@ -174,16 +165,16 @@
             
     <article><h4>ID Element</h4>
 <p>The <code>id</code> attribute assigns a unique identifier to an HTML element. It must be unique across the entire page and can be used to reference the element via CSS, JavaScript, or anchor links.</p>
-<p><code>&lt;h1 id=&quot;title&quot;&gt;Movie Review Page&lt;/h1&gt;</code></p>
-<h5>Purpose</h5>
+<p class="language-html"><code>&lt;h1 id=&quot;title&quot;&gt;Movie Review Page&lt;/h1&gt;</code></p>
+<h5>Purpose:</h5>
 <p>You can reference the <code>id</code> name <code>title</code> within your CSS or JavaScript. Here's a CSS example referencing the <code>id</code> to change the text <code>color</code> to <code>red</code>:</p>
-<pre><code class="language-html">    #title {
+<pre><code class="language-css">    #title {
       color: red;
     }
 </code></pre>
 <h5>Linking to an ID</h5>
 <p>You can use an <code>id</code> in a link to jump to a specific section of a page:</p>
-<p><code>&lt;a href=&quot;#title&quot;&gt;Jump to Title&lt;/a&gt;</code></p>
+<p class="language-html"><code>&lt;a href=&quot;#title&quot;&gt;Jump to Title&lt;/a&gt;</code></p>
 </article>
   
           </article>
@@ -194,7 +185,7 @@
     <article><h4>HTML Entities</h4>
 <p>HTML entities are used to represent reserved characters in HTML, such as <code>&lt;</code>, <code>&gt;</code>, <code>&quot;</code>, and <code>&amp;</code>.</p>
 <p>To display the following HTML code on a webpage as plain text:</p>
-<p><code>&lt;div class=&quot;example&quot;&gt;Hello &amp; welcome!&lt;/div&gt;</code></p>
+<p><code class="language-html">&lt;div class=&quot;example&quot;&gt;Hello &amp; welcome!&lt;/div&gt;</code></p>
 <p>you need to write it in the HTML source like this:</p>
 <p><code>&amp;lt;div class=&amp;quot;example&amp;quot;&amp;gt;Hello &amp;amp; welcome!&amp;lt;/div&amp;gt;</code></p>
 <h5>Types of HTML Entities</h5>
@@ -210,21 +201,20 @@
         
           <article id="lesson-0009">
             
-    <article><h4>Why do we need Script?</h4>
+    <article><h4>Script</h4>
 <p>The script element is used to embed executable code</p>
-<p><strong>Example:</strong>
-alert('Welcome to freeCodeCamp')</p>
+<p class="marker">Example:</p>
+<p><code>alert('Welcome to freeCodeCamp')</code></p>
 <pre><code class="language-html">&lt;body&gt;
   &lt;script&gt;
     alert(&quot;Welcome to freeCodeCamp&quot;);
   &lt;/script&gt;
 &lt;/body&gt;
 </code></pre>
-<p><strong>How to use</strong></p>
+<h5>How to use</h5>
 <p>While you can technically write all of your JavaScript code inside the script tags, it is considered best practice to link to an external JavaScript file instead. Here is an example of using the script element to link to an external JavaScript file:</p>
-<pre><code class="language-html">&lt;script src=&quot;path-to-javascript-file.js&quot;&gt;&lt;/script&gt;
-</code></pre>
-<p><strong>A small tip:</strong></p>
+<p><code class="language-html">&lt;script src=&quot;path-to-javascript-file.js&quot;&gt;&lt;/script&gt;</code></p>
+<h5>A small tip</h5>
 <p>In order not to get confused in the file paths with a more complex structure, always remember:</p>
 <ul>
 <li><code>src=&quot;something.js&quot;</code> — it searches in the same folder where index.html</li>
@@ -241,7 +231,7 @@ alert('Welcome to freeCodeCamp')</p>
             
     <article><h4>Meta description</h4>
 <p>SEO, or Search Engine Optimization, is a practice that optimizes web pages so they become more visible and rank higher on search engines. One way to improve your site's SEO, is to provide a short description for the web page using the meta element.</p>
-<p><strong>Example:</strong></p>
+<p class="marker">Example:</p>
 <pre><code class="language-html">&lt;meta
   name=&quot;description&quot;
   content=&quot;Discover expert tips and techniques for gardening in small spaces, choosing the right plants, and maintaining a thriving garden.&quot;
@@ -256,11 +246,9 @@ alert('Welcome to freeCodeCamp')</p>
             
     <article><h4>What Is Open Graph</h4>
 <p>This is a protocol to control how your website's content appears across various social media platforms, such as Facebook, LinkedIn, and many more.</p>
-<p><strong>Example</strong></p>
 <p>The first important OG property to include would be the title. Here is an example of setting the OG title for the freeCodeCamp homepage:</p>
-<pre><code class="language-html">&lt;meta content=&quot;freeCodeCamp.org&quot; property=&quot;og:title&quot; /&gt;
-</code></pre>
-<p><strong>The whole Head:</strong></p>
+<p class="language-html"><code>&lt;meta content=&quot;freeCodeCamp.org&quot; property=&quot;og:title&quot; /&gt;</code></p>
+<p class="marker">The whole Head:</p>
 <pre><code class="language-html">    &lt;head&gt;
         &lt;meta charset=&quot;utf-8&quot;&gt;
         &lt;title&gt;Test&lt;/title&gt;
@@ -284,13 +272,13 @@ alert('Welcome to freeCodeCamp')</p>
             
     <article><h4>What Are Replaced Elements</h4>
 <p>A replaced element is an element whose content is determined by an external resource rather than by CSS itself.</p>
-<p><strong>The image element, which embeds an <code>image</code> on your web page:</strong></p>
-<p><code>&lt;img src=&quot;example-img-url&quot; alt=&quot;Descriptive text goes here&quot;&gt;</code></p>
+<p>The image element, which embeds an <code>image</code> on your web page:</p>
+<p class="language-html"><code>&lt;img src=&quot;example-img-url&quot; alt=&quot;Descriptive text goes here&quot;&gt;</code></p>
 <p>(The element itself is replaced with the external object: the <code>image</code>).</p>
-<p><strong>A more robust example might be the <code>iframe</code> element, which embeds an external site on your web page:</strong></p>
-<p><code>&lt;iframe src=&quot;https://www.example.com&quot; title=&quot;Example Site&quot;&gt;&lt;/iframe&gt;</code></p>
-<p><strong>An <code>input</code> element with the <code>type</code> attribute set to <code>image</code>:</strong></p>
-<p><code>&lt;input type=&quot;image&quot; alt=&quot;Descriptive text goes here&quot; src=&quot;example-img-url&quot;&gt;</code></p>
+<p>A more robust example might be the <code>iframe</code> element, which embeds an external site on your web page:</p>
+<p class="language-html"><code>&lt;iframe src=&quot;https://www.example.com&quot; title=&quot;Example Site&quot;&gt;&lt;/iframe&gt;</code></p>
+<p>An <code>input</code> element with the <code>type</code> attribute set to <code>image</code>:</p>
+<p class="language-html"><code>&lt;input type=&quot;image&quot; alt=&quot;Descriptive text goes here&quot; src=&quot;example-img-url&quot;&gt;</code></p>
 </article>
   
           </article>
@@ -300,24 +288,32 @@ alert('Welcome to freeCodeCamp')</p>
             
     <article><h4>Optimize Media Assets</h4>
 <p>To optimize media like images, consider:</p>
-<p><strong>1. Size</strong></p>
+<ol>
+<li>
+<p>Size</p>
 <ul>
 <li>Resize images to match display size.</li>
 <li>Avoid large-resolution images scaled down with CSS.</li>
 <li>Use <code>srcset</code> and <code>sizes</code> for responsive images.</li>
 </ul>
-<p><strong>2. Format</strong></p>
+</li>
+<li>
+<p>Format</p>
 <ul>
 <li>Use modern formats: <code>WEBP</code> or <code>AVIF</code> instead of <code>JPG</code> or <code>PNG</code>.</li>
 <li>Use <code>SVG</code> for icons and simple graphics.</li>
 </ul>
-<p><strong>3. Compression</strong></p>
+</li>
+<li>
+<p>Compression</p>
 <ul>
 <li>Use compression tools: <code>pngcrush</code>, <code>jpegoptim</code>, <code>squoosh</code>.</li>
 <li>Lossy formats like <code>JPG</code> degrade quality.</li>
 <li>Remove metadata to reduce file size.</li>
 </ul>
-<p><strong>Tips</strong></p>
+</li>
+</ol>
+<h5>Tips</h5>
 <ul>
 <li>Use <code>loading=&quot;lazy&quot;</code> for lazy loading.</li>
 <li>Use Image CDNs for automatic optimization.</li>
@@ -332,19 +328,19 @@ alert('Welcome to freeCodeCamp')</p>
             
     <article><h4>Image Licenses</h4>
 <p>Images are intellectual property and protected by copyright. By default — <strong>all rights reserved</strong>.</p>
-<p>You can legally use an image if:</p>
+<p class="marker">You can legally use an image if:</p>
 <ul>
 <li>You have <strong>written permission</strong> from the author.</li>
 <li>You <strong>purchased a license</strong> (e.g. from stock sites).</li>
 <li>Your use qualifies as <strong>fair use</strong> (limited, transformative, not harming the owner).</li>
 </ul>
-<h5>Fair Use</h5>
+<p class="marker">Fair Use:</p>
 <ul>
 <li>Allows use without permission if your usage is <strong>transformative</strong> (e.g. commentary, parody).</li>
 <li>Risky: not always legally safe.</li>
 </ul>
 <h5>License Types</h5>
-<p><strong>Creative Commons (CC)</strong></p>
+<p class="marker">Creative Commons (CC):</p>
 <ul>
 <li><code>CC BY</code> – free use with <strong>attribution</strong>.</li>
 <li><code>CC BY-SA</code> – must use the <strong>same license</strong>.</li>
@@ -352,7 +348,7 @@ alert('Welcome to freeCodeCamp')</p>
 <li><code>CC BY-NC</code> – <strong>non-commercial use</strong> only.</li>
 <li><code>CC0</code> – <strong>public domain</strong>, no restrictions.</li>
 </ul>
-<p><strong>Other</strong></p>
+<p class="marker">Other:</p>
 <ul>
 <li><strong>BSD</strong> – permissive, used mostly for code.</li>
 <li><strong>Public Domain</strong> – no copyright, full freedom to use.</li>
@@ -400,15 +396,14 @@ alert('Welcome to freeCodeCamp')</p>
 <li>Ideal for interactive or animated graphics.</li>
 </ul>
 <h6>2. External SVG — as a regular image</h6>
-<pre><code class="language-html">&lt;img src=&quot;https://example.com/icon.svg&quot; alt=&quot;icon&quot; /&gt;
-</code></pre>
+<p><code class="language-html">&lt;img src=&quot;https://example.com/icon.svg&quot; alt=&quot;icon&quot; /&gt;</code></p>
 <ul>
 <li>Used like any image (<code>&lt;img&gt;</code> tag).</li>
 <li>No access to internal SVG structure.</li>
 <li>Best for simple, static icons.</li>
 </ul>
 <h6>3. SVG via Icon Library — using Font Awesome</h6>
-<p><strong>From CDN:</strong></p>
+<p class="marker">From CDN:</p>
 <pre><code class="language-html">&lt;head&gt;
   &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css&quot;&gt;
 &lt;/head&gt;
@@ -416,17 +411,14 @@ alert('Welcome to freeCodeCamp')</p>
   &lt;i class=&quot;fas fa-camera&quot;&gt;&lt;/i&gt;
 &lt;/body&gt;
 </code></pre>
-<p><strong>From local install (npm):</strong></p>
-<pre><code class="language-bash">npm install @fortawesome/fontawesome-free
-</code></pre>
-<pre><code class="language-js">import '@fortawesome/fontawesome-free/css/all.min.css';
-</code></pre>
+<p class="marker">From local install (npm):</p>
+<p><code class="language-bash">npm install @fortawesome/fontawesome-free</code></p>
+<p><code class="language-js">import '@fortawesome/fontawesome-free/css/all.min.css';</code></p>
 <ul>
 <li>Useful for many ready-to-use icons.</li>
 <li>Easy to style with CSS:</li>
 </ul>
-<pre><code class="language-html">&lt;i class=&quot;fas fa-star&quot; style=&quot;color: gold; font-size: 24px;&quot;&gt;&lt;/i&gt;
-</code></pre>
+<p><code class="language-html">&lt;i class=&quot;fas fa-star&quot; style=&quot;color: gold; font-size: 24px;&quot;&gt;&lt;/i&gt;</code></p>
 <h5>Tools &amp; Libraries</h5>
 <ul>
 <li><a href="https://fontawesome.com">Font Awesome</a> – icon library based on SVG.</li>
@@ -445,20 +437,20 @@ alert('Welcome to freeCodeCamp')</p>
 <h5>1. Purpose</h5>
 <p>The <code>&lt;audio&gt;</code> and <code>&lt;video&gt;</code> elements embed sound and video into webpages using native HTML tags.</p>
 <h5>2. Supported Formats and MIME Types</h5>
-<p><strong>Audio:</strong></p>
+<p class="marker">Audio:</p>
 <ul>
 <li>.mp3 — <code>audio/mpeg</code></li>
 <li>.wav — <code>audio/wav</code></li>
 <li>.ogg — <code>audio/ogg</code></li>
 <li>.m4a — <code>audio/mp4</code> or <code>audio/x-m4a</code></li>
 </ul>
-<p><strong>Video:</strong></p>
+<p class="marker">Video:</p>
 <ul>
 <li>.mp4 — <code>video/mp4</code></li>
 <li>.webm — <code>video/webm</code></li>
 <li>.ogg — <code>video/ogg</code></li>
 </ul>
-<p><strong>Example:</strong></p>
+<p class="marker">Example:</p>
 <pre><code class="language-html">&lt;audio controls&gt;
   &lt;source src=&quot;sound.ogg&quot; type=&quot;audio/ogg&quot; /&gt;
   &lt;source src=&quot;sound.mp3&quot; type=&quot;audio/mpeg&quot; /&gt;
@@ -479,17 +471,17 @@ alert('Welcome to freeCodeCamp')</p>
 </ul>
 </li>
 </ul>
-<p><strong>Example:</strong></p>
-<p><code>&lt;audio src=&quot;file.mp3&quot; controls loop muted preload=&quot;auto&quot;&gt;&lt;/audio&gt;</code></p>
-<h5>4. <code>&lt;video&gt;</code>-only Attributes</h5>
+<p class="marker">Example:</p>
+<p><code class="language-html">&lt;audio src=&quot;file.mp3&quot; controls loop muted preload=&quot;auto&quot;&gt;&lt;/audio&gt;</code></p>
+<h5>4. Video only Attributes</h5>
 <ul>
 <li><code>poster</code>: Image shown before video loads or plays</li>
 <li><code>width</code>: Width in pixels</li>
 <li><code>height</code>: Height in pixels</li>
 </ul>
-<p><strong>Example:</strong></p>
-<p><code>&lt;video src=&quot;video.mp4&quot; controls poster=&quot;cover.jpg&quot; width=&quot;640&quot;&gt;&lt;/video&gt;</code></p>
-<h5>5. Using <code>&lt;source&gt;</code> for Fallback</h5>
+<p class="marker">Example:</p>
+<p><code class="language-html">&lt;video src=&quot;video.mp4&quot; controls poster=&quot;cover.jpg&quot; width=&quot;640&quot;&gt;&lt;/video&gt;</code></p>
+<h5>5. Using Source for Fallback</h5>
 <p>The browser picks the first supported format:</p>
 <pre><code class="language-html">&lt;video controls&gt;
   &lt;source src=&quot;movie.webm&quot; type=&quot;video/webm&quot; /&gt;
@@ -507,7 +499,7 @@ alert('Welcome to freeCodeCamp')</p>
 &lt;/iframe&gt;
 </code></pre>
 <h5>7. JavaScript API (basics)</h5>
-<pre><code class="language-javascript">audio.play();
+<pre><code class="language-js">audio.play();
 audio.pause();
 audio.currentTime = 0;
 audio.volume = 0.5;
@@ -520,8 +512,8 @@ audio.muted = true;
 <li><code>ended</code>: Playback finished</li>
 <li><code>timeupdate</code>: Playback time changes</li>
 </ul>
-<p><strong>Example:</strong></p>
-<p><code>video.addEventListener(&quot;ended&quot;, () =&gt; alert(&quot;Video finished&quot;));</code></p>
+<p class="marker">Example:</p>
+<p><code class="language-js">video.addEventListener(&quot;ended&quot;, () =&gt; alert(&quot;Video finished&quot;));</code></p>
 <h5>9. Summary</h5>
 <ul>
 <li>Use <code>&lt;audio&gt;</code> for music/sound, <code>&lt;video&gt;</code> for movies.</li>
@@ -538,8 +530,7 @@ audio.muted = true;
             
     <article><h4>iframe Element</h4>
 <h5>Basic Syntax and Key Attributes</h5>
-<pre><code class="language-html">&lt;iframe src=&quot;...&quot; width=&quot;...&quot; height=&quot;...&quot; title=&quot;...&quot; allowfullscreen&gt;&lt;/iframe&gt;
-</code></pre>
+<p class="language-html"><code>&lt;iframe src=&quot;...&quot; width=&quot;...&quot; height=&quot;...&quot; title=&quot;...&quot; allowfullscreen&gt;&lt;/iframe&gt;</code></p>
 <ul>
 <li><code>src</code>: URL of the embedded resource.</li>
 <li><code>width</code>, <code>height</code>: Size of the embedded frame.</li>
@@ -556,7 +547,8 @@ audio.muted = true;
 </li>
 <li><code>sandbox</code>: Applies restrictions for security.
 <ul>
-<li>Useful flags:
+<li>
+<p>Useful flags:</p>
 <ul>
 <li><code>allow-scripts</code></li>
 <li><code>allow-same-origin</code></li>
@@ -574,7 +566,7 @@ audio.muted = true;
 <li>Search engines usually <strong>don’t index</strong> iframe content.</li>
 </ul>
 <h5>Embedding Videos</h5>
-<p><strong>YouTube</strong></p>
+<p class="marker">YouTube</p>
 <ul>
 <li>Use format: <code>https://www.youtube.com/embed/VIDEO_ID</code></li>
 <li>Common query parameters:
@@ -588,27 +580,26 @@ audio.muted = true;
 </li>
 <li>Not all videos allow embedding (may be restricted).</li>
 </ul>
-<p><strong>Short vs Embed Links</strong></p>
+<p class="marker">Short vs Embed Links</p>
 <ul>
 <li><code>https://youtu.be/VIDEO_ID</code> - shareable link, <strong>not for iframe</strong></li>
 <li><code>https://www.youtube.com/embed/VIDEO_ID</code> - correct iframe format</li>
 </ul>
 <p>Note: Parameters like <code>?si=...</code> sometimes appear in shared links but don’t always affect iframe embedding.</p>
-<p><strong>Other Platforms</strong></p>
+<p class="marker">Other Platforms</p>
 <ul>
 <li>Vimeo - <code>https://player.vimeo.com/video/VIDEO_ID</code></li>
 <li>Pexels / Pixabay - Provide full iframe code</li>
 <li>Check each platform’s documentation for correct <code>allow</code> values</li>
 </ul>
-<p><strong>Maps (e.g., OpenStreetMap)</strong></p>
-<p>Use a bounding box:</p>
+<h5>Maps (e.g., OpenStreetMap)</h5>
+<p class="marker">Use a bounding box:</p>
 <pre><code class="language-html">https://www.openstreetmap.org/export/embed.html?bbox=minLon,minLat,maxLon,maxLat
 </code></pre>
 <p>To set a specific location, calculate the bbox around a center coordinate.</p>
-<p><strong>srcdoc</strong></p>
-<p>Inline HTML in iframe:</p>
-<pre><code class="language-html">&lt;iframe srcdoc=&quot;&lt;p&gt;Hello&lt;/p&gt;&quot; sandbox&gt;&lt;/iframe&gt;
-</code></pre>
+<h5>srcdoc</h5>
+<p class="marker">Inline HTML in iframe:</p>
+<p class="language-html"><code>&lt;iframe srcdoc=&quot;&lt;p&gt;Hello&lt;/p&gt;&quot; sandbox&gt;&lt;/iframe&gt;</code></p>
 <p>Good for small self-contained content.</p>
 <h5>CORS and Security Policies</h5>
 <ul>
@@ -631,8 +622,7 @@ audio.muted = true;
 });
 </code></pre>
 <p>Attach to iframe like:</p>
-<pre><code class="language-html">&lt;iframe id=&quot;map&quot; width=&quot;600&quot; height=&quot;400&quot;&gt;&lt;/iframe&gt;
-</code></pre>
+<p class="language-html"><code>&lt;iframe id=&quot;map&quot; width=&quot;600&quot; height=&quot;400&quot;&gt;&lt;/iframe&gt;</code></p>
 <h5>Troubleshooting</h5>
 <ul>
 <li>Check for errors in the browser console.</li>
@@ -641,7 +631,7 @@ audio.muted = true;
 <li>Some videos or domains simply can’t be embedded due to restrictions.</li>
 </ul>
 <h5>iframe Code Snippets (Examples)</h5>
-<p>YouTube Video with Autoplay and No Controls</p>
+<p>YouTube Video with Autoplay and No Controls:</p>
 <pre><code class="language-html">&lt;iframe
   width=&quot;560&quot;
   height=&quot;315&quot;
@@ -652,7 +642,7 @@ audio.muted = true;
   allowfullscreen&gt;
 &lt;/iframe&gt;
 </code></pre>
-<p>Vimeo Video</p>
+<p>Vimeo Video:</p>
 <pre><code class="language-html">&lt;iframe
   src=&quot;https://player.vimeo.com/video/76979871&quot;
   width=&quot;640&quot;
@@ -663,7 +653,7 @@ audio.muted = true;
   title=&quot;Vimeo video&quot;&gt;
 &lt;/iframe&gt;
 </code></pre>
-<p>OpenStreetMap Centered on Location (Tbilisi Example)</p>
+<p>OpenStreetMap Centered on Location (Tbilisi Example):</p>
 <pre><code class="language-html">&lt;iframe
   width=&quot;600&quot;
   height=&quot;450&quot;
@@ -675,7 +665,7 @@ audio.muted = true;
   title=&quot;OpenStreetMap - Tbilisi&quot;&gt;
 &lt;/iframe&gt;
 </code></pre>
-<p>Inline HTML with <code>srcdoc</code></p>
+<p>Inline HTML with <code>srcdoc</code>:</p>
 <pre><code class="language-html">&lt;iframe
   srcdoc=&quot;
     &lt;style&gt;
@@ -689,7 +679,7 @@ audio.muted = true;
   title=&quot;Inline content&quot;&gt;
 &lt;/iframe&gt;
 </code></pre>
-<p>Embedded PDF File</p>
+<p>Embedded PDF File:</p>
 <pre><code class="language-html">&lt;iframe
   src=&quot;https://example.com/sample.pdf&quot;
   width=&quot;100%&quot;
@@ -701,7 +691,7 @@ audio.muted = true;
 <blockquote>
 <p>It depends on whether the browser supports PDF viewing and whether the site allows opening in an iframe.</p>
 </blockquote>
-<p>Embedded GitHub README (as raw HTML preview via third-party service)</p>
+<p>Embedded GitHub README (as raw HTML preview via third-party service):</p>
 <pre><code class="language-html">&lt;iframe
   src=&quot;https://htmlpreview.github.io/?https://github.com/user/repo/blob/main/README.md&quot;
   width=&quot;100%&quot;
@@ -713,7 +703,7 @@ audio.muted = true;
 <blockquote>
 <p>This method only works with an open public repository and via GitHub Pages or special preview services.</p>
 </blockquote>
-<p>Fallback Message (for unsupported browsers)</p>
+<p>Fallback Message (for unsupported browsers):</p>
 <pre><code class="language-html">&lt;iframe
   src=&quot;https://example.com&quot;
   width=&quot;600&quot;
@@ -739,19 +729,17 @@ audio.muted = true;
 <li><code>_top</code> – opens in the <strong>top-level window</strong>.</li>
 <li><code>_unfencedTop</code> – experimental, for Fenced Frames.</li>
 </ul>
-<h5>Example</h5>
-<pre><code class="language-html">&lt;a href=&quot;https://example.com&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;New Tab&lt;/a&gt;
-</code></pre>
-<p><strong>Named Targets</strong></p>
+<p class="marker">Example:</p>
+<p class="language-html"><code>&lt;a href=&quot;https://example.com&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;New Tab&lt;/a&gt;</code></p>
+<h5>Named Targets</h5>
 <p>Named targets allow you to open a link or form submission into a specific <code>&lt;iframe&gt;</code> or window by using its <code>name</code> attribute. If an element like <code>&lt;iframe name=&quot;myFrame&quot;&gt;</code> exists, <code>target=&quot;myFrame&quot;</code> will load the page inside it. If no such target exists, the browser may open a new window with that name.</p>
 <pre><code class="language-html">&lt;iframe name=&quot;myFrame&quot;&gt;&lt;/iframe&gt;
 &lt;a href=&quot;page.html&quot; target=&quot;myFrame&quot;&gt;Open in Frame&lt;/a&gt;
 </code></pre>
-<p><strong>Forms</strong></p>
+<h5>Forms</h5>
 <p>Using <code>target=&quot;_blank&quot;</code> in a <code>&lt;form&gt;</code> makes the form submission result open in a new tab or window. This can be useful when you don’t want to navigate away from the current page after submitting.</p>
-<pre><code class="language-html">&lt;form action=&quot;/submit&quot; target=&quot;_blank&quot;&gt;...&lt;/form&gt;
-</code></pre>
-<p><strong>Note</strong></p>
+<p class="language-html"><code>&lt;form action=&quot;/submit&quot; target=&quot;_blank&quot;&gt;...&lt;/form&gt;</code></p>
+<p>Note:</p>
 <p>Use <code>rel=&quot;noopener&quot;</code> with <code>_blank</code> for security.</p>
 <h5>Security Note</h5>
 <p>When using <code>target=&quot;_blank&quot;</code>, always add <code>rel=&quot;noopener&quot;</code> (or <code>rel=&quot;noreferrer&quot;</code>) to prevent the new page from having access to the original page via <code>window.opener</code>. This helps avoid potential security vulnerabilities such as phishing attacks.</p>
@@ -768,11 +756,11 @@ audio.muted = true;
             
     <article><h4>What Is a Path?</h4>
 <p>A <strong>path</strong> shows the location of a resource (file, image, page) in the file system or website structure.</p>
-<p>Types of paths:</p>
+<p class="marker">Types of paths:</p>
 <ul>
-<li><strong>Absolute</strong></li>
-<li><strong>Relative</strong></li>
-<li><strong>Root-relative</strong></li>
+<li>Absolute</li>
+<li>Relative</li>
+<li>Root-relative</li>
 </ul>
 <h5>Absolute Path</h5>
 <p>A full address to a file — starts from the <strong>root</strong>.</p>
@@ -792,7 +780,7 @@ audio.muted = true;
 </ul>
 <h5>Relative Path</h5>
 <p>Relative to the <strong>current file's folder</strong>. Shorter and flexible.</p>
-<p>Examples:</p>
+<p class="marker">Examples:</p>
 <ul>
 <li><code>about.html</code> — same folder</li>
 <li><code>../index.html</code> — one level up</li>
@@ -802,24 +790,24 @@ audio.muted = true;
 <p>Works in both <code>file://</code> and <code>localhost</code> modes if folder structure is correct.</p>
 <h5>Root-Relative Path</h5>
 <p>Starts with <code>/</code> — relative to the <strong>site root</strong>, not current file.</p>
-<p>Example:<br>
-<code>/assets/css/main.css</code></p>
+<p class="marker">Example:</p>
+<p><code>/assets/css/main.css</code></p>
 <ul>
 <li>Works only in <strong>localhost</strong> or live server.</li>
 <li>Does <strong>not</strong> work in <code>file://</code> mode.</li>
 </ul>
 <h5>Base URL (optional)</h5>
-<p>The <code>&lt;base href=&quot;/assets/&quot;&gt;</code> tag in <code>&lt;head&gt;</code> changes how all relative paths are resolved. Use carefully.</p>
+<p>The <code class="language-html">&lt;base href=&quot;/assets/&quot;&gt;</code> tag in <code>&lt;head&gt;</code> changes how all relative paths are resolved. Use carefully.</p>
 <h5>Link Behavior Examples</h5>
-<p><strong>Absolute web URL</strong></p>
-<p><code>&lt;a href=&quot;https://example.com/style.css&quot;&gt;External&lt;/a&gt;</code></p>
-<p><strong>Relative to current file</strong></p>
-<p><code>&lt;a href=&quot;about.html&quot;&gt;Same folder&lt;/a&gt;</code></p>
-<p><code>&lt;a href=&quot;../index.html&quot;&gt;Up one level&lt;/a&gt;</code></p>
-<p><strong>Root-relative (server only)</strong></p>
-<p><code>&lt;a href=&quot;/pages/lesson.html&quot;&gt;From site root&lt;/a&gt;</code></p>
-<p><strong>Localhost absolute URL</strong></p>
-<p><code>&lt;a href=&quot;http://127.0.0.1/lessons/lesson.html&quot;&gt;Always works if server runs&lt;/a&gt;</code></p>
+<p>Absolute web URL:</p>
+<p class="language-html"><code>&lt;a href=&quot;https://example.com/style.css&quot;&gt;External&lt;/a&gt;</code></p>
+<p>Relative to current file:</p>
+<p class="language-html"><code>&lt;a href=&quot;about.html&quot;&gt;Same folder&lt;/a&gt;</code></p>
+<p class="language-html"><code>&lt;a href=&quot;../index.html&quot;&gt;Up one level&lt;/a&gt;</code></p>
+<p>Root-relative (server only):</p>
+<p class="language-html"><code>&lt;a href=&quot;/pages/lesson.html&quot;&gt;From site root&lt;/a&gt;</code></p>
+<p>Localhost absolute URL:</p>
+<p class="language-html"><code>&lt;a href=&quot;http://127.0.0.1/lessons/lesson.html&quot;&gt;Always works if server runs&lt;/a&gt;</code></p>
 <h5>Common Mistake</h5>
 <ul>
 <li>Mixing styles (absolute / relative / root-relative) inconsistently</li>
@@ -832,13 +820,13 @@ audio.muted = true;
 <li>Test root-relative paths only under localhost.</li>
 </ul>
 <h5>OS Path Formats vs browser format</h5>
-<p><strong>macOS:</strong></p>
+<p>macOS:</p>
 <ul>
 <li><code>/Users/Daniel/Desktop/project/index.html</code></li>
 <li>Browser path:<br>
 <code>file:///Users/Daniel/Desktop/project/index.html</code></li>
 </ul>
-<p><strong>Windows:</strong></p>
+<p>Windows:</p>
 <ul>
 <li><code>C:\Users\Daniel\Desktop\project\index.html</code></li>
 <li>Browser path:<br>
@@ -858,7 +846,6 @@ These pseudo-classes allow dynamic styling, which improves UX and accessibility.
 <p><code>:focus</code> is not the same as <code>:hover</code>.<br>
 Focus means the element is active for <strong>keyboard interaction</strong> (e.g., selected via Tab), not just hovered.</p>
 </blockquote>
-<hr>
 <h5>Link States Overview</h5>
 <ul>
 <li><code>:link</code> — the link has <strong>not</strong> been visited yet</li>
@@ -867,8 +854,8 @@ Focus means the element is active for <strong>keyboard interaction</strong> (e.g
 <li><code>:focus</code> — the link is <strong>focused</strong> (via Tab or mouse click)</li>
 <li><code>:active</code> — the link is being activated (usually during <strong>mouse-down</strong>)</li>
 </ul>
-<p><strong>Correct CSS order</strong>:<br>
-<code>link → visited → hover → focus → active</code></p>
+<p class="marker">Correct CSS order:</p>
+<p><code>link → visited → hover → focus → active</code></p>
 <p>Mnemonic: <strong>LoVe FAt HAir</strong></p>
 <h5>CSS Example</h5>
 <pre><code class="language-css">a:link {
@@ -919,9 +906,9 @@ a:active {
 <p>Semantic HTML is thinking one level up — not <em>how it looks</em> but <em>what it means</em>.<br>
 The best code is understandable without CSS or JavaScript.</p>
 </blockquote>
-<p><strong>Example:</strong><br>
+<p>Example: {.marker}<br>
 <code>&lt;p&gt;</code> means paragraph, a logical block of text.</p>
-<p><strong>Why it matters:</strong></p>
+<h5>Why it matters:</h5>
 <ol>
 <li><strong>Accessibility:</strong> Screen readers rely on semantic tags to understand content.</li>
 <li><strong>SEO:</strong> Search engines rank semantic content higher.</li>
@@ -944,15 +931,15 @@ The best code is understandable without CSS or JavaScript.</p>
 <li><code>h3</code>: sub-subheading, must follow <code>h2</code> (never skip levels like <code>h1</code> → <code>h3</code>).</li>
 <li>Multiple headings at the same level are allowed (e.g., multiple <code>h2</code>).</li>
 </ul>
-<p><strong>Example of correct heading order:</strong></p>
-<pre><code>&lt;section&gt;
+<p class="marker">Example of correct heading order:</p>
+<pre><code class="language-html">&lt;section&gt;
   &lt;h1&gt;freeCodeCamp&lt;/h1&gt;
   &lt;h2&gt;Learn Front-End Development&lt;/h2&gt;
   &lt;h2&gt;Learn Back-End Development&lt;/h2&gt;
 &lt;/section&gt;
 </code></pre>
-<p><strong>Incorrect example (<code>h3</code> before <code>h2</code>):</strong></p>
-<pre><code>&lt;section&gt;
+<p class="marker">Incorrect example (<code>h3</code> before <code>h2</code>):</p>
+<pre><code class="language-html">&lt;section&gt;
   &lt;h1&gt;freeCodeCamp&lt;/h1&gt;
   &lt;h3&gt;Learn Front-End Development&lt;/h3&gt;
   &lt;h2&gt;Learn Back-End Development&lt;/h2&gt;
@@ -976,8 +963,8 @@ The best code is understandable without CSS or JavaScript.</p>
     <article><h4>Difference Between Presentational and Semantic HTML</h4>
 <p>Presentational HTML focuses on how content looks (appearance and style). Now this approach is deprecated.</p>
 <p>Semantic HTML focuses on the meaning and structure of the content. It uses elements that describe the role of the content clearly.</p>
-<h4>Modern Best Practices for Text Highlighting and Emphasis</h4>
-<p><strong>Common semantic tags for emphasis and meaning:</strong></p>
+<h5>Modern Best Practices for Text Highlighting and Emphasis</h5>
+<p class="marker">Common semantic tags for emphasis and meaning:</p>
 <ul>
 <li><code>&lt;strong&gt;</code> — for important or strong emphasis (typically bold)</li>
 <li><code>&lt;em&gt;</code> — for stressed or emphasized text (typically italic)</li>
@@ -989,22 +976,22 @@ The best code is understandable without CSS or JavaScript.</p>
 <li><code>&lt;sub&gt;</code> and <code>&lt;sup&gt;</code> — for subscripts and superscripts (e.g., chemical formulas or exponents)</li>
 <li><code>&lt;i&gt;</code> - highlighting alternative voice or mood, idiomatic terms from another language, technical terms, and thoughts: <code>&lt;p&gt;There is a certain &lt;i lang=&quot;fr&quot;&gt;je ne sais quoi&lt;/i&gt; in the air.&lt;/p&gt;</code></li>
 </ul>
-<p>Example:</p>
-<pre><code>&lt;p&gt;Please &lt;strong&gt;read&lt;/strong&gt; the &lt;em&gt;instructions&lt;/em&gt; carefully.&lt;/p&gt;
+<p class="marker">Example:</p>
+<pre><code class="language-html">&lt;p&gt;Please &lt;strong&gt;read&lt;/strong&gt; the &lt;em&gt;instructions&lt;/em&gt; carefully.&lt;/p&gt;
 &lt;p&gt;Old price: &lt;del&gt;$50&lt;/del&gt;, New price: &lt;ins&gt;$40&lt;/ins&gt;&lt;/p&gt;
 &lt;p&gt;Submit your form &lt;mark&gt;by Friday&lt;/mark&gt;.&lt;/p&gt;
 &lt;p&gt;Water formula: H&lt;sub&gt;2&lt;/sub&gt;O, Einstein’s equation: E = mc&lt;sup&gt;2&lt;/sup&gt;.&lt;/p&gt;
 &lt;p&gt;Use the &lt;code&gt;printf()&lt;/code&gt; function in your C program.&lt;/p&gt;
 </code></pre>
 <p>To style a specific part of text visually without adding meaning, use <code>&lt;span&gt;</code> with CSS:</p>
-<pre><code>&lt;p&gt;This is a &lt;span class=&quot;highlight&quot;&gt;highlighted&lt;/span&gt; word.&lt;/p&gt;
-
-.highlight {
+<pre><code class="language-html">&lt;p&gt;This is a &lt;span class=&quot;highlight&quot;&gt;highlighted&lt;/span&gt; word.&lt;/p&gt;
+</code></pre>
+<pre><code class="language-css">.highlight {
   background-color: yellow;
   font-weight: bold;
 }
 </code></pre>
-<p><strong>Deprecated Presentational Tags</strong></p>
+<h5>Deprecated Presentational Tags</h5>
 <ul>
 <li><code>&lt;font&gt;</code> — for font size and color</li>
 <li><code>&lt;center&gt;</code> — for centering content</li>
@@ -1021,15 +1008,45 @@ The best code is understandable without CSS or JavaScript.</p>
             
     <article><h4>I Emphasis Element</h4>
 <p>Use the <code>&lt;i&gt;</code> element especially for foreign words, technical terms, idiomatic expressions, or thoughts.<br>
-When using it for foreign language, add the <code>lang=&quot;&quot;</code> attribute:<br>
-<code>Say &lt;i lang=&quot;es&quot;&gt;¡Hola!&lt;/i&gt;</code></p>
+When using it for foreign language, add the <code>lang=&quot;&quot;</code> attribute:</p>
+<p class="language-html"><code>Say &lt;i lang=&quot;es&quot;&gt;¡Hola!&lt;/i&gt;</code></p>
 <p>For general emphasis, prefer the more semantic <code>&lt;em&gt;</code> element.</p>
 </article>
   
           </article>
           <hr class="lesson-divider">
-        <h2 class="topic">CSS</h2><h3 class="subtopic">first example</h3>
+        
           <article id="lesson-0026">
+            
+    <article><h4>Strong vs B Element</h4>
+<h5>Purpose</h5>
+<ul>
+<li><code>&lt;strong&gt;</code> — semantic HTML element. Indicates <strong>importance</strong> of the text. <code>&lt;strong&gt;</code> is meant for content that should be emphasized with <strong>semantic weight</strong> — e.g. warnings, critical info, key points.
+Screen readers often <strong>stress</strong> such text when reading aloud.</li>
+</ul>
+<pre><code class="language-html">&lt;!-- Semantic importance --&gt;
+&lt;p&gt;
+  &lt;strong&gt;Warning:&lt;/strong&gt; This product may cause allergic reactions.
+&lt;/p&gt;
+</code></pre>
+<ul>
+<li><code>&lt;b&gt;</code> — purely <strong>stylistic</strong> element. Highlights text <strong>visually</strong> without adding meaning. <code>&lt;b&gt;</code> is used to simply draw the reader’s attention — for instance, product names, keywords, or other non-critical highlights. It’s <strong>not semantic</strong>, only visual.</li>
+</ul>
+<pre><code class="language-html">&lt;!-- Visual emphasis only --&gt;
+&lt;p&gt;
+  We tested several products, including the &lt;b&gt;SuperSound 3000&lt;/b&gt; for audio
+  quality, the &lt;b&gt;QuickCharge Pro&lt;/b&gt; for fast charging, and the
+  &lt;b&gt;EcoClean Vacuum&lt;/b&gt; for cleaning. The first two performed well, but the
+  &lt;b&gt;EcoClean Vacuum&lt;/b&gt; did not meet expectations.
+&lt;/p&gt;
+</code></pre>
+<p>Both will appear bold in most browsers, but only <code>&lt;strong&gt;</code> carries <strong>semantic meaning</strong>.</p>
+</article>
+  
+          </article>
+          <hr class="lesson-divider">
+        <h2 class="topic">CSS</h2><h3 class="subtopic">first example</h3>
+          <article id="lesson-0027">
             
     <article><h4>Comming Soon</h4>
 </article>
@@ -1042,5 +1059,8 @@ When using it for foreign language, add the <code>lang=&quot;&quot;</code> attri
         <footer>
             <p>&copy; 2025 Danil Ilin — powered by GPT</p>
         </footer>
+		
+		<script src="/js/prism.js"></script>
+		
     </body>
 </html>

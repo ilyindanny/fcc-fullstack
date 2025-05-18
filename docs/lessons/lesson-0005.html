@@ -5,19 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>UTF-8</title>
   <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="/css/prism.css" />
 </head>
 <body>
 
   <main>
     <article><h4>What is UTF-8</h4>
 <p>UTF-8, or UCS Transformation Format 8, is a standardized character encoding widely used on the web.</p>
-<p><strong>Example:</strong></p>
+<p class="marker">Example:</p>
 <p>HTML source code:</p>
-<p><code>&lt;p&gt;café&lt;/p&gt;</code></p>
+<ul>
+<li class="language-html"><code>&lt;p&gt;café&lt;/p&gt;</code></li>
+</ul>
 <p>Rendered output:</p>
-<p><strong>café</strong></p>
-<p><strong>Required Meta element for UTF-8</strong></p>
-<p><code>&lt;meta charset=&quot;UTF-8&quot;&gt;</code></p>
+<ul>
+<li><strong>café</strong></li>
+</ul>
+<p class="marker">Required Meta element for UTF-8:</p>
+<p class="language-html"><code>&lt;meta charset=&quot;UTF-8&quot;&gt;</code></p>
 <p>By setting the character encoding to UTF-8, it ensures that the accented &quot;e&quot; character (<code>é</code>) is displayed correctly on the page.</p>
 </article>
   </main> 
@@ -30,5 +35,7 @@
       </nav>
     </section>
   
+	
+	<script src="/js/prism.js"></script>
 </body>
 </html>

@@ -6,9 +6,7 @@ title: Iframe Element
 
 ##### Basic Syntax and Key Attributes
 
-```html
-<iframe src="..." width="..." height="..." title="..." allowfullscreen></iframe>
-```
+`<iframe src="..." width="..." height="..." title="..." allowfullscreen></iframe>` {.language-html}
 
 - `src`: URL of the embedded resource.
 - `width`, `height`: Size of the embedded frame.
@@ -21,7 +19,8 @@ title: Iframe Element
 - `referrerpolicy`: Controls the Referer header.
   - Examples: `no-referrer`, `origin`, `origin-when-cross-origin`.
 - `sandbox`: Applies restrictions for security.
-  - Useful flags:
+  - Useful flags:  
+  
     - `allow-scripts`
     - `allow-same-origin`
     - `allow-popups`
@@ -35,7 +34,7 @@ title: Iframe Element
 
 ##### Embedding Videos
 
-**YouTube**
+YouTube {.marker}  
 
 - Use format: `https://www.youtube.com/embed/VIDEO_ID`
 - Common query parameters:
@@ -46,22 +45,22 @@ title: Iframe Element
   - `loop=1&playlist=VIDEO_ID`
 - Not all videos allow embedding (may be restricted).
 
-**Short vs Embed Links**
+Short vs Embed Links {.marker}  
 
 - `https://youtu.be/VIDEO_ID` - shareable link, **not for iframe**
 - `https://www.youtube.com/embed/VIDEO_ID` - correct iframe format
 
 Note: Parameters like `?si=...` sometimes appear in shared links but don’t always affect iframe embedding.
 
-**Other Platforms**
+Other Platforms {.marker}  
 
 - Vimeo - `https://player.vimeo.com/video/VIDEO_ID`
 - Pexels / Pixabay - Provide full iframe code
 - Check each platform’s documentation for correct `allow` values
 
-**Maps (e.g., OpenStreetMap)**
+##### Maps (e.g., OpenStreetMap)
 
-Use a bounding box:
+Use a bounding box: {.marker}  
 
 ```html
 https://www.openstreetmap.org/export/embed.html?bbox=minLon,minLat,maxLon,maxLat
@@ -69,13 +68,11 @@ https://www.openstreetmap.org/export/embed.html?bbox=minLon,minLat,maxLon,maxLat
 
 To set a specific location, calculate the bbox around a center coordinate.
 
-**srcdoc**
+##### srcdoc
 
-Inline HTML in iframe:
+Inline HTML in iframe: {.marker}  
 
-```html
-<iframe srcdoc="<p>Hello</p>" sandbox></iframe>
-```
+`<iframe srcdoc="<p>Hello</p>" sandbox></iframe>` {.language-html}
 
 Good for small self-contained content.
 
@@ -102,9 +99,7 @@ navigator.geolocation.getCurrentPosition(function(pos) {
 
 Attach to iframe like:
 
-```html
-<iframe id="map" width="600" height="400"></iframe>
-```
+`<iframe id="map" width="600" height="400"></iframe>` {.language-html}
 
 ##### Troubleshooting
 
@@ -118,7 +113,7 @@ Attach to iframe like:
 
 ##### iframe Code Snippets (Examples)
 
-YouTube Video with Autoplay and No Controls
+YouTube Video with Autoplay and No Controls:
 
 ```html
 <iframe
@@ -132,7 +127,7 @@ YouTube Video with Autoplay and No Controls
 </iframe>
 ```
 
-Vimeo Video
+Vimeo Video:  
 
 ```html
 <iframe
@@ -146,7 +141,7 @@ Vimeo Video
 </iframe>
 ```
 
-OpenStreetMap Centered on Location (Tbilisi Example)
+OpenStreetMap Centered on Location (Tbilisi Example):  
 
 ```html
 <iframe
@@ -161,7 +156,7 @@ OpenStreetMap Centered on Location (Tbilisi Example)
 </iframe>
 ```
 
-Inline HTML with `srcdoc`
+Inline HTML with `srcdoc`:  
 
 ```html
 <iframe
@@ -178,7 +173,7 @@ Inline HTML with `srcdoc`
 </iframe>
 ```
 
-Embedded PDF File
+Embedded PDF File:  
 
 ```html
 <iframe
@@ -192,7 +187,7 @@ Embedded PDF File
 
 > It depends on whether the browser supports PDF viewing and whether the site allows opening in an iframe.
 
-Embedded GitHub README (as raw HTML preview via third-party service)
+Embedded GitHub README (as raw HTML preview via third-party service):  
 
 ```html
 <iframe
@@ -206,7 +201,7 @@ Embedded GitHub README (as raw HTML preview via third-party service)
 
 > This method only works with an open public repository and via GitHub Pages or special preview services.
 
-Fallback Message (for unsupported browsers)
+Fallback Message (for unsupported browsers):  
 
 ```html
 <iframe

@@ -13,6 +13,7 @@ SVG is a **vector image format** — unlike raster formats (`JPG`, `PNG`), which
 - **Lightweight** for simple graphics and icons.
 
 ##### When to Use
+
 - Icons and UI elements.
 - Logos and diagrams.
 - Custom bullets and decorative shapes.
@@ -34,9 +35,7 @@ SVG is a **vector image format** — unlike raster formats (`JPG`, `PNG`), which
 
 ###### 2. External SVG — as a regular image
 
-```html
-<img src="https://example.com/icon.svg" alt="icon" />
-```
+`<img src="https://example.com/icon.svg" alt="icon" />`{.language-html}
 
 - Used like any image (`<img>` tag).
 - No access to internal SVG structure.
@@ -45,7 +44,7 @@ SVG is a **vector image format** — unlike raster formats (`JPG`, `PNG`), which
 
 ###### 3. SVG via Icon Library — using Font Awesome
 
-**From CDN:**
+From CDN: {.marker}  
 
 ```html
 <head>
@@ -56,22 +55,16 @@ SVG is a **vector image format** — unlike raster formats (`JPG`, `PNG`), which
 </body>
 ```
 
-**From local install (npm):**
+From local install (npm): {.marker}  
 
-```bash
-npm install @fortawesome/fontawesome-free
-```
+`npm install @fortawesome/fontawesome-free`{.language-bash}
 
-```js
-import '@fortawesome/fontawesome-free/css/all.min.css';
-```
+`import '@fortawesome/fontawesome-free/css/all.min.css';`{.language-js}
 
 - Useful for many ready-to-use icons.
 - Easy to style with CSS:
 
-```html
-<i class="fas fa-star" style="color: gold; font-size: 24px;"></i>
-```
+`<i class="fas fa-star" style="color: gold; font-size: 24px;"></i>`{.language-html}  
 
 
 ##### Tools & Libraries

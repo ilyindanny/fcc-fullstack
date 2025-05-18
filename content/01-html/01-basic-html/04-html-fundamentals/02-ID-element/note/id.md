@@ -6,13 +6,13 @@ title: ID Element
 
 The `id` attribute assigns a unique identifier to an HTML element. It must be unique across the entire page and can be used to reference the element via CSS, JavaScript, or anchor links.
 
-`<h1 id="title">Movie Review Page</h1>`
+`<h1 id="title">Movie Review Page</h1>` {.language-html}
 
-##### Purpose
+##### Purpose:
 
-You can reference the `id` name `title` within your CSS or JavaScript. Here's a CSS example referencing the `id` to change the text `color` to `red`:
+You can reference the `id` name `title` within your CSS or JavaScript. Here's a CSS example referencing the `id` to change the text `color` to `red`:  
 
-```html
+```css
     #title {
       color: red;
     }
@@ -22,4 +22,4 @@ You can reference the `id` name `title` within your CSS or JavaScript. Here's a 
 
 You can use an `id` in a link to jump to a specific section of a page:
 
-`<a href="#title">Jump to Title</a>`
+`<a href="#title">Jump to Title</a>` {.language-html}

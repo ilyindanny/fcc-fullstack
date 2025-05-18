@@ -5,30 +5,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Optimize Media Asets</title>
   <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="/css/prism.css" />
 </head>
 <body>
 
   <main>
     <article><h4>Optimize Media Assets</h4>
 <p>To optimize media like images, consider:</p>
-<p><strong>1. Size</strong></p>
+<ol>
+<li>
+<p>Size</p>
 <ul>
 <li>Resize images to match display size.</li>
 <li>Avoid large-resolution images scaled down with CSS.</li>
 <li>Use <code>srcset</code> and <code>sizes</code> for responsive images.</li>
 </ul>
-<p><strong>2. Format</strong></p>
+</li>
+<li>
+<p>Format</p>
 <ul>
 <li>Use modern formats: <code>WEBP</code> or <code>AVIF</code> instead of <code>JPG</code> or <code>PNG</code>.</li>
 <li>Use <code>SVG</code> for icons and simple graphics.</li>
 </ul>
-<p><strong>3. Compression</strong></p>
+</li>
+<li>
+<p>Compression</p>
 <ul>
 <li>Use compression tools: <code>pngcrush</code>, <code>jpegoptim</code>, <code>squoosh</code>.</li>
 <li>Lossy formats like <code>JPG</code> degrade quality.</li>
 <li>Remove metadata to reduce file size.</li>
 </ul>
-<p><strong>Tips</strong></p>
+</li>
+</ol>
+<h5>Tips</h5>
 <ul>
 <li>Use <code>loading=&quot;lazy&quot;</code> for lazy loading.</li>
 <li>Use Image CDNs for automatic optimization.</li>
@@ -45,5 +54,7 @@
       </nav>
     </section>
   
+	
+	<script src="/js/prism.js"></script>
 </body>
 </html>

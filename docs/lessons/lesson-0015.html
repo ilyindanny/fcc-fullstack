@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>SVG</title>
   <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="/css/prism.css" />
 </head>
 <body>
 
@@ -36,15 +37,14 @@
 <li>Ideal for interactive or animated graphics.</li>
 </ul>
 <h6>2. External SVG — as a regular image</h6>
-<pre><code class="language-html">&lt;img src=&quot;https://example.com/icon.svg&quot; alt=&quot;icon&quot; /&gt;
-</code></pre>
+<p><code class="language-html">&lt;img src=&quot;https://example.com/icon.svg&quot; alt=&quot;icon&quot; /&gt;</code></p>
 <ul>
 <li>Used like any image (<code>&lt;img&gt;</code> tag).</li>
 <li>No access to internal SVG structure.</li>
 <li>Best for simple, static icons.</li>
 </ul>
 <h6>3. SVG via Icon Library — using Font Awesome</h6>
-<p><strong>From CDN:</strong></p>
+<p class="marker">From CDN:</p>
 <pre><code class="language-html">&lt;head&gt;
   &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css&quot;&gt;
 &lt;/head&gt;
@@ -52,17 +52,14 @@
   &lt;i class=&quot;fas fa-camera&quot;&gt;&lt;/i&gt;
 &lt;/body&gt;
 </code></pre>
-<p><strong>From local install (npm):</strong></p>
-<pre><code class="language-bash">npm install @fortawesome/fontawesome-free
-</code></pre>
-<pre><code class="language-js">import '@fortawesome/fontawesome-free/css/all.min.css';
-</code></pre>
+<p class="marker">From local install (npm):</p>
+<p><code class="language-bash">npm install @fortawesome/fontawesome-free</code></p>
+<p><code class="language-js">import '@fortawesome/fontawesome-free/css/all.min.css';</code></p>
 <ul>
 <li>Useful for many ready-to-use icons.</li>
 <li>Easy to style with CSS:</li>
 </ul>
-<pre><code class="language-html">&lt;i class=&quot;fas fa-star&quot; style=&quot;color: gold; font-size: 24px;&quot;&gt;&lt;/i&gt;
-</code></pre>
+<p><code class="language-html">&lt;i class=&quot;fas fa-star&quot; style=&quot;color: gold; font-size: 24px;&quot;&gt;&lt;/i&gt;</code></p>
 <h5>Tools &amp; Libraries</h5>
 <ul>
 <li><a href="https://fontawesome.com">Font Awesome</a> – icon library based on SVG.</li>
@@ -81,5 +78,7 @@
       </nav>
     </section>
   
+	
+	<script src="/js/prism.js"></script>
 </body>
 </html>

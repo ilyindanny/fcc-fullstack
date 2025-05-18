@@ -8,7 +8,7 @@ HTML entities are used to represent reserved characters in HTML, such as `<`, `>
 
 To display the following HTML code on a webpage as plain text:
 
-`<div class="example">Hello & welcome!</div>`
+`<div class="example">Hello & welcome!</div>`{.language-html}
 
 you need to write it in the HTML source like this:
 

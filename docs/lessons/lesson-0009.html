@@ -5,25 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Script</title>
   <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="/css/prism.css" />
 </head>
 <body>
 
   <main>
-    <article><h4>Why do we need Script?</h4>
+    <article><h4>Script</h4>
 <p>The script element is used to embed executable code</p>
-<p><strong>Example:</strong>
-alert('Welcome to freeCodeCamp')</p>
+<p class="marker">Example:</p>
+<p><code>alert('Welcome to freeCodeCamp')</code></p>
 <pre><code class="language-html">&lt;body&gt;
   &lt;script&gt;
     alert(&quot;Welcome to freeCodeCamp&quot;);
   &lt;/script&gt;
 &lt;/body&gt;
 </code></pre>
-<p><strong>How to use</strong></p>
+<h5>How to use</h5>
 <p>While you can technically write all of your JavaScript code inside the script tags, it is considered best practice to link to an external JavaScript file instead. Here is an example of using the script element to link to an external JavaScript file:</p>
-<pre><code class="language-html">&lt;script src=&quot;path-to-javascript-file.js&quot;&gt;&lt;/script&gt;
-</code></pre>
-<p><strong>A small tip:</strong></p>
+<p><code class="language-html">&lt;script src=&quot;path-to-javascript-file.js&quot;&gt;&lt;/script&gt;</code></p>
+<h5>A small tip</h5>
 <p>In order not to get confused in the file paths with a more complex structure, always remember:</p>
 <ul>
 <li><code>src=&quot;something.js&quot;</code> — it searches in the same folder where index.html</li>
@@ -42,5 +42,7 @@ alert('Welcome to freeCodeCamp')</p>
       </nav>
     </section>
   
+	
+	<script src="/js/prism.js"></script>
 </body>
 </html>

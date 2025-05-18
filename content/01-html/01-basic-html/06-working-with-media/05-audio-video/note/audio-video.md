@@ -10,20 +10,20 @@ The `<audio>` and `<video>` elements embed sound and video into webpages using n
 
 ##### 2. Supported Formats and MIME Types
 
-**Audio:**
+Audio: {.marker}  
 
 - .mp3 — `audio/mpeg`  
 - .wav — `audio/wav`  
 - .ogg — `audio/ogg`  
 - .m4a — `audio/mp4` or `audio/x-m4a`
 
-**Video:**
+Video: {.marker}  
 
 - .mp4 — `video/mp4`  
 - .webm — `video/webm`  
 - .ogg — `video/ogg`
 
-**Example:**
+Example: {.marker}  
 
 ```html
 <audio controls>
@@ -44,21 +44,21 @@ The `<audio>` and `<video>` elements embed sound and video into webpages using n
     - `metadata` — preload only metadata (like duration)
     - `auto` — let the browser decide
 
-**Example:**
+Example: {.marker}  
 
-`<audio src="file.mp3" controls loop muted preload="auto"></audio>`
+`<audio src="file.mp3" controls loop muted preload="auto"></audio>`{.language-html}
 
-##### 4. `<video>`-only Attributes
+##### 4. Video only Attributes
 
 - `poster`: Image shown before video loads or plays
 - `width`: Width in pixels
 - `height`: Height in pixels
 
-**Example:**
+Example: {.marker}  
 
-`<video src="video.mp4" controls poster="cover.jpg" width="640"></video>`
+`<video src="video.mp4" controls poster="cover.jpg" width="640"></video>`{.language-html}
 
-##### 5. Using `<source>` for Fallback
+##### 5. Using Source for Fallback
 
 The browser picks the first supported format:
 
@@ -85,7 +85,7 @@ Use `<iframe>` to embed external players:
 
 ##### 7. JavaScript API (basics)
 
-```javascript
+```js
 audio.play();
 audio.pause();
 audio.currentTime = 0;
@@ -100,10 +100,9 @@ audio.muted = true;
 - `ended`: Playback finished
 - `timeupdate`: Playback time changes
 
-**Example:**
+Example: {.marker}  
 
-`video.addEventListener("ended", () => alert("Video finished"));`
-
+`video.addEventListener("ended", () => alert("Video finished"));`{.language-js}
 
 
 ##### 9. Summary

@@ -5,17 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>File Paths</title>
   <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="/css/prism.css" />
 </head>
 <body>
 
   <main>
     <article><h4>What Is a Path?</h4>
 <p>A <strong>path</strong> shows the location of a resource (file, image, page) in the file system or website structure.</p>
-<p>Types of paths:</p>
+<p class="marker">Types of paths:</p>
 <ul>
-<li><strong>Absolute</strong></li>
-<li><strong>Relative</strong></li>
-<li><strong>Root-relative</strong></li>
+<li>Absolute</li>
+<li>Relative</li>
+<li>Root-relative</li>
 </ul>
 <h5>Absolute Path</h5>
 <p>A full address to a file — starts from the <strong>root</strong>.</p>
@@ -35,7 +36,7 @@
 </ul>
 <h5>Relative Path</h5>
 <p>Relative to the <strong>current file's folder</strong>. Shorter and flexible.</p>
-<p>Examples:</p>
+<p class="marker">Examples:</p>
 <ul>
 <li><code>about.html</code> — same folder</li>
 <li><code>../index.html</code> — one level up</li>
@@ -45,24 +46,24 @@
 <p>Works in both <code>file://</code> and <code>localhost</code> modes if folder structure is correct.</p>
 <h5>Root-Relative Path</h5>
 <p>Starts with <code>/</code> — relative to the <strong>site root</strong>, not current file.</p>
-<p>Example:<br>
-<code>/assets/css/main.css</code></p>
+<p class="marker">Example:</p>
+<p><code>/assets/css/main.css</code></p>
 <ul>
 <li>Works only in <strong>localhost</strong> or live server.</li>
 <li>Does <strong>not</strong> work in <code>file://</code> mode.</li>
 </ul>
 <h5>Base URL (optional)</h5>
-<p>The <code>&lt;base href=&quot;/assets/&quot;&gt;</code> tag in <code>&lt;head&gt;</code> changes how all relative paths are resolved. Use carefully.</p>
+<p>The <code class="language-html">&lt;base href=&quot;/assets/&quot;&gt;</code> tag in <code>&lt;head&gt;</code> changes how all relative paths are resolved. Use carefully.</p>
 <h5>Link Behavior Examples</h5>
-<p><strong>Absolute web URL</strong></p>
-<p><code>&lt;a href=&quot;https://example.com/style.css&quot;&gt;External&lt;/a&gt;</code></p>
-<p><strong>Relative to current file</strong></p>
-<p><code>&lt;a href=&quot;about.html&quot;&gt;Same folder&lt;/a&gt;</code></p>
-<p><code>&lt;a href=&quot;../index.html&quot;&gt;Up one level&lt;/a&gt;</code></p>
-<p><strong>Root-relative (server only)</strong></p>
-<p><code>&lt;a href=&quot;/pages/lesson.html&quot;&gt;From site root&lt;/a&gt;</code></p>
-<p><strong>Localhost absolute URL</strong></p>
-<p><code>&lt;a href=&quot;http://127.0.0.1/lessons/lesson.html&quot;&gt;Always works if server runs&lt;/a&gt;</code></p>
+<p>Absolute web URL:</p>
+<p class="language-html"><code>&lt;a href=&quot;https://example.com/style.css&quot;&gt;External&lt;/a&gt;</code></p>
+<p>Relative to current file:</p>
+<p class="language-html"><code>&lt;a href=&quot;about.html&quot;&gt;Same folder&lt;/a&gt;</code></p>
+<p class="language-html"><code>&lt;a href=&quot;../index.html&quot;&gt;Up one level&lt;/a&gt;</code></p>
+<p>Root-relative (server only):</p>
+<p class="language-html"><code>&lt;a href=&quot;/pages/lesson.html&quot;&gt;From site root&lt;/a&gt;</code></p>
+<p>Localhost absolute URL:</p>
+<p class="language-html"><code>&lt;a href=&quot;http://127.0.0.1/lessons/lesson.html&quot;&gt;Always works if server runs&lt;/a&gt;</code></p>
 <h5>Common Mistake</h5>
 <ul>
 <li>Mixing styles (absolute / relative / root-relative) inconsistently</li>
@@ -75,13 +76,13 @@
 <li>Test root-relative paths only under localhost.</li>
 </ul>
 <h5>OS Path Formats vs browser format</h5>
-<p><strong>macOS:</strong></p>
+<p>macOS:</p>
 <ul>
 <li><code>/Users/Daniel/Desktop/project/index.html</code></li>
 <li>Browser path:<br>
 <code>file:///Users/Daniel/Desktop/project/index.html</code></li>
 </ul>
-<p><strong>Windows:</strong></p>
+<p>Windows:</p>
 <ul>
 <li><code>C:\Users\Daniel\Desktop\project\index.html</code></li>
 <li>Browser path:<br>
@@ -98,5 +99,7 @@
       </nav>
     </section>
   
+	
+	<script src="/js/prism.js"></script>
 </body>
 </html>

@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Audio  Video</title>
   <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="/css/prism.css" />
 </head>
 <body>
 
@@ -13,20 +14,20 @@
 <h5>1. Purpose</h5>
 <p>The <code>&lt;audio&gt;</code> and <code>&lt;video&gt;</code> elements embed sound and video into webpages using native HTML tags.</p>
 <h5>2. Supported Formats and MIME Types</h5>
-<p><strong>Audio:</strong></p>
+<p class="marker">Audio:</p>
 <ul>
 <li>.mp3 — <code>audio/mpeg</code></li>
 <li>.wav — <code>audio/wav</code></li>
 <li>.ogg — <code>audio/ogg</code></li>
 <li>.m4a — <code>audio/mp4</code> or <code>audio/x-m4a</code></li>
 </ul>
-<p><strong>Video:</strong></p>
+<p class="marker">Video:</p>
 <ul>
 <li>.mp4 — <code>video/mp4</code></li>
 <li>.webm — <code>video/webm</code></li>
 <li>.ogg — <code>video/ogg</code></li>
 </ul>
-<p><strong>Example:</strong></p>
+<p class="marker">Example:</p>
 <pre><code class="language-html">&lt;audio controls&gt;
   &lt;source src=&quot;sound.ogg&quot; type=&quot;audio/ogg&quot; /&gt;
   &lt;source src=&quot;sound.mp3&quot; type=&quot;audio/mpeg&quot; /&gt;
@@ -47,17 +48,17 @@
 </ul>
 </li>
 </ul>
-<p><strong>Example:</strong></p>
-<p><code>&lt;audio src=&quot;file.mp3&quot; controls loop muted preload=&quot;auto&quot;&gt;&lt;/audio&gt;</code></p>
-<h5>4. <code>&lt;video&gt;</code>-only Attributes</h5>
+<p class="marker">Example:</p>
+<p><code class="language-html">&lt;audio src=&quot;file.mp3&quot; controls loop muted preload=&quot;auto&quot;&gt;&lt;/audio&gt;</code></p>
+<h5>4. Video only Attributes</h5>
 <ul>
 <li><code>poster</code>: Image shown before video loads or plays</li>
 <li><code>width</code>: Width in pixels</li>
 <li><code>height</code>: Height in pixels</li>
 </ul>
-<p><strong>Example:</strong></p>
-<p><code>&lt;video src=&quot;video.mp4&quot; controls poster=&quot;cover.jpg&quot; width=&quot;640&quot;&gt;&lt;/video&gt;</code></p>
-<h5>5. Using <code>&lt;source&gt;</code> for Fallback</h5>
+<p class="marker">Example:</p>
+<p><code class="language-html">&lt;video src=&quot;video.mp4&quot; controls poster=&quot;cover.jpg&quot; width=&quot;640&quot;&gt;&lt;/video&gt;</code></p>
+<h5>5. Using Source for Fallback</h5>
 <p>The browser picks the first supported format:</p>
 <pre><code class="language-html">&lt;video controls&gt;
   &lt;source src=&quot;movie.webm&quot; type=&quot;video/webm&quot; /&gt;
@@ -75,7 +76,7 @@
 &lt;/iframe&gt;
 </code></pre>
 <h5>7. JavaScript API (basics)</h5>
-<pre><code class="language-javascript">audio.play();
+<pre><code class="language-js">audio.play();
 audio.pause();
 audio.currentTime = 0;
 audio.volume = 0.5;
@@ -88,8 +89,8 @@ audio.muted = true;
 <li><code>ended</code>: Playback finished</li>
 <li><code>timeupdate</code>: Playback time changes</li>
 </ul>
-<p><strong>Example:</strong></p>
-<p><code>video.addEventListener(&quot;ended&quot;, () =&gt; alert(&quot;Video finished&quot;));</code></p>
+<p class="marker">Example:</p>
+<p><code class="language-js">video.addEventListener(&quot;ended&quot;, () =&gt; alert(&quot;Video finished&quot;));</code></p>
 <h5>9. Summary</h5>
 <ul>
 <li>Use <code>&lt;audio&gt;</code> for music/sound, <code>&lt;video&gt;</code> for movies.</li>
@@ -108,5 +109,7 @@ audio.muted = true;
       </nav>
     </section>
   
+	
+	<script src="/js/prism.js"></script>
 </body>
 </html>

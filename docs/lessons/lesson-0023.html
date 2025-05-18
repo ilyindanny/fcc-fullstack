@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Hierarchy in HTML</title>
   <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="/css/prism.css" />
 </head>
 <body>
 
@@ -18,15 +19,15 @@
 <li><code>h3</code>: sub-subheading, must follow <code>h2</code> (never skip levels like <code>h1</code> → <code>h3</code>).</li>
 <li>Multiple headings at the same level are allowed (e.g., multiple <code>h2</code>).</li>
 </ul>
-<p><strong>Example of correct heading order:</strong></p>
-<pre><code>&lt;section&gt;
+<p class="marker">Example of correct heading order:</p>
+<pre><code class="language-html">&lt;section&gt;
   &lt;h1&gt;freeCodeCamp&lt;/h1&gt;
   &lt;h2&gt;Learn Front-End Development&lt;/h2&gt;
   &lt;h2&gt;Learn Back-End Development&lt;/h2&gt;
 &lt;/section&gt;
 </code></pre>
-<p><strong>Incorrect example (<code>h3</code> before <code>h2</code>):</strong></p>
-<pre><code>&lt;section&gt;
+<p class="marker">Incorrect example (<code>h3</code> before <code>h2</code>):</p>
+<pre><code class="language-html">&lt;section&gt;
   &lt;h1&gt;freeCodeCamp&lt;/h1&gt;
   &lt;h3&gt;Learn Front-End Development&lt;/h3&gt;
   &lt;h2&gt;Learn Back-End Development&lt;/h2&gt;
@@ -51,5 +52,7 @@
       </nav>
     </section>
   
+	
+	<script src="/js/prism.js"></script>
 </body>
 </html>

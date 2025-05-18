@@ -6,36 +6,12 @@ title: What is HTML?
 
 **Hypertext Markup Language** — a way to create structured web pages with text, links, images, and more.
 
-**Paragraph Example:**
+Paragraph Example: {.marker}  
 
-```html
+`<p>Hello, World!</p>`{.language-html}
+
 <p>Hello, World!</p>
-```
 
-**Image Example:**
+Image Example: {.marker}  
 
-```html
-<img src="img-url" alt="description">
-```
-
-**Path Types in Attributes**
-
-##### Absolute URL
-
-`https://example.com/path/to/resource`
-
-##### Relative URL
-
-`img/pic.jpg` — relative to current folder
-
-
-`./img/pic.jpg` — explicit current folder
-
-`./img/pic.jpg`
-
-`../img/pic.jpg` — one folder up
-
-
-`../../img/pic.jpg` — two folders up, then into "img"
-
-`/img/pic.jpg` — root-relative from server root
+`<img src="img-url" alt="description">`{.language-html}

@@ -6,15 +6,11 @@ title: Open Graph
 
 This is a protocol to control how your website's content appears across various social media platforms, such as Facebook, LinkedIn, and many more.
 
-**Example**
-
 The first important OG property to include would be the title. Here is an example of setting the OG title for the freeCodeCamp homepage:
 
-```html
-<meta content="freeCodeCamp.org" property="og:title" />
-```
+`<meta content="freeCodeCamp.org" property="og:title" />` {.language-html}
 
-**The whole Head:**
+The whole Head: {.marker}  
 
 ```html
     <head>
