@@ -13,20 +13,18 @@ body {
 }
 
 /* ===== TYPOGRAPHY ===== */
-
-h2 {
-  font-size: 1.6em; /* Emphasized size */
-  padding-bottom: 0.5rem;
-  border-bottom: 2px solid #61afef; /* VS Code Light Blue */
-  margin-bottom: 1.5rem;
+h1 {
+  font-size: 1.8em;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  color: #ffffff; /* White */
 }
 
-h3 {
-  font-size: 1.3em; /* Slightly emphasized size */
-  padding-bottom: 0.3rem;
-  border-bottom: 1px solid #98c379; /* VS Code Light Green */
+h2 {
+  font-size: 1.4em;
+  margin-top: 2rem;
   margin-bottom: 1rem;
-  font-style: italic;
+  color: #ffffff; /* White */
 }
 
 h3 {
@@ -190,6 +188,22 @@ pre, code {
 .lesson-navigation a.next,
 .lesson-navigation a.home-page {
   background-color: #264f78; /* Blueish */
+}
+
+/* ===== THEME OVERRIDES ===== */
+h2.topic {
+  font-size: 1.6em; /* Emphasized size */
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #61afef; /* VS Code Light Blue */
+  margin-bottom: 1.5rem;
+}
+
+h3.subtopic {
+  font-size: 1.3em; /* Slightly emphasized size */
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid #98c379; /* VS Code Light Green */
+  margin-bottom: 1rem;
+  font-style: italic;
 }
 
 /* ===== MOBILE RESPONSIVENESS ===== */
