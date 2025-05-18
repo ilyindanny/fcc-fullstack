@@ -2,7 +2,7 @@
 title: Script
 ---
 
-## Why do we need Script?
+#### Why do we need Script?
 
 The script element is used to embed executable code
 

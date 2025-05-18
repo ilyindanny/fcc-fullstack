@@ -94,11 +94,11 @@
         ]
       },
       {
-        "title": "Semantic",
+        "title": "HTML Semantic",
         "order": 2,
         "lessons": [
           {
-            "title": "Untitled",
+            "title": "Why to care?",
             "filename": "lesson-0022.html"
           }
         ]
@@ -114,7 +114,7 @@
         "order": 1,
         "lessons": [
           {
-            "title": "Untitled",
+            "title": "CSS example",
             "filename": "lesson-0023.html"
           }
         ]

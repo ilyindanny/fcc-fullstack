@@ -13,10 +13,10 @@ function generateIndexContent() {
 
   tree.forEach(topic => {
     content += `<h2>${topic.title}</h2><ul>`;
-    
+
     topic.subtopics.forEach(subtopic => {
       content += `<li><strong>${subtopic.title}</strong><ul>`;
-      
+
       subtopic.lessons.forEach(lesson => {
         content += `<li><a href="lessons/${lesson.filename}">${lesson.title}</a></li>`;
       });
@@ -43,13 +43,25 @@ function saveIndexHtml(content) {
 function generateAllContentAndLessons() {
   let content = '';
   let lessons = '';
+  let currentTopicTitle = '';
+  let currentSubtopicTitle = '';
 
   tree.forEach(topic => {
+    // Добавляем заголовок основной темы, если он изменился
+    if (topic.title !== currentTopicTitle) {
+      lessons += `<h2 class="topic">${topic.title}</h2>`;
+      currentTopicTitle = topic.title;
+    }
     content += `<h2>${topic.title}</h2><ul>`;
-    
+
     topic.subtopics.forEach(subtopic => {
+      // Добавляем заголовок подтемы, если он изменился
+      if (subtopic.title !== currentSubtopicTitle) {
+        lessons += `<h3 class="subtopic">${subtopic.title}</h3>`;
+        currentSubtopicTitle = subtopic.title;
+      }
       content += `<li><strong>${subtopic.title}</strong><ul>`;
-      
+
       subtopic.lessons.forEach(lesson => {
         const anchorId = lesson.filename.replace('.html', '');
         content += `<li><a href="#${anchorId}">${lesson.title}</a></li>`;

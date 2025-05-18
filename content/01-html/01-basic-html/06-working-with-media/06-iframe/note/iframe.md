@@ -2,9 +2,9 @@
 title: Iframe Element
 ---
 
-## iframe Element
+#### iframe Element
 
-### Basic Syntax and Key Attributes
+##### Basic Syntax and Key Attributes
 
 ```html
 <iframe src="..." width="..." height="..." title="..." allowfullscreen></iframe>
@@ -15,7 +15,7 @@ title: Iframe Element
 - `title`: Improves accessibility and SEO.
 - `allowfullscreen`: Enables full-screen mode.
 
-### Important Attributes
+##### Important Attributes
 
 - `allow`: Grants permissions to iframe (e.g., `autoplay`, `fullscreen`, `clipboard-write`).
 - `referrerpolicy`: Controls the Referer header.
@@ -27,15 +27,15 @@ title: Iframe Element
     - `allow-popups`
     - `allow-forms`
 
-### Accessibility and SEO
+##### Accessibility and SEO
 
 - Always provide a `title` for screen readers.
 - Prefer meaningful descriptions if content is important.
 - Search engines usually **don’t index** iframe content.
 
-### Embedding Videos
+##### Embedding Videos
 
-#### YouTube
+###### YouTube
 
 - Use format: `https://www.youtube.com/embed/VIDEO_ID`
 - Common query parameters:
@@ -46,22 +46,22 @@ title: Iframe Element
   - `loop=1&playlist=VIDEO_ID`
 - Not all videos allow embedding (may be restricted).
 
-#### Short vs Embed Links
+###### Short vs Embed Links
 
 - `https://youtu.be/VIDEO_ID` → shareable link, **not for iframe**
 - `https://www.youtube.com/embed/VIDEO_ID` → correct iframe format
 
 Note: Parameters like `?si=...` sometimes appear in shared links but don’t always affect iframe embedding.
 
-#### Other Platforms
+###### Other Platforms
 
 - Vimeo → `https://player.vimeo.com/video/VIDEO_ID`
 - Pexels / Pixabay → Provide full iframe code
 - Check each platform’s documentation for correct `allow` values
 
-### Maps and Other Content
+##### Maps and Other Content
 
-#### Maps (e.g., OpenStreetMap)
+###### Maps (e.g., OpenStreetMap)
 
 Use a bounding box:
 
@@ -71,7 +71,7 @@ https://www.openstreetmap.org/export/embed.html?bbox=minLon,minLat,maxLon,maxLat
 
 To set a specific location, calculate the bbox around a center coordinate.
 
-#### srcdoc
+###### srcdoc
 
 Inline HTML in iframe:
 
@@ -81,7 +81,7 @@ Inline HTML in iframe:
 
 Good for small self-contained content.
 
-### CORS and Security Policies
+##### CORS and Security Policies
 
 - Sites can block iframes with HTTP headers:
   - `X-Frame-Options: DENY` or `SAMEORIGIN`
@@ -89,7 +89,7 @@ Good for small self-contained content.
 - Check DevTools console if iframe fails.
 - JavaScript cannot access content across domains (Same-Origin Policy).
 
-### Geolocation and Dynamic Maps
+##### Geolocation and Dynamic Maps
 
 iframes don’t detect geolocation themselves. Use JavaScript:
 
@@ -108,7 +108,7 @@ Attach to iframe like:
 <iframe id="map" width="600" height="400"></iframe>
 ```
 
-### Troubleshooting
+##### Troubleshooting
 
 - Check for errors in the browser console.
 - Ensure iframe source allows embedding.
@@ -118,9 +118,9 @@ Attach to iframe like:
 
 
 
-## iframe Code Snippets (Examples)
+#### iframe Code Snippets (Examples)
 
-### YouTube Video with Autoplay and No Controls
+##### YouTube Video with Autoplay and No Controls
 
 ```html
 <iframe
@@ -134,7 +134,7 @@ Attach to iframe like:
 </iframe>
 ```
 
-### Vimeo Video
+##### Vimeo Video
 
 ```html
 <iframe
@@ -148,7 +148,7 @@ Attach to iframe like:
 </iframe>
 ```
 
-### OpenStreetMap Centered on Location (Tbilisi Example)
+##### OpenStreetMap Centered on Location (Tbilisi Example)
 
 ```html
 <iframe
@@ -163,7 +163,7 @@ Attach to iframe like:
 </iframe>
 ```
 
-### Inline HTML with `srcdoc`
+##### Inline HTML with `srcdoc`
 
 ```html
 <iframe
@@ -180,7 +180,7 @@ Attach to iframe like:
 </iframe>
 ```
 
-### Embedded PDF File
+##### Embedded PDF File
 
 ```html
 <iframe
@@ -194,7 +194,7 @@ Attach to iframe like:
 
 > 🔒 It depends on whether the browser supports PDF viewing and whether the site allows opening in an iframe.
 
-### Embedded GitHub README (as raw HTML preview via third-party service)
+##### Embedded GitHub README (as raw HTML preview via third-party service)
 
 ```html
 <iframe
@@ -208,7 +208,7 @@ Attach to iframe like:
 
 > ⚠️ This method only works with an open public repository and via GitHub Pages or special preview services.
 
-### Fallback Message (for unsupported browsers)
+##### Fallback Message (for unsupported browsers)
 
 ```html
 <iframe

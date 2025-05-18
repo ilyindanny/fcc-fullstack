@@ -2,7 +2,7 @@
 title: What is HTML?
 ---
 
-## What is HTML
+#### What is HTML
 
 **Hypertext Markup Language** — a way to create structured web pages with text, links, images, and more.
 
@@ -20,11 +20,11 @@ title: What is HTML?
 
 **Path Types in Attributes**
 
-### Absolute URL
+##### Absolute URL
 
 `https://example.com/path/to/resource`
 
-### Relative URL
+##### Relative URL
 
 `img/pic.jpg` — relative to current folder
 

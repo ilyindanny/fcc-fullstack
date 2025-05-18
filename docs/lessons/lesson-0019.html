@@ -9,7 +9,7 @@
 <body>
 
   <main>
-    <article><h2>What Is a Path?</h2>
+    <article><h4>What Is a Path?</h4>
 <p>A <strong>path</strong> shows the location of a resource (file, image, page) in the file system or website structure.</p>
 <p>Types of paths:</p>
 <ul>
@@ -17,7 +17,7 @@
 <li><strong>Relative</strong></li>
 <li><strong>Root-relative</strong></li>
 </ul>
-<h3>Absolute Path</h3>
+<h5>Absolute Path</h5>
 <p>A full address to a file — starts from the <strong>root</strong>.</p>
 <ul>
 <li>
@@ -33,7 +33,7 @@
 <code>file:///C:/Users/Daniel/Desktop/site/pages/about.html</code></p>
 </li>
 </ul>
-<h3>Relative Path</h3>
+<h5>Relative Path</h5>
 <p>Relative to the <strong>current file's folder</strong>. Shorter and flexible.</p>
 <p>Examples:</p>
 <ul>
@@ -43,7 +43,7 @@
 <li><code>./style.css</code> — current folder (optional <code>./</code>)</li>
 </ul>
 <p>Works in both <code>file://</code> and <code>localhost</code> modes if folder structure is correct.</p>
-<h3>Root-Relative Path</h3>
+<h5>Root-Relative Path</h5>
 <p>Starts with <code>/</code> — relative to the <strong>site root</strong>, not current file.</p>
 <p>Example:<br>
 <code>/assets/css/main.css</code></p>
@@ -51,9 +51,9 @@
 <li>Works only in <strong>localhost</strong> or live server.</li>
 <li>Does <strong>not</strong> work in <code>file://</code> mode.</li>
 </ul>
-<h3>Base URL (optional)</h3>
+<h5>Base URL (optional)</h5>
 <p>The <code>&lt;base href=&quot;/assets/&quot;&gt;</code> tag in <code>&lt;head&gt;</code> changes how all relative paths are resolved. Use carefully.</p>
-<h3>Link Behavior Examples</h3>
+<h5>Link Behavior Examples</h5>
 <p><strong>Absolute web URL</strong></p>
 <p><code>&lt;a href=&quot;https://example.com/style.css&quot;&gt;External&lt;/a&gt;</code></p>
 <p><strong>Relative to current file</strong></p>
@@ -63,18 +63,18 @@
 <p><code>&lt;a href=&quot;/pages/lesson.html&quot;&gt;From site root&lt;/a&gt;</code></p>
 <p><strong>Localhost absolute URL</strong></p>
 <p><code>&lt;a href=&quot;http://127.0.0.1/lessons/lesson.html&quot;&gt;Always works if server runs&lt;/a&gt;</code></p>
-<h3>Common Mistake</h3>
+<h5>Common Mistake</h5>
 <ul>
 <li>Mixing styles (absolute / relative / root-relative) inconsistently</li>
 </ul>
-<h3>Best Practices</h3>
+<h5>Best Practices</h5>
 <ul>
 <li>Use absolute paths for external sites.</li>
 <li>Use relative paths for internal links during development.</li>
 <li>Use root-relative when served from a server and structure is stable.</li>
 <li>Test root-relative paths only under localhost.</li>
 </ul>
-<h3>OS Path Formats vs browser format</h3>
+<h5>OS Path Formats vs browser format</h5>
 <p><strong>macOS:</strong></p>
 <ul>
 <li><code>/Users/Daniel/Desktop/project/index.html</code></li>

@@ -2,13 +2,13 @@
 title: Audio & Video
 ---
 
-## HTML Media Elements: Audio & Video
+#### HTML Media Elements: Audio & Video
 
-### 1. Purpose
+##### 1. Purpose
 
 The `<audio>` and `<video>` elements embed sound and video into webpages using native HTML tags.
 
-### 2. Supported Formats and MIME Types
+##### 2. Supported Formats and MIME Types
 
 **Audio:**
 
@@ -32,7 +32,7 @@ The `<audio>` and `<video>` elements embed sound and video into webpages using n
 </audio>
 ```
 
-### 3. Common Attributes (`<audio>` and `<video>`)
+##### 3. Common Attributes (`<audio>` and `<video>`)
 
 - `src` (URL): Path to media file. Optional if you use <source> elements inside the tag.
 - `controls` (boolean): Displays built-in play/pause/etc. controls.
@@ -48,7 +48,7 @@ The `<audio>` and `<video>` elements embed sound and video into webpages using n
 
 `<audio src="file.mp3" controls loop muted preload="auto"></audio>`
 
-### 4. `<video>`-only Attributes
+##### 4. `<video>`-only Attributes
 
 - `poster`: Image shown before video loads or plays
 - `width`: Width in pixels
@@ -58,7 +58,7 @@ The `<audio>` and `<video>` elements embed sound and video into webpages using n
 
 `<video src="video.mp4" controls poster="cover.jpg" width="640"></video>`
 
-### 5. Using `<source>` for Fallback
+##### 5. Using `<source>` for Fallback
 
 The browser picks the first supported format:
 
@@ -69,7 +69,7 @@ The browser picks the first supported format:
 </video>
 ```
 
-### 6. YouTube / Vimeo Embeds
+##### 6. YouTube / Vimeo Embeds
 
 Use `<iframe>` to embed external players:
 
@@ -83,7 +83,7 @@ Use `<iframe>` to embed external players:
 </iframe>
 ```
 
-### 7. JavaScript API (basics)
+##### 7. JavaScript API (basics)
 
 ```javascript
 audio.play();
@@ -93,7 +93,7 @@ audio.volume = 0.5;
 audio.muted = true;
 ```
 
-### 8. Media Events (examples)
+##### 8. Media Events (examples)
 
 - `play`:Starts playing
 - `pause`: Playback paused
@@ -106,7 +106,7 @@ audio.muted = true;
 
 
 
-### 9. Summary
+##### 9. Summary
 
 - Use `<audio>` for music/sound, `<video>` for movies.  
 - Use `<source>` for format fallback.  

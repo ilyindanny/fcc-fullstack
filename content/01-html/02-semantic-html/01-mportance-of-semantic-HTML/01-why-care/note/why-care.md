@@ -1,11 +1,7 @@
 ---
-Why care?
+title: Why to care?
 ---
 
-# What is HTML?
+#### HTML Semantic
 
-HTML stands for HyperText Markup Language.
-
-```html
-<h1>Hello, world!</h1>
-```
+Coming soon

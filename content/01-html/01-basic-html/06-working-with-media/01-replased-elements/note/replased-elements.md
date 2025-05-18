@@ -2,7 +2,7 @@
 title: Replaced Elements
 ---
 
-## What Are Replaced Elements
+#### What Are Replaced Elements
 
 A replaced element is an element whose content is determined by an external resource rather than by CSS itself.
 

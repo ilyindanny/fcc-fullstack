@@ -1,4 +1,4 @@
-/* ===== Base ===== */
+/* ===== BASE ===== */
 html {
   scroll-behavior: smooth;
 }
@@ -6,30 +6,74 @@ html {
 body {
   margin: 2rem;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #2d2d2d; /* Основной фон */
-  color: #e6e6e6; /* Основной текст */
+  background-color: #2d2d2d; /* VS Code Dark Background */
+  color: #e6e6e6; /* VS Code Light Text */
   line-height: 1.6;
-  padding-top: 60px; /* для header */
+  padding-top: 60px; /* Space for fixed header */
 }
 
-/* ===== Header ===== */
+/* ===== TYPOGRAPHY ===== */
+h1 {
+  font-size: 1.8em;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  color: #ffffff; /* White */
+}
+
+h2 {
+  font-size: 1.4em;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: #ffffff; /* White */
+}
+
+h3 {
+  font-size: 1.2em;
+  margin-top: 1.5rem;
+  margin-bottom: 0.8rem;
+  color: #ffffff; /* White */
+}
+
+h4 {
+  font-size: 1.1em;
+  margin-top: 1rem;
+  margin-bottom: 0.6rem;
+  color: #ffffff; /* White */
+}
+
+ul {
+  padding-left: 2rem;
+}
+
+/* ===== LINKS ===== */
+a {
+  color: #4ea8de; /* VS Code Light Blue */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #82cfff; /* VS Code Hover Light Blue */
+}
+
+/* ===== HEADER ===== */
 header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #333; /* Темный фон для header */
+  background-color: #333; /* Darker Background */
   color: white;
   padding: 10px 20px;
   z-index: 1000;
   display: flex;
-  flex-direction: column; /* Располагаем элементы вертикально */
+  flex-direction: column;
   align-items: flex-start;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .header-content {
-  margin-bottom: 0px; /* Отделяем заголовок от кнопок */
+  margin-bottom: 0;
 }
 
 .site-name {
@@ -41,7 +85,7 @@ header {
 
 .navbar {
   display: flex;
-  justify-content: flex-start; /* Слева кнопки */
+  justify-content: flex-start;
   width: 100%;
 }
 
@@ -52,7 +96,7 @@ header {
 }
 
 .menu-button {
-  color: #4ea8de; /* Цвет кнопок */
+  color: #4ea8de; /* VS Code Light Blue */
   font-size: 14px;
   text-decoration: none;
   background-color: transparent;
@@ -63,11 +107,11 @@ header {
 
 .menu-button:hover {
   text-decoration: underline;
-  color: #82cfff; /* Цвет при наведении */
+  color: #82cfff; /* VS Code Hover Light Blue */
 }
 
 .divider {
-  color: #999;
+  color: #999; /* Light Gray */
   font-size: 14px;
   user-select: none;
 }
@@ -81,64 +125,40 @@ header {
   text-transform: lowercase;
 }
 
-/* ===== Headings ===== */
-h1, h2, h3 {
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  color: #ffffff; /* Белый цвет для заголовков */
-}
-
-/* ===== Code Blocks ===== */
-pre, code {
-  background-color: #272822; /* Темный фон для кода */
-  color: #f8f8f2; /* Светлый текст для кода */
-  padding: 0.5rem;
-  border-radius: 5px;
-  font-family: 'Courier New', Courier, monospace;
-  overflow-x: auto;
-}
-
-/* ===== Links ===== */
-a {
-  color: #4ea8de; /* Цвет ссылок */
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-  color: #82cfff; /* Цвет при наведении */
-}
-
-/* ===== Lists ===== */
-ul {
-  padding-left: 2rem;
-}
-
-/* ===== Sections ===== */
+/* ===== CONTENT LAYOUT ===== */
 section {
   margin-bottom: 2rem;
 }
 
-/* ===== Lesson Collection Layout ===== */
 #lesson-collection {
   margin-top: 4rem;
-  border-top: 1px solid #444;
+  border-top: 1px solid #444; /* Dark Gray */
   padding-top: 2rem;
 }
 
 .collected-lesson {
   margin-bottom: 4rem;
   padding-bottom: 2rem;
-  border-bottom: 1px dashed #555;
+  border-bottom: 1px dashed #555; /* Light Dark Gray Dashed */
 }
 
 .lesson-divider {
   margin: 4rem 0;
-  border-top: 1px solid #444;
+  border-top: 1px solid #444; /* Dark Gray */
   opacity: 0.3;
 }
 
-/* ===== Lesson Navigation Buttons ===== */
+/* ===== CODE BLOCKS ===== */
+pre, code {
+  background-color: #272822; /* VS Code Code Background */
+  color: #f8f8f2; /* VS Code Code Text */
+  padding: 0.5rem;
+  border-radius: 5px;
+  font-family: 'Courier New', Courier, monospace;
+  overflow-x: auto;
+}
+
+/* ===== NAVIGATION ===== */
 .lesson-navigation {
   display: flex;
   justify-content: center;
@@ -152,25 +172,41 @@ section {
   font-weight: 500;
   border-radius: 3px;
   text-decoration: none;
-  background-color: #3c3c3c;
-  color: #dcdcdc;
-  border: 1px solid #555;
+  background-color: #3c3c3c; /* Slightly Lighter Dark */
+  color: #dcdcdc; /* Light Gray */
+  border: 1px solid #555; /* Light Dark Gray */
   transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 
 .lesson-navigation a:hover {
-  background-color: #505050;
-  color: #ffffff;
-  border-color: #777;
+  background-color: #505050; /* Lighter Dark */
+  color: #ffffff; /* White */
+  border-color: #777; /* Medium Dark Gray */
 }
 
 .lesson-navigation a.previous,
 .lesson-navigation a.next,
 .lesson-navigation a.home-page {
-  background-color: #264f78; /* Цвет кнопок навигации */
+  background-color: #264f78; /* Blueish */
 }
 
-/* ===== Mobile responsiveness ===== */
+/* ===== THEME OVERRIDES ===== */
+h2.topic {
+  font-size: 1.6em; /* Emphasized size */
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #61afef; /* VS Code Light Blue */
+  margin-bottom: 1.5rem;
+}
+
+h3.subtopic {
+  font-size: 1.3em; /* Slightly emphasized size */
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid #98c379; /* VS Code Light Green */
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+/* ===== MOBILE RESPONSIVENESS ===== */
 @media (max-width: 600px) {
   body {
     font-size: 14px;

@@ -2,7 +2,7 @@
 title: Link States in CSS
 ---
 
-## What Are Link States?
+#### What Are Link States?
 
 Links can exist in different **states** depending on how the user interacts with them.  
 These pseudo-classes allow dynamic styling, which improves UX and accessibility.
@@ -12,7 +12,7 @@ These pseudo-classes allow dynamic styling, which improves UX and accessibility.
 
 ---
 
-### Link States Overview
+##### Link States Overview
 
 - `:link` — the link has **not** been visited yet  
 - `:visited` — the link **has** been opened before  
@@ -26,7 +26,7 @@ These pseudo-classes allow dynamic styling, which improves UX and accessibility.
 Mnemonic: **LoVe FAt HAir**
 
 
-### CSS Example
+##### CSS Example
 
 ```css
 a:link {

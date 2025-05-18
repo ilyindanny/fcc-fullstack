@@ -2,24 +2,24 @@
 title: SVG
 ---
 
-## SVG (Scalable Vector Graphics)
+#### SVG (Scalable Vector Graphics)
 
 SVG is a **vector image format** — unlike raster formats (`JPG`, `PNG`), which are **pixel-based**.
 
-### Advantages
+##### Advantages
 - **Scales infinitely** without losing quality.
 - Defined in **XML**, so can be embedded directly into HTML.
 - **Styleable** with CSS (e.g. fill, stroke, size).
 - **Lightweight** for simple graphics and icons.
 
-### When to Use
+##### When to Use
 - Icons and UI elements.
 - Logos and diagrams.
 - Custom bullets and decorative shapes.
 
-### Use Cases (How to Use SVG)
+##### Use Cases (How to Use SVG)
 
-#### 1. Inline SVG — directly in HTML
+###### 1. Inline SVG — directly in HTML
 
 ```html
 <svg width="24" height="24" viewBox="0 0 24 24">
@@ -32,7 +32,7 @@ SVG is a **vector image format** — unlike raster formats (`JPG`, `PNG`), which
 - Ideal for interactive or animated graphics.
 
 
-#### 2. External SVG — as a regular image
+###### 2. External SVG — as a regular image
 
 ```html
 <img src="https://example.com/icon.svg" alt="icon" />
@@ -43,7 +43,7 @@ SVG is a **vector image format** — unlike raster formats (`JPG`, `PNG`), which
 - Best for simple, static icons.
 
 
-#### 3. SVG via Icon Library — using Font Awesome
+###### 3. SVG via Icon Library — using Font Awesome
 
 **From CDN:**
 
@@ -74,10 +74,10 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 ```
 
 
-### Tools & Libraries
+##### Tools & Libraries
 - [Font Awesome](https://fontawesome.com) – icon library based on SVG.
 - Inkscape, Figma, Illustrator – for creating and editing SVG files.
 
 
-### Tip
+##### Tip
 Open an `.svg` file in a text editor — it's just readable XML code!

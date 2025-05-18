@@ -2,7 +2,7 @@
 title: HTML Entities
 ---
 
-## HTML Entities
+#### HTML Entities
 
 HTML entities are used to represent reserved characters in HTML, such as `<`, `>`, `"`, and `&`.
 
@@ -14,7 +14,7 @@ you need to write it in the HTML source like this:
 
     `&lt;div class=&quot;example&quot;&gt;Hello &amp; welcome!&lt;/div&gt;`
 
-### Types of HTML Entities
+##### Types of HTML Entities
 
 *   **Named characters:** `&lt;`, `&gt;`, `&quot;`, `&amp;` and many others
 *   **Decimal numeric reference:** `&#60;` — uses the Unicode decimal number of the character

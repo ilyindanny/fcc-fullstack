@@ -2,7 +2,7 @@
 title: Optimize Media Asets
 ---
 
-## Optimize Media Assets
+#### Optimize Media Assets
 
 To optimize media like images, consider:
 

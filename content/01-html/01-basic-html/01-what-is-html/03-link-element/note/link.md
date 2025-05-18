@@ -2,7 +2,7 @@
 title: Link Element
 ---
 
-## Link Element
+#### Link Element
 
 The `<link>` element is used to link to external resources
 

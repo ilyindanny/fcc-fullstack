@@ -2,11 +2,11 @@
 title: Target Attribute
 ---
 
-## Target Attribute
+#### Target Attribute
 
 Specifies **where** a link or form opens — same tab, new tab, or frame.
 
-### Values
+##### Values
 
 - `_self` – default, opens in the **same tab**.
 - `_blank` – opens in a **new tab** (add `rel="noopener"`).
@@ -14,7 +14,7 @@ Specifies **where** a link or form opens — same tab, new tab, or frame.
 - `_top` – opens in the **top-level window**.
 - `_unfencedTop` – experimental, for Fenced Frames.
 
-### Example
+##### Example
 ```html
 <a href="https://example.com" target="_blank" rel="noopener">New Tab</a>
 ```
@@ -42,16 +42,16 @@ Using `target="_blank"` in a `<form>` makes the form submission result open in a
 Use `rel="noopener"` with `_blank` for security.
 
 
-### Security Note
+##### Security Note
 
 When using `target="_blank"`, always add `rel="noopener"` (or `rel="noreferrer"`) to prevent the new page from having access to the original page via `window.opener`. This helps avoid potential security vulnerabilities such as phishing attacks.
 
 
-### Named Targets
+##### Named Targets
 
 The `target` attribute can refer to any named window or frame, not just the predefined keywords. For example, if an `<iframe>` or window has a `name` attribute, links or forms can target that specific window by name.
 
 
-### Modern Usage
+##### Modern Usage
 
 Named frames are less common in modern web development. Today, developers often prefer using JavaScript frameworks and SPA architecture, reducing reliance on frames and multiple windows for navigation.

@@ -2,7 +2,7 @@
 title: File Paths
 ---
 
-## What Is a Path?
+#### What Is a Path?
 
 A **path** shows the location of a resource (file, image, page) in the file system or website structure.
 
@@ -11,7 +11,7 @@ Types of paths:
 - **Relative**
 - **Root-relative**
 
-### Absolute Path
+##### Absolute Path
 
 A full address to a file — starts from the **root**.
 
@@ -25,7 +25,7 @@ A full address to a file — starts from the **root**.
   `file:///C:/Users/Daniel/Desktop/site/pages/about.html`
 
 
-### Relative Path
+##### Relative Path
 
 Relative to the **current file's folder**. Shorter and flexible.
 
@@ -37,7 +37,7 @@ Examples:
 
 Works in both `file://` and `localhost` modes if folder structure is correct.
 
-### Root-Relative Path
+##### Root-Relative Path
 
 Starts with `/` — relative to the **site root**, not current file.
 
@@ -47,12 +47,12 @@ Example:
 - Works only in **localhost** or live server.  
 - Does **not** work in `file://` mode.
 
-### Base URL (optional)
+##### Base URL (optional)
 
 The `<base href="/assets/">` tag in `<head>` changes how all relative paths are resolved. Use carefully.
 
 
-### Link Behavior Examples
+##### Link Behavior Examples
 
 **Absolute web URL**
 
@@ -74,12 +74,12 @@ The `<base href="/assets/">` tag in `<head>` changes how all relative paths are 
 
 `<a href="http://127.0.0.1/lessons/lesson.html">Always works if server runs</a>`
 
-### Common Mistake
+##### Common Mistake
 
 - Mixing styles (absolute / relative / root-relative) inconsistently  
 
 
-### Best Practices
+##### Best Practices
 
 - Use absolute paths for external sites.  
 - Use relative paths for internal links during development.  
@@ -87,7 +87,7 @@ The `<base href="/assets/">` tag in `<head>` changes how all relative paths are 
 - Test root-relative paths only under localhost.
 
 
-### OS Path Formats vs browser format
+##### OS Path Formats vs browser format
 
 **macOS:**
 - `/Users/Daniel/Desktop/project/index.html`  

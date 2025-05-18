@@ -9,10 +9,10 @@
 <body>
 
   <main>
-    <article><h2>HTML Media Elements: Audio &amp; Video</h2>
-<h3>1. Purpose</h3>
+    <article><h4>HTML Media Elements: Audio &amp; Video</h4>
+<h5>1. Purpose</h5>
 <p>The <code>&lt;audio&gt;</code> and <code>&lt;video&gt;</code> elements embed sound and video into webpages using native HTML tags.</p>
-<h3>2. Supported Formats and MIME Types</h3>
+<h5>2. Supported Formats and MIME Types</h5>
 <p><strong>Audio:</strong></p>
 <ul>
 <li>.mp3 — <code>audio/mpeg</code></li>
@@ -32,7 +32,7 @@
   &lt;source src=&quot;sound.mp3&quot; type=&quot;audio/mpeg&quot; /&gt;
 &lt;/audio&gt;
 </code></pre>
-<h3>3. Common Attributes (<code>&lt;audio&gt;</code> and <code>&lt;video&gt;</code>)</h3>
+<h5>3. Common Attributes (<code>&lt;audio&gt;</code> and <code>&lt;video&gt;</code>)</h5>
 <ul>
 <li><code>src</code> (URL): Path to media file. Optional if you use &lt;source&gt; elements inside the tag.</li>
 <li><code>controls</code> (boolean): Displays built-in play/pause/etc. controls.</li>
@@ -49,7 +49,7 @@
 </ul>
 <p><strong>Example:</strong></p>
 <p><code>&lt;audio src=&quot;file.mp3&quot; controls loop muted preload=&quot;auto&quot;&gt;&lt;/audio&gt;</code></p>
-<h3>4. <code>&lt;video&gt;</code>-only Attributes</h3>
+<h5>4. <code>&lt;video&gt;</code>-only Attributes</h5>
 <ul>
 <li><code>poster</code>: Image shown before video loads or plays</li>
 <li><code>width</code>: Width in pixels</li>
@@ -57,14 +57,14 @@
 </ul>
 <p><strong>Example:</strong></p>
 <p><code>&lt;video src=&quot;video.mp4&quot; controls poster=&quot;cover.jpg&quot; width=&quot;640&quot;&gt;&lt;/video&gt;</code></p>
-<h3>5. Using <code>&lt;source&gt;</code> for Fallback</h3>
+<h5>5. Using <code>&lt;source&gt;</code> for Fallback</h5>
 <p>The browser picks the first supported format:</p>
 <pre><code class="language-html">&lt;video controls&gt;
   &lt;source src=&quot;movie.webm&quot; type=&quot;video/webm&quot; /&gt;
   &lt;source src=&quot;movie.mp4&quot; type=&quot;video/mp4&quot; /&gt;
 &lt;/video&gt;
 </code></pre>
-<h3>6. YouTube / Vimeo Embeds</h3>
+<h5>6. YouTube / Vimeo Embeds</h5>
 <p>Use <code>&lt;iframe&gt;</code> to embed external players:</p>
 <pre><code class="language-html">&lt;iframe
   width=&quot;560&quot;
@@ -74,14 +74,14 @@
   allowfullscreen&gt;
 &lt;/iframe&gt;
 </code></pre>
-<h3>7. JavaScript API (basics)</h3>
+<h5>7. JavaScript API (basics)</h5>
 <pre><code class="language-javascript">audio.play();
 audio.pause();
 audio.currentTime = 0;
 audio.volume = 0.5;
 audio.muted = true;
 </code></pre>
-<h3>8. Media Events (examples)</h3>
+<h5>8. Media Events (examples)</h5>
 <ul>
 <li><code>play</code>:Starts playing</li>
 <li><code>pause</code>: Playback paused</li>
@@ -90,7 +90,7 @@ audio.muted = true;
 </ul>
 <p><strong>Example:</strong></p>
 <p><code>video.addEventListener(&quot;ended&quot;, () =&gt; alert(&quot;Video finished&quot;));</code></p>
-<h3>9. Summary</h3>
+<h5>9. Summary</h5>
 <ul>
 <li>Use <code>&lt;audio&gt;</code> for music/sound, <code>&lt;video&gt;</code> for movies.</li>
 <li>Use <code>&lt;source&gt;</code> for format fallback.</li>
