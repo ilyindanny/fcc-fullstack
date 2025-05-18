@@ -20,9 +20,11 @@
             </div>
         </header>
         <main>
+            <h1>freeCodeCamp FullStack Notes</h1>
+            <p>All Notes on the One Page</p>
             <section>
                 <h2>Content:</h2>
-                <nav><h2>HTML</h2><ul><li><strong>Basic HTML</strong><ul><li><a href="#lesson-0001">What is HTML?</a></li><li><a href="#lesson-0002">HTML Tag Attributes</a></li><li><a href="#lesson-0003">Link Element</a></li><li><a href="#lesson-0004">Boilerplate</a></li><li><a href="#lesson-0005">UTF-8</a></li><li><a href="#lesson-0006">Div Eement</a></li><li><a href="#lesson-0007">ID Element</a></li><li><a href="#lesson-0008">HTML Entities</a></li><li><a href="#lesson-0009">Script</a></li><li><a href="#lesson-0010">Meta description</a></li><li><a href="#lesson-0011">Open Graph</a></li><li><a href="#lesson-0012">Replaced Elements</a></li><li><a href="#lesson-0013">Optimize Media Asets</a></li><li><a href="#lesson-0014">Image licenses</a></li><li><a href="#lesson-0015">SVG</a></li><li><a href="#lesson-0016">Audio & Video</a></li><li><a href="#lesson-0017">Iframe Element</a></li><li><a href="#lesson-0018">Target Attribute</a></li><li><a href="#lesson-0019">File Paths</a></li><li><a href="#lesson-0020">Link States in CSS</a></li><li><a href="#lesson-0021">Basic HTML Review</a></li></ul></li><li><strong>HTML Semantic</strong><ul><li><a href="#lesson-0022">Why to care?</a></li></ul></li></ul><h2>CSS</h2><ul><li><strong>first example</strong><ul><li><a href="#lesson-0023">CSS example</a></li></ul></li></ul></nav>
+                <nav><h2>HTML</h2><ul><li><strong>Basic HTML</strong><ul><li><a href="#lesson-0001">What is HTML?</a></li><li><a href="#lesson-0002">HTML Tag Attributes</a></li><li><a href="#lesson-0003">Link Element</a></li><li><a href="#lesson-0004">Boilerplate</a></li><li><a href="#lesson-0005">UTF-8</a></li><li><a href="#lesson-0006">Div Eement</a></li><li><a href="#lesson-0007">ID Element</a></li><li><a href="#lesson-0008">HTML Entities</a></li><li><a href="#lesson-0009">Script</a></li><li><a href="#lesson-0010">Meta description</a></li><li><a href="#lesson-0011">Open Graph</a></li><li><a href="#lesson-0012">Replaced Elements</a></li><li><a href="#lesson-0013">Optimize Media Asets</a></li><li><a href="#lesson-0014">Image licenses</a></li><li><a href="#lesson-0015">SVG</a></li><li><a href="#lesson-0016">Audio & Video</a></li><li><a href="#lesson-0017">Iframe Element</a></li><li><a href="#lesson-0018">Target Attribute</a></li><li><a href="#lesson-0019">File Paths</a></li><li><a href="#lesson-0020">Link States in CSS</a></li><li><a href="#lesson-0021">Basic HTML Review</a></li></ul></li><li><strong>HTML Semantic</strong><ul><li><a href="#lesson-0022">Semantic HTML</a></li><li><a href="#lesson-0023">Hierarchy in HTML</a></li></ul></li></ul><h2>CSS</h2><ul><li><strong>first example</strong><ul><li><a href="#lesson-0024">CSS example</a></li></ul></li></ul></nav>
             </section>
             <section><h2 class="topic">HTML</h2><h3 class="subtopic">Basic HTML</h3>
           <article id="lesson-0001">
@@ -957,14 +959,69 @@ a:active {
         <h3 class="subtopic">HTML Semantic</h3>
           <article id="lesson-0022">
             
-    <article><h4>HTML Semantic</h4>
-<p>Coming soon</p>
+    <article><h4>Semantic HTML</h4>
+<ul>
+<li><strong>Semantics</strong> means meaning, not just appearance.</li>
+<li>Each HTML element has a purpose beyond style.</li>
+<li><strong>Core idea:</strong></li>
+</ul>
+<blockquote>
+<p>Semantic HTML is thinking one level up — not <em>how it looks</em> but <em>what it means</em>.<br>
+The best code is understandable without CSS or JavaScript.</p>
+</blockquote>
+<p><strong>Example:</strong><br>
+<code>&lt;p&gt;</code> means paragraph, a logical block of text.</p>
+<p><strong>Why it matters:</strong></p>
+<ol>
+<li><strong>Accessibility:</strong> Screen readers rely on semantic tags to understand content.</li>
+<li><strong>SEO:</strong> Search engines rank semantic content higher.</li>
+<li><strong>Maintainability:</strong> Code is easier to read and edit when structure is clear.</li>
+</ol>
+<p>Avoid non-semantic tags like <code>&lt;div&gt;</code> and <code>&lt;span&gt;</code> when possible; prefer semantic tags like <code>&lt;nav&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;strong&gt;</code>, etc.</p>
+</article>
+  
+          </article>
+          <hr class="lesson-divider">
+        
+          <article id="lesson-0023">
+            
+    <article><h4>Why is it important to have good structural hierarchy?</h4>
+<ul>
+<li>Structural hierarchy relies on proper use of heading elements: <code>h1</code>, <code>h2</code>, <code>h3</code>, etc.</li>
+<li>Heading levels indicate the importance and nesting of content.</li>
+<li><code>h1</code>: top-level heading, usually one per page, appears before main content.</li>
+<li><code>h2</code>: subheading, can appear multiple times, used to separate sections.</li>
+<li><code>h3</code>: sub-subheading, must follow <code>h2</code> (never skip levels like <code>h1</code> → <code>h3</code>).</li>
+<li>Multiple headings at the same level are allowed (e.g., multiple <code>h2</code>).</li>
+</ul>
+<p><strong>Example of correct heading order:</strong></p>
+<pre><code>&lt;section&gt;
+  &lt;h1&gt;freeCodeCamp&lt;/h1&gt;
+  &lt;h2&gt;Learn Front-End Development&lt;/h2&gt;
+  &lt;h2&gt;Learn Back-End Development&lt;/h2&gt;
+&lt;/section&gt;
+</code></pre>
+<p><strong>Incorrect example (<code>h3</code> before <code>h2</code>):</strong></p>
+<pre><code>&lt;section&gt;
+  &lt;h1&gt;freeCodeCamp&lt;/h1&gt;
+  &lt;h3&gt;Learn Front-End Development&lt;/h3&gt;
+  &lt;h2&gt;Learn Back-End Development&lt;/h2&gt;
+&lt;/section&gt;
+</code></pre>
+<ul>
+<li>Do not choose heading elements based on visual style (e.g., <code>h1</code> for big text). Use CSS for styling.</li>
+<li>Proper hierarchy improves accessibility: screen readers rely on correct heading order to guide users.</li>
+<li>Incorrect heading order can confuse assistive technologies, making users miss or misunderstand content.</li>
+<li>Proper hierarchy improves SEO: search engines parse structure to rank pages correctly.</li>
+<li>Malformed structure may cause HTML to be invalid; browsers then guess the intent, which can break the layout or logic.</li>
+</ul>
+<p>Summary: Always use headings in order (<code>h1</code> → <code>h2</code> → <code>h3</code>, etc.) to ensure accessibility, SEO, and valid HTML.</p>
 </article>
   
           </article>
           <hr class="lesson-divider">
         <h2 class="topic">CSS</h2><h3 class="subtopic">first example</h3>
-          <article id="lesson-0023">
+          <article id="lesson-0024">
             
     <article><h4>Comming Soon</h4>
 </article>

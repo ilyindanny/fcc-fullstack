@@ -98,8 +98,12 @@
         "order": 2,
         "lessons": [
           {
-            "title": "Why to care?",
+            "title": "Semantic HTML",
             "filename": "lesson-0022.html"
+          },
+          {
+            "title": "Hierarchy in HTML",
+            "filename": "lesson-0023.html"
           }
         ]
       }
@@ -115,7 +119,7 @@
         "lessons": [
           {
             "title": "CSS example",
-            "filename": "lesson-0023.html"
+            "filename": "lesson-0024.html"
           }
         ]
       }
