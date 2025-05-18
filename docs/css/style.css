@@ -171,17 +171,14 @@ section {
 }
 
 /* ===== CODE BLOCKS ===== */
-
-code {
-  background-color: #272822; /* VS Code Code Background */
-  color: #f8f8f2; /* VS Code Code Text */
-  /*padding: 0.5rem;*/
-  border-radius: 5px;
-  font-family: 'Courier New', Courier, monospace;
-  overflow-x: auto;
+code:not([class^="language-"]):not(pre *) {
+  color: #d4d4d4; /* Стандартный цвет текста Prism */
+  font-size: 0.9em; /* Немного меньше, чем у Prism для инлайна */
+  font-family: Menlo, Monaco, Consolas, "Andale Mono", "Ubuntu Mono", "Courier New", monospace; /* Семейство шрифтов Prism */
+  background-color: #282828; /* Цвет фона Prism для инлайна */
+  padding: 0.2em 0.4em; /* Немного больше, чем у Prism для инлайна */
+  border-radius: 0.3em; /* Закругление как у Prism для инлайна */
 }
-
-*/
 
 
 /* ===== NAVIGATION ===== */
