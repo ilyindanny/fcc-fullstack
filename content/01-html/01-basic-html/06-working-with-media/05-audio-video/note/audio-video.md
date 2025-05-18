@@ -34,7 +34,7 @@ The `<audio>` and `<video>` elements embed sound and video into webpages using n
 
 ##### 3. Common Attributes (`<audio>` and `<video>`)
 
-- `src` (URL): Path to media file. Optional if you use <source> elements inside the tag.
+- `src` (URL): Path to media file. Optional if you use `<source>` elements inside the tag.
 - `controls` (boolean): Displays built-in play/pause/etc. controls.
 - `autoplay` (boolean): Starts playback automatically. Usually works only if muted is also set.
 - `loop` (boolean): Repeats the media file indefinitely.

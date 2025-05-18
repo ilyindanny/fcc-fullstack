@@ -47,7 +47,7 @@
 <li>Search engines usually <strong>don’t index</strong> iframe content.</li>
 </ul>
 <h5>Embedding Videos</h5>
-<h6>YouTube</h6>
+<p><strong>YouTube</strong></p>
 <ul>
 <li>Use format: <code>https://www.youtube.com/embed/VIDEO_ID</code></li>
 <li>Common query parameters:
@@ -61,25 +61,24 @@
 </li>
 <li>Not all videos allow embedding (may be restricted).</li>
 </ul>
-<h6>Short vs Embed Links</h6>
+<p><strong>Short vs Embed Links</strong></p>
 <ul>
-<li><code>https://youtu.be/VIDEO_ID</code> → shareable link, <strong>not for iframe</strong></li>
-<li><code>https://www.youtube.com/embed/VIDEO_ID</code> → correct iframe format</li>
+<li><code>https://youtu.be/VIDEO_ID</code> - shareable link, <strong>not for iframe</strong></li>
+<li><code>https://www.youtube.com/embed/VIDEO_ID</code> - correct iframe format</li>
 </ul>
 <p>Note: Parameters like <code>?si=...</code> sometimes appear in shared links but don’t always affect iframe embedding.</p>
-<h6>Other Platforms</h6>
+<p><strong>Other Platforms</strong></p>
 <ul>
-<li>Vimeo → <code>https://player.vimeo.com/video/VIDEO_ID</code></li>
-<li>Pexels / Pixabay → Provide full iframe code</li>
+<li>Vimeo - <code>https://player.vimeo.com/video/VIDEO_ID</code></li>
+<li>Pexels / Pixabay - Provide full iframe code</li>
 <li>Check each platform’s documentation for correct <code>allow</code> values</li>
 </ul>
-<h5>Maps and Other Content</h5>
-<h6>Maps (e.g., OpenStreetMap)</h6>
+<p><strong>Maps (e.g., OpenStreetMap)</strong></p>
 <p>Use a bounding box:</p>
 <pre><code class="language-html">https://www.openstreetmap.org/export/embed.html?bbox=minLon,minLat,maxLon,maxLat
 </code></pre>
 <p>To set a specific location, calculate the bbox around a center coordinate.</p>
-<h6>srcdoc</h6>
+<p><strong>srcdoc</strong></p>
 <p>Inline HTML in iframe:</p>
 <pre><code class="language-html">&lt;iframe srcdoc=&quot;&lt;p&gt;Hello&lt;/p&gt;&quot; sandbox&gt;&lt;/iframe&gt;
 </code></pre>
@@ -114,8 +113,8 @@
 <li>Confirm correct URL format (especially for YouTube).</li>
 <li>Some videos or domains simply can’t be embedded due to restrictions.</li>
 </ul>
-<h4>iframe Code Snippets (Examples)</h4>
-<h5>YouTube Video with Autoplay and No Controls</h5>
+<h5>iframe Code Snippets (Examples)</h5>
+<p>YouTube Video with Autoplay and No Controls</p>
 <pre><code class="language-html">&lt;iframe
   width=&quot;560&quot;
   height=&quot;315&quot;
@@ -126,7 +125,7 @@
   allowfullscreen&gt;
 &lt;/iframe&gt;
 </code></pre>
-<h5>Vimeo Video</h5>
+<p>Vimeo Video</p>
 <pre><code class="language-html">&lt;iframe
   src=&quot;https://player.vimeo.com/video/76979871&quot;
   width=&quot;640&quot;
@@ -137,7 +136,7 @@
   title=&quot;Vimeo video&quot;&gt;
 &lt;/iframe&gt;
 </code></pre>
-<h5>OpenStreetMap Centered on Location (Tbilisi Example)</h5>
+<p>OpenStreetMap Centered on Location (Tbilisi Example)</p>
 <pre><code class="language-html">&lt;iframe
   width=&quot;600&quot;
   height=&quot;450&quot;
@@ -149,7 +148,7 @@
   title=&quot;OpenStreetMap - Tbilisi&quot;&gt;
 &lt;/iframe&gt;
 </code></pre>
-<h5>Inline HTML with <code>srcdoc</code></h5>
+<p>Inline HTML with <code>srcdoc</code></p>
 <pre><code class="language-html">&lt;iframe
   srcdoc=&quot;
     &lt;style&gt;
@@ -163,7 +162,7 @@
   title=&quot;Inline content&quot;&gt;
 &lt;/iframe&gt;
 </code></pre>
-<h5>Embedded PDF File</h5>
+<p>Embedded PDF File</p>
 <pre><code class="language-html">&lt;iframe
   src=&quot;https://example.com/sample.pdf&quot;
   width=&quot;100%&quot;
@@ -173,9 +172,9 @@
 &lt;/iframe&gt;
 </code></pre>
 <blockquote>
-<p>🔒 It depends on whether the browser supports PDF viewing and whether the site allows opening in an iframe.</p>
+<p>It depends on whether the browser supports PDF viewing and whether the site allows opening in an iframe.</p>
 </blockquote>
-<h5>Embedded GitHub README (as raw HTML preview via third-party service)</h5>
+<p>Embedded GitHub README (as raw HTML preview via third-party service)</p>
 <pre><code class="language-html">&lt;iframe
   src=&quot;https://htmlpreview.github.io/?https://github.com/user/repo/blob/main/README.md&quot;
   width=&quot;100%&quot;
@@ -185,9 +184,9 @@
 &lt;/iframe&gt;
 </code></pre>
 <blockquote>
-<p>⚠️ This method only works with an open public repository and via GitHub Pages or special preview services.</p>
+<p>This method only works with an open public repository and via GitHub Pages or special preview services.</p>
 </blockquote>
-<h5>Fallback Message (for unsupported browsers)</h5>
+<p>Fallback Message (for unsupported browsers)</p>
 <pre><code class="language-html">&lt;iframe
   src=&quot;https://example.com&quot;
   width=&quot;600&quot;

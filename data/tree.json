@@ -104,6 +104,14 @@
           {
             "title": "Hierarchy in HTML",
             "filename": "lesson-0023.html"
+          },
+          {
+            "title": "Semantic HTML",
+            "filename": "lesson-0024.html"
+          },
+          {
+            "title": "I Emphasis Element",
+            "filename": "lesson-0025.html"
           }
         ]
       }
@@ -119,7 +127,7 @@
         "lessons": [
           {
             "title": "CSS example",
-            "filename": "lesson-0024.html"
+            "filename": "lesson-0026.html"
           }
         ]
       }

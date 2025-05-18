@@ -1,0 +1,43 @@
+📘 Compact Markdown Cheatsheet
+
+# Heading — H1  
+## Heading — H2  
+### Heading — H3  
+
+Text with two spaces␣␣  — manual line break  
+
+*italic* — italic  
+**bold** — bold  
+`code` — inline code  
+~~strikethrough~~ — strikethrough  
+==highlight== — highlight (markdown-it)  
+
+> quote — blockquote  
+
+- Item — unordered list  
+1. Item — ordered list  
+
+[link text](url) — hyperlink  
+<https://url.com> — autolink  
+
+[link text][link id]  
+[link id]: https://url.com — reference-style links
+
+![alt](img.jpg) — image  
+
+```js  
+code  
+``` — code block (three backticks + language)  
+
+--- — horizontal rule  
+
+\* — escape special characters  
+
+## Heading {#id .class .class2} — add ID and classes to heading  
+**text**{#id .class} — add ID and classes to element  
+
+| A | B | — table  
+|---|---|  
+| 1 | 2 |  
+
+<p class="note">HTML</p> — inline HTML (if `html: true` is enabled)

@@ -20,24 +20,12 @@ The `rel` attribute (short for "relationship") defines the type of relationship 
 
 **Common rel values:**
 
-*       stylesheet
-    
-    – links to an external CSS file
-*       icon
-    
-    – specifies a favicon (browser tab icon)
-*       preload
-    
-    – hints the browser to preload a resource for better performance
-*       author
-    
-    – provides a link to the author of the document
-*       alternate
-    
-    – indicates an alternative version of the page (e.g., RSS feed)
-*       manifest
-    
-    – links to a web app manifest file
+- `stylesheet` – links to an external CSS file
+- `icon` – specifies a favicon (browser tab icon)
+- `preload` – hints the browser to preload a resource for better performance
+- `author` – provides a link to the author of the document
+- `alternate` – indicates an alternative version of the page (e.g., RSS feed)
+- `manifest` – links to a web app manifest file
 
 **href attribute**
 

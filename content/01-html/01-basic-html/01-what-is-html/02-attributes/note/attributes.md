@@ -9,29 +9,28 @@ An attribute is a value placed inside the opening tag of an HTML element. Attrib
 
     `<tag attribute="value">`
 
-##### Common HTML Attributes:
+##### Common HTML Attributes:  
 
+**`<a>`**  
 
-**<a>**
-
-*       `<a href="https://www.example-website.com">`
+- `<a href="https://www.example-website.com">`
     
 
-**<img>**
+**`<img>`**  
 
-*       `<img src="image.jpg" alt="A beautiful image" />`
+- `<img src="image.jpg" alt="A beautiful image" />`
     
 
-**<input>**
+**`<input>`**  
 
-*       `<input type="checkbox" checked>` — checkbox is checked
-*       `<input type="text" disabled>` — not editable
-*       `<input type="text" readonly>` — visible but unchangeable
-*       `<input type="text" required>` — must be filled
+- `<input type="checkbox" checked>` — checkbox is checked
+- `<input type="text" disabled>` — not editable
+- `<input type="text" readonly>` — visible but unchangeable
+- `<input type="text" required>` — must be filled
 
 
 ##### Boolean Attributes
 
-*   `<input checked>` \= `<input checked="checked">`
+- `<input checked>` \= `<input checked="checked">`
     
-*   If present = **true**, if missing = **false**
+- If present = **true**, if missing = **false**

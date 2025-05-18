@@ -10,7 +10,7 @@ UTF-8, or UCS Transformation Format 8, is a standardized character encoding wide
 
 HTML source code:
 
-    `<p>café</p>`
+`<p>café</p>`
 
 Rendered output:
 
@@ -18,6 +18,6 @@ Rendered output:
 
 **Required Meta element for UTF-8**
 
-    `<meta charset="UTF-8">`
+`<meta charset="UTF-8">`
 
 By setting the character encoding to UTF-8, it ensures that the accented "e" character (`é`) is displayed correctly on the page.

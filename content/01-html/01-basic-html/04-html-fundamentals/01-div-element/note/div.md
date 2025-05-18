@@ -14,6 +14,6 @@ Purpose:
 
 Example:
 
-    `<div>This is a generic container</div>`
+`<div>This is a generic container</div>`
 
 This is a generic container
