@@ -192,22 +192,6 @@ pre, code {
   background-color: #264f78; /* Blueish */
 }
 
-/* ===== THEME OVERRIDES ===== */
-h2.topic {
-  font-size: 1.6em; /* Emphasized size */
-  padding-bottom: 0.5rem;
-  border-bottom: 2px solid #61afef; /* VS Code Light Blue */
-  margin-bottom: 1.5rem;
-}
-
-h3.subtopic {
-  font-size: 1.3em; /* Slightly emphasized size */
-  padding-bottom: 0.3rem;
-  border-bottom: 1px solid #98c379; /* VS Code Light Green */
-  margin-bottom: 1rem;
-  font-style: italic;
-}
-
 /* ===== MOBILE RESPONSIVENESS ===== */
 @media (max-width: 600px) {
   body {
