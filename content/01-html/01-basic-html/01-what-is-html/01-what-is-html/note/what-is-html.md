@@ -18,4 +18,4 @@ Image Example: {.marker}
 
 `<img src="img-url" alt="description">`{.language-html}
 
-<img src="/img/html.png" alt="HTML logo" width="100" height="100">
+<img src="https://ilyindanny.github.io/fcc-fullstack/img/html.png" alt="HTML logo" width="100" height="100">
