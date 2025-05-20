@@ -12,6 +12,7 @@ title: Semantic HTML
 > The best code is understandable without CSS or JavaScript.
 
 Example: {.marker}  
+
 `<p>` means paragraph, a logical block of text.
 
 ##### Why it matters:

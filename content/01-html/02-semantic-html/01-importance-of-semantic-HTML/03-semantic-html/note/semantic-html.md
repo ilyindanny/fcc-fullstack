@@ -2,10 +2,11 @@
 title: Semantic HTML
 ---
 
-#### Difference Between Presentational and Semantic HTML
+#### Semantic HTML
 
-Presentational HTML focuses on how content looks (appearance and style). Now this approach is deprecated.
+What is the difference Between Presentational and Semantic HTML?
 
+Presentational HTML focuses on how content looks (appearance and style). Now this approach is deprecated.  
 Semantic HTML focuses on the meaning and structure of the content. It uses elements that describe the role of the content clearly.
 
 ##### Modern Best Practices for Text Highlighting and Emphasis
@@ -34,9 +35,7 @@ Example: {.marker}
 
 To style a specific part of text visually without adding meaning, use `<span>` with CSS:
 
-```html
-<p>This is a <span class="highlight">highlighted</span> word.</p>
-```
+`<p>This is a <span class="highlight">highlighted</span> word.</p>` {.language-html}
 
 ```css
 .highlight {
