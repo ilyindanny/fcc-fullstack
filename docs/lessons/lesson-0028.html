@@ -3,56 +3,39 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Quoted Elements</title>
+  <title>Description List</title>
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/prism.css" />
 </head>
 <body>
 
   <main>
-    <article><h4>Quoted Elements in HTML</h4>
-<p>Quoted elements help distinguish quotes from surrounding text.</p>
-<h5>Block Quotes</h5>
-<p>Use <code>&lt;blockquote&gt;</code> for extended quotations from other sources.</p>
-<ul>
-<li>Element: <code>&lt;blockquote&gt;</code></li>
-<li>Attribute: <code>cite=&quot;URL&quot;</code> — source (not visible in UI)</li>
-</ul>
-<p class="marker">Usage:</p>
-<pre><code class="language-html">&lt;blockquote cite=&quot;https://example.com&quot;&gt;
-  Long  text...
-&lt;/blockquote&gt;
+    <article><h4>Description Lists</h4>
+<p>This is a semantic way to present pairs of related data, such as terms and definitions or keys and values.</p>
+<dl>
+<dt>Description list:</dt>
+<dd>organize content into terms and their corresponding descriptions.</dd>
+<dt>Elements of Description list:</dt>
+<dd><code>&lt;dl&gt;</code> - container for the entire list,</dd>
+<dd><code>&lt;dt&gt;</code> - the term or key,</dd>
+<dd><code>&lt;dd&gt;</code> - the description or value.</dd>
+</dl>
+<p class="marker">Example:</p>
+<pre><code class="language-html">&lt;dl&gt;
+  &lt;dt&gt;HTML&lt;/dt&gt;
+  &lt;dd&gt;HyperText Markup Language&lt;/dd&gt;
+  &lt;dt&gt;CSS&lt;/dt&gt;
+  &lt;dd&gt;Cascading Style Sheets&lt;/dd&gt;
+&lt;/dl&gt;
 </code></pre>
-<ul>
-<li>You can use <code>&lt;p&gt;</code> inside for multi-paragraph quotes.</li>
-<li>To show source visually, use <code>&lt;cite&gt;</code> outside:</li>
-</ul>
-<pre><code class="language-html">&lt;p&gt;—Author, &lt;cite&gt;Title of the Work&lt;/cite&gt;&lt;/p&gt;
-</code></pre>
-<h5>Inline Quotes</h5>
-<p>Use <code>&lt;q&gt;</code> for short, inline quotations.</p>
-<ul>
-<li>Element: <code>&lt;q&gt;</code></li>
-<li>Attribute: <code>cite=&quot;URL&quot;</code> — source (invisible)</li>
-</ul>
-<p class="language-html">Usage: {.marker}
-<code>&lt;p&gt;He said, &lt;q cite=&quot;...&quot;&gt;&quot;Do it now.&quot;&lt;/q&gt;&lt;/p&gt;</code></p>
-<ul>
-<li>Most browsers add quotation marks automatically.</li>
-</ul>
-<h5>Notes</h5>
-<ul>
-<li><code>&lt;cite&gt;</code> is for titles of creative works, not for URLs.</li>
-<li>To link the source, use <code>&lt;a&gt;</code> inside <code>&lt;cite&gt;</code> (not recomended)</li>
-</ul>
 </article>
   </main> 
 	
     <section class="navigation">
       <nav class="lesson-nav">
-        <a class="prev" href="lesson-0027.html">&larr; Description List</a>
+        <a class="prev" href="lesson-0027.html">&larr; Strong vs B Element</a>
         <a class="home" href="../index.html">Home</a>
-        <a class="next" href="lesson-0029.html">Abbreviations And Acronyms &rarr;</a>
+        <a class="next" href="lesson-0029.html">Quoted Elements &rarr;</a>
       </nav>
     </section>
   

@@ -3,31 +3,74 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Link Element</title>
+  <title>Anchor Element</title>
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/prism.css" />
 </head>
 <body>
 
   <main>
-    <article><h4>Link Element</h4>
-<p>The <code>&lt;link&gt;</code> element is used to link to external resources</p>
-<p>Often times you will see multiple link elements inside a professional codebase that link to different stylesheets, fonts, and icons.</p>
-<p class="marker">Code Example:</p>
-<p class="language-html"><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;./styles.css&quot; /&gt;</code></p>
-<p class="marker">rel attribute:</p>
-<p>The <code>rel</code> attribute (short for &quot;relationship&quot;) defines the type of relationship between the current HTML document and the linked external resource. This helps the browser understand the purpose of the link.</p>
-<p class="marker">Common rel values:</p>
+    <article><h2>Anchor Element</h2>
+<p>What is an <code>&lt;a&gt;</code> (anchor) element?</p>
+<p class="language-html">Creates a hyperlink to another resource.<br>
+<code>&lt;a href=&quot;https://example.com&quot;&gt;Visit&lt;/a&gt;</code></p>
+<h3>href</h3>
+<p class="mark">Specifies the link destination: </p>
 <ul>
-<li><code>stylesheet</code> – links to an external CSS file</li>
-<li><code>icon</code> – specifies a favicon (browser tab icon)</li>
-<li><code>preload</code> – hints the browser to preload a resource for better performance</li>
-<li><code>author</code> – provides a link to the author of the document</li>
-<li><code>alternate</code> – indicates an alternative version of the page (e.g., RSS feed)</li>
-<li><code>manifest</code> – links to a web app manifest file</li>
+<li>Absolute: <code>href=&quot;https://...&quot;</code></li>
+<li>Relative: <code>href=&quot;/about.html&quot;</code></li>
 </ul>
-<p class="marker">href attribute</p>
-<p>The <code>href</code> attribute is used to specify the location of the URL for the external resource.</p>
+<h3>Types of Links</h3>
+<ul>
+<li>Web: <code>href=&quot;https://...&quot;</code></li>
+<li>Email: <code>mailto:user@example.com&quot;</code></li>
+<li>Phone: <code>tel:+1234567890&quot;</code></li>
+<li>Anchor: <code>href=&quot;#section&quot;</code></li>
+<li>FTP: <code>ftp://...&quot;</code></li>
+<li>JavaScript (unsafe): <code>javascript:...&quot;</code></li>
+<li>Blob/Data: <code>blob:...</code>, <code>data:...</code></li>
+</ul>
+<h3>Anchor Links</h3>
+<p class="mark">Jump to element by <code>id</code>: </p>
+<ul>
+<li class="language-html"><code>&lt;a href=&quot;#top&quot;&gt;Back&lt;/a&gt;</code></li>
+<li class="language-html"><code>&lt;h2 id=&quot;top&quot;&gt;...&lt;/h2&gt;</code></li>
+</ul>
+<h3>target</h3>
+<p class="mark">Defines where to open the link: </p>
+<ul>
+<li><code>_blank</code>: new tab</li>
+<li><code>_self</code>: same tab (default)</li>
+</ul>
+<ul>
+<li>Use <code>rel=&quot;noopener noreferrer&quot;</code> for security</li>
+</ul>
+<p class="language-html"><code>&lt;a href=&quot;...&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;</code></p>
+<h3>download</h3>
+<p class="mark">Triggers file download: </p>
+<p class="language-html"><code>&lt;a href=&quot;file.pdf&quot; download&gt;Download&lt;/a&gt;</code></p>
+<p>Custom name: <code>download=&quot;newname.pdf&quot;</code></p>
+<h3>Nested Elements</h3>
+<p>You can nest inline or even block-level elements (HTML5):</p>
+<pre><code class="language-html">`&lt;a href=&quot;/&quot;&gt;
+    &lt;img src=&quot;logo.png&quot; alt=&quot;Logo&quot; /&gt;
+&lt;/a&gt;
+</code></pre>
+<h3>Avoid</h3>
+<ul>
+<li><code>href=&quot;#&quot;</code> without JS handler — scrolls to top</li>
+<li><code>javascript:</code> — insecure</li>
+<li>Nested <code>&lt;a&gt;&lt;a&gt;...&lt;/a&gt;&lt;/a&gt;</code> — invalid</li>
+<li><code>&lt;a&gt;</code> without <code>href</code> — not interactive</li>
+</ul>
+<h3>Quick Examples</h3>
+<pre><code class="language-html">&lt;a href=&quot;https://mdn.com&quot;&gt;MDN&lt;/a&gt;
+&lt;a href=&quot;#footer&quot;&gt;Footer&lt;/a&gt;
+&lt;a href=&quot;mailto:hi@example.com&quot;&gt;Email&lt;/a&gt;
+&lt;a href=&quot;tel:+123456789&quot;&gt;Call&lt;/a&gt;
+&lt;a href=&quot;file.pdf&quot; download&gt;PDF&lt;/a&gt;
+&lt;a href=&quot;...&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;New Tab&lt;/a&gt;
+</code></pre>
 </article>
   </main> 
 	
@@ -35,7 +78,7 @@
       <nav class="lesson-nav">
         <a class="prev" href="lesson-0002.html">&larr; HTML Tag Attributes</a>
         <a class="home" href="../index.html">Home</a>
-        <a class="next" href="lesson-0004.html">Boilerplate &rarr;</a>
+        <a class="next" href="lesson-0004.html">Link Element &rarr;</a>
       </nav>
     </section>
   

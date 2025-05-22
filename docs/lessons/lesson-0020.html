@@ -3,62 +3,99 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Link States in CSS</title>
+  <title>File Paths</title>
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/prism.css" />
 </head>
 <body>
 
   <main>
-    <article><h4>What Are Link States?</h4>
-<p>Links can exist in different <strong>states</strong> depending on how the user interacts with them.<br>
-These pseudo-classes allow dynamic styling, which improves UX and accessibility.</p>
-<blockquote>
-<p><code>:focus</code> is not the same as <code>:hover</code>.<br>
-Focus means the element is active for <strong>keyboard interaction</strong> (e.g., selected via Tab), not just hovered.</p>
-</blockquote>
-<h5>Link States Overview</h5>
+    <article><h4>What Is a Path?</h4>
+<p>A <strong>path</strong> shows the location of a resource (file, image, page) in the file system or website structure.</p>
+<p class="marker">Types of paths:</p>
 <ul>
-<li><code>:link</code> — the link has <strong>not</strong> been visited yet</li>
-<li><code>:visited</code> — the link <strong>has</strong> been opened before</li>
-<li><code>:hover</code> — the mouse is hovering over the link</li>
-<li><code>:focus</code> — the link is <strong>focused</strong> (via Tab or mouse click)</li>
-<li><code>:active</code> — the link is being activated (usually during <strong>mouse-down</strong>)</li>
+<li>Absolute</li>
+<li>Relative</li>
+<li>Root-relative</li>
 </ul>
-<p class="marker">Correct CSS order:</p>
-<p><code>link → visited → hover → focus → active</code></p>
-<p>Mnemonic: <strong>LoVe FAt HAir</strong></p>
-<h5>CSS Example</h5>
-<pre><code class="language-css">a:link {
-  color: blue;
-  text-decoration: none;
-}
-
-a:visited {
-  color: gray;
-}
-
-a:hover {
-  color: orange;
-  text-decoration: underline;
-}
-
-a:focus {
-  outline: 2px dashed orange;
-}
-
-a:active {
-  color: red;
-}
-</code></pre>
+<h5>Absolute Path</h5>
+<p>A full address to a file — starts from the <strong>root</strong>.</p>
+<ul>
+<li>
+<p><strong>Web</strong>: Includes protocol + domain<br>
+<code>https://example.com/img/logo.png</code></p>
+</li>
+<li>
+<p><strong>Local file (macOS)</strong>:<br>
+<code>file:///Users/Daniel/Desktop/site/pages/about.html</code></p>
+</li>
+<li>
+<p><strong>Local file (Windows)</strong>:<br>
+<code>file:///C:/Users/Daniel/Desktop/site/pages/about.html</code></p>
+</li>
+</ul>
+<h5>Relative Path</h5>
+<p>Relative to the <strong>current file's folder</strong>. Shorter and flexible.</p>
+<p class="marker">Examples:</p>
+<ul>
+<li><code>about.html</code> — same folder</li>
+<li><code>../index.html</code> — one level up</li>
+<li><code>../../img/logo.svg</code> — two levels up</li>
+<li><code>./style.css</code> — current folder (optional <code>./</code>)</li>
+</ul>
+<p>Works in both <code>file://</code> and <code>localhost</code> modes if folder structure is correct.</p>
+<h5>Root-Relative Path</h5>
+<p>Starts with <code>/</code> — relative to the <strong>site root</strong>, not current file.</p>
+<p class="marker">Example:</p>
+<p><code>/assets/css/main.css</code></p>
+<ul>
+<li>Works only in <strong>localhost</strong> or live server.</li>
+<li>Does <strong>not</strong> work in <code>file://</code> mode.</li>
+</ul>
+<h5>Base URL (optional)</h5>
+<p>The <code class="language-html">&lt;base href=&quot;/assets/&quot;&gt;</code> tag in <code>&lt;head&gt;</code> changes how all relative paths are resolved. Use carefully.</p>
+<h5>Link Behavior Examples</h5>
+<p>Absolute web URL:</p>
+<p class="language-html"><code>&lt;a href=&quot;https://example.com/style.css&quot;&gt;External&lt;/a&gt;</code></p>
+<p>Relative to current file:</p>
+<p class="language-html"><code>&lt;a href=&quot;about.html&quot;&gt;Same folder&lt;/a&gt;</code></p>
+<p class="language-html"><code>&lt;a href=&quot;../index.html&quot;&gt;Up one level&lt;/a&gt;</code></p>
+<p>Root-relative (server only):</p>
+<p class="language-html"><code>&lt;a href=&quot;/pages/lesson.html&quot;&gt;From site root&lt;/a&gt;</code></p>
+<p>Localhost absolute URL:</p>
+<p class="language-html"><code>&lt;a href=&quot;http://127.0.0.1/lessons/lesson.html&quot;&gt;Always works if server runs&lt;/a&gt;</code></p>
+<h5>Common Mistake</h5>
+<ul>
+<li>Mixing styles (absolute / relative / root-relative) inconsistently</li>
+</ul>
+<h5>Best Practices</h5>
+<ul>
+<li>Use absolute paths for external sites.</li>
+<li>Use relative paths for internal links during development.</li>
+<li>Use root-relative when served from a server and structure is stable.</li>
+<li>Test root-relative paths only under localhost.</li>
+</ul>
+<h5>OS Path Formats vs browser format</h5>
+<p>macOS:</p>
+<ul>
+<li><code>/Users/Daniel/Desktop/project/index.html</code></li>
+<li>Browser path:<br>
+<code>file:///Users/Daniel/Desktop/project/index.html</code></li>
+</ul>
+<p>Windows:</p>
+<ul>
+<li><code>C:\Users\Daniel\Desktop\project\index.html</code></li>
+<li>Browser path:<br>
+<code>file:///C:/Users/Daniel/Desktop/project/index.html</code></li>
+</ul>
 </article>
   </main> 
 	
     <section class="navigation">
       <nav class="lesson-nav">
-        <a class="prev" href="lesson-0019.html">&larr; File Paths</a>
+        <a class="prev" href="lesson-0019.html">&larr; Target Attribute</a>
         <a class="home" href="../index.html">Home</a>
-        <a class="next" href="lesson-0021.html">Basic HTML Review &rarr;</a>
+        <a class="next" href="lesson-0021.html">Link States in CSS &rarr;</a>
       </nav>
     </section>
   

@@ -3,39 +3,44 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Description List</title>
+  <title>Strong vs B Element</title>
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/prism.css" />
 </head>
 <body>
 
   <main>
-    <article><h4>Description Lists</h4>
-<p>This is a semantic way to present pairs of related data, such as terms and definitions or keys and values.</p>
-<dl>
-<dt>Description list:</dt>
-<dd>organize content into terms and their corresponding descriptions.</dd>
-<dt>Elements of Description list:</dt>
-<dd><code>&lt;dl&gt;</code> - container for the entire list,</dd>
-<dd><code>&lt;dt&gt;</code> - the term or key,</dd>
-<dd><code>&lt;dd&gt;</code> - the description or value.</dd>
-</dl>
-<p class="marker">Example:</p>
-<pre><code class="language-html">&lt;dl&gt;
-  &lt;dt&gt;HTML&lt;/dt&gt;
-  &lt;dd&gt;HyperText Markup Language&lt;/dd&gt;
-  &lt;dt&gt;CSS&lt;/dt&gt;
-  &lt;dd&gt;Cascading Style Sheets&lt;/dd&gt;
-&lt;/dl&gt;
+    <article><h4>Strong vs B Element</h4>
+<h5>Purpose</h5>
+<ul>
+<li><code>&lt;strong&gt;</code> — semantic HTML element. Indicates <strong>importance</strong> of the text. <code>&lt;strong&gt;</code> is meant for content that should be emphasized with <strong>semantic weight</strong> — e.g. warnings, critical info, key points.
+Screen readers often <strong>stress</strong> such text when reading aloud.</li>
+</ul>
+<pre><code class="language-html">&lt;!-- Semantic importance --&gt;
+&lt;p&gt;
+  &lt;strong&gt;Warning:&lt;/strong&gt; This product may cause allergic reactions.
+&lt;/p&gt;
 </code></pre>
+<ul>
+<li><code>&lt;b&gt;</code> — purely <strong>stylistic</strong> element. Highlights text <strong>visually</strong> without adding meaning. <code>&lt;b&gt;</code> is used to simply draw the reader’s attention — for instance, product names, keywords, or other non-critical highlights. It’s <strong>not semantic</strong>, only visual.</li>
+</ul>
+<pre><code class="language-html">&lt;!-- Visual emphasis only --&gt;
+&lt;p&gt;
+  We tested several products, including the &lt;b&gt;SuperSound 3000&lt;/b&gt; for audio
+  quality, the &lt;b&gt;QuickCharge Pro&lt;/b&gt; for fast charging, and the
+  &lt;b&gt;EcoClean Vacuum&lt;/b&gt; for cleaning. The first two performed well, but the
+  &lt;b&gt;EcoClean Vacuum&lt;/b&gt; did not meet expectations.
+&lt;/p&gt;
+</code></pre>
+<p>Both will appear bold in most browsers, but only <code>&lt;strong&gt;</code> carries <strong>semantic meaning</strong>.</p>
 </article>
   </main> 
 	
     <section class="navigation">
       <nav class="lesson-nav">
-        <a class="prev" href="lesson-0026.html">&larr; Strong vs B Element</a>
+        <a class="prev" href="lesson-0026.html">&larr; I Emphasis Element</a>
         <a class="home" href="../index.html">Home</a>
-        <a class="next" href="lesson-0028.html">Quoted Elements &rarr;</a>
+        <a class="next" href="lesson-0028.html">Description List &rarr;</a>
       </nav>
     </section>
   

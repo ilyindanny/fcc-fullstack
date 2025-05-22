@@ -3,109 +3,78 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Audio  Video</title>
+  <title>SVG</title>
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/prism.css" />
 </head>
 <body>
 
   <main>
-    <article><h4>HTML Media Elements: Audio &amp; Video</h4>
-<h5>1. Purpose</h5>
-<p>The <code>&lt;audio&gt;</code> and <code>&lt;video&gt;</code> elements embed sound and video into webpages using native HTML tags.</p>
-<h5>2. Supported Formats and MIME Types</h5>
-<p class="marker">Audio:</p>
+    <article><h4>SVG (Scalable Vector Graphics)</h4>
+<p>SVG is a <strong>vector image format</strong> — unlike raster formats (<code>JPG</code>, <code>PNG</code>), which are <strong>pixel-based</strong>.</p>
+<h5>Advantages</h5>
 <ul>
-<li>.mp3 — <code>audio/mpeg</code></li>
-<li>.wav — <code>audio/wav</code></li>
-<li>.ogg — <code>audio/ogg</code></li>
-<li>.m4a — <code>audio/mp4</code> or <code>audio/x-m4a</code></li>
+<li><strong>Scales infinitely</strong> without losing quality.</li>
+<li>Defined in <strong>XML</strong>, so can be embedded directly into HTML.</li>
+<li><strong>Styleable</strong> with CSS (e.g. fill, stroke, size).</li>
+<li><strong>Lightweight</strong> for simple graphics and icons.</li>
 </ul>
-<p class="marker">Video:</p>
+<h5>When to Use</h5>
 <ul>
-<li>.mp4 — <code>video/mp4</code></li>
-<li>.webm — <code>video/webm</code></li>
-<li>.ogg — <code>video/ogg</code></li>
+<li>Icons and UI elements.</li>
+<li>Logos and diagrams.</li>
+<li>Custom bullets and decorative shapes.</li>
 </ul>
-<p class="marker">Example:</p>
-<pre><code class="language-html">&lt;audio controls&gt;
-  &lt;source src=&quot;sound.ogg&quot; type=&quot;audio/ogg&quot; /&gt;
-  &lt;source src=&quot;sound.mp3&quot; type=&quot;audio/mpeg&quot; /&gt;
-&lt;/audio&gt;
+<h5>Use Cases (How to Use SVG)</h5>
+<h6>1. Inline SVG — directly in HTML</h6>
+<pre><code class="language-html">&lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;
+  &lt;circle cx=&quot;12&quot; cy=&quot;12&quot; r=&quot;10&quot; fill=&quot;red&quot; /&gt;
+&lt;/svg&gt;
 </code></pre>
-<h5>3. Common Attributes (<code>&lt;audio&gt;</code> and <code>&lt;video&gt;</code>)</h5>
 <ul>
-<li><code>src</code> (URL): Path to media file. Optional if you use <code>&lt;source&gt;</code> elements inside the tag.</li>
-<li><code>controls</code> (boolean): Displays built-in play/pause/etc. controls.</li>
-<li><code>autoplay</code> (boolean): Starts playback automatically. Usually works only if muted is also set.</li>
-<li><code>loop</code> (boolean): Repeats the media file indefinitely.</li>
-<li><code>muted</code> (boolean): Starts the media in a muted state.</li>
-<li><code>preload</code> (none, metadata, auto): Suggests how much data the browser should preload:
+<li>Full control via CSS (<code>fill</code>, <code>stroke</code>) and JavaScript.</li>
+<li>Part of the DOM.</li>
+<li>Ideal for interactive or animated graphics.</li>
+</ul>
+<h6>2. External SVG — as a regular image</h6>
+<p><code class="language-html">&lt;img src=&quot;https://example.com/icon.svg&quot; alt=&quot;icon&quot; /&gt;</code></p>
 <ul>
-<li><code>none</code> — don’t preload anything</li>
-<li><code>metadata</code> — preload only metadata (like duration)</li>
-<li><code>auto</code> — let the browser decide</li>
+<li>Used like any image (<code>&lt;img&gt;</code> tag).</li>
+<li>No access to internal SVG structure.</li>
+<li>Best for simple, static icons.</li>
 </ul>
-</li>
-</ul>
-<p class="marker">Example:</p>
-<p><code class="language-html">&lt;audio src=&quot;file.mp3&quot; controls loop muted preload=&quot;auto&quot;&gt;&lt;/audio&gt;</code></p>
-<h5>4. Video only Attributes</h5>
-<ul>
-<li><code>poster</code>: Image shown before video loads or plays</li>
-<li><code>width</code>: Width in pixels</li>
-<li><code>height</code>: Height in pixels</li>
-</ul>
-<p class="marker">Example:</p>
-<p><code class="language-html">&lt;video src=&quot;video.mp4&quot; controls poster=&quot;cover.jpg&quot; width=&quot;640&quot;&gt;&lt;/video&gt;</code></p>
-<h5>5. Using Source for Fallback</h5>
-<p>The browser picks the first supported format:</p>
-<pre><code class="language-html">&lt;video controls&gt;
-  &lt;source src=&quot;movie.webm&quot; type=&quot;video/webm&quot; /&gt;
-  &lt;source src=&quot;movie.mp4&quot; type=&quot;video/mp4&quot; /&gt;
-&lt;/video&gt;
+<h6>3. SVG via Icon Library — using Font Awesome</h6>
+<p class="marker">From CDN:</p>
+<pre><code class="language-html">&lt;head&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;i class=&quot;fas fa-camera&quot;&gt;&lt;/i&gt;
+&lt;/body&gt;
 </code></pre>
-<h5>6. YouTube / Vimeo Embeds</h5>
-<p>Use <code>&lt;iframe&gt;</code> to embed external players:</p>
-<pre><code class="language-html">&lt;iframe
-  width=&quot;560&quot;
-  height=&quot;315&quot;
-  src=&quot;https://www.youtube.com/embed/3Z7ddmHlbdU&quot;
-  allow=&quot;autoplay; encrypted-media&quot;
-  allowfullscreen&gt;
-&lt;/iframe&gt;
-</code></pre>
-<h5>7. JavaScript API (basics)</h5>
-<pre><code class="language-js">audio.play();
-audio.pause();
-audio.currentTime = 0;
-audio.volume = 0.5;
-audio.muted = true;
-</code></pre>
-<h5>8. Media Events (examples)</h5>
+<p class="marker">From local install (npm):</p>
+<p><code class="language-bash">npm install @fortawesome/fontawesome-free</code></p>
+<p><code class="language-js">import '@fortawesome/fontawesome-free/css/all.min.css';</code></p>
 <ul>
-<li><code>play</code>:Starts playing</li>
-<li><code>pause</code>: Playback paused</li>
-<li><code>ended</code>: Playback finished</li>
-<li><code>timeupdate</code>: Playback time changes</li>
+<li>Useful for many ready-to-use icons.</li>
+<li>Easy to style with CSS:</li>
 </ul>
-<p class="marker">Example:</p>
-<p><code class="language-js">video.addEventListener(&quot;ended&quot;, () =&gt; alert(&quot;Video finished&quot;));</code></p>
-<h5>9. Summary</h5>
+<p><code class="language-html">&lt;i class=&quot;fas fa-star&quot; style=&quot;color: gold; font-size: 24px;&quot;&gt;&lt;/i&gt;</code></p>
+<h5>Tools &amp; Libraries</h5>
 <ul>
-<li>Use <code>&lt;audio&gt;</code> for music/sound, <code>&lt;video&gt;</code> for movies.</li>
-<li>Use <code>&lt;source&gt;</code> for format fallback.</li>
-<li>Use <code>&lt;iframe&gt;</code> for hosted content like YouTube.</li>
-<li>Attributes are mostly shared; <code>poster</code>, <code>width</code>, and <code>height</code> are video-specific.</li>
+<li><a href="https://fontawesome.com">Font Awesome</a> – icon library based on SVG.</li>
+<li>Inkscape, Figma, Illustrator – for creating and editing SVG files.</li>
 </ul>
+<h5>Tip</h5>
+<p>Open an <code>.svg</code> file in a text editor — it's just readable XML code!</p>
 </article>
   </main> 
 	
     <section class="navigation">
       <nav class="lesson-nav">
-        <a class="prev" href="lesson-0015.html">&larr; SVG</a>
+        <a class="prev" href="lesson-0015.html">&larr; Image licenses</a>
         <a class="home" href="../index.html">Home</a>
-        <a class="next" href="lesson-0017.html">Iframe Element &rarr;</a>
+        <a class="next" href="lesson-0017.html">Audio & Video &rarr;</a>
       </nav>
     </section>
   

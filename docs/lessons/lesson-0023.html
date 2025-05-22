@@ -3,52 +3,40 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Hierarchy in HTML</title>
+  <title>Semantic HTML</title>
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/prism.css" />
 </head>
 <body>
 
   <main>
-    <article><h4>Why is it important to have good structural hierarchy?</h4>
+    <article><h4>Semantic HTML</h4>
 <ul>
-<li>Structural hierarchy relies on proper use of heading elements: <code>h1</code>, <code>h2</code>, <code>h3</code>, etc.</li>
-<li>Heading levels indicate the importance and nesting of content.</li>
-<li><code>h1</code>: top-level heading, usually one per page, appears before main content.</li>
-<li><code>h2</code>: subheading, can appear multiple times, used to separate sections.</li>
-<li><code>h3</code>: sub-subheading, must follow <code>h2</code> (never skip levels like <code>h1</code> → <code>h3</code>).</li>
-<li>Multiple headings at the same level are allowed (e.g., multiple <code>h2</code>).</li>
+<li><strong>Semantics</strong> means meaning, not just appearance.</li>
+<li>Each HTML element has a purpose beyond style.</li>
+<li><strong>Core idea:</strong></li>
 </ul>
-<p class="marker">Example of correct heading order:</p>
-<pre><code class="language-html">&lt;section&gt;
-  &lt;h1&gt;freeCodeCamp&lt;/h1&gt;
-  &lt;h2&gt;Learn Front-End Development&lt;/h2&gt;
-  &lt;h2&gt;Learn Back-End Development&lt;/h2&gt;
-&lt;/section&gt;
-</code></pre>
-<p class="marker">Incorrect example (<code>h3</code> before <code>h2</code>):</p>
-<pre><code class="language-html">&lt;section&gt;
-  &lt;h1&gt;freeCodeCamp&lt;/h1&gt;
-  &lt;h3&gt;Learn Front-End Development&lt;/h3&gt;
-  &lt;h2&gt;Learn Back-End Development&lt;/h2&gt;
-&lt;/section&gt;
-</code></pre>
-<ul>
-<li>Do not choose heading elements based on visual style (e.g., <code>h1</code> for big text). Use CSS for styling.</li>
-<li>Proper hierarchy improves accessibility: screen readers rely on correct heading order to guide users.</li>
-<li>Incorrect heading order can confuse assistive technologies, making users miss or misunderstand content.</li>
-<li>Proper hierarchy improves SEO: search engines parse structure to rank pages correctly.</li>
-<li>Malformed structure may cause HTML to be invalid; browsers then guess the intent, which can break the layout or logic.</li>
-</ul>
-<p>Summary: Always use headings in order (<code>h1</code> → <code>h2</code> → <code>h3</code>, etc.) to ensure accessibility, SEO, and valid HTML.</p>
+<blockquote>
+<p>Semantic HTML is thinking one level up — not <em>how it looks</em> but <em>what it means</em>.<br>
+The best code is understandable without CSS or JavaScript.</p>
+</blockquote>
+<p class="marker">Example:</p>
+<p><code>&lt;p&gt;</code> means paragraph, a logical block of text.</p>
+<h5>Why it matters:</h5>
+<ol>
+<li><strong>Accessibility:</strong> Screen readers rely on semantic tags to understand content.</li>
+<li><strong>SEO:</strong> Search engines rank semantic content higher.</li>
+<li><strong>Maintainability:</strong> Code is easier to read and edit when structure is clear.</li>
+</ol>
+<p>Avoid non-semantic tags like <code>&lt;div&gt;</code> and <code>&lt;span&gt;</code> when possible; prefer semantic tags like <code>&lt;nav&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;strong&gt;</code>, etc.</p>
 </article>
   </main> 
 	
     <section class="navigation">
       <nav class="lesson-nav">
-        <a class="prev" href="lesson-0022.html">&larr; Semantic HTML</a>
+        <a class="prev" href="lesson-0022.html">&larr; Basic HTML Review</a>
         <a class="home" href="../index.html">Home</a>
-        <a class="next" href="lesson-0024.html">Semantic HTML &rarr;</a>
+        <a class="next" href="lesson-0024.html">Hierarchy in HTML &rarr;</a>
       </nav>
     </section>
   

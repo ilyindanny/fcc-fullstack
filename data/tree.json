@@ -16,80 +16,84 @@
             "filename": "lesson-0002.html"
           },
           {
-            "title": "Link Element",
+            "title": "Anchor Element",
             "filename": "lesson-0003.html"
           },
           {
-            "title": "Boilerplate",
+            "title": "Link Element",
             "filename": "lesson-0004.html"
           },
           {
-            "title": "UTF-8",
+            "title": "Boilerplate",
             "filename": "lesson-0005.html"
           },
           {
-            "title": "Div Eement",
+            "title": "UTF-8",
             "filename": "lesson-0006.html"
           },
           {
-            "title": "ID Element",
+            "title": "Div Eement",
             "filename": "lesson-0007.html"
           },
           {
-            "title": "HTML Entities",
+            "title": "ID Element",
             "filename": "lesson-0008.html"
           },
           {
-            "title": "Script",
+            "title": "HTML Entities",
             "filename": "lesson-0009.html"
           },
           {
-            "title": "Meta description",
+            "title": "Script",
             "filename": "lesson-0010.html"
           },
           {
-            "title": "Open Graph",
+            "title": "Meta description",
             "filename": "lesson-0011.html"
           },
           {
-            "title": "Replaced Elements",
+            "title": "Open Graph",
             "filename": "lesson-0012.html"
           },
           {
-            "title": "Optimize Media Asets",
+            "title": "Replaced Elements",
             "filename": "lesson-0013.html"
           },
           {
-            "title": "Image licenses",
+            "title": "Optimize Media Asets",
             "filename": "lesson-0014.html"
           },
           {
-            "title": "SVG",
+            "title": "Image licenses",
             "filename": "lesson-0015.html"
           },
           {
-            "title": "Audio & Video",
+            "title": "SVG",
             "filename": "lesson-0016.html"
           },
           {
-            "title": "Iframe Element",
+            "title": "Audio & Video",
             "filename": "lesson-0017.html"
           },
           {
-            "title": "Target Attribute",
+            "title": "Iframe Element",
             "filename": "lesson-0018.html"
           },
           {
-            "title": "File Paths",
+            "title": "Target Attribute",
             "filename": "lesson-0019.html"
           },
           {
-            "title": "Link States in CSS",
+            "title": "File Paths",
             "filename": "lesson-0020.html"
           },
           {
-            "title": "Basic HTML Review",
+            "title": "Link States in CSS",
             "filename": "lesson-0021.html"
+          },
+          {
+            "title": "Basic HTML Review",
+            "filename": "lesson-0022.html"
           }
         ]
       },
@@ -99,35 +103,43 @@
         "lessons": [
           {
             "title": "Semantic HTML",
-            "filename": "lesson-0022.html"
-          },
-          {
-            "title": "Hierarchy in HTML",
             "filename": "lesson-0023.html"
           },
           {
-            "title": "Semantic HTML",
+            "title": "Hierarchy in HTML",
             "filename": "lesson-0024.html"
           },
           {
-            "title": "I Emphasis Element",
+            "title": "Semantic HTML",
             "filename": "lesson-0025.html"
           },
           {
-            "title": "Strong vs B Element",
+            "title": "I Emphasis Element",
             "filename": "lesson-0026.html"
           },
           {
-            "title": "Description List",
+            "title": "Strong vs B Element",
             "filename": "lesson-0027.html"
           },
           {
-            "title": "Quoted Elements",
+            "title": "Description List",
             "filename": "lesson-0028.html"
           },
           {
-            "title": "Abbreviations And Acronyms",
+            "title": "Quoted Elements",
             "filename": "lesson-0029.html"
+          },
+          {
+            "title": "Abbreviations And Acronyms",
+            "filename": "lesson-0030.html"
+          },
+          {
+            "title": "Address Element",
+            "filename": "lesson-0031.html"
+          },
+          {
+            "title": "Time Element",
+            "filename": "lesson-0032.html"
           }
         ]
       }
@@ -143,7 +155,7 @@
         "lessons": [
           {
             "title": "CSS example",
-            "filename": "lesson-0030.html"
+            "filename": "lesson-0033.html"
           }
         ]
       }

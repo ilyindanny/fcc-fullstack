@@ -3,48 +3,56 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Abbreviations And Acronyms</title>
+  <title>Quoted Elements</title>
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/prism.css" />
 </head>
 <body>
 
   <main>
-    <article><h4>Abbreviations And Acronyms</h4>
-<p class="marker">Basics:</p>
+    <article><h4>Quoted Elements in HTML</h4>
+<p>Quoted elements help distinguish quotes from surrounding text.</p>
+<h5>Block Quotes</h5>
+<p>Use <code>&lt;blockquote&gt;</code> for extended quotations from other sources.</p>
 <ul>
-<li>Use the <code>&lt;abbr&gt;</code> tag</li>
-<li><code>title</code> attribute provides the full meaning</li>
-<li>Hover shows a tooltip with the full term</li>
-<li>No visible change by default</li>
-<li><code>&lt;acronym&gt;</code> is obsolete — do not use it</li>
+<li>Element: <code>&lt;blockquote&gt;</code></li>
+<li>Attribute: <code>cite=&quot;URL&quot;</code> — source (not visible in UI)</li>
 </ul>
-<p class="marker">Examples:</p>
-<p class="language-html"><code>&lt;p&gt;&lt;abbr title=&quot;HyperText Markup Language&quot;&gt;HTML&lt;/abbr&gt; is the foundation of the web.&lt;/p&gt;</code></p>
-<p class="language-html"><code>&lt;p&gt;&lt;abbr title=&quot;Cascading Style Sheets&quot;&gt;CSS&lt;/abbr&gt; makes pages look good.&lt;/p&gt;</code></p>
-<p class="language-html"><code>&lt;p&gt;&lt;abbr title=&quot;World Health Organization&quot;&gt;WHO&lt;/abbr&gt; was founded in 1948.&lt;/p&gt;</code></p>
-<p class="marker">Rendered:</p>
-<p><abbr title="HyperText Markup Language">HTML</abbr> is the foundation of the web.</p>
-<p class="marker">When to Use:</p>
-<ul>
-<li>At the first mention of an abbreviation</li>
-<li>If the meaning might not be obvious</li>
-<li>For accessibility (screen readers, tooltips)</li>
-</ul>
-<p class="marker">Optional Styling:</p>
-<pre><code class="language-css">abbr[title] {
-  text-decoration: underline dotted;
-  cursor: help;
-}
+<p class="marker">Usage:</p>
+<pre><code class="language-html">&lt;blockquote cite=&quot;https://example.com&quot;&gt;
+  Long  text...
+&lt;/blockquote&gt;
 </code></pre>
+<ul>
+<li>You can use <code>&lt;p&gt;</code> inside for multi-paragraph quotes.</li>
+<li>To show source visually, use <code>&lt;cite&gt;</code> outside:</li>
+</ul>
+<pre><code class="language-html">&lt;p&gt;—Author, &lt;cite&gt;Title of the Work&lt;/cite&gt;&lt;/p&gt;
+</code></pre>
+<h5>Inline Quotes</h5>
+<p>Use <code>&lt;q&gt;</code> for short, inline quotations.</p>
+<ul>
+<li>Element: <code>&lt;q&gt;</code></li>
+<li>Attribute: <code>cite=&quot;URL&quot;</code> — source (invisible)</li>
+</ul>
+<p class="language-html">Usage: {.marker}
+<code>&lt;p&gt;He said, &lt;q cite=&quot;...&quot;&gt;&quot;Do it now.&quot;&lt;/q&gt;&lt;/p&gt;</code></p>
+<ul>
+<li>Most browsers add quotation marks automatically.</li>
+</ul>
+<h5>Notes</h5>
+<ul>
+<li><code>&lt;cite&gt;</code> is for titles of creative works, not for URLs.</li>
+<li>To link the source, use <code>&lt;a&gt;</code> inside <code>&lt;cite&gt;</code> (not recomended)</li>
+</ul>
 </article>
   </main> 
 	
     <section class="navigation">
       <nav class="lesson-nav">
-        <a class="prev" href="lesson-0028.html">&larr; Quoted Elements</a>
+        <a class="prev" href="lesson-0028.html">&larr; Description List</a>
         <a class="home" href="../index.html">Home</a>
-        <a class="next" href="lesson-0030.html">CSS example &rarr;</a>
+        <a class="next" href="lesson-0030.html">Abbreviations And Acronyms &rarr;</a>
       </nav>
     </section>
   

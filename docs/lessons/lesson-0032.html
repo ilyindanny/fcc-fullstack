@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Time Element</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/prism.css" />
+</head>
+<body>
+
+  <main>
+    <article><h2>Time Element</h2>
+<p><code>&lt;time&gt;</code> element represents a <strong>specific time or date</strong> in a <strong>machine-readable</strong> and <strong>human-readable</strong> way</p>
+<p class="marker">Example:</p>
+<p class="language-html"><code>&lt;time datetime=&quot;2024-06-15&quot;&gt;June 15&lt;/time&gt;</code></p>
+<ul>
+<li>Use the <code>datetime</code> attribute to define the <strong>ISO 8601</strong> value</li>
+</ul>
+<p class="marker">Example:</p>
+<p><code>datetime=&quot;2024-06-15T15:00&quot;</code></p>
+<p class="marker">Common ISO formats: </p>
+<ul>
+<li>Time: <code>&quot;20:00&quot;</code></li>
+<li>Date: <code>&quot;2024-06-15&quot;</code></li>
+<li>DateTime: <code>&quot;2024-06-15T15:00&quot;</code></li>
+<li>Month: <code>&quot;2024-06&quot;</code></li>
+<li>Year: <code>&quot;2024&quot;</code></li>
+<li>Duration: <code>&quot;PT2H&quot;</code> (2 hours)</li>
+</ul>
+<p class="marker">The separator <code>T</code> between date and time:</p>
+<p><code>Example: &quot;2024-06-15T15:00&quot;</code></p>
+<p class="marker">Use cases:</p>
+<p class="language-html"><code>Post published on &lt;time datetime=&quot;2025-05-22&quot;&gt;May 22&lt;/time&gt;</code> </p>
+<p class="language-html"><code>The flight is at &lt;time datetime=&quot;20:00&quot;&gt;20:00&lt;/time&gt;</code></p>
+<p class="marker">Benefits:</p>
+<ul>
+<li>Improves <strong>SEO</strong>, <strong>accessibility</strong>, and <strong>JS processing</strong></li>
+<li>Supports <strong>localization</strong> and <strong>calendar tools</strong></li>
+</ul>
+<p class="marker">Avoid:</p>
+<ul>
+<li>Missing <code>datetime</code></li>
+<li>Invalid ISO format</li>
+<li>Misusing for generic content</li>
+</ul>
+<p class="marker">Example:</p>
+<pre><code class="language-html">&lt;p&gt;
+  This lecture was written on
+  &lt;time datetime=&quot;2025-05-22T12:40&quot;&gt;May 22, 2025 at 12:40 PM&lt;/time&gt;
+&lt;/p&gt;
+</code></pre>
+<p class="marker">Rendered:</p>
+<p>
+  This lecture was written on
+  <time datetime="2025-05-22T12:40">May 22, 2025 at 12:40 PM</time>
+</p>
+</article>
+  </main> 
+	
+    <section class="navigation">
+      <nav class="lesson-nav">
+        <a class="prev" href="lesson-0031.html">&larr; Address Element</a>
+        <a class="home" href="../index.html">Home</a>
+        <a class="next" href="lesson-0033.html">CSS example &rarr;</a>
+      </nav>
+    </section>
+  
+	
+	<script src="../js/prism.js"></script>
+</body>
+</html>

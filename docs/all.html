@@ -25,7 +25,7 @@
             <p>All Notes on the One Page</p>
             <section>
                 <h2>Content:</h2>
-                <nav><h2>HTML</h2><ul><li><strong>Basic HTML</strong><ul><li><a href="#lesson-0001">What is HTML?</a></li><li><a href="#lesson-0002">HTML Tag Attributes</a></li><li><a href="#lesson-0003">Link Element</a></li><li><a href="#lesson-0004">Boilerplate</a></li><li><a href="#lesson-0005">UTF-8</a></li><li><a href="#lesson-0006">Div Eement</a></li><li><a href="#lesson-0007">ID Element</a></li><li><a href="#lesson-0008">HTML Entities</a></li><li><a href="#lesson-0009">Script</a></li><li><a href="#lesson-0010">Meta description</a></li><li><a href="#lesson-0011">Open Graph</a></li><li><a href="#lesson-0012">Replaced Elements</a></li><li><a href="#lesson-0013">Optimize Media Asets</a></li><li><a href="#lesson-0014">Image licenses</a></li><li><a href="#lesson-0015">SVG</a></li><li><a href="#lesson-0016">Audio & Video</a></li><li><a href="#lesson-0017">Iframe Element</a></li><li><a href="#lesson-0018">Target Attribute</a></li><li><a href="#lesson-0019">File Paths</a></li><li><a href="#lesson-0020">Link States in CSS</a></li><li><a href="#lesson-0021">Basic HTML Review</a></li></ul></li><li><strong>HTML Semantic</strong><ul><li><a href="#lesson-0022">Semantic HTML</a></li><li><a href="#lesson-0023">Hierarchy in HTML</a></li><li><a href="#lesson-0024">Semantic HTML</a></li><li><a href="#lesson-0025">I Emphasis Element</a></li><li><a href="#lesson-0026">Strong vs B Element</a></li><li><a href="#lesson-0027">Description List</a></li><li><a href="#lesson-0028">Quoted Elements</a></li><li><a href="#lesson-0029">Abbreviations And Acronyms</a></li></ul></li></ul><h2>CSS</h2><ul><li><strong>first example</strong><ul><li><a href="#lesson-0030">CSS example</a></li></ul></li></ul></nav>
+                <nav><h2>HTML</h2><ul><li><strong>Basic HTML</strong><ul><li><a href="#lesson-0001">What is HTML?</a></li><li><a href="#lesson-0002">HTML Tag Attributes</a></li><li><a href="#lesson-0003">Anchor Element</a></li><li><a href="#lesson-0004">Link Element</a></li><li><a href="#lesson-0005">Boilerplate</a></li><li><a href="#lesson-0006">UTF-8</a></li><li><a href="#lesson-0007">Div Eement</a></li><li><a href="#lesson-0008">ID Element</a></li><li><a href="#lesson-0009">HTML Entities</a></li><li><a href="#lesson-0010">Script</a></li><li><a href="#lesson-0011">Meta description</a></li><li><a href="#lesson-0012">Open Graph</a></li><li><a href="#lesson-0013">Replaced Elements</a></li><li><a href="#lesson-0014">Optimize Media Asets</a></li><li><a href="#lesson-0015">Image licenses</a></li><li><a href="#lesson-0016">SVG</a></li><li><a href="#lesson-0017">Audio & Video</a></li><li><a href="#lesson-0018">Iframe Element</a></li><li><a href="#lesson-0019">Target Attribute</a></li><li><a href="#lesson-0020">File Paths</a></li><li><a href="#lesson-0021">Link States in CSS</a></li><li><a href="#lesson-0022">Basic HTML Review</a></li></ul></li><li><strong>HTML Semantic</strong><ul><li><a href="#lesson-0023">Semantic HTML</a></li><li><a href="#lesson-0024">Hierarchy in HTML</a></li><li><a href="#lesson-0025">Semantic HTML</a></li><li><a href="#lesson-0026">I Emphasis Element</a></li><li><a href="#lesson-0027">Strong vs B Element</a></li><li><a href="#lesson-0028">Description List</a></li><li><a href="#lesson-0029">Quoted Elements</a></li><li><a href="#lesson-0030">Abbreviations And Acronyms</a></li><li><a href="#lesson-0031">Address Element</a></li><li><a href="#lesson-0032">Time Element</a></li></ul></li></ul><h2>CSS</h2><ul><li><strong>first example</strong><ul><li><a href="#lesson-0033">CSS example</a></li></ul></li></ul></nav>
             </section>
             <section><h2 class="topic">HTML</h2><h3 class="subtopic">Basic HTML</h3>
           <article id="lesson-0001">
@@ -81,6 +81,74 @@
         
           <article id="lesson-0003">
             
+    <article><h2>Anchor Element</h2>
+<p>What is an <code>&lt;a&gt;</code> (anchor) element?</p>
+<p class="language-html">Creates a hyperlink to another resource.<br>
+<code>&lt;a href=&quot;https://example.com&quot;&gt;Visit&lt;/a&gt;</code></p>
+<h3>href</h3>
+<p class="mark">Specifies the link destination: </p>
+<ul>
+<li>Absolute: <code>href=&quot;https://...&quot;</code></li>
+<li>Relative: <code>href=&quot;/about.html&quot;</code></li>
+</ul>
+<h3>Types of Links</h3>
+<ul>
+<li>Web: <code>href=&quot;https://...&quot;</code></li>
+<li>Email: <code>mailto:user@example.com&quot;</code></li>
+<li>Phone: <code>tel:+1234567890&quot;</code></li>
+<li>Anchor: <code>href=&quot;#section&quot;</code></li>
+<li>FTP: <code>ftp://...&quot;</code></li>
+<li>JavaScript (unsafe): <code>javascript:...&quot;</code></li>
+<li>Blob/Data: <code>blob:...</code>, <code>data:...</code></li>
+</ul>
+<h3>Anchor Links</h3>
+<p class="mark">Jump to element by <code>id</code>: </p>
+<ul>
+<li class="language-html"><code>&lt;a href=&quot;#top&quot;&gt;Back&lt;/a&gt;</code></li>
+<li class="language-html"><code>&lt;h2 id=&quot;top&quot;&gt;...&lt;/h2&gt;</code></li>
+</ul>
+<h3>target</h3>
+<p class="mark">Defines where to open the link: </p>
+<ul>
+<li><code>_blank</code>: new tab</li>
+<li><code>_self</code>: same tab (default)</li>
+</ul>
+<ul>
+<li>Use <code>rel=&quot;noopener noreferrer&quot;</code> for security</li>
+</ul>
+<p class="language-html"><code>&lt;a href=&quot;...&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;</code></p>
+<h3>download</h3>
+<p class="mark">Triggers file download: </p>
+<p class="language-html"><code>&lt;a href=&quot;file.pdf&quot; download&gt;Download&lt;/a&gt;</code></p>
+<p>Custom name: <code>download=&quot;newname.pdf&quot;</code></p>
+<h3>Nested Elements</h3>
+<p>You can nest inline or even block-level elements (HTML5):</p>
+<pre><code class="language-html">`&lt;a href=&quot;/&quot;&gt;
+    &lt;img src=&quot;logo.png&quot; alt=&quot;Logo&quot; /&gt;
+&lt;/a&gt;
+</code></pre>
+<h3>Avoid</h3>
+<ul>
+<li><code>href=&quot;#&quot;</code> without JS handler — scrolls to top</li>
+<li><code>javascript:</code> — insecure</li>
+<li>Nested <code>&lt;a&gt;&lt;a&gt;...&lt;/a&gt;&lt;/a&gt;</code> — invalid</li>
+<li><code>&lt;a&gt;</code> without <code>href</code> — not interactive</li>
+</ul>
+<h3>Quick Examples</h3>
+<pre><code class="language-html">&lt;a href=&quot;https://mdn.com&quot;&gt;MDN&lt;/a&gt;
+&lt;a href=&quot;#footer&quot;&gt;Footer&lt;/a&gt;
+&lt;a href=&quot;mailto:hi@example.com&quot;&gt;Email&lt;/a&gt;
+&lt;a href=&quot;tel:+123456789&quot;&gt;Call&lt;/a&gt;
+&lt;a href=&quot;file.pdf&quot; download&gt;PDF&lt;/a&gt;
+&lt;a href=&quot;...&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;New Tab&lt;/a&gt;
+</code></pre>
+</article>
+  
+          </article>
+          <hr class="lesson-divider">
+        
+          <article id="lesson-0004">
+            
     <article><h4>Link Element</h4>
 <p>The <code>&lt;link&gt;</code> element is used to link to external resources</p>
 <p>Often times you will see multiple link elements inside a professional codebase that link to different stylesheets, fonts, and icons.</p>
@@ -104,7 +172,7 @@
           </article>
           <hr class="lesson-divider">
         
-          <article id="lesson-0004">
+          <article id="lesson-0005">
             
     <article><h4>Boilerplate</h4>
 <p>It's a'template for webpages</p>
@@ -128,7 +196,7 @@
           </article>
           <hr class="lesson-divider">
         
-          <article id="lesson-0005">
+          <article id="lesson-0006">
             
     <article><h4>What is UTF-8</h4>
 <p>UTF-8, or UCS Transformation Format 8, is a standardized character encoding widely used on the web.</p>
@@ -149,7 +217,7 @@
           </article>
           <hr class="lesson-divider">
         
-          <article id="lesson-0006">
+          <article id="lesson-0007">
             
     <article><h4>Content Division Element</h4>
 <p>The <code>&lt;div&gt;</code> element is a generic container used to group other HTML elements. Unlike <code>&lt;section&gt;</code> or <code>&lt;article&gt;</code>, it has no semantic meaning by default.</p>
@@ -163,7 +231,7 @@
           </article>
           <hr class="lesson-divider">
         
-          <article id="lesson-0007">
+          <article id="lesson-0008">
             
     <article><h4>ID Element</h4>
 <p>The <code>id</code> attribute assigns a unique identifier to an HTML element. It must be unique across the entire page and can be used to reference the element via CSS, JavaScript, or anchor links.</p>
@@ -182,7 +250,7 @@
           </article>
           <hr class="lesson-divider">
         
-          <article id="lesson-0008">
+          <article id="lesson-0009">
             
     <article><h4>HTML Entities</h4>
 <p>HTML entities are used to represent reserved characters in HTML, such as <code>&lt;</code>, <code>&gt;</code>, <code>&quot;</code>, and <code>&amp;</code>.</p>
@@ -201,7 +269,7 @@
           </article>
           <hr class="lesson-divider">
         
-          <article id="lesson-0009">
+          <article id="lesson-0010">
             
     <article><h4>Script</h4>
 <p>The script element is used to embed executable code</p>
@@ -229,7 +297,7 @@
           </article>
           <hr class="lesson-divider">
         
-          <article id="lesson-0010">
+          <article id="lesson-0011">
             
     <article><h4>Meta description</h4>
 <p>SEO, or Search Engine Optimization, is a practice that optimizes web pages so they become more visible and rank higher on search engines. One way to improve your site's SEO, is to provide a short description for the web page using the meta element.</p>
@@ -244,7 +312,7 @@
           </article>
           <hr class="lesson-divider">
         
-          <article id="lesson-0011">
+          <article id="lesson-0012">
             
     <article><h4>What Is Open Graph</h4>
 <p>This is a protocol to control how your website's content appears across various social media platforms, such as Facebook, LinkedIn, and many more.</p>
@@ -270,7 +338,7 @@
           </article>
           <hr class="lesson-divider">
         
-          <article id="lesson-0012">
+          <article id="lesson-0013">
             
     <article><h4>What Are Replaced Elements</h4>
 <p>A replaced element is an element whose content is determined by an external resource rather than by CSS itself.</p>
@@ -286,7 +354,7 @@
           </article>
           <hr class="lesson-divider">
         
-          <article id="lesson-0013">
+          <article id="lesson-0014">
             
     <article><h4>Optimize Media Assets</h4>
 <p>To optimize media like images, consider:</p>
@@ -326,7 +394,7 @@
           </article>
           <hr class="lesson-divider">
         
-          <article id="lesson-0014">
+          <article id="lesson-0015">
             
     <article><h4>Image Licenses</h4>
 <p>Images are intellectual property and protected by copyright. By default — <strong>all rights reserved</strong>.</p>
@@ -369,7 +437,7 @@
           </article>
           <hr class="lesson-divider">
         
-          <article id="lesson-0015">
+          <article id="lesson-0016">
             
     <article><h4>SVG (Scalable Vector Graphics)</h4>
 <p>SVG is a <strong>vector image format</strong> — unlike raster formats (<code>JPG</code>, <code>PNG</code>), which are <strong>pixel-based</strong>.</p>
@@ -433,7 +501,7 @@
           </article>
           <hr class="lesson-divider">
         
-          <article id="lesson-0016">
+          <article id="lesson-0017">
             
     <article><h4>HTML Media Elements: Audio &amp; Video</h4>
 <h5>1. Purpose</h5>
@@ -528,7 +596,7 @@ audio.muted = true;
           </article>
           <hr class="lesson-divider">
         
-          <article id="lesson-0017">
+          <article id="lesson-0018">
             
     <article><h4>iframe Element</h4>
 <h5>Basic Syntax and Key Attributes</h5>
@@ -719,7 +787,7 @@ audio.muted = true;
           </article>
           <hr class="lesson-divider">
         
-          <article id="lesson-0018">
+          <article id="lesson-0019">
             
     <article><h4>Target Attribute</h4>
 <p>Specifies <strong>where</strong> a link or form opens — same tab, new tab, or frame.</p>
@@ -754,7 +822,7 @@ audio.muted = true;
           </article>
           <hr class="lesson-divider">
         
-          <article id="lesson-0019">
+          <article id="lesson-0020">
             
     <article><h4>What Is a Path?</h4>
 <p>A <strong>path</strong> shows the location of a resource (file, image, page) in the file system or website structure.</p>
@@ -839,7 +907,7 @@ audio.muted = true;
           </article>
           <hr class="lesson-divider">
         
-          <article id="lesson-0020">
+          <article id="lesson-0021">
             
     <article><h4>What Are Link States?</h4>
 <p>Links can exist in different <strong>states</strong> depending on how the user interacts with them.<br>
@@ -887,7 +955,7 @@ a:active {
           </article>
           <hr class="lesson-divider">
         
-          <article id="lesson-0021">
+          <article id="lesson-0022">
             
     <article><h4>Basic HTML Review</h4>
 <p><a href="https://www.freecodecamp.org/learn/full-stack-developer/review-basic-html/basic-html-review">freeCodeCamp - Basic HTML Rewiew Page</a></p>
@@ -896,7 +964,7 @@ a:active {
           </article>
           <hr class="lesson-divider">
         <h3 class="subtopic">HTML Semantic</h3>
-          <article id="lesson-0022">
+          <article id="lesson-0023">
             
     <article><h4>Semantic HTML</h4>
 <ul>
@@ -922,7 +990,7 @@ The best code is understandable without CSS or JavaScript.</p>
           </article>
           <hr class="lesson-divider">
         
-          <article id="lesson-0023">
+          <article id="lesson-0024">
             
     <article><h4>Why is it important to have good structural hierarchy?</h4>
 <ul>
@@ -960,7 +1028,7 @@ The best code is understandable without CSS or JavaScript.</p>
           </article>
           <hr class="lesson-divider">
         
-          <article id="lesson-0024">
+          <article id="lesson-0025">
             
     <article><h4>Semantic HTML</h4>
 <p>What is the difference Between Presentational and Semantic HTML?</p>
@@ -1006,7 +1074,7 @@ Semantic HTML focuses on the meaning and structure of the content. It uses eleme
           </article>
           <hr class="lesson-divider">
         
-          <article id="lesson-0025">
+          <article id="lesson-0026">
             
     <article><h4>I Emphasis Element</h4>
 <p>Use the <code>&lt;i&gt;</code> element especially for foreign words, technical terms, idiomatic expressions, or thoughts.<br>
@@ -1018,7 +1086,7 @@ When using it for foreign language, add the <code>lang=&quot;&quot;</code> attri
           </article>
           <hr class="lesson-divider">
         
-          <article id="lesson-0026">
+          <article id="lesson-0027">
             
     <article><h4>Strong vs B Element</h4>
 <h5>Purpose</h5>
@@ -1048,7 +1116,7 @@ Screen readers often <strong>stress</strong> such text when reading aloud.</li>
           </article>
           <hr class="lesson-divider">
         
-          <article id="lesson-0027">
+          <article id="lesson-0028">
             
     <article><h4>Description Lists</h4>
 <p>This is a semantic way to present pairs of related data, such as terms and definitions or keys and values.</p>
@@ -1073,7 +1141,7 @@ Screen readers often <strong>stress</strong> such text when reading aloud.</li>
           </article>
           <hr class="lesson-divider">
         
-          <article id="lesson-0028">
+          <article id="lesson-0029">
             
     <article><h4>Quoted Elements in HTML</h4>
 <p>Quoted elements help distinguish quotes from surrounding text.</p>
@@ -1115,7 +1183,7 @@ Screen readers often <strong>stress</strong> such text when reading aloud.</li>
           </article>
           <hr class="lesson-divider">
         
-          <article id="lesson-0029">
+          <article id="lesson-0030">
             
     <article><h4>Abbreviations And Acronyms</h4>
 <p class="marker">Basics:</p>
@@ -1148,8 +1216,126 @@ Screen readers often <strong>stress</strong> such text when reading aloud.</li>
   
           </article>
           <hr class="lesson-divider">
+        
+          <article id="lesson-0031">
+            
+    <article><h2>Address Element</h2>
+<p>What is the <code>&lt;address&gt;</code> element?</p>
+<p>Defines contact information for a person, organization, or section.</p>
+<h3>Semantics</h3>
+<p>Use for <strong>author</strong> or <strong>organization</strong> contact info.<br>
+Better than generic <code>&lt;div&gt;</code> for contact blocks.</p>
+<h3>Typical Content</h3>
+<ul>
+<li>Name</li>
+<li>Physical address</li>
+<li>Phone number</li>
+<li>Email</li>
+<li>Website or social links</li>
+</ul>
+<p class="marker">Example:</p>
+<pre><code class="language-html">&lt;address&gt;
+  &lt;h2&gt;Company Name&lt;/h2&gt;
+  &lt;p&gt;
+    1234 Elm Street&lt;br /&gt;
+    Springfield, IL 62701&lt;br /&gt;
+    USA
+  &lt;/p&gt;
+  &lt;p&gt;Phone: &lt;a href=&quot;tel:+15555555555&quot;&gt;+1 (555) 555-5555&lt;/a&gt;&lt;/p&gt;
+  &lt;p&gt;Email: &lt;a href=&quot;mailto:contact@company.com&quot;&gt;contact@company.com&lt;/a&gt;&lt;/p&gt;
+&lt;/address&gt;
+</code></pre>
+<p class="marker">Rendered:</p>
+<address>
+  <h4>Company Name</h4>
+  <p>
+    1234 Elm Street<br />
+    Springfield, IL 62701<br />
+    USA
+  </p>
+  <p>Phone: <a href="tel:+15555555555">+1 (555) 555-5555</a></p>
+  <p>Email: <a href="mailto:contact@company.com">contact@company.com</a></p>
+</address>
+<h3>Build in links:</h3>
+<p class="marker">Phone Links:</p>
+<p class="language-html">Use <code>tel:</code> for clickable phone numbers on supported devices:<br>
+<code>&lt;a href=&quot;tel:+1234567890&quot;&gt;Call us&lt;/a&gt;</code></p>
+<p class="marker">Email Links:</p>
+<p>Use <code>mailto:</code> to open email clients:</p>
+<p language-html=""><code>&lt;a href=&quot;mailto:user@example.com&quot;&gt;Email&lt;/a&gt;</code></p>
+<p>⚠️ Can be used by spammers (visible in source)</p>
+<h3>Other Links</h3>
+<p>You can include links to social profiles or websites inside <code>&lt;address&gt;</code>.</p>
+<h2>Placement</h2>
+<p class="marker">Usually placed: </p>
+<ul>
+<li>Inside <code>&lt;footer&gt;</code> for site-wide contact</li>
+<li>At end of an <code>&lt;article&gt;</code> for author info</li>
+</ul>
+<h3>Avoid</h3>
+<ul>
+<li>Putting unrelated info (hours, maps) inside</li>
+<li>Using for non-contact content</li>
+<li>Styling as block unless needed — not all browsers render as block by default</li>
+</ul>
+</article>
+  
+          </article>
+          <hr class="lesson-divider">
+        
+          <article id="lesson-0032">
+            
+    <article><h2>Time Element</h2>
+<p><code>&lt;time&gt;</code> element represents a <strong>specific time or date</strong> in a <strong>machine-readable</strong> and <strong>human-readable</strong> way</p>
+<p class="marker">Example:</p>
+<p class="language-html"><code>&lt;time datetime=&quot;2024-06-15&quot;&gt;June 15&lt;/time&gt;</code></p>
+<ul>
+<li>Use the <code>datetime</code> attribute to define the <strong>ISO 8601</strong> value</li>
+</ul>
+<p class="marker">Example:</p>
+<p><code>datetime=&quot;2024-06-15T15:00&quot;</code></p>
+<p class="marker">Common ISO formats: </p>
+<ul>
+<li>Time: <code>&quot;20:00&quot;</code></li>
+<li>Date: <code>&quot;2024-06-15&quot;</code></li>
+<li>DateTime: <code>&quot;2024-06-15T15:00&quot;</code></li>
+<li>Month: <code>&quot;2024-06&quot;</code></li>
+<li>Year: <code>&quot;2024&quot;</code></li>
+<li>Duration: <code>&quot;PT2H&quot;</code> (2 hours)</li>
+</ul>
+<p class="marker">The separator <code>T</code> between date and time:</p>
+<p><code>Example: &quot;2024-06-15T15:00&quot;</code></p>
+<p class="marker">Use cases:</p>
+<p class="language-html"><code>Post published on &lt;time datetime=&quot;2025-05-22&quot;&gt;May 22&lt;/time&gt;</code> </p>
+<p class="language-html"><code>The flight is at &lt;time datetime=&quot;20:00&quot;&gt;20:00&lt;/time&gt;</code></p>
+<p class="marker">Benefits:</p>
+<ul>
+<li>Improves <strong>SEO</strong>, <strong>accessibility</strong>, and <strong>JS processing</strong></li>
+<li>Supports <strong>localization</strong> and <strong>calendar tools</strong></li>
+</ul>
+<p class="marker">Avoid:</p>
+<ul>
+<li>Missing <code>datetime</code></li>
+<li>Invalid ISO format</li>
+<li>Misusing for generic content</li>
+</ul>
+<p class="marker">Example:</p>
+<pre><code class="language-html">&lt;p&gt;
+  This lecture was written on
+  &lt;time datetime=&quot;2025-05-22T12:40&quot;&gt;May 22, 2025 at 12:40 PM&lt;/time&gt;
+&lt;/p&gt;
+</code></pre>
+<p class="marker">Rendered:</p>
+<p>
+  This lecture was written on
+  <time datetime="2025-05-22T12:40">May 22, 2025 at 12:40 PM</time>
+</p>
+</article>
+  
+          </article>
+          <hr class="lesson-divider">
         <h2 class="topic">CSS</h2><h3 class="subtopic">first example</h3>
-          <article id="lesson-0030">
+          <article id="lesson-0033">
             
     <article><h4>Comming Soon</h4>
 </article>

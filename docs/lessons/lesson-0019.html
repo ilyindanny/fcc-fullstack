@@ -3,99 +3,49 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>File Paths</title>
+  <title>Target Attribute</title>
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/prism.css" />
 </head>
 <body>
 
   <main>
-    <article><h4>What Is a Path?</h4>
-<p>A <strong>path</strong> shows the location of a resource (file, image, page) in the file system or website structure.</p>
-<p class="marker">Types of paths:</p>
+    <article><h4>Target Attribute</h4>
+<p>Specifies <strong>where</strong> a link or form opens — same tab, new tab, or frame.</p>
+<h5>Values</h5>
 <ul>
-<li>Absolute</li>
-<li>Relative</li>
-<li>Root-relative</li>
+<li><code>_self</code> – default, opens in the <strong>same tab</strong>.</li>
+<li><code>_blank</code> – opens in a <strong>new tab</strong> (add <code>rel=&quot;noopener&quot;</code>).</li>
+<li><code>_parent</code> – opens in the <strong>parent frame</strong>.</li>
+<li><code>_top</code> – opens in the <strong>top-level window</strong>.</li>
+<li><code>_unfencedTop</code> – experimental, for Fenced Frames.</li>
 </ul>
-<h5>Absolute Path</h5>
-<p>A full address to a file — starts from the <strong>root</strong>.</p>
-<ul>
-<li>
-<p><strong>Web</strong>: Includes protocol + domain<br>
-<code>https://example.com/img/logo.png</code></p>
-</li>
-<li>
-<p><strong>Local file (macOS)</strong>:<br>
-<code>file:///Users/Daniel/Desktop/site/pages/about.html</code></p>
-</li>
-<li>
-<p><strong>Local file (Windows)</strong>:<br>
-<code>file:///C:/Users/Daniel/Desktop/site/pages/about.html</code></p>
-</li>
-</ul>
-<h5>Relative Path</h5>
-<p>Relative to the <strong>current file's folder</strong>. Shorter and flexible.</p>
-<p class="marker">Examples:</p>
-<ul>
-<li><code>about.html</code> — same folder</li>
-<li><code>../index.html</code> — one level up</li>
-<li><code>../../img/logo.svg</code> — two levels up</li>
-<li><code>./style.css</code> — current folder (optional <code>./</code>)</li>
-</ul>
-<p>Works in both <code>file://</code> and <code>localhost</code> modes if folder structure is correct.</p>
-<h5>Root-Relative Path</h5>
-<p>Starts with <code>/</code> — relative to the <strong>site root</strong>, not current file.</p>
 <p class="marker">Example:</p>
-<p><code>/assets/css/main.css</code></p>
-<ul>
-<li>Works only in <strong>localhost</strong> or live server.</li>
-<li>Does <strong>not</strong> work in <code>file://</code> mode.</li>
-</ul>
-<h5>Base URL (optional)</h5>
-<p>The <code class="language-html">&lt;base href=&quot;/assets/&quot;&gt;</code> tag in <code>&lt;head&gt;</code> changes how all relative paths are resolved. Use carefully.</p>
-<h5>Link Behavior Examples</h5>
-<p>Absolute web URL:</p>
-<p class="language-html"><code>&lt;a href=&quot;https://example.com/style.css&quot;&gt;External&lt;/a&gt;</code></p>
-<p>Relative to current file:</p>
-<p class="language-html"><code>&lt;a href=&quot;about.html&quot;&gt;Same folder&lt;/a&gt;</code></p>
-<p class="language-html"><code>&lt;a href=&quot;../index.html&quot;&gt;Up one level&lt;/a&gt;</code></p>
-<p>Root-relative (server only):</p>
-<p class="language-html"><code>&lt;a href=&quot;/pages/lesson.html&quot;&gt;From site root&lt;/a&gt;</code></p>
-<p>Localhost absolute URL:</p>
-<p class="language-html"><code>&lt;a href=&quot;http://127.0.0.1/lessons/lesson.html&quot;&gt;Always works if server runs&lt;/a&gt;</code></p>
-<h5>Common Mistake</h5>
-<ul>
-<li>Mixing styles (absolute / relative / root-relative) inconsistently</li>
-</ul>
-<h5>Best Practices</h5>
-<ul>
-<li>Use absolute paths for external sites.</li>
-<li>Use relative paths for internal links during development.</li>
-<li>Use root-relative when served from a server and structure is stable.</li>
-<li>Test root-relative paths only under localhost.</li>
-</ul>
-<h5>OS Path Formats vs browser format</h5>
-<p>macOS:</p>
-<ul>
-<li><code>/Users/Daniel/Desktop/project/index.html</code></li>
-<li>Browser path:<br>
-<code>file:///Users/Daniel/Desktop/project/index.html</code></li>
-</ul>
-<p>Windows:</p>
-<ul>
-<li><code>C:\Users\Daniel\Desktop\project\index.html</code></li>
-<li>Browser path:<br>
-<code>file:///C:/Users/Daniel/Desktop/project/index.html</code></li>
-</ul>
+<p class="language-html"><code>&lt;a href=&quot;https://example.com&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;New Tab&lt;/a&gt;</code></p>
+<h5>Named Targets</h5>
+<p>Named targets allow you to open a link or form submission into a specific <code>&lt;iframe&gt;</code> or window by using its <code>name</code> attribute. If an element like <code>&lt;iframe name=&quot;myFrame&quot;&gt;</code> exists, <code>target=&quot;myFrame&quot;</code> will load the page inside it. If no such target exists, the browser may open a new window with that name.</p>
+<pre><code class="language-html">&lt;iframe name=&quot;myFrame&quot;&gt;&lt;/iframe&gt;
+&lt;a href=&quot;page.html&quot; target=&quot;myFrame&quot;&gt;Open in Frame&lt;/a&gt;
+</code></pre>
+<h5>Forms</h5>
+<p>Using <code>target=&quot;_blank&quot;</code> in a <code>&lt;form&gt;</code> makes the form submission result open in a new tab or window. This can be useful when you don’t want to navigate away from the current page after submitting.</p>
+<p class="language-html"><code>&lt;form action=&quot;/submit&quot; target=&quot;_blank&quot;&gt;...&lt;/form&gt;</code></p>
+<p>Note:</p>
+<p>Use <code>rel=&quot;noopener&quot;</code> with <code>_blank</code> for security.</p>
+<h5>Security Note</h5>
+<p>When using <code>target=&quot;_blank&quot;</code>, always add <code>rel=&quot;noopener&quot;</code> (or <code>rel=&quot;noreferrer&quot;</code>) to prevent the new page from having access to the original page via <code>window.opener</code>. This helps avoid potential security vulnerabilities such as phishing attacks.</p>
+<h5>Named Targets</h5>
+<p>The <code>target</code> attribute can refer to any named window or frame, not just the predefined keywords. For example, if an <code>&lt;iframe&gt;</code> or window has a <code>name</code> attribute, links or forms can target that specific window by name.</p>
+<h5>Modern Usage</h5>
+<p>Named frames are less common in modern web development. Today, developers often prefer using JavaScript frameworks and SPA architecture, reducing reliance on frames and multiple windows for navigation.</p>
 </article>
   </main> 
 	
     <section class="navigation">
       <nav class="lesson-nav">
-        <a class="prev" href="lesson-0018.html">&larr; Target Attribute</a>
+        <a class="prev" href="lesson-0018.html">&larr; Iframe Element</a>
         <a class="home" href="../index.html">Home</a>
-        <a class="next" href="lesson-0020.html">Link States in CSS &rarr;</a>
+        <a class="next" href="lesson-0020.html">File Paths &rarr;</a>
       </nav>
     </section>
   

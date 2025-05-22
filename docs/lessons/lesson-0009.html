@@ -3,42 +3,33 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Script</title>
+  <title>HTML Entities</title>
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/prism.css" />
 </head>
 <body>
 
   <main>
-    <article><h4>Script</h4>
-<p>The script element is used to embed executable code</p>
-<p class="marker">Example:</p>
-<p><code>alert('Welcome to freeCodeCamp')</code></p>
-<pre><code class="language-html">&lt;body&gt;
-  &lt;script&gt;
-    alert(&quot;Welcome to freeCodeCamp&quot;);
-  &lt;/script&gt;
-&lt;/body&gt;
-</code></pre>
-<h5>How to use</h5>
-<p>While you can technically write all of your JavaScript code inside the script tags, it is considered best practice to link to an external JavaScript file instead. Here is an example of using the script element to link to an external JavaScript file:</p>
-<p><code class="language-html">&lt;script src=&quot;path-to-javascript-file.js&quot;&gt;&lt;/script&gt;</code></p>
-<h5>A small tip</h5>
-<p>In order not to get confused in the file paths with a more complex structure, always remember:</p>
+    <article><h4>HTML Entities</h4>
+<p>HTML entities are used to represent reserved characters in HTML, such as <code>&lt;</code>, <code>&gt;</code>, <code>&quot;</code>, and <code>&amp;</code>.</p>
+<p>To display the following HTML code on a webpage as plain text:</p>
+<p><code class="language-html">&lt;div class=&quot;example&quot;&gt;Hello &amp; welcome!&lt;/div&gt;</code></p>
+<p>you need to write it in the HTML source like this:</p>
+<p><code>&amp;lt;div class=&amp;quot;example&amp;quot;&amp;gt;Hello &amp;amp; welcome!&amp;lt;/div&amp;gt;</code></p>
+<h5>Types of HTML Entities</h5>
 <ul>
-<li><code>src=&quot;something.js&quot;</code> — it searches in the same folder where index.html</li>
-<li><code>src=&quot;folder/something.js&quot;</code> — searches in a subfolder</li>
-<li><code>src=&quot;../something.js&quot;</code> — goes up a level</li>
-<li><code>&quot;/something.js&quot;</code> — it searches in the root of the server, not the project (it doesn't work on the locale without a server!)</li>
+<li><strong>Named characters:</strong> <code>&amp;lt;</code>, <code>&amp;gt;</code>, <code>&amp;quot;</code>, <code>&amp;amp;</code> and many others</li>
+<li><strong>Decimal numeric reference:</strong> <code>&amp;#60;</code> — uses the Unicode decimal number of the character</li>
+<li><strong>Hexadecimal numeric reference:</strong> <code>&amp;#x3C;</code> — same as above but in hexadecimal format</li>
 </ul>
 </article>
   </main> 
 	
     <section class="navigation">
       <nav class="lesson-nav">
-        <a class="prev" href="lesson-0008.html">&larr; HTML Entities</a>
+        <a class="prev" href="lesson-0008.html">&larr; ID Element</a>
         <a class="home" href="../index.html">Home</a>
-        <a class="next" href="lesson-0010.html">Meta description &rarr;</a>
+        <a class="next" href="lesson-0010.html">Script &rarr;</a>
       </nav>
     </section>
   

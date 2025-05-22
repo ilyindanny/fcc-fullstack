@@ -3,23 +3,62 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Basic HTML Review</title>
+  <title>Link States in CSS</title>
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/prism.css" />
 </head>
 <body>
 
   <main>
-    <article><h4>Basic HTML Review</h4>
-<p><a href="https://www.freecodecamp.org/learn/full-stack-developer/review-basic-html/basic-html-review">freeCodeCamp - Basic HTML Rewiew Page</a></p>
+    <article><h4>What Are Link States?</h4>
+<p>Links can exist in different <strong>states</strong> depending on how the user interacts with them.<br>
+These pseudo-classes allow dynamic styling, which improves UX and accessibility.</p>
+<blockquote>
+<p><code>:focus</code> is not the same as <code>:hover</code>.<br>
+Focus means the element is active for <strong>keyboard interaction</strong> (e.g., selected via Tab), not just hovered.</p>
+</blockquote>
+<h5>Link States Overview</h5>
+<ul>
+<li><code>:link</code> — the link has <strong>not</strong> been visited yet</li>
+<li><code>:visited</code> — the link <strong>has</strong> been opened before</li>
+<li><code>:hover</code> — the mouse is hovering over the link</li>
+<li><code>:focus</code> — the link is <strong>focused</strong> (via Tab or mouse click)</li>
+<li><code>:active</code> — the link is being activated (usually during <strong>mouse-down</strong>)</li>
+</ul>
+<p class="marker">Correct CSS order:</p>
+<p><code>link → visited → hover → focus → active</code></p>
+<p>Mnemonic: <strong>LoVe FAt HAir</strong></p>
+<h5>CSS Example</h5>
+<pre><code class="language-css">a:link {
+  color: blue;
+  text-decoration: none;
+}
+
+a:visited {
+  color: gray;
+}
+
+a:hover {
+  color: orange;
+  text-decoration: underline;
+}
+
+a:focus {
+  outline: 2px dashed orange;
+}
+
+a:active {
+  color: red;
+}
+</code></pre>
 </article>
   </main> 
 	
     <section class="navigation">
       <nav class="lesson-nav">
-        <a class="prev" href="lesson-0020.html">&larr; Link States in CSS</a>
+        <a class="prev" href="lesson-0020.html">&larr; File Paths</a>
         <a class="home" href="../index.html">Home</a>
-        <a class="next" href="lesson-0022.html">Semantic HTML &rarr;</a>
+        <a class="next" href="lesson-0022.html">Basic HTML Review &rarr;</a>
       </nav>
     </section>
   

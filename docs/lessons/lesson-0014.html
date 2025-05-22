@@ -3,57 +3,54 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Image licenses</title>
+  <title>Optimize Media Asets</title>
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/prism.css" />
 </head>
 <body>
 
   <main>
-    <article><h4>Image Licenses</h4>
-<p>Images are intellectual property and protected by copyright. By default — <strong>all rights reserved</strong>.</p>
-<p class="marker">You can legally use an image if:</p>
+    <article><h4>Optimize Media Assets</h4>
+<p>To optimize media like images, consider:</p>
+<ol>
+<li>
+<p>Size</p>
 <ul>
-<li>You have <strong>written permission</strong> from the author.</li>
-<li>You <strong>purchased a license</strong> (e.g. from stock sites).</li>
-<li>Your use qualifies as <strong>fair use</strong> (limited, transformative, not harming the owner).</li>
+<li>Resize images to match display size.</li>
+<li>Avoid large-resolution images scaled down with CSS.</li>
+<li>Use <code>srcset</code> and <code>sizes</code> for responsive images.</li>
 </ul>
-<p class="marker">Fair Use:</p>
+</li>
+<li>
+<p>Format</p>
 <ul>
-<li>Allows use without permission if your usage is <strong>transformative</strong> (e.g. commentary, parody).</li>
-<li>Risky: not always legally safe.</li>
+<li>Use modern formats: <code>WEBP</code> or <code>AVIF</code> instead of <code>JPG</code> or <code>PNG</code>.</li>
+<li>Use <code>SVG</code> for icons and simple graphics.</li>
 </ul>
-<h5>License Types</h5>
-<p class="marker">Creative Commons (CC):</p>
+</li>
+<li>
+<p>Compression</p>
 <ul>
-<li><code>CC BY</code> – free use with <strong>attribution</strong>.</li>
-<li><code>CC BY-SA</code> – must use the <strong>same license</strong>.</li>
-<li><code>CC BY-ND</code> – <strong>no modifications</strong> allowed.</li>
-<li><code>CC BY-NC</code> – <strong>non-commercial use</strong> only.</li>
-<li><code>CC0</code> – <strong>public domain</strong>, no restrictions.</li>
+<li>Use compression tools: <code>pngcrush</code>, <code>jpegoptim</code>, <code>squoosh</code>.</li>
+<li>Lossy formats like <code>JPG</code> degrade quality.</li>
+<li>Remove metadata to reduce file size.</li>
 </ul>
-<p class="marker">Other:</p>
+</li>
+</ol>
+<h5>Tips</h5>
 <ul>
-<li><strong>BSD</strong> – permissive, used mostly for code.</li>
-<li><strong>Public Domain</strong> – no copyright, full freedom to use.</li>
+<li>Use <code>loading=&quot;lazy&quot;</code> for lazy loading.</li>
+<li>Use Image CDNs for automatic optimization.</li>
+<li>Always include <code>alt</code> attributes for accessibility.</li>
 </ul>
-<h5>Safe Sources</h5>
-<ul>
-<li><a href="https://unsplash.com">Unsplash</a></li>
-<li><a href="https://pixabay.com">Pixabay</a></li>
-<li><a href="https://pexels.com">Pexels</a></li>
-<li><a href="https://commons.wikimedia.org">Wikimedia Commons</a></li>
-</ul>
-<h5>Tip</h5>
-<p>Use image search filters (e.g. in Google) to find content with a license.</p>
 </article>
   </main> 
 	
     <section class="navigation">
       <nav class="lesson-nav">
-        <a class="prev" href="lesson-0013.html">&larr; Optimize Media Asets</a>
+        <a class="prev" href="lesson-0013.html">&larr; Replaced Elements</a>
         <a class="home" href="../index.html">Home</a>
-        <a class="next" href="lesson-0015.html">SVG &rarr;</a>
+        <a class="next" href="lesson-0015.html">Image licenses &rarr;</a>
       </nav>
     </section>
   

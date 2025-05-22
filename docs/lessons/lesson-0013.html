@@ -3,54 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Optimize Media Asets</title>
+  <title>Replaced Elements</title>
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/prism.css" />
 </head>
 <body>
 
   <main>
-    <article><h4>Optimize Media Assets</h4>
-<p>To optimize media like images, consider:</p>
-<ol>
-<li>
-<p>Size</p>
-<ul>
-<li>Resize images to match display size.</li>
-<li>Avoid large-resolution images scaled down with CSS.</li>
-<li>Use <code>srcset</code> and <code>sizes</code> for responsive images.</li>
-</ul>
-</li>
-<li>
-<p>Format</p>
-<ul>
-<li>Use modern formats: <code>WEBP</code> or <code>AVIF</code> instead of <code>JPG</code> or <code>PNG</code>.</li>
-<li>Use <code>SVG</code> for icons and simple graphics.</li>
-</ul>
-</li>
-<li>
-<p>Compression</p>
-<ul>
-<li>Use compression tools: <code>pngcrush</code>, <code>jpegoptim</code>, <code>squoosh</code>.</li>
-<li>Lossy formats like <code>JPG</code> degrade quality.</li>
-<li>Remove metadata to reduce file size.</li>
-</ul>
-</li>
-</ol>
-<h5>Tips</h5>
-<ul>
-<li>Use <code>loading=&quot;lazy&quot;</code> for lazy loading.</li>
-<li>Use Image CDNs for automatic optimization.</li>
-<li>Always include <code>alt</code> attributes for accessibility.</li>
-</ul>
+    <article><h4>What Are Replaced Elements</h4>
+<p>A replaced element is an element whose content is determined by an external resource rather than by CSS itself.</p>
+<p>The image element, which embeds an <code>image</code> on your web page:</p>
+<p class="language-html"><code>&lt;img src=&quot;example-img-url&quot; alt=&quot;Descriptive text goes here&quot;&gt;</code></p>
+<p>(The element itself is replaced with the external object: the <code>image</code>).</p>
+<p>A more robust example might be the <code>iframe</code> element, which embeds an external site on your web page:</p>
+<p class="language-html"><code>&lt;iframe src=&quot;https://www.example.com&quot; title=&quot;Example Site&quot;&gt;&lt;/iframe&gt;</code></p>
+<p>An <code>input</code> element with the <code>type</code> attribute set to <code>image</code>:</p>
+<p class="language-html"><code>&lt;input type=&quot;image&quot; alt=&quot;Descriptive text goes here&quot; src=&quot;example-img-url&quot;&gt;</code></p>
 </article>
   </main> 
 	
     <section class="navigation">
       <nav class="lesson-nav">
-        <a class="prev" href="lesson-0012.html">&larr; Replaced Elements</a>
+        <a class="prev" href="lesson-0012.html">&larr; Open Graph</a>
         <a class="home" href="../index.html">Home</a>
-        <a class="next" href="lesson-0014.html">Image licenses &rarr;</a>
+        <a class="next" href="lesson-0014.html">Optimize Media Asets &rarr;</a>
       </nav>
     </section>
   
