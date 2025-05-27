@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Code Element</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/prism.css" />
+</head>
+<body>
+
+  <main>
+    <article><h4>Code Element</h4>
+<p>How to display Code in HTML and Markdown.</p>
+<h5>Inline Code (single line)</h5>
+<ul>
+<li>Use the <code>&lt;code&gt;</code> tag inside a block of text.</li>
+</ul>
+<p class="marker">Example:</p>
+<p class="language-html"><code>&lt;p&gt;Use &lt;code&gt;color: blue;&lt;/code&gt; to change text color.&lt;/p&gt;</code></p>
+<ul>
+<li>Default styling: monospace font.</li>
+</ul>
+<h5>Block Code (multi-line)</h5>
+<ul>
+<li>Use a <code class="language-html">&lt;pre&gt;&lt;code&gt;...&lt;/code&gt;&lt;/pre&gt;</code> structure.</li>
+<li><code>&lt;pre&gt;</code> preserves spacing, indentation, and line breaks.</li>
+</ul>
+<p class="marker">Example:</p>
+<pre><code class="language-html">&lt;pre&gt;&lt;code&gt;
+body {
+  color: red;
+}
+&lt;/code&gt;&lt;/pre&gt;
+</code></pre>
+<h5>In Markdown</h5>
+<p>Using 'markdown-it-attrs'</p>
+<ul>
+<li>Adds HTML attributes directly in Markdown.</li>
+<li>Useful for setting:
+<ul>
+<li>Custom classes (e.g. '.inline-code')</li>
+<li>Language identifiers for highlighters (e.g. '.language-js')</li>
+</ul>
+</li>
+</ul>
+<p class="marker">Example for converting to <code>&lt;pre&gt;&lt;code&gt;</code>:</p>
+<pre><code class="language-markdown">
+```js
+body {
+  color: red;
+}
+```
+</code></pre>
+<ul>
+<li>The <code>```js</code> class enables syntax highlighting.</li>
+</ul>
+<p class="marker">Example for converting to inline <code>&lt;code&gt;</code>:</p>
+<p><code>color: blue; {.language-css}</code></p>
+<ul>
+<li>The <code>{.language-css}</code> class enables syntax highlighting.</li>
+</ul>
+<h5>Notes</h5>
+<ul>
+<li><code>&lt;pre&gt;</code> renders text exactly as typed (be mindful of indentation).</li>
+<li>Always escape <code>&lt;</code>, <code>&gt;</code>, <code>&amp;</code> if displaying user input.</li>
+<li>Pair with libraries like <code>Prism.js</code> or <code>Highlight.js</code> for syntax highlighting.</li>
+<li>Best practice: use <code>&lt;code&gt;</code> for inline snippets, <code>&lt;pre&gt;&lt;code&gt;</code> for blocks.</li>
+<li>Avoid nesting <code>&lt;pre&gt;</code> inside Markdown code blocks — it can break layout.</li>
+</ul>
+</article>
+  </main> 
+	
+    <section class="navigation">
+      <nav class="lesson-nav">
+        <a class="prev" href="lesson-0033.html">&larr; Superscript And Subscript Elements</a>
+        <a class="home" href="../index.html">Home</a>
+        <a class="next" href="lesson-0035.html">CSS example &rarr;</a>
+      </nav>
+    </section>
+  
+	
+	<script src="../js/prism.js"></script>
+</body>
+</html>

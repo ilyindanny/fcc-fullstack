@@ -140,6 +140,14 @@
           {
             "title": "Time Element",
             "filename": "lesson-0032.html"
+          },
+          {
+            "title": "Superscript And Subscript Elements",
+            "filename": "lesson-0033.html"
+          },
+          {
+            "title": "Code Element",
+            "filename": "lesson-0034.html"
           }
         ]
       }
@@ -155,7 +163,7 @@
         "lessons": [
           {
             "title": "CSS example",
-            "filename": "lesson-0033.html"
+            "filename": "lesson-0035.html"
           }
         ]
       }
