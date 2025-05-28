@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>U S And Ruby Elements</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/prism.css" />
+</head>
+<body>
+
+  <main>
+    <article><h4>U, S And Ruby Elements</h4>
+<p>Underlines, Strikethroughs, and Annotations in HTML<br>
+This group of elements provides <strong>semantic meaning</strong> — not styling — for errors, cancellations, edits, and phonetic annotations.</p>
+<h5><code>&lt;u&gt;</code> — underlined with annotation</h5>
+<p>Semantics: <strong>Unarticulated annotation</strong>, misspellings.</p>
+<p>Not for visual underline.</p>
+<p class="marker">Example:</p>
+<p class="language-html"><code>&lt;p&gt;Please fix the &lt;u&gt;speling&lt;/u&gt; mistake.&lt;/p&gt;</code></p>
+<h5><code>&lt;s&gt;</code> — for some text that is no longer accurate</h5>
+<p>Semantics: <strong>Outdated but still visible</strong> text.</p>
+<p>Not for tracking document changes — use <code>&lt;del&gt;</code> / <code>&lt;ins&gt;</code> instead.</p>
+<p class="marker">Example:</p>
+<p class="language-html"><code>&lt;p&gt;&lt;s&gt;Meeting at 10am&lt;/s&gt; — moved to 2pm.&lt;/p&gt;</code></p>
+<h5><code>&lt;del&gt;</code> — deleted content</h5>
+<p>Semantics: Text that was <strong>removed in an edited version</strong>. Supports <code>datetime</code> and <code>cite</code> attrebutes.</p>
+<p class="marker">Example:</p>
+<p class="language-html"><code>&lt;p&gt;The color is &lt;del datetime=&quot;2024-01-01&quot;&gt;green&lt;/del&gt;.&lt;/p&gt;</code></p>
+<h5><code>&lt;ins&gt;</code> — inserted content</h5>
+<p>Semantics: Text that was <strong>added in an edit</strong>. Also supports <code>datetime</code>.</p>
+<p class="language-html"><code>&lt;p&gt;Now it is &lt;ins datetime=&quot;2024-01-02&quot;&gt;blue&lt;/ins&gt;.&lt;/p&gt;</code></p>
+<h5><code>&lt;ruby&gt;</code> — phonetic annotation</h5>
+<p>Semantics: Small annotations for <strong>pronunciation of East Asian characters</strong>.</p>
+<ul>
+<li><code>&lt;rt&gt;</code> — <em>ruby text</em> (the annotation)</li>
+<li><code>&lt;rp&gt;</code> — <em>ruby parentheses</em> (fallback for unsupported browsers)</li>
+</ul>
+<p class="marker">Example:</p>
+<pre><code class="language-html">&lt;ruby&gt;
+  明日
+  &lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;あした&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;
+&lt;/ruby&gt;
+</code></pre>
+<p class="marker">Rendered:</p>
+<ruby>
+  明日
+  <rp>(</rp><rt>あした</rt><rp>)</rp>
+</ruby>
+<p>If ruby is not supported browser will show:<br>
+<strong>明日(あした)</strong></p>
+</article>
+  </main> 
+	
+    <section class="navigation">
+      <nav class="lesson-nav">
+        <a class="prev" href="lesson-0036.html">&larr; Code Element</a>
+        <a class="home" href="../index.html">Home</a>
+        <a class="next" href="lesson-0038.html">CSS example &rarr;</a>
+      </nav>
+    </section>
+  
+	
+	<script src="../js/prism.js"></script>
+</body>
+</html>

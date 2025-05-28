@@ -3,48 +3,39 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Abbreviations And Acronyms</title>
+  <title>Description List</title>
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/prism.css" />
 </head>
 <body>
 
   <main>
-    <article><h4>Abbreviations And Acronyms</h4>
-<p class="marker">Basics:</p>
-<ul>
-<li>Use the <code>&lt;abbr&gt;</code> tag</li>
-<li><code>title</code> attribute provides the full meaning</li>
-<li>Hover shows a tooltip with the full term</li>
-<li>No visible change by default</li>
-<li><code>&lt;acronym&gt;</code> is obsolete — do not use it</li>
-</ul>
-<p class="marker">Examples:</p>
-<p class="language-html"><code>&lt;p&gt;&lt;abbr title=&quot;HyperText Markup Language&quot;&gt;HTML&lt;/abbr&gt; is the foundation of the web.&lt;/p&gt;</code></p>
-<p class="language-html"><code>&lt;p&gt;&lt;abbr title=&quot;Cascading Style Sheets&quot;&gt;CSS&lt;/abbr&gt; makes pages look good.&lt;/p&gt;</code></p>
-<p class="language-html"><code>&lt;p&gt;&lt;abbr title=&quot;World Health Organization&quot;&gt;WHO&lt;/abbr&gt; was founded in 1948.&lt;/p&gt;</code></p>
-<p class="marker">Rendered:</p>
-<p><abbr title="HyperText Markup Language">HTML</abbr> is the foundation of the web.</p>
-<p class="marker">When to Use:</p>
-<ul>
-<li>At the first mention of an abbreviation</li>
-<li>If the meaning might not be obvious</li>
-<li>For accessibility (screen readers, tooltips)</li>
-</ul>
-<p class="marker">Optional Styling:</p>
-<pre><code class="language-css">abbr[title] {
-  text-decoration: underline dotted;
-  cursor: help;
-}
+    <article><h4>Description Lists</h4>
+<p>This is a semantic way to present pairs of related data, such as terms and definitions or keys and values.</p>
+<dl>
+<dt>Description list:</dt>
+<dd>organize content into terms and their corresponding descriptions.</dd>
+<dt>Elements of Description list:</dt>
+<dd><code>&lt;dl&gt;</code> - container for the entire list,</dd>
+<dd><code>&lt;dt&gt;</code> - the term or key,</dd>
+<dd><code>&lt;dd&gt;</code> - the description or value.</dd>
+</dl>
+<p class="marker">Example:</p>
+<pre><code class="language-html">&lt;dl&gt;
+  &lt;dt&gt;HTML&lt;/dt&gt;
+  &lt;dd&gt;HyperText Markup Language&lt;/dd&gt;
+  &lt;dt&gt;CSS&lt;/dt&gt;
+  &lt;dd&gt;Cascading Style Sheets&lt;/dd&gt;
+&lt;/dl&gt;
 </code></pre>
 </article>
   </main> 
 	
     <section class="navigation">
       <nav class="lesson-nav">
-        <a class="prev" href="lesson-0029.html">&larr; Quoted Elements</a>
+        <a class="prev" href="lesson-0029.html">&larr; Strong vs B Element</a>
         <a class="home" href="../index.html">Home</a>
-        <a class="next" href="lesson-0031.html">Address Element &rarr;</a>
+        <a class="next" href="lesson-0031.html">Quoted Elements &rarr;</a>
       </nav>
     </section>
   

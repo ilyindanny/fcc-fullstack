@@ -3,80 +3,56 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Address Element</title>
+  <title>Quoted Elements</title>
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/prism.css" />
 </head>
 <body>
 
   <main>
-    <article><h4>Address Element</h4>
-<p>What is the <code>&lt;address&gt;</code> element?</p>
-<p>Defines contact information for a person, organization, or section.</p>
-<h5>Semantics</h5>
-<p>Use for <strong>author</strong> or <strong>organization</strong> contact info.<br>
-Better than generic <code>&lt;div&gt;</code> for contact blocks.</p>
-<h5>Typical Content</h5>
+    <article><h4>Quoted Elements in HTML</h4>
+<p>Quoted elements help distinguish quotes from surrounding text.</p>
+<h5>Block Quotes</h5>
+<p>Use <code>&lt;blockquote&gt;</code> for extended quotations from other sources.</p>
 <ul>
-<li>Name</li>
-<li>Physical address</li>
-<li>Phone number</li>
-<li>Email</li>
-<li>Website or social links</li>
+<li>Element: <code>&lt;blockquote&gt;</code></li>
+<li>Attribute: <code>cite=&quot;URL&quot;</code> — source (not visible in UI)</li>
 </ul>
-<p class="marker">Example:</p>
-<pre><code class="language-html">&lt;address&gt;
-  &lt;h2&gt;Company Name&lt;/h2&gt;
-  &lt;p&gt;
-    1234 Elm Street&lt;br /&gt;
-    Springfield, IL 62701&lt;br /&gt;
-    USA
-  &lt;/p&gt;
-  &lt;p&gt;Phone: &lt;a href=&quot;tel:+15555555555&quot;&gt;+1 (555) 555-5555&lt;/a&gt;&lt;/p&gt;
-  &lt;p&gt;Email: &lt;a href=&quot;mailto:contact@company.com&quot;&gt;contact@company.com&lt;/a&gt;&lt;/p&gt;
-&lt;/address&gt;
+<p class="marker">Usage:</p>
+<pre><code class="language-html">&lt;blockquote cite=&quot;https://example.com&quot;&gt;
+  Long  text...
+&lt;/blockquote&gt;
 </code></pre>
-<p class="marker">Rendered:</p>
-<address>
-  <h4>Company Name</h4>
-  <p>
-    1234 Elm Street<br />
-    Springfield, IL 62701<br />
-    USA
-  </p>
-  <p>Phone: <a href="tel:+15555555555">+1 (555) 555-5555</a></p>
-  <p>Email: <a href="mailto:contact@company.com">contact@company.com</a></p>
-</address>
-<h5>Build in links:</h5>
-<p class="marker">Phone Links:</p>
-<p class="language-html">Use <code>tel:</code> for clickable phone numbers on supported devices:<br>
-<code>&lt;a href=&quot;tel:+1234567890&quot;&gt;Call us&lt;/a&gt;</code></p>
-<p class="marker">Email Links:</p>
-<p>Use <code>mailto:</code> to open email clients:</p>
-<p language-html=""><code>&lt;a href=&quot;mailto:user@example.com&quot;&gt;Email&lt;/a&gt;</code></p>
-<p>⚠️ Can be used by spammers (visible in source)</p>
-<h5>Other Links</h5>
-<p>You can include links to social profiles or websites inside <code>&lt;address&gt;</code>.</p>
-<h4>Placement</h4>
-<p class="marker">Usually placed: </p>
 <ul>
-<li>Inside <code>&lt;footer&gt;</code> for site-wide contact</li>
-<li>At end of an <code>&lt;article&gt;</code> for author info</li>
+<li>You can use <code>&lt;p&gt;</code> inside for multi-paragraph quotes.</li>
+<li>To show source visually, use <code>&lt;cite&gt;</code> outside:</li>
 </ul>
-<h5>Avoid</h5>
+<pre><code class="language-html">&lt;p&gt;—Author, &lt;cite&gt;Title of the Work&lt;/cite&gt;&lt;/p&gt;
+</code></pre>
+<h5>Inline Quotes</h5>
+<p>Use <code>&lt;q&gt;</code> for short, inline quotations.</p>
 <ul>
-<li>Putting unrelated info (hours, maps) inside</li>
-<li>Using for non-contact content</li>
-<li>Styling as block unless needed — not all browsers render as block by default</li>
+<li>Element: <code>&lt;q&gt;</code></li>
+<li>Attribute: <code>cite=&quot;URL&quot;</code> — source (invisible)</li>
+</ul>
+<p class="language-html">Usage: {.marker}
+<code>&lt;p&gt;He said, &lt;q cite=&quot;...&quot;&gt;&quot;Do it now.&quot;&lt;/q&gt;&lt;/p&gt;</code></p>
+<ul>
+<li>Most browsers add quotation marks automatically.</li>
+</ul>
+<h5>Notes</h5>
+<ul>
+<li><code>&lt;cite&gt;</code> is for titles of creative works, not for URLs.</li>
+<li>To link the source, use <code>&lt;a&gt;</code> inside <code>&lt;cite&gt;</code> (not recomended)</li>
 </ul>
 </article>
   </main> 
 	
     <section class="navigation">
       <nav class="lesson-nav">
-        <a class="prev" href="lesson-0030.html">&larr; Abbreviations And Acronyms</a>
+        <a class="prev" href="lesson-0030.html">&larr; Description List</a>
         <a class="home" href="../index.html">Home</a>
-        <a class="next" href="lesson-0032.html">Time Element &rarr;</a>
+        <a class="next" href="lesson-0032.html">Abbreviations And Acronyms &rarr;</a>
       </nav>
     </section>
   

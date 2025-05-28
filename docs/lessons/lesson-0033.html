@@ -3,27 +3,80 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Superscript And Subscript Elements</title>
+  <title>Address Element</title>
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/prism.css" />
 </head>
 <body>
 
   <main>
-    <article><h4>Superscript And Subscript Elements</h4>
-<p>2<sup>2</sup></p>
-<p>3<sup>22</sup></p>
-<p>3^(55)</p>
-<p>H<sub>2</sub>O</p>
-<p>CO<sub>2</sub></p>
+    <article><h4>Address Element</h4>
+<p>What is the <code>&lt;address&gt;</code> element?</p>
+<p>Defines contact information for a person, organization, or section.</p>
+<h5>Semantics</h5>
+<p>Use for <strong>author</strong> or <strong>organization</strong> contact info.<br>
+Better than generic <code>&lt;div&gt;</code> for contact blocks.</p>
+<h5>Typical Content</h5>
+<ul>
+<li>Name</li>
+<li>Physical address</li>
+<li>Phone number</li>
+<li>Email</li>
+<li>Website or social links</li>
+</ul>
+<p class="marker">Example:</p>
+<pre><code class="language-html">&lt;address&gt;
+  &lt;h2&gt;Company Name&lt;/h2&gt;
+  &lt;p&gt;
+    1234 Elm Street&lt;br /&gt;
+    Springfield, IL 62701&lt;br /&gt;
+    USA
+  &lt;/p&gt;
+  &lt;p&gt;Phone: &lt;a href=&quot;tel:+15555555555&quot;&gt;+1 (555) 555-5555&lt;/a&gt;&lt;/p&gt;
+  &lt;p&gt;Email: &lt;a href=&quot;mailto:contact@company.com&quot;&gt;contact@company.com&lt;/a&gt;&lt;/p&gt;
+&lt;/address&gt;
+</code></pre>
+<p class="marker">Rendered:</p>
+<address>
+  <h4>Company Name</h4>
+  <p>
+    1234 Elm Street<br />
+    Springfield, IL 62701<br />
+    USA
+  </p>
+  <p>Phone: <a href="tel:+15555555555">+1 (555) 555-5555</a></p>
+  <p>Email: <a href="mailto:contact@company.com">contact@company.com</a></p>
+</address>
+<h5>Build in links:</h5>
+<p class="marker">Phone Links:</p>
+<p class="language-html">Use <code>tel:</code> for clickable phone numbers on supported devices:<br>
+<code>&lt;a href=&quot;tel:+1234567890&quot;&gt;Call us&lt;/a&gt;</code></p>
+<p class="marker">Email Links:</p>
+<p>Use <code>mailto:</code> to open email clients:</p>
+<p language-html=""><code>&lt;a href=&quot;mailto:user@example.com&quot;&gt;Email&lt;/a&gt;</code></p>
+<p>⚠️ Can be used by spammers (visible in source)</p>
+<h5>Other Links</h5>
+<p>You can include links to social profiles or websites inside <code>&lt;address&gt;</code>.</p>
+<h4>Placement</h4>
+<p class="marker">Usually placed: </p>
+<ul>
+<li>Inside <code>&lt;footer&gt;</code> for site-wide contact</li>
+<li>At end of an <code>&lt;article&gt;</code> for author info</li>
+</ul>
+<h5>Avoid</h5>
+<ul>
+<li>Putting unrelated info (hours, maps) inside</li>
+<li>Using for non-contact content</li>
+<li>Styling as block unless needed — not all browsers render as block by default</li>
+</ul>
 </article>
   </main> 
 	
     <section class="navigation">
       <nav class="lesson-nav">
-        <a class="prev" href="lesson-0032.html">&larr; Time Element</a>
+        <a class="prev" href="lesson-0032.html">&larr; Abbreviations And Acronyms</a>
         <a class="home" href="../index.html">Home</a>
-        <a class="next" href="lesson-0034.html">Code Element &rarr;</a>
+        <a class="next" href="lesson-0034.html">Time Element &rarr;</a>
       </nav>
     </section>
   

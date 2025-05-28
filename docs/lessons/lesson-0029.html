@@ -3,56 +3,44 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Quoted Elements</title>
+  <title>Strong vs B Element</title>
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/prism.css" />
 </head>
 <body>
 
   <main>
-    <article><h4>Quoted Elements in HTML</h4>
-<p>Quoted elements help distinguish quotes from surrounding text.</p>
-<h5>Block Quotes</h5>
-<p>Use <code>&lt;blockquote&gt;</code> for extended quotations from other sources.</p>
+    <article><h4>Strong vs B Element</h4>
+<h5>Purpose</h5>
 <ul>
-<li>Element: <code>&lt;blockquote&gt;</code></li>
-<li>Attribute: <code>cite=&quot;URL&quot;</code> — source (not visible in UI)</li>
+<li><code>&lt;strong&gt;</code> — semantic HTML element. Indicates <strong>importance</strong> of the text. <code>&lt;strong&gt;</code> is meant for content that should be emphasized with <strong>semantic weight</strong> — e.g. warnings, critical info, key points.
+Screen readers often <strong>stress</strong> such text when reading aloud.</li>
 </ul>
-<p class="marker">Usage:</p>
-<pre><code class="language-html">&lt;blockquote cite=&quot;https://example.com&quot;&gt;
-  Long  text...
-&lt;/blockquote&gt;
+<pre><code class="language-html">&lt;!-- Semantic importance --&gt;
+&lt;p&gt;
+  &lt;strong&gt;Warning:&lt;/strong&gt; This product may cause allergic reactions.
+&lt;/p&gt;
 </code></pre>
 <ul>
-<li>You can use <code>&lt;p&gt;</code> inside for multi-paragraph quotes.</li>
-<li>To show source visually, use <code>&lt;cite&gt;</code> outside:</li>
+<li><code>&lt;b&gt;</code> — purely <strong>stylistic</strong> element. Highlights text <strong>visually</strong> without adding meaning. <code>&lt;b&gt;</code> is used to simply draw the reader’s attention — for instance, product names, keywords, or other non-critical highlights. It’s <strong>not semantic</strong>, only visual.</li>
 </ul>
-<pre><code class="language-html">&lt;p&gt;—Author, &lt;cite&gt;Title of the Work&lt;/cite&gt;&lt;/p&gt;
+<pre><code class="language-html">&lt;!-- Visual emphasis only --&gt;
+&lt;p&gt;
+  We tested several products, including the &lt;b&gt;SuperSound 3000&lt;/b&gt; for audio
+  quality, the &lt;b&gt;QuickCharge Pro&lt;/b&gt; for fast charging, and the
+  &lt;b&gt;EcoClean Vacuum&lt;/b&gt; for cleaning. The first two performed well, but the
+  &lt;b&gt;EcoClean Vacuum&lt;/b&gt; did not meet expectations.
+&lt;/p&gt;
 </code></pre>
-<h5>Inline Quotes</h5>
-<p>Use <code>&lt;q&gt;</code> for short, inline quotations.</p>
-<ul>
-<li>Element: <code>&lt;q&gt;</code></li>
-<li>Attribute: <code>cite=&quot;URL&quot;</code> — source (invisible)</li>
-</ul>
-<p class="language-html">Usage: {.marker}
-<code>&lt;p&gt;He said, &lt;q cite=&quot;...&quot;&gt;&quot;Do it now.&quot;&lt;/q&gt;&lt;/p&gt;</code></p>
-<ul>
-<li>Most browsers add quotation marks automatically.</li>
-</ul>
-<h5>Notes</h5>
-<ul>
-<li><code>&lt;cite&gt;</code> is for titles of creative works, not for URLs.</li>
-<li>To link the source, use <code>&lt;a&gt;</code> inside <code>&lt;cite&gt;</code> (not recomended)</li>
-</ul>
+<p>Both will appear bold in most browsers, but only <code>&lt;strong&gt;</code> carries <strong>semantic meaning</strong>.</p>
 </article>
   </main> 
 	
     <section class="navigation">
       <nav class="lesson-nav">
-        <a class="prev" href="lesson-0028.html">&larr; Description List</a>
+        <a class="prev" href="lesson-0028.html">&larr; I Emphasis Element</a>
         <a class="home" href="../index.html">Home</a>
-        <a class="next" href="lesson-0030.html">Abbreviations And Acronyms &rarr;</a>
+        <a class="next" href="lesson-0030.html">Description List &rarr;</a>
       </nav>
     </section>
   

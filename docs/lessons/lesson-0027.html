@@ -3,44 +3,60 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Strong vs B Element</title>
+  <title>Semantic HTML</title>
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/prism.css" />
 </head>
 <body>
 
   <main>
-    <article><h4>Strong vs B Element</h4>
-<h5>Purpose</h5>
+    <article><h4>Semantic HTML</h4>
+<p>What is the difference Between Presentational and Semantic HTML?</p>
+<p>Presentational HTML focuses on how content looks (appearance and style). Now this approach is deprecated.<br>
+Semantic HTML focuses on the meaning and structure of the content. It uses elements that describe the role of the content clearly.</p>
+<h5>Modern Best Practices for Text Highlighting and Emphasis</h5>
+<p class="marker">Common semantic tags for emphasis and meaning:</p>
 <ul>
-<li><code>&lt;strong&gt;</code> — semantic HTML element. Indicates <strong>importance</strong> of the text. <code>&lt;strong&gt;</code> is meant for content that should be emphasized with <strong>semantic weight</strong> — e.g. warnings, critical info, key points.
-Screen readers often <strong>stress</strong> such text when reading aloud.</li>
+<li><code>&lt;strong&gt;</code> — for important or strong emphasis (typically bold)</li>
+<li><code>&lt;em&gt;</code> — for stressed or emphasized text (typically italic)</li>
+<li><code>&lt;del&gt;</code> — for deleted or removed content (shows as strikethrough)</li>
+<li><code>&lt;ins&gt;</code> — for inserted content (usually underlined)</li>
+<li><code>&lt;mark&gt;</code> — for highlighted text (background color)</li>
+<li><code>&lt;small&gt;</code> — for side comments or fine print (smaller font)</li>
+<li><code>&lt;code&gt;</code> — for inline code snippets</li>
+<li><code>&lt;sub&gt;</code> and <code>&lt;sup&gt;</code> — for subscripts and superscripts (e.g., chemical formulas or exponents)</li>
+<li><code>&lt;i&gt;</code> - highlighting alternative voice or mood, idiomatic terms from another language, technical terms, and thoughts: <code>&lt;p&gt;There is a certain &lt;i lang=&quot;fr&quot;&gt;je ne sais quoi&lt;/i&gt; in the air.&lt;/p&gt;</code></li>
 </ul>
-<pre><code class="language-html">&lt;!-- Semantic importance --&gt;
-&lt;p&gt;
-  &lt;strong&gt;Warning:&lt;/strong&gt; This product may cause allergic reactions.
-&lt;/p&gt;
+<p class="marker">Example:</p>
+<pre><code class="language-html">&lt;p&gt;Please &lt;strong&gt;read&lt;/strong&gt; the &lt;em&gt;instructions&lt;/em&gt; carefully.&lt;/p&gt;
+&lt;p&gt;Old price: &lt;del&gt;$50&lt;/del&gt;, New price: &lt;ins&gt;$40&lt;/ins&gt;&lt;/p&gt;
+&lt;p&gt;Submit your form &lt;mark&gt;by Friday&lt;/mark&gt;.&lt;/p&gt;
+&lt;p&gt;Water formula: H&lt;sub&gt;2&lt;/sub&gt;O, Einstein’s equation: E = mc&lt;sup&gt;2&lt;/sup&gt;.&lt;/p&gt;
+&lt;p&gt;Use the &lt;code&gt;printf()&lt;/code&gt; function in your C program.&lt;/p&gt;
 </code></pre>
+<p>To style a specific part of text visually without adding meaning, use <code>&lt;span&gt;</code> with CSS:</p>
+<p class="language-html"><code>&lt;p&gt;This is a &lt;span class=&quot;highlight&quot;&gt;highlighted&lt;/span&gt; word.&lt;/p&gt;</code></p>
+<pre><code class="language-css">.highlight {
+  background-color: yellow;
+  font-weight: bold;
+}
+</code></pre>
+<h5>Deprecated Presentational Tags</h5>
 <ul>
-<li><code>&lt;b&gt;</code> — purely <strong>stylistic</strong> element. Highlights text <strong>visually</strong> without adding meaning. <code>&lt;b&gt;</code> is used to simply draw the reader’s attention — for instance, product names, keywords, or other non-critical highlights. It’s <strong>not semantic</strong>, only visual.</li>
+<li><code>&lt;font&gt;</code> — for font size and color</li>
+<li><code>&lt;center&gt;</code> — for centering content</li>
+<li><code>&lt;big&gt;</code> — for bigger text</li>
+<li><code>&lt;b&gt;</code> and <code>&lt;i&gt;</code> — for styling only</li>
+<li><code>&lt;strike&gt;</code> and <code>&lt;s&gt;</code> — for strikethrough</li>
 </ul>
-<pre><code class="language-html">&lt;!-- Visual emphasis only --&gt;
-&lt;p&gt;
-  We tested several products, including the &lt;b&gt;SuperSound 3000&lt;/b&gt; for audio
-  quality, the &lt;b&gt;QuickCharge Pro&lt;/b&gt; for fast charging, and the
-  &lt;b&gt;EcoClean Vacuum&lt;/b&gt; for cleaning. The first two performed well, but the
-  &lt;b&gt;EcoClean Vacuum&lt;/b&gt; did not meet expectations.
-&lt;/p&gt;
-</code></pre>
-<p>Both will appear bold in most browsers, but only <code>&lt;strong&gt;</code> carries <strong>semantic meaning</strong>.</p>
 </article>
   </main> 
 	
     <section class="navigation">
       <nav class="lesson-nav">
-        <a class="prev" href="lesson-0026.html">&larr; I Emphasis Element</a>
+        <a class="prev" href="lesson-0026.html">&larr; Hierarchy in HTML</a>
         <a class="home" href="../index.html">Home</a>
-        <a class="next" href="lesson-0028.html">Description List &rarr;</a>
+        <a class="next" href="lesson-0028.html">I Emphasis Element &rarr;</a>
       </nav>
     </section>
   

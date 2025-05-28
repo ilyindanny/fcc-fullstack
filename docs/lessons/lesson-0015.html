@@ -3,49 +3,55 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Image licenses</title>
+  <title>Img Element</title>
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/prism.css" />
 </head>
 <body>
 
   <main>
-    <article><h4>Image Licenses</h4>
-<p>Images are intellectual property and protected by copyright. By default — <strong>all rights reserved</strong>.</p>
-<p class="marker">You can legally use an image if:</p>
+    <article><h4>Img Element</h4>
+<p><code>&lt;img&gt;</code> — embedding images in HTML.</p>
+<p>Displays an image as <strong>inline content</strong>. It is a <strong>void element</strong> — it doesn’t have a closing tag.</p>
+<h5>Basic syntax</h5>
 <ul>
-<li>You have <strong>written permission</strong> from the author.</li>
-<li>You <strong>purchased a license</strong> (e.g. from stock sites).</li>
-<li>Your use qualifies as <strong>fair use</strong> (limited, transformative, not harming the owner).</li>
+<li><code>src</code> — (source) path to the image file (<strong>required</strong>)</li>
+<li><code>alt</code> — (alternative text) for screen readers and fallback if image fails (<strong>required for semantics</strong>)</li>
 </ul>
-<p class="marker">Fair Use:</p>
+<p class="marker">Example:</p>
+<p class="language-html"><code>&lt;img src=&quot;cat.jpg&quot; alt=&quot;A cat sitting on a windowsill&quot;&gt;</code></p>
+<h5>Width and height</h5>
 <ul>
-<li>Allows use without permission if your usage is <strong>transformative</strong> (e.g. commentary, parody).</li>
-<li>Risky: not always legally safe.</li>
+<li>Can use <strong>px</strong> or <strong>%</strong>, but it’s <strong>better to control size via CSS</strong></li>
+<li>Setting dimensions helps avoid layout shifts during loading</li>
 </ul>
-<h5>License Types</h5>
-<p class="marker">Creative Commons (CC):</p>
+<p class="marker">Example:</p>
+<p class="language-html"><code>&lt;img src=&quot;cat.jpg&quot; alt=&quot;Cat&quot; width=&quot;300&quot; height=&quot;200&quot;&gt;</code></p>
+<h5>Responsive images</h5>
 <ul>
-<li><code>CC BY</code> – free use with <strong>attribution</strong>.</li>
-<li><code>CC BY-SA</code> – must use the <strong>same license</strong>.</li>
-<li><code>CC BY-ND</code> – <strong>no modifications</strong> allowed.</li>
-<li><code>CC BY-NC</code> – <strong>non-commercial use</strong> only.</li>
-<li><code>CC0</code> – <strong>public domain</strong>, no restrictions.</li>
+<li><code>srcset</code> — list of image files with their width descriptors</li>
+<li><code>sizes</code> — tells the browser how much space the image will take depending on screen size</li>
 </ul>
-<p class="marker">Other:</p>
+<p class="marker">Example:</p>
+<pre><code class="language-html">&lt;img srcset=&quot;cat-480.jpg 480w, cat-800.jpg 800w&quot; sizes=&quot;(max-width: 600px) 480px, 800px&quot;
+     src=&quot;cat-800.jpg&quot; alt=&quot;Responsive cat&quot;&gt;
+</code></pre>
+<h5>Captioned image — <code>&lt;figure&gt;</code> + <code>&lt;figcaption&gt;</code></h5>
 <ul>
-<li><strong>BSD</strong> – permissive, used mostly for code.</li>
-<li><strong>Public Domain</strong> – no copyright, full freedom to use.</li>
+<li><code>&lt;figure&gt;</code> — groups image and its caption</li>
+<li><code>&lt;figcaption&gt;</code> — adds a caption below or above the image</li>
 </ul>
-<h5>Safe Sources</h5>
+<p class="marker">Example:</p>
+<pre><code class="language-html">&lt;figure&gt;
+  &lt;img src=&quot;cat.jpg&quot; alt=&quot;A sleeping cat&quot;&gt;
+  &lt;figcaption&gt;Figure 1: A cat enjoying the sun.&lt;/figcaption&gt;
+&lt;/figure&gt;
+</code></pre>
+<h5>Additional notes</h5>
 <ul>
-<li><a href="https://unsplash.com">Unsplash</a></li>
-<li><a href="https://pixabay.com">Pixabay</a></li>
-<li><a href="https://pexels.com">Pexels</a></li>
-<li><a href="https://commons.wikimedia.org">Wikimedia Commons</a></li>
+<li><code>&lt;img&gt;</code> is <strong>inline</strong>, but often wrapped in block-level containers (like <code>&lt;figure&gt;</code>)</li>
+<li>Prefer <code>&lt;img&gt;</code> over CSS background images if the image carries semantic or informative meaning</li>
 </ul>
-<h5>Tip</h5>
-<p>Use image search filters (e.g. in Google) to find content with a license.</p>
 </article>
   </main> 
 	
@@ -53,7 +59,7 @@
       <nav class="lesson-nav">
         <a class="prev" href="lesson-0014.html">&larr; Optimize Media Asets</a>
         <a class="home" href="../index.html">Home</a>
-        <a class="next" href="lesson-0016.html">SVG &rarr;</a>
+        <a class="next" href="lesson-0016.html">Image licenses &rarr;</a>
       </nav>
     </section>
   

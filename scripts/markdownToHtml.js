@@ -3,8 +3,8 @@
 const MarkdownIt = require('markdown-it')
 const markdownItAttrs = require('markdown-it-attrs')
 const markdownItDeflist = require('markdown-it-deflist')
-const markdownItSup = require('markdown-it-sup')
-const markdownItSub = require('markdown-it-sub')
+// const markdownItSup = require('markdown-it-sup')
+// const markdownItSub = require('markdown-it-sub')
 
 function convertMarkdownToHtml(markdown) {
     markdown = markdown.replace(/\t/g, '    ') // заменить табы на 4 пробела
@@ -14,8 +14,8 @@ function convertMarkdownToHtml(markdown) {
     })
 	.use(markdownItAttrs)
 	.use(markdownItDeflist)
-	.use(markdownItSup)
-	.use(markdownItSub)
+	// .use(markdownItSup)
+	// .use(markdownItSub)
 
     const html = md.render(markdown)
 

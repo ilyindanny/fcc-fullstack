@@ -3,22 +3,62 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>CSS example</title>
+  <title>Superscript And Subscript</title>
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/prism.css" />
 </head>
 <body>
 
   <main>
-    <article><h4>Comming Soon</h4>
+    <article><h4>Superscript And Subscript Elements</h4>
+<p>How to display exponents, chemical formulas, and typographic annotations.</p>
+<h5>Superscript</h5>
+<ul>
+<li>Use <code>&lt;sup&gt;</code> to raise text above the baseline.</li>
+</ul>
+<p class="marker">Typical use cases:</p>
+<ul>
+<li>Math exponents (<code>2&lt;sup&gt;2&lt;/sup&gt;</code> → 2^2^)</li>
+<li>Ordinal indicators (<code>4&lt;sup&gt;th&lt;/sup&gt;</code> → 4ᵗʰ)</li>
+<li>Abbreviations with superior lettering (e.g. <code>M&lt;sup&gt;gr&lt;/sup&gt;</code>)</li>
+</ul>
+<p class="marker">Example:</p>
+<pre><code class="language-html">&lt;p&gt;2&lt;sup&gt;2&lt;/sup&gt; (2 squared) is 4.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;M&lt;sup&gt;gr&lt;/sup&gt;&lt;/strong&gt;&lt;/p&gt;
+</code></pre>
+<p class="marker">Rendered:</p>
+<p>2<sup>2</sup> (2 squared) is 4.</p>
+<p><strong>M<sup>gr</sup></strong></p>
+<h5>Subscript</h5>
+<ul>
+<li>Use <code>&lt;sub&gt;</code> to lower text below the baseline.</li>
+</ul>
+<p class="marker">Typical use cases:</p>
+<ul>
+<li>Chemical formulas (<code>CO&lt;sub&gt;2&lt;/sub&gt;</code> → CO₂)</li>
+<li>Mathematical variable subscripts (<code>x&lt;sub&gt;1&lt;/sub&gt;</code>)</li>
+<li>Footnotes or annotations</li>
+</ul>
+<p class="marker">Example:</p>
+<pre><code class="language-html">&lt;p&gt;CO&lt;sub&gt;2&lt;/sub&gt;&lt;/p&gt;
+</code></pre>
+<p class="marker">Rendered:</p>
+<p>CO<sub>2</sub></p>
+<h5>Notes</h5>
+<ul>
+<li>Superscript and Subscript are only for <strong>semantic</strong>.<br>
+For visual-only effects use CSS.</li>
+<li><code>&lt;sup&gt;</code> and <code>&lt;sub&gt;</code> are <strong>inline elements</strong>.</li>
+<li>Combine with semantic tags (<code>&lt;strong&gt;</code>, <code>&lt;em&gt;</code>) if needed.</li>
+</ul>
 </article>
   </main> 
 	
     <section class="navigation">
       <nav class="lesson-nav">
-        <a class="prev" href="lesson-0034.html">&larr; Code Element</a>
+        <a class="prev" href="lesson-0034.html">&larr; Time Element</a>
         <a class="home" href="../index.html">Home</a>
-        <span class="empty"></span>
+        <a class="next" href="lesson-0036.html">Code Element &rarr;</a>
       </nav>
     </section>
   

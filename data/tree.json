@@ -64,11 +64,11 @@
             "filename": "lesson-0014.html"
           },
           {
-            "title": "Image licenses",
+            "title": "Img Element",
             "filename": "lesson-0015.html"
           },
           {
-            "title": "SVG",
+            "title": "Image licenses",
             "filename": "lesson-0016.html"
           },
           {
@@ -76,24 +76,32 @@
             "filename": "lesson-0017.html"
           },
           {
-            "title": "Iframe Element",
+            "title": "SVG",
             "filename": "lesson-0018.html"
           },
           {
-            "title": "Target Attribute",
+            "title": "Figure And Figcaption Elements",
             "filename": "lesson-0019.html"
           },
           {
-            "title": "File Paths",
+            "title": "Iframe Element",
             "filename": "lesson-0020.html"
           },
           {
-            "title": "Link States in CSS",
+            "title": "Target Attribute",
             "filename": "lesson-0021.html"
           },
           {
-            "title": "Basic HTML Review",
+            "title": "File Paths",
             "filename": "lesson-0022.html"
+          },
+          {
+            "title": "Link States in CSS",
+            "filename": "lesson-0023.html"
+          },
+          {
+            "title": "Basic HTML Review",
+            "filename": "lesson-0024.html"
           }
         ]
       },
@@ -103,51 +111,55 @@
         "lessons": [
           {
             "title": "Semantic HTML",
-            "filename": "lesson-0023.html"
-          },
-          {
-            "title": "Hierarchy in HTML",
-            "filename": "lesson-0024.html"
-          },
-          {
-            "title": "Semantic HTML",
             "filename": "lesson-0025.html"
           },
           {
-            "title": "I Emphasis Element",
+            "title": "Hierarchy in HTML",
             "filename": "lesson-0026.html"
           },
           {
-            "title": "Strong vs B Element",
+            "title": "Semantic HTML",
             "filename": "lesson-0027.html"
           },
           {
-            "title": "Description List",
+            "title": "I Emphasis Element",
             "filename": "lesson-0028.html"
           },
           {
-            "title": "Quoted Elements",
+            "title": "Strong vs B Element",
             "filename": "lesson-0029.html"
           },
           {
-            "title": "Abbreviations And Acronyms",
+            "title": "Description List",
             "filename": "lesson-0030.html"
           },
           {
-            "title": "Address Element",
+            "title": "Quoted Elements",
             "filename": "lesson-0031.html"
           },
           {
-            "title": "Time Element",
+            "title": "Abbreviations And Acronyms",
             "filename": "lesson-0032.html"
           },
           {
-            "title": "Superscript And Subscript Elements",
+            "title": "Address Element",
             "filename": "lesson-0033.html"
           },
           {
-            "title": "Code Element",
+            "title": "Time Element",
             "filename": "lesson-0034.html"
+          },
+          {
+            "title": "Superscript And Subscript",
+            "filename": "lesson-0035.html"
+          },
+          {
+            "title": "Code Element",
+            "filename": "lesson-0036.html"
+          },
+          {
+            "title": "U, S And Ruby Elements",
+            "filename": "lesson-0037.html"
           }
         ]
       }
@@ -163,7 +175,7 @@
         "lessons": [
           {
             "title": "CSS example",
-            "filename": "lesson-0035.html"
+            "filename": "lesson-0038.html"
           }
         ]
       }

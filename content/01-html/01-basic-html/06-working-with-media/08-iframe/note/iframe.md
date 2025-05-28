@@ -2,7 +2,7 @@
 title: Iframe Element
 ---
 
-#### iframe Element
+#### Iframe Element
 
 ##### Basic Syntax and Key Attributes
 

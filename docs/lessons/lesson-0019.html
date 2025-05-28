@@ -3,49 +3,66 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Target Attribute</title>
+  <title>Figure And Figcaption Elements</title>
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/prism.css" />
 </head>
 <body>
 
   <main>
-    <article><h4>Target Attribute</h4>
-<p>Specifies <strong>where</strong> a link or form opens — same tab, new tab, or frame.</p>
-<h5>Values</h5>
+    <article><h4>Figure And Figcaption Elements</h4>
+<p><code>&lt;figure&gt;</code> and <code>&lt;figcaption&gt;</code> — semantic container for self-contained content</p>
+<p>Used to group any content (not just images) that is related to the main text but remains self-contained and meaningful on its own. Commonly paired with <code>&lt;figcaption&gt;</code> for a caption.</p>
+<h5><code>&lt;figure&gt;</code> — self-contained block of content</h5>
+<p>Semantic container for:</p>
 <ul>
-<li><code>_self</code> – default, opens in the <strong>same tab</strong>.</li>
-<li><code>_blank</code> – opens in a <strong>new tab</strong> (add <code>rel=&quot;noopener&quot;</code>).</li>
-<li><code>_parent</code> – opens in the <strong>parent frame</strong>.</li>
-<li><code>_top</code> – opens in the <strong>top-level window</strong>.</li>
-<li><code>_unfencedTop</code> – experimental, for Fenced Frames.</li>
+<li>images</li>
+<li>charts</li>
+<li>code snippets</li>
+<li>videos</li>
+<li>audio</li>
+<li>tables</li>
+<li>formulas</li>
+<li>illustrations</li>
+<li>quotes</li>
 </ul>
-<p class="marker">Example:</p>
-<p class="language-html"><code>&lt;a href=&quot;https://example.com&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;New Tab&lt;/a&gt;</code></p>
-<h5>Named Targets</h5>
-<p>Named targets allow you to open a link or form submission into a specific <code>&lt;iframe&gt;</code> or window by using its <code>name</code> attribute. If an element like <code>&lt;iframe name=&quot;myFrame&quot;&gt;</code> exists, <code>target=&quot;myFrame&quot;</code> will load the page inside it. If no such target exists, the browser may open a new window with that name.</p>
-<pre><code class="language-html">&lt;iframe name=&quot;myFrame&quot;&gt;&lt;/iframe&gt;
-&lt;a href=&quot;page.html&quot; target=&quot;myFrame&quot;&gt;Open in Frame&lt;/a&gt;
+<h5><code>&lt;figcaption&gt;</code> — caption for the figure</h5>
+<p>Provides a textual description. Can appear before or after the content.</p>
+<h5 class="language-html">Examples:</h5>
+<p><strong>Image:</strong></p>
+<pre><code class="language-html">&lt;figure&gt;
+  &lt;img src=&quot;chart.png&quot; alt=&quot;Sales chart&quot;&gt;
+  &lt;figcaption&gt;Figure 1: Quarterly sales in 2025.&lt;/figcaption&gt;
+&lt;/figure&gt;
 </code></pre>
-<h5>Forms</h5>
-<p>Using <code>target=&quot;_blank&quot;</code> in a <code>&lt;form&gt;</code> makes the form submission result open in a new tab or window. This can be useful when you don’t want to navigate away from the current page after submitting.</p>
-<p class="language-html"><code>&lt;form action=&quot;/submit&quot; target=&quot;_blank&quot;&gt;...&lt;/form&gt;</code></p>
-<p>Note:</p>
-<p>Use <code>rel=&quot;noopener&quot;</code> with <code>_blank</code> for security.</p>
-<h5>Security Note</h5>
-<p>When using <code>target=&quot;_blank&quot;</code>, always add <code>rel=&quot;noopener&quot;</code> (or <code>rel=&quot;noreferrer&quot;</code>) to prevent the new page from having access to the original page via <code>window.opener</code>. This helps avoid potential security vulnerabilities such as phishing attacks.</p>
-<h5>Named Targets</h5>
-<p>The <code>target</code> attribute can refer to any named window or frame, not just the predefined keywords. For example, if an <code>&lt;iframe&gt;</code> or window has a <code>name</code> attribute, links or forms can target that specific window by name.</p>
-<h5>Modern Usage</h5>
-<p>Named frames are less common in modern web development. Today, developers often prefer using JavaScript frameworks and SPA architecture, reducing reliance on frames and multiple windows for navigation.</p>
+<p><strong>Code snippet:</strong></p>
+<pre><code class="language-html">&lt;figure&gt;
+  &lt;pre&gt;&lt;code&gt;function greet() { console.log(&quot;Hello&quot;); }&lt;/code&gt;&lt;/pre&gt;
+  &lt;figcaption&gt;Listing 1: Simple greeting function.&lt;/figcaption&gt;
+&lt;/figure&gt;
+</code></pre>
+<p><strong>Video:</strong></p>
+<pre><code class="language-html">&lt;figure&gt;
+  &lt;video controls src=&quot;demo.mp4&quot;&gt;&lt;/video&gt;
+  &lt;figcaption&gt;Video 1: App walkthrough.&lt;/figcaption&gt;
+&lt;/figure&gt;
+</code></pre>
+<h5>Best practice</h5>
+<p>Use <code>&lt;figure&gt;</code> when the content + caption can be removed from the main text without breaking its meaning.</p>
+<h5>Display behavior</h5>
+<ul>
+<li>Block-level element</li>
+<li>Often placed inside <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;main&gt;</code></li>
+<li>Usually rendered with default margins and styled with CSS</li>
+</ul>
 </article>
   </main> 
 	
     <section class="navigation">
       <nav class="lesson-nav">
-        <a class="prev" href="lesson-0018.html">&larr; Iframe Element</a>
+        <a class="prev" href="lesson-0018.html">&larr; SVG</a>
         <a class="home" href="../index.html">Home</a>
-        <a class="next" href="lesson-0020.html">File Paths &rarr;</a>
+        <a class="next" href="lesson-0020.html">Iframe Element &rarr;</a>
       </nav>
     </section>
   

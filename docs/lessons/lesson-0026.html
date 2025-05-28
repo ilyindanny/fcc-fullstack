@@ -3,18 +3,44 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>I Emphasis Element</title>
+  <title>Hierarchy in HTML</title>
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/prism.css" />
 </head>
 <body>
 
   <main>
-    <article><h4>I Emphasis Element</h4>
-<p>Use the <code>&lt;i&gt;</code> element especially for foreign words, technical terms, idiomatic expressions, or thoughts.<br>
-When using it for foreign language, add the <code>lang=&quot;&quot;</code> attribute:</p>
-<p class="language-html"><code>Say &lt;i lang=&quot;es&quot;&gt;¡Hola!&lt;/i&gt;</code></p>
-<p>For general emphasis, prefer the more semantic <code>&lt;em&gt;</code> element.</p>
+    <article><h4>Why is it important to have good structural hierarchy?</h4>
+<ul>
+<li>Structural hierarchy relies on proper use of heading elements: <code>h1</code>, <code>h2</code>, <code>h3</code>, etc.</li>
+<li>Heading levels indicate the importance and nesting of content.</li>
+<li><code>h1</code>: top-level heading, usually one per page, appears before main content.</li>
+<li><code>h2</code>: subheading, can appear multiple times, used to separate sections.</li>
+<li><code>h3</code>: sub-subheading, must follow <code>h2</code> (never skip levels like <code>h1</code> → <code>h3</code>).</li>
+<li>Multiple headings at the same level are allowed (e.g., multiple <code>h2</code>).</li>
+</ul>
+<p class="marker">Example of correct heading order:</p>
+<pre><code class="language-html">&lt;section&gt;
+  &lt;h1&gt;freeCodeCamp&lt;/h1&gt;
+  &lt;h2&gt;Learn Front-End Development&lt;/h2&gt;
+  &lt;h2&gt;Learn Back-End Development&lt;/h2&gt;
+&lt;/section&gt;
+</code></pre>
+<p class="marker">Incorrect example (<code>h3</code> before <code>h2</code>):</p>
+<pre><code class="language-html">&lt;section&gt;
+  &lt;h1&gt;freeCodeCamp&lt;/h1&gt;
+  &lt;h3&gt;Learn Front-End Development&lt;/h3&gt;
+  &lt;h2&gt;Learn Back-End Development&lt;/h2&gt;
+&lt;/section&gt;
+</code></pre>
+<ul>
+<li>Do not choose heading elements based on visual style (e.g., <code>h1</code> for big text). Use CSS for styling.</li>
+<li>Proper hierarchy improves accessibility: screen readers rely on correct heading order to guide users.</li>
+<li>Incorrect heading order can confuse assistive technologies, making users miss or misunderstand content.</li>
+<li>Proper hierarchy improves SEO: search engines parse structure to rank pages correctly.</li>
+<li>Malformed structure may cause HTML to be invalid; browsers then guess the intent, which can break the layout or logic.</li>
+</ul>
+<p>Summary: Always use headings in order (<code>h1</code> → <code>h2</code> → <code>h3</code>, etc.) to ensure accessibility, SEO, and valid HTML.</p>
 </article>
   </main> 
 	
@@ -22,7 +48,7 @@ When using it for foreign language, add the <code>lang=&quot;&quot;</code> attri
       <nav class="lesson-nav">
         <a class="prev" href="lesson-0025.html">&larr; Semantic HTML</a>
         <a class="home" href="../index.html">Home</a>
-        <a class="next" href="lesson-0027.html">Strong vs B Element &rarr;</a>
+        <a class="next" href="lesson-0027.html">Semantic HTML &rarr;</a>
       </nav>
     </section>
   

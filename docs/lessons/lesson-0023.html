@@ -3,40 +3,62 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Semantic HTML</title>
+  <title>Link States in CSS</title>
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/prism.css" />
 </head>
 <body>
 
   <main>
-    <article><h4>Semantic HTML</h4>
-<ul>
-<li><strong>Semantics</strong> means meaning, not just appearance.</li>
-<li>Each HTML element has a purpose beyond style.</li>
-<li><strong>Core idea:</strong></li>
-</ul>
+    <article><h4>What Are Link States?</h4>
+<p>Links can exist in different <strong>states</strong> depending on how the user interacts with them.<br>
+These pseudo-classes allow dynamic styling, which improves UX and accessibility.</p>
 <blockquote>
-<p>Semantic HTML is thinking one level up — not <em>how it looks</em> but <em>what it means</em>.<br>
-The best code is understandable without CSS or JavaScript.</p>
+<p><code>:focus</code> is not the same as <code>:hover</code>.<br>
+Focus means the element is active for <strong>keyboard interaction</strong> (e.g., selected via Tab), not just hovered.</p>
 </blockquote>
-<p class="marker">Example:</p>
-<p><code>&lt;p&gt;</code> means paragraph, a logical block of text.</p>
-<h5>Why it matters:</h5>
-<ol>
-<li><strong>Accessibility:</strong> Screen readers rely on semantic tags to understand content.</li>
-<li><strong>SEO:</strong> Search engines rank semantic content higher.</li>
-<li><strong>Maintainability:</strong> Code is easier to read and edit when structure is clear.</li>
-</ol>
-<p>Avoid non-semantic tags like <code>&lt;div&gt;</code> and <code>&lt;span&gt;</code> when possible; prefer semantic tags like <code>&lt;nav&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;strong&gt;</code>, etc.</p>
+<h5>Link States Overview</h5>
+<ul>
+<li><code>:link</code> — the link has <strong>not</strong> been visited yet</li>
+<li><code>:visited</code> — the link <strong>has</strong> been opened before</li>
+<li><code>:hover</code> — the mouse is hovering over the link</li>
+<li><code>:focus</code> — the link is <strong>focused</strong> (via Tab or mouse click)</li>
+<li><code>:active</code> — the link is being activated (usually during <strong>mouse-down</strong>)</li>
+</ul>
+<p class="marker">Correct CSS order:</p>
+<p><code>link → visited → hover → focus → active</code></p>
+<p>Mnemonic: <strong>LoVe FAt HAir</strong></p>
+<h5>CSS Example</h5>
+<pre><code class="language-css">a:link {
+  color: blue;
+  text-decoration: none;
+}
+
+a:visited {
+  color: gray;
+}
+
+a:hover {
+  color: orange;
+  text-decoration: underline;
+}
+
+a:focus {
+  outline: 2px dashed orange;
+}
+
+a:active {
+  color: red;
+}
+</code></pre>
 </article>
   </main> 
 	
     <section class="navigation">
       <nav class="lesson-nav">
-        <a class="prev" href="lesson-0022.html">&larr; Basic HTML Review</a>
+        <a class="prev" href="lesson-0022.html">&larr; File Paths</a>
         <a class="home" href="../index.html">Home</a>
-        <a class="next" href="lesson-0024.html">Hierarchy in HTML &rarr;</a>
+        <a class="next" href="lesson-0024.html">Basic HTML Review &rarr;</a>
       </nav>
     </section>
   

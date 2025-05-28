@@ -22,11 +22,7 @@ An attribute is a value placed inside the opening tag of an HTML element. Attrib
 
 `<input>`{.marker}  
 
-- `<input type="checkbox" checked>`{.language-html} — checkbox is checked
-- `<input type="text" disabled>`{.language-html} — not editable
-- `<input type="text" readonly>`{.language-html} — visible but unchangeable
-- `<input type="text" required>`{.language-html} — must be filled
-
+- `<input type="checkbox" checked>`{.language-html}  
 
 ##### Boolean Attributes
 

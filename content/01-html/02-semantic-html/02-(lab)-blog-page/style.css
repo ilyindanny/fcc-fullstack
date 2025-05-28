@@ -1,0 +1,121 @@
+/* style.css */
+
+:root {
+  --bg: #fdfdfd;
+  --text: #222;
+  --accent: #0077cc;
+  --accent-light: #dceeff;
+  --border: #ddd;
+  --heading: #111;
+  --code-bg: #f4f4f4;
+  --font: 'Segoe UI', Roboto, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  padding: 2rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1, h2, h3 {
+  color: var(--heading);
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+  margin-top: 2rem;
+  border-bottom: 2px solid var(--border);
+  padding-bottom: 0.3rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+  margin-top: 1.5rem;
+}
+
+p {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+ul li {
+  margin: 0.5rem 0;
+}
+
+ul li a {
+  background-color: var(--accent-light);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  display: inline-block;
+  font-weight: bold;
+  transition: 0.2s ease;
+}
+
+ul li a:hover {
+  background-color: var(--accent);
+  color: white;
+}
+
+figure {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.1);
+}
+
+figcaption {
+  font-style: italic;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  color: #555;
+}
+
+address {
+  margin-top: 1rem;
+  font-style: normal;
+  background: var(--accent-light);
+  padding: 1rem;
+  border-radius: 5px;
+  border-left: 4px solid var(--accent);
+}
+
+address p {
+  margin: 0.3rem 0;
+}
