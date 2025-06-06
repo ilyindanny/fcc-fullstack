@@ -160,6 +160,10 @@
           {
             "title": "U, S And Ruby Elements",
             "filename": "lesson-0037.html"
+          },
+          {
+            "title": "Semantic HTML Review",
+            "filename": "lesson-0038.html"
           }
         ]
       }
@@ -175,7 +179,7 @@
         "lessons": [
           {
             "title": "CSS example",
-            "filename": "lesson-0038.html"
+            "filename": "lesson-0039.html"
           }
         ]
       }

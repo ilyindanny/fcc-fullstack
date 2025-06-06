@@ -4,96 +4,101 @@
         <meta charset="utf-8" />
         <title>Blog Page</title>
         <meta name="description" content="Lab" />
-
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="./style.css" />
     </head>
     <body>
-        <main>
+        <header>
             <h1>Welcome to Mr. Whiskers' Blog Page!</h1>
+
             <figure>
-                <img src="./blog-page-cat.jpeg" alt="Cat picture" />
+                <img src="./blog-page-cat.jpeg" alt="Mr. Whiskers sleeping" />
                 <figcaption>Mr. Whiskers Sleeping</figcaption>
             </figure>
-            <nav>
+
+            <nav aria-label="Main navigation">
                 <ul>
                     <li><a href="#about">About</a></li>
                     <li><a href="#posts">Posts</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
-            <h2 id="about">About</h2>
-            <p>
-                Hi there! I'm Jane Doe, a passionate writer who finds endless
-                inspiration in the antics of my beloved cat, Mr. Whiskers.
-            </p>
-            <p>
-                His playful nature and boundless energy keeps me on my toes. I
-                love him so much.
-            </p>
+        </header>
 
-            <h2 id="posts">Posts</h2>
-            <h3>Mr. Whiskers' First Day Home</h3>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Quisquam quod, voluptates, quae, quos quibusdam dolorum quia
-                nemo repudiandae quidem voluptatum quas. Quisquam quod,
-                voluptates, quae, quos quibusdam dolorum quia nemo repudiandae
-                quidem voluptatum quas.
-            </p>
+        <main>
+            <section id="about" aria-labelledby="about-heading">
+                <h2 id="about-heading">About</h2>
+                <p>
+                    Hi there! I'm Jane Doe, a passionate writer who finds
+                    endless inspiration in the antics of my beloved cat, Mr.
+                    Whiskers.
+                </p>
+                <p>
+                    His playful nature and boundless energy keeps me on my toes.
+                    I love him so much.
+                </p>
+            </section>
 
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Quisquam quod, voluptates, quae, quos quibusdam dolorum quia
-                nemo repudiandae quidem voluptatum quas. Quisquam quod,
-                voluptates, quae, quos quibusdam dolorum quia nemo repudiandae
-                quidem voluptatum quas.
-            </p>
+            <section id="posts" aria-labelledby="posts-heading">
+                <h2 id="posts-heading">Posts</h2>
 
-            <h3>Mr. Whiskers' First Bath</h3>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Quisquam quod, voluptates, quae, quos quibusdam dolorum quia
-                nemo repudiandae quidem voluptatum quas. Quisquam quod,
-                voluptates, quae, quos quibusdam dolorum quia nemo repudiandae
-                quidem voluptatum quas.
-            </p>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Quisquam quod, voluptates, quae, quos quibusdam dolorum quia
-                nemo repudiandae quidem voluptatum quas. Quisquam quod,
-                voluptates, quae, quos quibusdam dolorum quia nemo repudiandae
-                quidem voluptatum quas.
-            </p>
+                <article>
+                    <h3>Mr. Whiskers' First Day Home</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Quisquam quod, voluptates, quae, quos quibusdam dolorum
+                        quia nemo repudiandae quidem voluptatum quas.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Quisquam quod, voluptates, quae, quos quibusdam dolorum
+                        quia nemo repudiandae quidem voluptatum quas.
+                    </p>
+                </article>
 
-            <h3>Mr. Whiskers' First Birthday Party</h3>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Quisquam quod, voluptates, quae, quos quibusdam dolorum quia
-                nemo repudiandae quidem voluptatum quas. Quisquam quod,
-                voluptates, quae, quos quibusdam dolorum quia nemo repudiandae
-                quidem voluptatum quas.
-            </p>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Quisquam quod, voluptates, quae, quos quibusdam dolorum quia
-                nemo repudiandae quidem voluptatum quas. Quisquam quod,
-                voluptates, quae, quos quibusdam dolorum quia nemo repudiandae
-                quidem voluptatum quas.
-            </p>
+                <article>
+                    <h3>Mr. Whiskers' First Bath</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Quisquam quod, voluptates, quae, quos quibusdam dolorum
+                        quia nemo repudiandae quidem voluptatum quas.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Quisquam quod, voluptates, quae, quos quibusdam dolorum
+                        quia nemo repudiandae quidem voluptatum quas.
+                    </p>
+                </article>
+
+                <article>
+                    <h3>Mr. Whiskers' First Birthday Party</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Quisquam quod, voluptates, quae, quos quibusdam dolorum
+                        quia nemo repudiandae quidem voluptatum quas.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Quisquam quod, voluptates, quae, quos quibusdam dolorum
+                        quia nemo repudiandae quidem voluptatum quas.
+                    </p>
+                </article>
+            </section>
+            <footer>
+                <section id="contact" aria-labelledby="contact-heading">
+                    <h2 id="contact-heading">Contact</h2>
+                    <address>
+                        <p>
+                            <strong>Phone:</strong>
+                            <a href="tel:555-555-5555">555-555-5555</a>
+                        </p>
+                        <p>
+                            <strong>Email:</strong>
+                            <a href="mailto:fake@email.com">fake@email.com</a>
+                        </p>
+                    </address>
+                </section>
+            </footer>
         </main>
-        <section aria-labelledby="contact">
-            <h2 id="contact">Contact</h2>
-            <address>
-                <p>
-                    <strong>Phone:</strong>
-                    <a href="tel:555-555-5555">555-555-5555</a>
-                </p>
-                <p>
-                    <strong>Email:</strong>
-                    <a href="mailto:fake@email.com">fake@email.com</a>
-                </p>
-            </address>
-        </section>
     </body>
 </html>
