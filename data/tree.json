@@ -106,7 +106,7 @@
         ]
       },
       {
-        "title": "HTML Semantic",
+        "title": "Semantic HTML",
         "order": 2,
         "lessons": [
           {
@@ -166,6 +166,16 @@
             "filename": "lesson-0038.html"
           }
         ]
+      },
+      {
+        "title": "Forms And Tables",
+        "order": 3,
+        "lessons": [
+          {
+            "title": "Form Element",
+            "filename": "lesson-0039.html"
+          }
+        ]
       }
     ]
   },
@@ -179,7 +189,7 @@
         "lessons": [
           {
             "title": "CSS example",
-            "filename": "lesson-0039.html"
+            "filename": "lesson-0040.html"
           }
         ]
       }

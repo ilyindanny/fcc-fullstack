@@ -9,4 +9,8 @@ When using it for foreign language, add the `lang=""` attribute:
 
 `Say <i lang="es">¡Hola!</i>` {.language-html}
 
+Rendered: {.marker}  
+
+<i lang="es">¡Hola!</i>
+
 For general emphasis, prefer the more semantic `<em>` element.

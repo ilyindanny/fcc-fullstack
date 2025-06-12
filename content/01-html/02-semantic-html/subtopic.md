@@ -1,5 +1,5 @@
 ---
 type: subtopic
-title: HTML Semantic
+title: Semantic HTML
 order: 2
 ---

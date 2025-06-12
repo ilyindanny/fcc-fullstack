@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Test page</title>
+        <meta name="description" content="code_test" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!--
+
+        <link
+            rel="stylesheet"
+            href="file:///var/mobile/Containers/Data/Application/5B18BE4B-5EDE-4C52-B637-C5B70C14FD77/Documents/root/courses/fcc-fullstack.git/docs/css/style.css" />
+		-->
+    </head>
+
+    <body>
+        <main>
+            <form action="">
+                <label for="name">Name: </label>
+                <input
+                    id="name"
+                    type="text"
+                    name="user_name"
+                    placeholder="John Doe"
+                    required />
+                <br />
+
+                <label for="email">Email: </label>
+                <input
+                    id="email"
+                    type="email"
+                    name="email"
+                    placeholder="example@mail.com"
+                    required />
+                <br />
+
+                <label for="desc">Message: </label>
+                <textarea
+                    id="desc"
+                    name="comment"
+                    placeholder="Write here..."></textarea>
+                <br />
+
+                <label>
+                    <input type="checkbox" name="subscribe" checked />
+                    Subscribe
+                </label>
+                <br />
+
+                <label>
+                    <input
+                        id="radio-online"
+                        type="radio"
+                        name="mode"
+                        value="online"
+                        checked />
+                    Online
+                </label>
+
+                <label>
+                    <input
+                        id="radio-offline"
+                        type="radio"
+                        name="mode"
+                        value="offline" />
+                    Offline
+                </label>
+                <br />
+
+                <input type="submit" name="action" value="Send" />
+
+                <input
+                    type="submit"
+                    name="action"
+                    value="Cancel"
+                    formnovalidate />
+            </form>
+        </main>
+    </body>
+</html>

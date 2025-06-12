@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Test page</title>
+        <meta name="description" content="code_test" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!--
+
+        <link
+            rel="stylesheet"
+            href="file:///var/mobile/Containers/Data/Application/5B18BE4B-5EDE-4C52-B637-C5B70C14FD77/Documents/root/courses/fcc-fullstack.git/docs/css/style.css" />
+		-->
+    </head>
+
+    <body>
+        <main>
+            <form id="forms" action="/submit">
+                <label for="email">Email:</label>
+                <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    placeholder="Your Email" />
+                <br />
+
+                <label for="description">What are you interested in?</label>
+                <br />
+                <textarea
+                    id="description"
+                    name="description"
+                    placeholder="Enter your purposes"></textarea>
+                <br />
+
+                <input type="radio" id="online" name="participation" />
+                <label for="online">Online participation</label>
+                <br />
+
+                <input type="radio" id="offline" name="participation" />
+                <label for="offline">Offline participation</label>
+                <br />
+
+                <input type="checkbox" id="subscription" name="subscription" />
+                <label for="subscription">Subscribe to newsletter</label>
+                <br />
+
+                <input type="submit" value="Enter" />
+            </form>
+        </main>
+    </body>
+</html>
