@@ -21,24 +21,105 @@
 <li><code>onsubmit=&quot;return false&quot;</code> prevents form from submitting (useful for demos).</li>
 </ul>
 <h5><code>input</code> element</h5>
-<p><code>name=&quot;...&quot;</code> — required to include the field in submission.</p>
-<p><code>required</code>, <code>readonly</code>, <code>disabled</code>, <code>autocomplete</code> — enhance UX and behavior.</p>
+<p>All <code>&lt;input&gt;</code> elements share common behavior:</p>
 <ul>
 <li>
-<p><code>type</code> attribute:</p>
-<ul>
-<li><code>text</code> — plain string.</li>
-<li><code>email</code> — validates email format.</li>
-<li><code>radio</code> — single option in a group (requires shared <code>name=&quot;group&quot;</code>).</li>
-<li><code>checkbox</code> — multiple selections; <code>checked</code> preselects it.</li>
-<li><code>submit</code> — submission button; <code>value=&quot;Label&quot;</code> defines button text; <code>formnovalidate</code> — disables form validation.</li>
-<li>Instead of <code>submit</code> can be <code class="language-html">&lt;button type=&quot;submit&quot;&gt;Label&lt;/button&gt;</code>  for more flexibility.</li>
-</ul>
+<p><code>name=&quot;...&quot;</code> — required to include the field in form submission.</p>
 </li>
 <li>
-<p><code>placeholder</code> — shows hint inside the field.</p>
+<p><code>value=&quot;...&quot;</code> — defines the initial value.</p>
+</li>
+<li>
+<p><code>required</code>, <code>readonly</code>, <code>disabled</code>, <code>autocomplete</code> — control availability and UX.</p>
+</li>
+<li>
+<p><code>placeholder=&quot;...&quot;</code> — hint shown inside the field.</p>
+</li>
+<li class="marker">
+<p>Textual Inputs:</p>
 </li>
 </ul>
+<dl>
+<dt><code>text</code></dt>
+<dd>free-form text.</dd>
+<dt><code>email</code></dt>
+<dd>validates email format.</dd>
+<dt><code>password</code></dt>
+<dd>hides input characters.</dd>
+<dt><code>search</code></dt>
+<dd>optimized for search fields (may be styled by browser).</dd>
+<dt><code>tel</code></dt>
+<dd>phone number input (no built-in format validation).</dd>
+<dt><code>url</code></dt>
+<dd>validates web address format.</dd>
+</dl>
+<ul>
+<li class="marker">Numeric Inputs:</li>
+</ul>
+<dl>
+<dt><code>number</code></dt>
+<dd>numeric input only; supports <code>min</code>, <code>max</code>, and <code>step</code>.</dd>
+<dt><code>range</code></dt>
+<dd>slider UI; accepts <code>min</code>, <code>max</code>, and <code>step</code>.</dd>
+</dl>
+<ul>
+<li class="marker">Date and Time Inputs:</li>
+</ul>
+<dl>
+<dt><code>date</code></dt>
+<dd>date picker (YYYY-MM-DD).</dd>
+<dt><code>time</code></dt>
+<dd>time input (HH:MM).</dd>
+<dt><code>datetime-local</code></dt>
+<dd>date and time (without timezone).</dd>
+<dt><code>month</code></dt>
+<dd>selects month and year.</dd>
+<dt><code>week</code></dt>
+<dd>selects week number of the year.</dd>
+</dl>
+<ul>
+<li class="marker">Choice Inputs:</li>
+</ul>
+<dl>
+<dt><code>checkbox</code></dt>
+<dd>allows multiple selections;</dd>
+<dd><code>checked</code> marks it selected by default.</dd>
+<dt><code>radio</code></dt>
+<dd>single choice in a group;</dd>
+<dd>all buttons must share the same <code>name=&quot;...&quot;</code>;</dd>
+<dd><code>checked</code> defines default.</dd>
+</dl>
+<ul>
+<li class="marker">File and Media Inputs:</li>
+</ul>
+<dl>
+<dt><code>file</code></dt>
+<dd>file selector;</dd>
+<dd><code>accept=&quot;image/*&quot;</code> limits types;</dd>
+<dd><code>multiple</code> allows multiple files.</dd>
+</dl>
+<ul>
+<li class="marker">Buttons:</li>
+</ul>
+<dl>
+<dt><code>submit</code></dt>
+<dd>submits the form;</dd>
+<dd><code>formnovalidate</code> disables validation;</dd>
+<dd><code>value=&quot;Label&quot;</code> defines button text.</dd>
+<dt><code>reset</code></dt>
+<dd>resets all fields to their initial state.</dd>
+<dt><code>button</code></dt>
+<dd>does not submit; needs JS to work;</dd>
+<dd>often replaced with <code>&lt;button type=&quot;button&quot;&gt;...&lt;/button&gt;</code> for flexibility.</dd>
+</dl>
+<ul>
+<li class="marker">Hidden Input:</li>
+</ul>
+<dl>
+<dt><code>hidden</code></dt>
+<dd>not visible to user but included in submission;</dd>
+<dd>useful for sending metadata or internal values.</dd>
+</dl>
 <h5><code>textarea</code> element</h5>
 <p>Multiline input field. Not a void element.</p>
 <pre><code class="language-html">&lt;textarea id=&quot;description&quot; placeholder=&quot;Enter your purposes&quot;&gt;&lt;/textarea&gt;
@@ -64,7 +145,6 @@
 <h5>Architectural Notes</h5>
 <ul>
 <li>Use semantic input types for better UX and validation.</li>
-<li>Prefer <code>for</code>/<code>id</code> explicit linking for accessibility.</li>
 <li>Group related radio buttons with same <code>name</code>.</li>
 <li>Use <code>checked</code> to define default selection (checkbox/radio).</li>
 <li>Use <code>fieldset</code> and <code>legend</code> to semantically group related controls.</li>
@@ -162,7 +242,7 @@
       <nav class="lesson-nav">
         <a class="prev" href="lesson-0038.html">&larr; Semantic HTML Review</a>
         <a class="home" href="../index.html">Home</a>
-        <a class="next" href="lesson-0040.html">CSS example &rarr;</a>
+        <a class="next" href="lesson-0040.html">Button Element &rarr;</a>
       </nav>
     </section>
   

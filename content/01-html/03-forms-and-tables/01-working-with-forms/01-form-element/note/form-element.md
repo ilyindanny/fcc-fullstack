@@ -17,20 +17,102 @@ Container for collecting user input.
 
 ##### `input` element
 
-`name="..."` — required to include the field in submission.
+All `<input>` elements share common behavior:
+- `name="..."` — required to include the field in form submission.
+- `value="..."` — defines the initial value.
+- `required`, `readonly`, `disabled`, `autocomplete` — control availability and UX.
+- `placeholder="..."` — hint shown inside the field.
 
-`required`, `readonly`, `disabled`, `autocomplete` — enhance UX and behavior.
 
-- `type` attribute:
-  - `text` — plain string.
-  - `email` — validates email format.
-  - `radio` — single option in a group (requires shared `name="group"`).
-  - `checkbox` — multiple selections; `checked` preselects it.
-  - `submit` — submission button; `value="Label"` defines button text; `formnovalidate` — disables form validation.
-  -  Instead of `submit` can be `<button type="submit">Label</button>`{.language-html}  for more flexibility.
 
-- `placeholder` — shows hint inside the field.
+- Textual Inputs: {.marker}  
 
+`text`  
+: free-form text.
+
+`email`  
+: validates email format.
+
+`password`  
+: hides input characters.
+
+`search`  
+: optimized for search fields (may be styled by browser).
+
+`tel`  
+: phone number input (no built-in format validation).
+
+`url`  
+: validates web address format.
+
+
+- Numeric Inputs: {.marker}  
+
+`number`  
+: numeric input only; supports `min`, `max`, and `step`.
+
+`range`  
+: slider UI; accepts `min`, `max`, and `step`.
+
+
+- Date and Time Inputs: {.marker}  
+
+`date`  
+: date picker (YYYY-MM-DD).
+
+`time`  
+: time input (HH:MM).
+
+`datetime-local`  
+: date and time (without timezone).
+
+`month`  
+: selects month and year.
+
+`week`  
+: selects week number of the year.
+
+
+- Choice Inputs: {.marker}  
+
+`checkbox`  
+: allows multiple selections;  
+: `checked` marks it selected by default.
+
+`radio`  
+: single choice in a group;  
+: all buttons must share the same `name="..."`;  
+: `checked` defines default.
+
+
+- File and Media Inputs: {.marker}  
+
+`file`  
+: file selector;  
+: `accept="image/*"` limits types;  
+: `multiple` allows multiple files.
+
+
+- Buttons: {.marker}  
+
+`submit`  
+: submits the form;  
+: `formnovalidate` disables validation;  
+: `value="Label"` defines button text.
+
+`reset`  
+: resets all fields to their initial state.
+
+`button`  
+: does not submit; needs JS to work;  
+: often replaced with `<button type="button">...</button>` for flexibility.
+
+
+- Hidden Input: {.marker}  
+
+`hidden`  
+: not visible to user but included in submission;  
+: useful for sending metadata or internal values.
 
 
 ##### `textarea` element
@@ -62,7 +144,6 @@ Binds text to an input field.
 ##### Architectural Notes
 
 - Use semantic input types for better UX and validation.
-- Prefer `for`/`id` explicit linking for accessibility.
 - Group related radio buttons with same `name`.
 - Use `checked` to define default selection (checkbox/radio).
 - Use `fieldset` and `legend` to semantically group related controls.

@@ -3,14 +3,83 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>CSS example</title>
+  <title>Button Element</title>
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/prism.css" />
 </head>
 <body>
 
   <main>
-    <article><h4>Comming Soon</h4>
+    <article><h2>Button Element</h2>
+<h3>Basic Usage</h3>
+<ul>
+<li>The <code>&lt;button&gt;</code> tag is a universal element for triggering actions.</li>
+<li>By default, a button without a <code>type</code> acts as <code>'submit'</code>.</li>
+</ul>
+<pre><code class="language-html">&lt;button&gt;Start Game&lt;/button&gt;
+</code></pre>
+<h3><code>type=&quot;button&quot;</code></h3>
+<ul>
+<li>Does <strong>not</strong> submit a form.</li>
+<li>Used for JavaScript-triggered actions.</li>
+</ul>
+<p class="marker">Example:</p>
+<p><code class="language-html">&lt;button type=&quot;button&quot;&gt;Show Alert&lt;/button&gt;</code></p>
+<p class="marker">An analog of the &quot;input&quot; element:</p>
+<p><code class="language-html">&lt;input type=&quot;button&quot; value=&quot;Click me&quot; /&gt;</code></p>
+<hr>
+<h3><code>type=&quot;submit&quot;</code></h3>
+<ul>
+<li>Submits the parent form.</li>
+<li>The <code>action</code> attribute on the <code>&lt;form&gt;</code> defines the destination.</li>
+</ul>
+<p class="marker">Example:</p>
+<pre><code class="language-html">&lt;form&gt;
+  &lt;input type=&quot;email&quot; name=&quot;email&quot; /&gt;
+  &lt;button type=&quot;submit&quot;&gt;Submit&lt;/button&gt;
+&lt;/form&gt;
+</code></pre>
+<p class="marker">An analog of the &quot;input&quot; element:</p>
+<p><code class="language-html">&lt;input type=&quot;submit&quot; value=&quot;Submit&quot; /&gt;</code></p>
+<h3><code>type=&quot;reset&quot;</code></h3>
+<ul>
+<li>Resets all form fields to their initial values.</li>
+<li>Rarely used due to risk of accidental data loss.</li>
+</ul>
+<p class="marker">Example:</p>
+<pre><code class="language-html">&lt;form&gt;
+  &lt;input type=&quot;email&quot; /&gt;
+  &lt;button type=&quot;reset&quot;&gt;Reset&lt;/button&gt;
+&lt;/form&gt;
+</code></pre>
+<p class="marker">An analog of the &quot;input&quot; element:</p>
+<p><code class="language-html">&lt;input type=&quot;reset&quot; value=&quot;Reset&quot; /&gt;</code></p>
+<h3><code>&lt;button&gt;</code> vs <code>&lt;input type=&quot;...&quot;&gt;</code></h3>
+<ul>
+<li><code>&lt;button&gt;</code> supports nested content like text, icons, or HTML.</li>
+<li><code>&lt;input&gt;</code> supports only the <code>value</code> attribute.</li>
+<li>Styling is more flexible with <code>&lt;button&gt;</code>.</li>
+<li><code>&lt;button&gt;</code> is generally preferred for better control and design.</li>
+</ul>
+<h3>Default Behavior Notes</h3>
+<ul>
+<li>A button without <code>type</code> defaults to <code>'submit'</code>.</li>
+<li>Pressing Enter in a form activates the first <code>'submit'</code> button.</li>
+<li>The <code>formnovalidate</code> attribute skips built-in HTML validation:</li>
+</ul>
+<pre><code class="language-html">&lt;button type=&quot;submit&quot; formnovalidate&gt;Send without check&lt;/button&gt;
+</code></pre>
+<h3>JavaScript Example</h3>
+<pre><code class="language-html">&lt;button type=&quot;button&quot; onclick=&quot;alert('Hello')&quot;&gt;Show Alert&lt;/button&gt;
+</code></pre>
+<p class="marker">Rendered:</p>
+<p><button type="button" onclick="alert('Hello')">Show Alert</button></p>
+<h3>Styling Differences</h3>
+<ul>
+<li><code>&lt;button&gt;</code> and <code>&lt;input type=&quot;button&quot;&gt;</code> have different default styles.</li>
+<li>Styling varies by browser (user-agent stylesheet).</li>
+<li>Best practice: apply a CSS reset for consistent design.</li>
+</ul>
 </article>
   </main> 
 	
@@ -18,7 +87,7 @@
       <nav class="lesson-nav">
         <a class="prev" href="lesson-0039.html">&larr; Form Element</a>
         <a class="home" href="../index.html">Home</a>
-        <span class="empty"></span>
+        <a class="next" href="lesson-0041.html">CSS example &rarr;</a>
       </nav>
     </section>
   

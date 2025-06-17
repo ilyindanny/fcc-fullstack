@@ -25,7 +25,7 @@
             <p>All Notes on the One Page</p>
             <section>
                 <h2>Content:</h2>
-                <nav><h2>HTML</h2><ul><li><strong>Basic HTML</strong><ul><li><a href="#lesson-0001">What is HTML?</a></li><li><a href="#lesson-0002">HTML Tag Attributes</a></li><li><a href="#lesson-0003">Anchor Element</a></li><li><a href="#lesson-0004">Link Element</a></li><li><a href="#lesson-0005">Boilerplate</a></li><li><a href="#lesson-0006">UTF-8</a></li><li><a href="#lesson-0007">Div Eement</a></li><li><a href="#lesson-0008">ID Element</a></li><li><a href="#lesson-0009">HTML Entities</a></li><li><a href="#lesson-0010">Script</a></li><li><a href="#lesson-0011">Meta description</a></li><li><a href="#lesson-0012">Open Graph</a></li><li><a href="#lesson-0013">Replaced Elements</a></li><li><a href="#lesson-0014">Optimize Media Asets</a></li><li><a href="#lesson-0015">Img Element</a></li><li><a href="#lesson-0016">Image licenses</a></li><li><a href="#lesson-0017">Audio & Video</a></li><li><a href="#lesson-0018">SVG</a></li><li><a href="#lesson-0019">Figure And Figcaption Elements</a></li><li><a href="#lesson-0020">Iframe Element</a></li><li><a href="#lesson-0021">Target Attribute</a></li><li><a href="#lesson-0022">File Paths</a></li><li><a href="#lesson-0023">Link States in CSS</a></li><li><a href="#lesson-0024">Basic HTML Review</a></li></ul></li><li><strong>Semantic HTML</strong><ul><li><a href="#lesson-0025">Semantic HTML</a></li><li><a href="#lesson-0026">Hierarchy in HTML</a></li><li><a href="#lesson-0027">Semantic HTML</a></li><li><a href="#lesson-0028">I Emphasis Element</a></li><li><a href="#lesson-0029">Strong vs B Element</a></li><li><a href="#lesson-0030">Description List</a></li><li><a href="#lesson-0031">Quoted Elements</a></li><li><a href="#lesson-0032">Abbreviations And Acronyms</a></li><li><a href="#lesson-0033">Address Element</a></li><li><a href="#lesson-0034">Time Element</a></li><li><a href="#lesson-0035">Superscript And Subscript</a></li><li><a href="#lesson-0036">Code Element</a></li><li><a href="#lesson-0037">U, S And Ruby Elements</a></li><li><a href="#lesson-0038">Semantic HTML Review</a></li></ul></li><li><strong>Forms And Tables</strong><ul><li><a href="#lesson-0039">Form Element</a></li></ul></li></ul><h2>CSS</h2><ul><li><strong>first example</strong><ul><li><a href="#lesson-0040">CSS example</a></li></ul></li></ul></nav>
+                <nav><h2>HTML</h2><ul><li><strong>Basic HTML</strong><ul><li><a href="#lesson-0001">What is HTML?</a></li><li><a href="#lesson-0002">HTML Tag Attributes</a></li><li><a href="#lesson-0003">Anchor Element</a></li><li><a href="#lesson-0004">Link Element</a></li><li><a href="#lesson-0005">Boilerplate</a></li><li><a href="#lesson-0006">UTF-8</a></li><li><a href="#lesson-0007">Div Eement</a></li><li><a href="#lesson-0008">ID Element</a></li><li><a href="#lesson-0009">HTML Entities</a></li><li><a href="#lesson-0010">Script</a></li><li><a href="#lesson-0011">Meta description</a></li><li><a href="#lesson-0012">Open Graph</a></li><li><a href="#lesson-0013">Replaced Elements</a></li><li><a href="#lesson-0014">Optimize Media Asets</a></li><li><a href="#lesson-0015">Img Element</a></li><li><a href="#lesson-0016">Image licenses</a></li><li><a href="#lesson-0017">Audio & Video</a></li><li><a href="#lesson-0018">SVG</a></li><li><a href="#lesson-0019">Figure And Figcaption Elements</a></li><li><a href="#lesson-0020">Iframe Element</a></li><li><a href="#lesson-0021">Target Attribute</a></li><li><a href="#lesson-0022">File Paths</a></li><li><a href="#lesson-0023">Link States in CSS</a></li><li><a href="#lesson-0024">Basic HTML Review</a></li></ul></li><li><strong>Semantic HTML</strong><ul><li><a href="#lesson-0025">Semantic HTML</a></li><li><a href="#lesson-0026">Hierarchy in HTML</a></li><li><a href="#lesson-0027">Semantic HTML</a></li><li><a href="#lesson-0028">I Emphasis Element</a></li><li><a href="#lesson-0029">Strong vs B Element</a></li><li><a href="#lesson-0030">Description List</a></li><li><a href="#lesson-0031">Quoted Elements</a></li><li><a href="#lesson-0032">Abbreviations And Acronyms</a></li><li><a href="#lesson-0033">Address Element</a></li><li><a href="#lesson-0034">Time Element</a></li><li><a href="#lesson-0035">Superscript And Subscript</a></li><li><a href="#lesson-0036">Code Element</a></li><li><a href="#lesson-0037">U, S And Ruby Elements</a></li><li><a href="#lesson-0038">Semantic HTML Review</a></li></ul></li><li><strong>Forms And Tables</strong><ul><li><a href="#lesson-0039">Form Element</a></li><li><a href="#lesson-0040">Button Element</a></li></ul></li></ul><h2>CSS</h2><ul><li><strong>first example</strong><ul><li><a href="#lesson-0041">CSS example</a></li></ul></li></ul></nav>
             </section>
             <section><h2 class="topic">HTML</h2><h3 class="subtopic">Basic HTML</h3>
           <article id="lesson-0001">
@@ -1620,24 +1620,105 @@ This group of elements provides <strong>semantic meaning</strong> — not stylin
 <li><code>onsubmit=&quot;return false&quot;</code> prevents form from submitting (useful for demos).</li>
 </ul>
 <h5><code>input</code> element</h5>
-<p><code>name=&quot;...&quot;</code> — required to include the field in submission.</p>
-<p><code>required</code>, <code>readonly</code>, <code>disabled</code>, <code>autocomplete</code> — enhance UX and behavior.</p>
+<p>All <code>&lt;input&gt;</code> elements share common behavior:</p>
 <ul>
 <li>
-<p><code>type</code> attribute:</p>
-<ul>
-<li><code>text</code> — plain string.</li>
-<li><code>email</code> — validates email format.</li>
-<li><code>radio</code> — single option in a group (requires shared <code>name=&quot;group&quot;</code>).</li>
-<li><code>checkbox</code> — multiple selections; <code>checked</code> preselects it.</li>
-<li><code>submit</code> — submission button; <code>value=&quot;Label&quot;</code> defines button text; <code>formnovalidate</code> — disables form validation.</li>
-<li>Instead of <code>submit</code> can be <code class="language-html">&lt;button type=&quot;submit&quot;&gt;Label&lt;/button&gt;</code>  for more flexibility.</li>
-</ul>
+<p><code>name=&quot;...&quot;</code> — required to include the field in form submission.</p>
 </li>
 <li>
-<p><code>placeholder</code> — shows hint inside the field.</p>
+<p><code>value=&quot;...&quot;</code> — defines the initial value.</p>
+</li>
+<li>
+<p><code>required</code>, <code>readonly</code>, <code>disabled</code>, <code>autocomplete</code> — control availability and UX.</p>
+</li>
+<li>
+<p><code>placeholder=&quot;...&quot;</code> — hint shown inside the field.</p>
+</li>
+<li class="marker">
+<p>Textual Inputs:</p>
 </li>
 </ul>
+<dl>
+<dt><code>text</code></dt>
+<dd>free-form text.</dd>
+<dt><code>email</code></dt>
+<dd>validates email format.</dd>
+<dt><code>password</code></dt>
+<dd>hides input characters.</dd>
+<dt><code>search</code></dt>
+<dd>optimized for search fields (may be styled by browser).</dd>
+<dt><code>tel</code></dt>
+<dd>phone number input (no built-in format validation).</dd>
+<dt><code>url</code></dt>
+<dd>validates web address format.</dd>
+</dl>
+<ul>
+<li class="marker">Numeric Inputs:</li>
+</ul>
+<dl>
+<dt><code>number</code></dt>
+<dd>numeric input only; supports <code>min</code>, <code>max</code>, and <code>step</code>.</dd>
+<dt><code>range</code></dt>
+<dd>slider UI; accepts <code>min</code>, <code>max</code>, and <code>step</code>.</dd>
+</dl>
+<ul>
+<li class="marker">Date and Time Inputs:</li>
+</ul>
+<dl>
+<dt><code>date</code></dt>
+<dd>date picker (YYYY-MM-DD).</dd>
+<dt><code>time</code></dt>
+<dd>time input (HH:MM).</dd>
+<dt><code>datetime-local</code></dt>
+<dd>date and time (without timezone).</dd>
+<dt><code>month</code></dt>
+<dd>selects month and year.</dd>
+<dt><code>week</code></dt>
+<dd>selects week number of the year.</dd>
+</dl>
+<ul>
+<li class="marker">Choice Inputs:</li>
+</ul>
+<dl>
+<dt><code>checkbox</code></dt>
+<dd>allows multiple selections;</dd>
+<dd><code>checked</code> marks it selected by default.</dd>
+<dt><code>radio</code></dt>
+<dd>single choice in a group;</dd>
+<dd>all buttons must share the same <code>name=&quot;...&quot;</code>;</dd>
+<dd><code>checked</code> defines default.</dd>
+</dl>
+<ul>
+<li class="marker">File and Media Inputs:</li>
+</ul>
+<dl>
+<dt><code>file</code></dt>
+<dd>file selector;</dd>
+<dd><code>accept=&quot;image/*&quot;</code> limits types;</dd>
+<dd><code>multiple</code> allows multiple files.</dd>
+</dl>
+<ul>
+<li class="marker">Buttons:</li>
+</ul>
+<dl>
+<dt><code>submit</code></dt>
+<dd>submits the form;</dd>
+<dd><code>formnovalidate</code> disables validation;</dd>
+<dd><code>value=&quot;Label&quot;</code> defines button text.</dd>
+<dt><code>reset</code></dt>
+<dd>resets all fields to their initial state.</dd>
+<dt><code>button</code></dt>
+<dd>does not submit; needs JS to work;</dd>
+<dd>often replaced with <code>&lt;button type=&quot;button&quot;&gt;...&lt;/button&gt;</code> for flexibility.</dd>
+</dl>
+<ul>
+<li class="marker">Hidden Input:</li>
+</ul>
+<dl>
+<dt><code>hidden</code></dt>
+<dd>not visible to user but included in submission;</dd>
+<dd>useful for sending metadata or internal values.</dd>
+</dl>
 <h5><code>textarea</code> element</h5>
 <p>Multiline input field. Not a void element.</p>
 <pre><code class="language-html">&lt;textarea id=&quot;description&quot; placeholder=&quot;Enter your purposes&quot;&gt;&lt;/textarea&gt;
@@ -1663,7 +1744,6 @@ This group of elements provides <strong>semantic meaning</strong> — not stylin
 <h5>Architectural Notes</h5>
 <ul>
 <li>Use semantic input types for better UX and validation.</li>
-<li>Prefer <code>for</code>/<code>id</code> explicit linking for accessibility.</li>
 <li>Group related radio buttons with same <code>name</code>.</li>
 <li>Use <code>checked</code> to define default selection (checkbox/radio).</li>
 <li>Use <code>fieldset</code> and <code>legend</code> to semantically group related controls.</li>
@@ -1758,8 +1838,85 @@ This group of elements provides <strong>semantic meaning</strong> — not stylin
   
           </article>
           <hr class="lesson-divider">
-        <h2 class="topic">CSS</h2><h3 class="subtopic">first example</h3>
+        
           <article id="lesson-0040">
+            
+    <article><h2>Button Element</h2>
+<h3>Basic Usage</h3>
+<ul>
+<li>The <code>&lt;button&gt;</code> tag is a universal element for triggering actions.</li>
+<li>By default, a button without a <code>type</code> acts as <code>'submit'</code>.</li>
+</ul>
+<pre><code class="language-html">&lt;button&gt;Start Game&lt;/button&gt;
+</code></pre>
+<h3><code>type=&quot;button&quot;</code></h3>
+<ul>
+<li>Does <strong>not</strong> submit a form.</li>
+<li>Used for JavaScript-triggered actions.</li>
+</ul>
+<p class="marker">Example:</p>
+<p><code class="language-html">&lt;button type=&quot;button&quot;&gt;Show Alert&lt;/button&gt;</code></p>
+<p class="marker">An analog of the &quot;input&quot; element:</p>
+<p><code class="language-html">&lt;input type=&quot;button&quot; value=&quot;Click me&quot; /&gt;</code></p>
+<hr>
+<h3><code>type=&quot;submit&quot;</code></h3>
+<ul>
+<li>Submits the parent form.</li>
+<li>The <code>action</code> attribute on the <code>&lt;form&gt;</code> defines the destination.</li>
+</ul>
+<p class="marker">Example:</p>
+<pre><code class="language-html">&lt;form&gt;
+  &lt;input type=&quot;email&quot; name=&quot;email&quot; /&gt;
+  &lt;button type=&quot;submit&quot;&gt;Submit&lt;/button&gt;
+&lt;/form&gt;
+</code></pre>
+<p class="marker">An analog of the &quot;input&quot; element:</p>
+<p><code class="language-html">&lt;input type=&quot;submit&quot; value=&quot;Submit&quot; /&gt;</code></p>
+<h3><code>type=&quot;reset&quot;</code></h3>
+<ul>
+<li>Resets all form fields to their initial values.</li>
+<li>Rarely used due to risk of accidental data loss.</li>
+</ul>
+<p class="marker">Example:</p>
+<pre><code class="language-html">&lt;form&gt;
+  &lt;input type=&quot;email&quot; /&gt;
+  &lt;button type=&quot;reset&quot;&gt;Reset&lt;/button&gt;
+&lt;/form&gt;
+</code></pre>
+<p class="marker">An analog of the &quot;input&quot; element:</p>
+<p><code class="language-html">&lt;input type=&quot;reset&quot; value=&quot;Reset&quot; /&gt;</code></p>
+<h3><code>&lt;button&gt;</code> vs <code>&lt;input type=&quot;...&quot;&gt;</code></h3>
+<ul>
+<li><code>&lt;button&gt;</code> supports nested content like text, icons, or HTML.</li>
+<li><code>&lt;input&gt;</code> supports only the <code>value</code> attribute.</li>
+<li>Styling is more flexible with <code>&lt;button&gt;</code>.</li>
+<li><code>&lt;button&gt;</code> is generally preferred for better control and design.</li>
+</ul>
+<h3>Default Behavior Notes</h3>
+<ul>
+<li>A button without <code>type</code> defaults to <code>'submit'</code>.</li>
+<li>Pressing Enter in a form activates the first <code>'submit'</code> button.</li>
+<li>The <code>formnovalidate</code> attribute skips built-in HTML validation:</li>
+</ul>
+<pre><code class="language-html">&lt;button type=&quot;submit&quot; formnovalidate&gt;Send without check&lt;/button&gt;
+</code></pre>
+<h3>JavaScript Example</h3>
+<pre><code class="language-html">&lt;button type=&quot;button&quot; onclick=&quot;alert('Hello')&quot;&gt;Show Alert&lt;/button&gt;
+</code></pre>
+<p class="marker">Rendered:</p>
+<p><button type="button" onclick="alert('Hello')">Show Alert</button></p>
+<h3>Styling Differences</h3>
+<ul>
+<li><code>&lt;button&gt;</code> and <code>&lt;input type=&quot;button&quot;&gt;</code> have different default styles.</li>
+<li>Styling varies by browser (user-agent stylesheet).</li>
+<li>Best practice: apply a CSS reset for consistent design.</li>
+</ul>
+</article>
+  
+          </article>
+          <hr class="lesson-divider">
+        <h2 class="topic">CSS</h2><h3 class="subtopic">first example</h3>
+          <article id="lesson-0041">
             
     <article><h4>Comming Soon</h4>
 </article>
