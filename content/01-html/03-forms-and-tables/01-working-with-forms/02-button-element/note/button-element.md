@@ -2,9 +2,9 @@
 title: Button Element
 ---
 
-## Button Element
+#### Button Element
 
-### Basic Usage
+##### Basic Usage
 
 - The `<button>` tag is a universal element for triggering actions.
 - By default, a button without a `type` acts as `'submit'`.
@@ -14,7 +14,7 @@ title: Button Element
 ```
 
 
-### `type="button"`
+##### `type="button"`
 
 - Does **not** submit a form.
 - Used for JavaScript-triggered actions.
@@ -29,7 +29,7 @@ An analog of the "input" element: {.marker}
 
 ---
 
-### `type="submit"`
+##### `type="submit"`
 
 - Submits the parent form.
 - The `action` attribute on the `<form>` defines the destination.
@@ -49,7 +49,7 @@ An analog of the "input" element: {.marker}
 
 
 
-### `type="reset"`
+##### `type="reset"`
 
 - Resets all form fields to their initial values.
 - Rarely used due to risk of accidental data loss.
@@ -68,7 +68,7 @@ An analog of the "input" element: {.marker}
 `<input type="reset" value="Reset" />`{.language-html}  
 
 
-### `<button>` vs `<input type="...">`
+##### `<button>` vs `<input type="...">`
 
 - `<button>` supports nested content like text, icons, or HTML.
 - `<input>` supports only the `value` attribute.
@@ -76,7 +76,7 @@ An analog of the "input" element: {.marker}
 - `<button>` is generally preferred for better control and design.
 
 
-### Default Behavior Notes
+##### Default Behavior Notes
 
 - A button without `type` defaults to `'submit'`.
 - Pressing Enter in a form activates the first `'submit'` button.
@@ -87,7 +87,7 @@ An analog of the "input" element: {.marker}
 ```
 
 
-### JavaScript Example
+##### JavaScript Example
 
 ```html
 <button type="button" onclick="alert('Hello')">Show Alert</button>
@@ -98,7 +98,7 @@ Rendered: {.marker}
 <button type="button" onclick="alert('Hello')">Show Alert</button>
 
 
-### Styling Differences
+##### Styling Differences
 
 - `<button>` and `<input type="button">` have different default styles.
 - Styling varies by browser (user-agent stylesheet).
