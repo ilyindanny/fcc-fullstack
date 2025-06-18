@@ -182,6 +182,10 @@
           {
             "title": "Validation",
             "filename": "lesson-0041.html"
+          },
+          {
+            "title": "Form States",
+            "filename": "lesson-0042.html"
           }
         ]
       }
@@ -197,7 +201,7 @@
         "lessons": [
           {
             "title": "CSS example",
-            "filename": "lesson-0042.html"
+            "filename": "lesson-0043.html"
           }
         ]
       }

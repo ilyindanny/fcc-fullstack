@@ -3,14 +3,84 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CSS example</title>
+  <title>Form States</title>
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/prism.css">
 </head>
 <body>
 
   <main>
-    <article><h4>Comming Soon</h4>
+    <article><h4>Form States</h4>
+<h5>Default state</h5>
+<ul>
+<li>Initial state when a form control is rendered.</li>
+<li>Editable, focusable, and included in form submission.</li>
+</ul>
+<h5>Focused state</h5>
+<ul>
+<li>Triggered when a user clicks or tabs into a form control.</li>
+<li>Browsers often show a blue outline or border.</li>
+<li>Can be styled via <code>input:focus</code>.</li>
+</ul>
+<h5>Disabled state</h5>
+<ul>
+<li>Set using the <code>disabled</code> attribute.</li>
+<li>Cannot be edited, copied or focused.</li>
+<li>Excluded from form submission.</li>
+<li>Can be styled via <code>input:disabled</code>.</li>
+</ul>
+<p class="marker">Example:</p>
+<p><code class="language-html">&lt;input disabled type=&quot;email&quot;&gt;</code></p>
+<p class="marker">Rendered <code>disabled</code> form:</p>
+<input disabled type="email" name="email" placeholder="example@mail.com">
+<h5>Readonly state</h5>
+<ul>
+<li>Set with the <code>readonly</code> attribute.</li>
+<li>Cannot be edited, <strong>but</strong> can still be focused.</li>
+<li>Included in form submission.</li>
+<li>Can be styled via <code>input[readonly]</code> attribute.</li>
+</ul>
+<p class="marker">Example:</p>
+<p><code class="language-html">&lt;input readonly type=&quot;email&quot;&gt;</code></p>
+<p class="marker">Rendered <code>readonly</code> form:</p>
+<input readonly type="email" name="email" value="example@email.com">
+<h5>Invalid state</h5>
+<ul>
+<li>Triggered when input fails native validation (e.g. required, pattern, type mismatch).</li>
+<li>Shown automatically by the browser.</li>
+<li>Can be styled with <code>input:invalid</code>.</li>
+</ul>
+<h5>Valid state</h5>
+<ul>
+<li>Input meets all native validation criteria.</li>
+<li>Can be styled via <code>input:valid</code>.</li>
+</ul>
+<h5>Hover state</h5>
+<ul>
+<li>When the user moves the mouse pointer over the element.</li>
+<li>Commonly used for visual feedback.</li>
+<li>Can be styled with <code>input:hover</code>.</li>
+</ul>
+<h5>Active state</h5>
+<ul>
+<li>Active while the element is being clicked (mouse button down).</li>
+<li>Good for button feedback.</li>
+<li>Can be styled with <code>button:active</code>.</li>
+</ul>
+<h5>Focus-visible (accessibility enhancement)</h5>
+<ul>
+<li><code>:focus-visible</code> only applies when focus was given via keyboard.</li>
+<li>Improves UX by avoiding unwanted outlines on mouse click.</li>
+<li>Can be styled with <code>input:focus-visible</code>.</li>
+</ul>
+<h5>Notes</h5>
+<ul>
+<li><code>readonly</code> allows copying but not editing.</li>
+<li><code>disabled</code> makes the field entirely inert and skipped in submission.</li>
+<li><code>:invalid</code> and <code>:valid</code> help with visual form validation.</li>
+<li><code>:focus-visible</code> is a best practice for accessibility (keyboard navigation).</li>
+<li>Combining these states in CSS allows for detailed form interaction design.</li>
+</ul>
 </article>
   </main> 
 	
@@ -18,7 +88,7 @@
       <nav class="lesson-nav">
         <a class="prev" href="lesson-0041.html">&larr; Validation</a>
         <a class="home" href="../index.html">Home</a>
-        <span class="empty"></span>
+        <a class="next" href="lesson-0043.html">CSS example &rarr;</a>
       </nav>
     </section>
   
