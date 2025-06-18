@@ -170,3 +170,56 @@ if (form.checkValidity()) {
   form.reportValidity(); // show error messages
 }
 ```
+
+
+Rendered examples: {.marker}  
+
+<form action="#" onsubmit="return false">
+<label for="required">required:</label>
+<input required id="required" type="text" name="form" />
+<br />
+
+<label for="password">password:</label>
+<input required id="password" type="password" name="form" />
+<br />
+
+<label for="length">tel (min 5 - max 9):</label>
+<input
+required
+id="length"
+type="tel"
+name="form"
+minlength="5"
+maxlength="9" />
+<br />
+
+<label for="pattern">pattern "000-000":</label>
+<input
+required
+id="pattern"
+type="text"
+name="form"
+pattern="\d{3}-\d{3}" />
+<br />
+
+<label for="minmax">min-max (1-10):</label>
+<input
+required
+id="minmax"
+type="number"
+name="form"
+min="1"
+max="10" />
+<br />
+
+<label for="autocom">Autocomplete email:</label>
+<input
+required
+id="autocom"
+type="email"
+name="form"
+autocomplete="email" />
+<br />
+
+<input type="submit" value="Submit" />
+</form>
