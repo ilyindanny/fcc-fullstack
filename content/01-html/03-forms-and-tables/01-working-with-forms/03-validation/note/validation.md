@@ -18,7 +18,7 @@ title: Validation
 
 Ensures the field must be filled:
 
-`<input type="email" required />`{.language-html}  
+`<input type="email" required>`{.language-html}  
 
 
 ##### `type="..."` 
@@ -26,10 +26,10 @@ Ensures the field must be filled:
 Some input types include built-in validation:
 
 ```html
-<input type="email" />      <!-- basic email format check -->
-<input type="url" />        <!-- basic URL format -->
-<input type="tel" />        <!-- no validation by default -->
-<input type="password" />   <!-- input hidden -->
+<input type="email">      <!-- basic email format check -->
+<input type="url">        <!-- basic URL format -->
+<input type="tel">        <!-- no validation by default -->
+<input type="password">   <!-- input hidden -->
 ```
 
 
@@ -37,14 +37,14 @@ Some input types include built-in validation:
 
 Set minimum and maximum number of characters:
 
-`<input minlength="4" maxlength="64" />`{.language-html}  
+`<input minlength="4" maxlength="64">`{.language-html}  
 
 
 ##### `pattern`
 
 Regex-based validation:
 
-`<input type="text" pattern="\d{3}-\d{3}" />`{.language-html}  
+`<input type="text" pattern="\d{3}-\d{3}">`{.language-html}  
 
 
 ##### `min`, `max`
@@ -52,8 +52,8 @@ Regex-based validation:
 Define numeric/date boundaries:
 
 ```html
-<input type="number" min="1" max="10" />
-<input type="date" min="2020-01-01" max="2030-01-01" />
+<input type="number" min="1" max="10">
+<input type="date" min="2020-01-01" max="2030-01-01">
 ```
 
 
@@ -61,14 +61,14 @@ Define numeric/date boundaries:
 
 Specify step intervals for number/date/range:
 
-`<input type="number" step="0.01" />`{.language-html}  
+`<input type="number" step="0.01">`{.language-html}  
 
 
 ##### `autocomplete`
 
 Not a validation attribute, but enhances UX by suggesting previously entered values:
 
-`<input name="email" autocomplete="email" />`{.language-html}  
+`<input name="email" autocomplete="email">`{.language-html}  
 
 
 #### Form- and Button-level Attributes
@@ -126,7 +126,7 @@ Examples: {.marker}
 ```html
 <form>
   <label>Email:</label>
-  <input type="email" required />
+  <input type="email" required>
   <button type="submit">Submit</button>
 </form>
 ```
@@ -146,12 +146,12 @@ Examples: {.marker}
 
 ##### Pattern-matching:
 
-`<input type="text" pattern="\d{3}-\d{3}" />`{.language-html}  
+`<input type="text" pattern="\d{3}-\d{3}">`{.language-html}  
 
 
 ##### Numeric range with step:
 
-`<input type="number" min="0" max="100" step="5" />`{.language-html}  
+`<input type="number" min="0" max="100" step="5">`{.language-html}  
 
 
 ##### Submit button bypassing validation:
@@ -176,12 +176,12 @@ Rendered examples: {.marker}
 
 <form action="#" onsubmit="return false">
 <label for="required">required:</label>
-<input required id="required" type="text" name="form" />
-<br />
+<input required id="required" type="text" name="form">
+<br>
 
 <label for="password">password:</label>
-<input required id="password" type="password" name="form" />
-<br />
+<input required id="password" type="password" name="form">
+<br>
 
 <label for="length">tel (min 5 - max 9):</label>
 <input
@@ -190,8 +190,8 @@ id="length"
 type="tel"
 name="form"
 minlength="5"
-maxlength="9" />
-<br />
+maxlength="9">
+<br>
 
 <label for="pattern">pattern "000-000":</label>
 <input
@@ -199,8 +199,8 @@ required
 id="pattern"
 type="text"
 name="form"
-pattern="\d{3}-\d{3}" />
-<br />
+pattern="\d{3}-\d{3}">
+<br>
 
 <label for="minmax">min-max (1-10):</label>
 <input
@@ -209,8 +209,8 @@ id="minmax"
 type="number"
 name="form"
 min="1"
-max="10" />
-<br />
+max="10">
+<br>
 
 <label for="autocom">Autocomplete email:</label>
 <input
@@ -218,8 +218,8 @@ required
 id="autocom"
 type="email"
 name="form"
-autocomplete="email" />
-<br />
+autocomplete="email">
+<br>
 
-<input type="submit" value="Submit" />
+<input type="submit" value="Submit">
 </form>

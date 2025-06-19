@@ -130,13 +130,13 @@ Binds text to an input field.
 
 - Implicit association (nesting), good for checkboxes and radio-buttons:
   ```html
-  <label>Username: <input type="text" /></label>
+  <label>Username: <input type="text"></label>
   ```
 
 - Explicit association (via `for` and `id`) better for text tags:
   ```html
   <label for="email">Email:</label>
-  <input id="email" type="email" />
+  <input id="email" type="email">
   ```
 - An element requires `id` when using explicit `label`.
 
@@ -155,22 +155,22 @@ Example: {.marker}
 <form action="">
 
 <label for="name">Name: </label>
-<input id="name" type="text" name="user_name" placeholder="John Doe" required />
-<br />
+<input id="name" type="text" name="user_name" placeholder="John Doe" required>
+<br>
 
 <label for="email">Email: </label>
-<input id="email" type="email" name="email" placeholder="example@mail.com" required />
-<br />
+<input id="email" type="email" name="email" placeholder="example@mail.com" required>
+<br>
 
 <label for="desc">Message: </label>
 <textarea id="desc" name="comment" placeholder="Write here..."></textarea>
-<br />
+<br>
 
 <label>
-    <input type="checkbox" name="subscribe" checked />
+    <input type="checkbox" name="subscribe" checked>
     Subscribe
 </label>
-<br />
+<br>
 
 <label>
     <input
@@ -178,7 +178,7 @@ Example: {.marker}
         type="radio"
         name="mode"
         value="online"
-        checked />
+        checked>
     Online
 </label>
 
@@ -187,14 +187,14 @@ Example: {.marker}
         id="radio-offline"
         type="radio"
         name="mode"
-        value="offline" />
+        value="offline">
     Offline
 </label>
-<br />
+<br>
 
-<input type="submit" name="action" value="Send" />
+<input type="submit" name="action" value="Send">
 
-<input type="submit" name="action" value="Cancel" formnovalidate />
+<input type="submit" name="action" value="Cancel" formnovalidate>
 
 </form>
 ```
@@ -210,22 +210,22 @@ Rendered: {.marker}
 <form action="#" onsubmit="return false">
 
 <label for="name">Name: </label>
-<input id="name" type="text" name="user_name" placeholder="John Doe" required />
-<br />
+<input id="name" type="text" name="user_name" placeholder="John Doe" required>
+<br>
 
 <label for="email">Email: </label>
-<input id="email" type="email" name="email" placeholder="example@mail.com" required />
-<br />
+<input id="email" type="email" name="email" placeholder="example@mail.com" required>
+<br>
 
 <label for="desc">Message: </label>
 <textarea id="desc" name="comment" placeholder="Write here..."></textarea>
-<br />
+<br>
 
 <label>
-    <input type="checkbox" name="subscribe" checked />
+    <input type="checkbox" name="subscribe" checked>
     Subscribe
 </label>
-<br />
+<br>
 
 <label>
     <input
@@ -233,7 +233,7 @@ Rendered: {.marker}
         type="radio"
         name="mode"
         value="online"
-        checked />
+        checked>
     Online
 </label>
 
@@ -242,13 +242,13 @@ Rendered: {.marker}
         id="radio-offline"
         type="radio"
         name="mode"
-        value="offline" />
+        value="offline">
     Offline
 </label>
-<br />
+<br>
 
-<input type="submit" name="action" value="Send" />
+<input type="submit" name="action" value="Send">
 
-<input type="submit" name="action" value="Cancel" formnovalidate />
+<input type="submit" name="action" value="Cancel" formnovalidate>
 
 </form>

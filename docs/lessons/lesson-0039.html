@@ -128,13 +128,13 @@
 <ul>
 <li>
 <p>Implicit association (nesting), good for checkboxes and radio-buttons:</p>
-<pre><code class="language-html">&lt;label&gt;Username: &lt;input type=&quot;text&quot; /&gt;&lt;/label&gt;
+<pre><code class="language-html">&lt;label&gt;Username: &lt;input type=&quot;text&quot;&gt;&lt;/label&gt;
 </code></pre>
 </li>
 <li>
 <p>Explicit association (via <code>for</code> and <code>id</code>) better for text tags:</p>
 <pre><code class="language-html">&lt;label for=&quot;email&quot;&gt;Email:&lt;/label&gt;
-&lt;input id=&quot;email&quot; type=&quot;email&quot; /&gt;
+&lt;input id=&quot;email&quot; type=&quot;email&quot;&gt;
 </code></pre>
 </li>
 <li>
@@ -152,22 +152,22 @@
 <pre><code class="language-html">&lt;form action=&quot;&quot;&gt;
 
 &lt;label for=&quot;name&quot;&gt;Name: &lt;/label&gt;
-&lt;input id=&quot;name&quot; type=&quot;text&quot; name=&quot;user_name&quot; placeholder=&quot;John Doe&quot; required /&gt;
-&lt;br /&gt;
+&lt;input id=&quot;name&quot; type=&quot;text&quot; name=&quot;user_name&quot; placeholder=&quot;John Doe&quot; required&gt;
+&lt;br&gt;
 
 &lt;label for=&quot;email&quot;&gt;Email: &lt;/label&gt;
-&lt;input id=&quot;email&quot; type=&quot;email&quot; name=&quot;email&quot; placeholder=&quot;example@mail.com&quot; required /&gt;
-&lt;br /&gt;
+&lt;input id=&quot;email&quot; type=&quot;email&quot; name=&quot;email&quot; placeholder=&quot;example@mail.com&quot; required&gt;
+&lt;br&gt;
 
 &lt;label for=&quot;desc&quot;&gt;Message: &lt;/label&gt;
 &lt;textarea id=&quot;desc&quot; name=&quot;comment&quot; placeholder=&quot;Write here...&quot;&gt;&lt;/textarea&gt;
-&lt;br /&gt;
+&lt;br&gt;
 
 &lt;label&gt;
-    &lt;input type=&quot;checkbox&quot; name=&quot;subscribe&quot; checked /&gt;
+    &lt;input type=&quot;checkbox&quot; name=&quot;subscribe&quot; checked&gt;
     Subscribe
 &lt;/label&gt;
-&lt;br /&gt;
+&lt;br&gt;
 
 &lt;label&gt;
     &lt;input
@@ -175,7 +175,7 @@
         type=&quot;radio&quot;
         name=&quot;mode&quot;
         value=&quot;online&quot;
-        checked /&gt;
+        checked&gt;
     Online
 &lt;/label&gt;
 
@@ -184,14 +184,14 @@
         id=&quot;radio-offline&quot;
         type=&quot;radio&quot;
         name=&quot;mode&quot;
-        value=&quot;offline&quot; /&gt;
+        value=&quot;offline&quot;&gt;
     Offline
 &lt;/label&gt;
-&lt;br /&gt;
+&lt;br&gt;
 
-&lt;input type=&quot;submit&quot; name=&quot;action&quot; value=&quot;Send&quot; /&gt;
+&lt;input type=&quot;submit&quot; name=&quot;action&quot; value=&quot;Send&quot;&gt;
 
-&lt;input type=&quot;submit&quot; name=&quot;action&quot; value=&quot;Cancel&quot; formnovalidate /&gt;
+&lt;input type=&quot;submit&quot; name=&quot;action&quot; value=&quot;Cancel&quot; formnovalidate&gt;
 
 &lt;/form&gt;
 </code></pre>
@@ -200,26 +200,26 @@
 <p class="marker">Rendered:</p>
 <form action="#" onsubmit="return false">
 <p><label for="name">Name: </label>
-<input id="name" type="text" name="user_name" placeholder="John Doe" required />
-<br /></p>
+<input id="name" type="text" name="user_name" placeholder="John Doe" required>
+<br></p>
 <p><label for="email">Email: </label>
-<input id="email" type="email" name="email" placeholder="example@mail.com" required />
-<br /></p>
+<input id="email" type="email" name="email" placeholder="example@mail.com" required>
+<br></p>
 <p><label for="desc">Message: </label></p>
 <textarea id="desc" name="comment" placeholder="Write here..."></textarea>
-<br />
+<br>
 <label>
-    <input type="checkbox" name="subscribe" checked />
+    <input type="checkbox" name="subscribe" checked>
     Subscribe
 </label>
-<br />
+<br>
 <label>
     <input
         id="radio-online"
         type="radio"
         name="mode"
         value="online"
-        checked />
+        checked>
     Online
 </label>
 <label>
@@ -227,12 +227,12 @@
         id="radio-offline"
         type="radio"
         name="mode"
-        value="offline" />
+        value="offline">
     Offline
 </label>
-<br />
-<input type="submit" name="action" value="Send" />
-<input type="submit" name="action" value="Cancel" formnovalidate />
+<br>
+<input type="submit" name="action" value="Send">
+<input type="submit" name="action" value="Cancel" formnovalidate>
 </form>
 </article>
         </main>

@@ -29,8 +29,8 @@ Example: {.marker}
 ```html
 <address>
   <p>
-    1234 Elm Street<br />
-    Springfield, IL 62701<br />
+    1234 Elm Street<br>
+    Springfield, IL 62701<br>
     USA
   </p>
   <p>Phone: <a href="tel:+15555555555">+1 (555) 555-5555</a></p>
@@ -41,8 +41,8 @@ Rendered: {.marker}
 
 <address>
   <p>
-    1234 Elm Street<br />
-    Springfield, IL 62701<br />
+    1234 Elm Street<br>
+    Springfield, IL 62701<br>
     USA
   </p>
   <p>Phone: <a href="tel:+15555555555">+1 (555) 555-5555</a></p>

@@ -24,7 +24,7 @@ SVG is a **vector image format** — unlike raster formats (`JPG`, `PNG`), which
 
 ```html
 <svg width="24" height="24" viewBox="0 0 24 24">
-  <circle cx="12" cy="12" r="10" fill="red" />
+  <circle cx="12" cy="12" r="10" fill="red">
 </svg>
 ```
 
@@ -35,7 +35,7 @@ SVG is a **vector image format** — unlike raster formats (`JPG`, `PNG`), which
 
 ###### 2. External SVG — as a regular image
 
-`<img src="https://example.com/icon.svg" alt="icon" />`{.language-html}
+`<img src="https://example.com/icon.svg" alt="icon">`{.language-html}
 
 - Used like any image (`<img>` tag).
 - No access to internal SVG structure.

@@ -10,7 +10,7 @@ Often times you will see multiple link elements inside a professional codebase t
 
 Code Example: {.marker}  
 
-`<link rel="stylesheet" href="./styles.css" />` {.language-html}
+`<link rel="stylesheet" href="./styles.css">` {.language-html}
 
 rel attribute: {.marker}  
 

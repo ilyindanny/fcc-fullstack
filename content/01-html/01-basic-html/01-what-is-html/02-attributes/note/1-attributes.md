@@ -17,7 +17,7 @@ An attribute is a value placed inside the opening tag of an HTML element. Attrib
 
 `<img>`{.marker}  
 
-- `<img src="image.jpg" alt="A beautiful image" />` {.language-html}
+- `<img src="image.jpg" alt="A beautiful image">` {.language-html}
     
 
 `<input>`{.marker}  

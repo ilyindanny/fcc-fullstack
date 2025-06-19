@@ -8,7 +8,7 @@ This is a protocol to control how your website's content appears across various 
 
 The first important OG property to include would be the title. Here is an example of setting the OG title for the freeCodeCamp homepage:
 
-`<meta content="freeCodeCamp.org" property="og:title" />` {.language-html}
+`<meta content="freeCodeCamp.org" property="og:title">` {.language-html}
 
 The whole Head: {.marker}  
 

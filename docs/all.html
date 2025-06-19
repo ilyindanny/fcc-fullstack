@@ -53,7 +53,7 @@
 </ul>
 <p><code class="marker">&lt;img&gt;</code></p>
 <ul>
-<li class="language-html"><code>&lt;img src=&quot;image.jpg&quot; alt=&quot;A beautiful image&quot; /&gt;</code></li>
+<li class="language-html"><code>&lt;img src=&quot;image.jpg&quot; alt=&quot;A beautiful image&quot;&gt;</code></li>
 </ul>
 <p><code class="marker">&lt;input&gt;</code></p>
 <ul>
@@ -143,7 +143,7 @@
 <p>The <code>&lt;link&gt;</code> element is used to link to external resources</p>
 <p>Often times you will see multiple link elements inside a professional codebase that link to different stylesheets, fonts, and icons.</p>
 <p class="marker">Code Example:</p>
-<p class="language-html"><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;./styles.css&quot; /&gt;</code></p>
+<p class="language-html"><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;./styles.css&quot;&gt;</code></p>
 <p class="marker">rel attribute:</p>
 <p>The <code>rel</code> attribute (short for &quot;relationship&quot;) defines the type of relationship between the current HTML document and the linked external resource. This helps the browser understand the purpose of the link.</p>
 <p class="marker">Common rel values:</p>
@@ -168,12 +168,12 @@
 <pre><code class="language-html">    &lt;!DOCTYPE html&gt;
     &lt;html lang=&quot;en&quot;&gt;
       &lt;head&gt;
-        &lt;meta charset=&quot;utf-8&quot; /&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
         &lt;meta
            name=&quot;viewport&quot;
-           content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+           content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
         &lt;title&gt;freeCodeCamp&lt;/title&gt;
-        &lt;link rel=&quot;stylesheet&quot; href=&quot;./styles.css&quot; /&gt;
+        &lt;link rel=&quot;stylesheet&quot; href=&quot;./styles.css&quot;&gt;
       &lt;/head&gt;
       &lt;body&gt;
       &lt;/body&gt;
@@ -291,7 +291,7 @@
             <article id="lesson-0012"><h4>What Is Open Graph</h4>
 <p>This is a protocol to control how your website's content appears across various social media platforms, such as Facebook, LinkedIn, and many more.</p>
 <p>The first important OG property to include would be the title. Here is an example of setting the OG title for the freeCodeCamp homepage:</p>
-<p class="language-html"><code>&lt;meta content=&quot;freeCodeCamp.org&quot; property=&quot;og:title&quot; /&gt;</code></p>
+<p class="language-html"><code>&lt;meta content=&quot;freeCodeCamp.org&quot; property=&quot;og:title&quot;&gt;</code></p>
 <p class="marker">The whole Head:</p>
 <pre><code class="language-html">    &lt;head&gt;
         &lt;meta charset=&quot;utf-8&quot;&gt;
@@ -471,8 +471,8 @@
 </ul>
 <p class="marker">Example:</p>
 <pre><code class="language-html">&lt;audio controls&gt;
-  &lt;source src=&quot;sound.ogg&quot; type=&quot;audio/ogg&quot; /&gt;
-  &lt;source src=&quot;sound.mp3&quot; type=&quot;audio/mpeg&quot; /&gt;
+  &lt;source src=&quot;sound.ogg&quot; type=&quot;audio/ogg&quot;&gt;
+  &lt;source src=&quot;sound.mp3&quot; type=&quot;audio/mpeg&quot;&gt;
 &lt;/audio&gt;
 </code></pre>
 <h5>3. Common Attributes (<code>&lt;audio&gt;</code> and <code>&lt;video&gt;</code>)</h5>
@@ -503,8 +503,8 @@
 <h5>5. Using Source for Fallback</h5>
 <p>The browser picks the first supported format:</p>
 <pre><code class="language-html">&lt;video controls&gt;
-  &lt;source src=&quot;movie.webm&quot; type=&quot;video/webm&quot; /&gt;
-  &lt;source src=&quot;movie.mp4&quot; type=&quot;video/mp4&quot; /&gt;
+  &lt;source src=&quot;movie.webm&quot; type=&quot;video/webm&quot;&gt;
+  &lt;source src=&quot;movie.mp4&quot; type=&quot;video/mp4&quot;&gt;
 &lt;/video&gt;
 </code></pre>
 <h5>6. YouTube / Vimeo Embeds</h5>
@@ -563,7 +563,7 @@ audio.muted = true;
 <h5>Use Cases (How to Use SVG)</h5>
 <h6>1. Inline SVG — directly in HTML</h6>
 <pre><code class="language-html">&lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;
-  &lt;circle cx=&quot;12&quot; cy=&quot;12&quot; r=&quot;10&quot; fill=&quot;red&quot; /&gt;
+  &lt;circle cx=&quot;12&quot; cy=&quot;12&quot; r=&quot;10&quot; fill=&quot;red&quot;&gt;
 &lt;/svg&gt;
 </code></pre>
 <ul>
@@ -572,7 +572,7 @@ audio.muted = true;
 <li>Ideal for interactive or animated graphics.</li>
 </ul>
 <h6>2. External SVG — as a regular image</h6>
-<p><code class="language-html">&lt;img src=&quot;https://example.com/icon.svg&quot; alt=&quot;icon&quot; /&gt;</code></p>
+<p><code class="language-html">&lt;img src=&quot;https://example.com/icon.svg&quot; alt=&quot;icon&quot;&gt;</code></p>
 <ul>
 <li>Used like any image (<code>&lt;img&gt;</code> tag).</li>
 <li>No access to internal SVG structure.</li>
@@ -1275,8 +1275,8 @@ Better than generic <code>&lt;div&gt;</code> for contact blocks.</p>
 <p class="marker">Example:</p>
 <pre><code class="language-html">&lt;address&gt;
   &lt;p&gt;
-    1234 Elm Street&lt;br /&gt;
-    Springfield, IL 62701&lt;br /&gt;
+    1234 Elm Street&lt;br&gt;
+    Springfield, IL 62701&lt;br&gt;
     USA
   &lt;/p&gt;
   &lt;p&gt;Phone: &lt;a href=&quot;tel:+15555555555&quot;&gt;+1 (555) 555-5555&lt;/a&gt;&lt;/p&gt;
@@ -1286,8 +1286,8 @@ Better than generic <code>&lt;div&gt;</code> for contact blocks.</p>
 <p class="marker">Rendered:</p>
 <address>
   <p>
-    1234 Elm Street<br />
-    Springfield, IL 62701<br />
+    1234 Elm Street<br>
+    Springfield, IL 62701<br>
     USA
   </p>
   <p>Phone: <a href="tel:+15555555555">+1 (555) 555-5555</a></p>
@@ -1649,13 +1649,13 @@ This group of elements provides <strong>semantic meaning</strong> — not stylin
 <ul>
 <li>
 <p>Implicit association (nesting), good for checkboxes and radio-buttons:</p>
-<pre><code class="language-html">&lt;label&gt;Username: &lt;input type=&quot;text&quot; /&gt;&lt;/label&gt;
+<pre><code class="language-html">&lt;label&gt;Username: &lt;input type=&quot;text&quot;&gt;&lt;/label&gt;
 </code></pre>
 </li>
 <li>
 <p>Explicit association (via <code>for</code> and <code>id</code>) better for text tags:</p>
 <pre><code class="language-html">&lt;label for=&quot;email&quot;&gt;Email:&lt;/label&gt;
-&lt;input id=&quot;email&quot; type=&quot;email&quot; /&gt;
+&lt;input id=&quot;email&quot; type=&quot;email&quot;&gt;
 </code></pre>
 </li>
 <li>
@@ -1673,22 +1673,22 @@ This group of elements provides <strong>semantic meaning</strong> — not stylin
 <pre><code class="language-html">&lt;form action=&quot;&quot;&gt;
 
 &lt;label for=&quot;name&quot;&gt;Name: &lt;/label&gt;
-&lt;input id=&quot;name&quot; type=&quot;text&quot; name=&quot;user_name&quot; placeholder=&quot;John Doe&quot; required /&gt;
-&lt;br /&gt;
+&lt;input id=&quot;name&quot; type=&quot;text&quot; name=&quot;user_name&quot; placeholder=&quot;John Doe&quot; required&gt;
+&lt;br&gt;
 
 &lt;label for=&quot;email&quot;&gt;Email: &lt;/label&gt;
-&lt;input id=&quot;email&quot; type=&quot;email&quot; name=&quot;email&quot; placeholder=&quot;example@mail.com&quot; required /&gt;
-&lt;br /&gt;
+&lt;input id=&quot;email&quot; type=&quot;email&quot; name=&quot;email&quot; placeholder=&quot;example@mail.com&quot; required&gt;
+&lt;br&gt;
 
 &lt;label for=&quot;desc&quot;&gt;Message: &lt;/label&gt;
 &lt;textarea id=&quot;desc&quot; name=&quot;comment&quot; placeholder=&quot;Write here...&quot;&gt;&lt;/textarea&gt;
-&lt;br /&gt;
+&lt;br&gt;
 
 &lt;label&gt;
-    &lt;input type=&quot;checkbox&quot; name=&quot;subscribe&quot; checked /&gt;
+    &lt;input type=&quot;checkbox&quot; name=&quot;subscribe&quot; checked&gt;
     Subscribe
 &lt;/label&gt;
-&lt;br /&gt;
+&lt;br&gt;
 
 &lt;label&gt;
     &lt;input
@@ -1696,7 +1696,7 @@ This group of elements provides <strong>semantic meaning</strong> — not stylin
         type=&quot;radio&quot;
         name=&quot;mode&quot;
         value=&quot;online&quot;
-        checked /&gt;
+        checked&gt;
     Online
 &lt;/label&gt;
 
@@ -1705,14 +1705,14 @@ This group of elements provides <strong>semantic meaning</strong> — not stylin
         id=&quot;radio-offline&quot;
         type=&quot;radio&quot;
         name=&quot;mode&quot;
-        value=&quot;offline&quot; /&gt;
+        value=&quot;offline&quot;&gt;
     Offline
 &lt;/label&gt;
-&lt;br /&gt;
+&lt;br&gt;
 
-&lt;input type=&quot;submit&quot; name=&quot;action&quot; value=&quot;Send&quot; /&gt;
+&lt;input type=&quot;submit&quot; name=&quot;action&quot; value=&quot;Send&quot;&gt;
 
-&lt;input type=&quot;submit&quot; name=&quot;action&quot; value=&quot;Cancel&quot; formnovalidate /&gt;
+&lt;input type=&quot;submit&quot; name=&quot;action&quot; value=&quot;Cancel&quot; formnovalidate&gt;
 
 &lt;/form&gt;
 </code></pre>
@@ -1721,26 +1721,26 @@ This group of elements provides <strong>semantic meaning</strong> — not stylin
 <p class="marker">Rendered:</p>
 <form action="#" onsubmit="return false">
 <p><label for="name">Name: </label>
-<input id="name" type="text" name="user_name" placeholder="John Doe" required />
-<br /></p>
+<input id="name" type="text" name="user_name" placeholder="John Doe" required>
+<br></p>
 <p><label for="email">Email: </label>
-<input id="email" type="email" name="email" placeholder="example@mail.com" required />
-<br /></p>
+<input id="email" type="email" name="email" placeholder="example@mail.com" required>
+<br></p>
 <p><label for="desc">Message: </label></p>
 <textarea id="desc" name="comment" placeholder="Write here..."></textarea>
-<br />
+<br>
 <label>
-    <input type="checkbox" name="subscribe" checked />
+    <input type="checkbox" name="subscribe" checked>
     Subscribe
 </label>
-<br />
+<br>
 <label>
     <input
         id="radio-online"
         type="radio"
         name="mode"
         value="online"
-        checked />
+        checked>
     Online
 </label>
 <label>
@@ -1748,12 +1748,12 @@ This group of elements provides <strong>semantic meaning</strong> — not stylin
         id="radio-offline"
         type="radio"
         name="mode"
-        value="offline" />
+        value="offline">
     Offline
 </label>
-<br />
-<input type="submit" name="action" value="Send" />
-<input type="submit" name="action" value="Cancel" formnovalidate />
+<br>
+<input type="submit" name="action" value="Send">
+<input type="submit" name="action" value="Cancel" formnovalidate>
 </form>
 </article>
         
@@ -1823,7 +1823,7 @@ This group of elements provides <strong>semantic meaning</strong> — not stylin
 <p class="marker">Example:</p>
 <p><code class="language-html">&lt;button type=&quot;button&quot;&gt;Show Alert&lt;/button&gt;</code></p>
 <p class="marker">An analog of the &quot;input&quot; element:</p>
-<p><code class="language-html">&lt;input type=&quot;button&quot; value=&quot;Click me&quot; /&gt;</code></p>
+<p><code class="language-html">&lt;input type=&quot;button&quot; value=&quot;Click me&quot;&gt;</code></p>
 <hr>
 <h5><code>type=&quot;submit&quot;</code></h5>
 <ul>
@@ -1832,12 +1832,12 @@ This group of elements provides <strong>semantic meaning</strong> — not stylin
 </ul>
 <p class="marker">Example:</p>
 <pre><code class="language-html">&lt;form&gt;
-  &lt;input type=&quot;email&quot; name=&quot;email&quot; /&gt;
+  &lt;input type=&quot;email&quot; name=&quot;email&quot;&gt;
   &lt;button type=&quot;submit&quot;&gt;Submit&lt;/button&gt;
 &lt;/form&gt;
 </code></pre>
 <p class="marker">An analog of the &quot;input&quot; element:</p>
-<p><code class="language-html">&lt;input type=&quot;submit&quot; value=&quot;Submit&quot; /&gt;</code></p>
+<p><code class="language-html">&lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;</code></p>
 <h5><code>type=&quot;reset&quot;</code></h5>
 <ul>
 <li>Resets all form fields to their initial values.</li>
@@ -1845,12 +1845,12 @@ This group of elements provides <strong>semantic meaning</strong> — not stylin
 </ul>
 <p class="marker">Example:</p>
 <pre><code class="language-html">&lt;form&gt;
-  &lt;input type=&quot;email&quot; /&gt;
+  &lt;input type=&quot;email&quot;&gt;
   &lt;button type=&quot;reset&quot;&gt;Reset&lt;/button&gt;
 &lt;/form&gt;
 </code></pre>
 <p class="marker">An analog of the &quot;input&quot; element:</p>
-<p><code class="language-html">&lt;input type=&quot;reset&quot; value=&quot;Reset&quot; /&gt;</code></p>
+<p><code class="language-html">&lt;input type=&quot;reset&quot; value=&quot;Reset&quot;&gt;</code></p>
 <h5><code>&lt;button&gt;</code> vs <code>&lt;input type=&quot;...&quot;&gt;</code></h5>
 <ul>
 <li><code>&lt;button&gt;</code> supports nested content like text, icons, or HTML.</li>
@@ -1892,31 +1892,31 @@ This group of elements provides <strong>semantic meaning</strong> — not stylin
 <h4>Main Validation Attributes</h4>
 <h5><code>required</code></h5>
 <p>Ensures the field must be filled:</p>
-<p><code class="language-html">&lt;input type=&quot;email&quot; required /&gt;</code></p>
+<p><code class="language-html">&lt;input type=&quot;email&quot; required&gt;</code></p>
 <h5><code>type=&quot;...&quot;</code></h5>
 <p>Some input types include built-in validation:</p>
-<pre><code class="language-html">&lt;input type=&quot;email&quot; /&gt;      &lt;!-- basic email format check --&gt;
-&lt;input type=&quot;url&quot; /&gt;        &lt;!-- basic URL format --&gt;
-&lt;input type=&quot;tel&quot; /&gt;        &lt;!-- no validation by default --&gt;
-&lt;input type=&quot;password&quot; /&gt;   &lt;!-- input hidden --&gt;
+<pre><code class="language-html">&lt;input type=&quot;email&quot;&gt;      &lt;!-- basic email format check --&gt;
+&lt;input type=&quot;url&quot;&gt;        &lt;!-- basic URL format --&gt;
+&lt;input type=&quot;tel&quot;&gt;        &lt;!-- no validation by default --&gt;
+&lt;input type=&quot;password&quot;&gt;   &lt;!-- input hidden --&gt;
 </code></pre>
 <h5><code>minlength</code>, <code>maxlength</code></h5>
 <p>Set minimum and maximum number of characters:</p>
-<p><code class="language-html">&lt;input minlength=&quot;4&quot; maxlength=&quot;64&quot; /&gt;</code></p>
+<p><code class="language-html">&lt;input minlength=&quot;4&quot; maxlength=&quot;64&quot;&gt;</code></p>
 <h5><code>pattern</code></h5>
 <p>Regex-based validation:</p>
-<p><code class="language-html">&lt;input type=&quot;text&quot; pattern=&quot;\d{3}-\d{3}&quot; /&gt;</code></p>
+<p><code class="language-html">&lt;input type=&quot;text&quot; pattern=&quot;\d{3}-\d{3}&quot;&gt;</code></p>
 <h5><code>min</code>, <code>max</code></h5>
 <p>Define numeric/date boundaries:</p>
-<pre><code class="language-html">&lt;input type=&quot;number&quot; min=&quot;1&quot; max=&quot;10&quot; /&gt;
-&lt;input type=&quot;date&quot; min=&quot;2020-01-01&quot; max=&quot;2030-01-01&quot; /&gt;
+<pre><code class="language-html">&lt;input type=&quot;number&quot; min=&quot;1&quot; max=&quot;10&quot;&gt;
+&lt;input type=&quot;date&quot; min=&quot;2020-01-01&quot; max=&quot;2030-01-01&quot;&gt;
 </code></pre>
 <h5><code>step</code></h5>
 <p>Specify step intervals for number/date/range:</p>
-<p><code class="language-html">&lt;input type=&quot;number&quot; step=&quot;0.01&quot; /&gt;</code></p>
+<p><code class="language-html">&lt;input type=&quot;number&quot; step=&quot;0.01&quot;&gt;</code></p>
 <h5><code>autocomplete</code></h5>
 <p>Not a validation attribute, but enhances UX by suggesting previously entered values:</p>
-<p><code class="language-html">&lt;input name=&quot;email&quot; autocomplete=&quot;email&quot; /&gt;</code></p>
+<p><code class="language-html">&lt;input name=&quot;email&quot; autocomplete=&quot;email&quot;&gt;</code></p>
 <h4>Form- and Button-level Attributes</h4>
 <h5><code>novalidate</code></h5>
 <p>Disables validation for the entire form:</p>
@@ -1954,7 +1954,7 @@ This group of elements provides <strong>semantic meaning</strong> — not stylin
 <h5>Basic email validation:</h5>
 <pre><code class="language-html">&lt;form&gt;
   &lt;label&gt;Email:&lt;/label&gt;
-  &lt;input type=&quot;email&quot; required /&gt;
+  &lt;input type=&quot;email&quot; required&gt;
   &lt;button type=&quot;submit&quot;&gt;Submit&lt;/button&gt;
 &lt;/form&gt;
 </code></pre>
@@ -1967,9 +1967,9 @@ This group of elements provides <strong>semantic meaning</strong> — not stylin
 /&gt;
 </code></pre>
 <h5>Pattern-matching:</h5>
-<p><code class="language-html">&lt;input type=&quot;text&quot; pattern=&quot;\d{3}-\d{3}&quot; /&gt;</code></p>
+<p><code class="language-html">&lt;input type=&quot;text&quot; pattern=&quot;\d{3}-\d{3}&quot;&gt;</code></p>
 <h5>Numeric range with step:</h5>
-<p><code class="language-html">&lt;input type=&quot;number&quot; min=&quot;0&quot; max=&quot;100&quot; step=&quot;5&quot; /&gt;</code></p>
+<p><code class="language-html">&lt;input type=&quot;number&quot; min=&quot;0&quot; max=&quot;100&quot; step=&quot;5&quot;&gt;</code></p>
 <h5>Submit button bypassing validation:</h5>
 <p><code class="language-html">&lt;button type=&quot;submit&quot; formnovalidate&gt;Cancel&lt;/button&gt;</code></p>
 <h5>JS form validation:</h5>
@@ -1984,11 +1984,11 @@ if (form.checkValidity()) {
 <p class="marker">Rendered examples:</p>
 <form action="#" onsubmit="return false">
 <label for="required">required:</label>
-<input required id="required" type="text" name="form" />
-<br />
+<input required id="required" type="text" name="form">
+<br>
 <p><label for="password">password:</label>
-<input required id="password" type="password" name="form" />
-<br /></p>
+<input required id="password" type="password" name="form">
+<br></p>
 <p><label for="length">tel (min 5 - max 9):</label>
 <input
 required
@@ -1996,16 +1996,16 @@ id="length"
 type="tel"
 name="form"
 minlength="5"
-maxlength="9" />
-<br /></p>
+maxlength="9">
+<br></p>
 <p><label for="pattern">pattern &quot;000-000&quot;:</label>
 <input
 required
 id="pattern"
 type="text"
 name="form"
-pattern="\d{3}-\d{3}" />
-<br /></p>
+pattern="\d{3}-\d{3}">
+<br></p>
 <p><label for="minmax">min-max (1-10):</label>
 <input
 required
@@ -2013,17 +2013,17 @@ id="minmax"
 type="number"
 name="form"
 min="1"
-max="10" />
-<br /></p>
+max="10">
+<br></p>
 <p><label for="autocom">Autocomplete email:</label>
 <input
 required
 id="autocom"
 type="email"
 name="form"
-autocomplete="email" />
-<br /></p>
-<input type="submit" value="Submit" />
+autocomplete="email">
+<br></p>
+<input type="submit" value="Submit">
 </form>
 </article>
         

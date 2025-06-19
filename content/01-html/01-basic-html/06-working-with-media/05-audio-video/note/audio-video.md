@@ -27,8 +27,8 @@ Example: {.marker}
 
 ```html
 <audio controls>
-  <source src="sound.ogg" type="audio/ogg" />
-  <source src="sound.mp3" type="audio/mpeg" />
+  <source src="sound.ogg" type="audio/ogg">
+  <source src="sound.mp3" type="audio/mpeg">
 </audio>
 ```
 
@@ -64,8 +64,8 @@ The browser picks the first supported format:
 
 ```html
 <video controls>
-  <source src="movie.webm" type="video/webm" />
-  <source src="movie.mp4" type="video/mp4" />
+  <source src="movie.webm" type="video/webm">
+  <source src="movie.mp4" type="video/mp4">
 </video>
 ```
 

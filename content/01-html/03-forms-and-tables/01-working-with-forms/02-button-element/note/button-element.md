@@ -25,7 +25,7 @@ Example: {.marker}
 
 An analog of the "input" element: {.marker}  
 
-`<input type="button" value="Click me" />`{.language-html}  
+`<input type="button" value="Click me">`{.language-html}  
 
 ---
 
@@ -38,14 +38,14 @@ Example: {.marker}
 
 ```html
 <form>
-  <input type="email" name="email" />
+  <input type="email" name="email">
   <button type="submit">Submit</button>
 </form>
 ```
 
 An analog of the "input" element: {.marker}  
 
-`<input type="submit" value="Submit" />`{.language-html}
+`<input type="submit" value="Submit">`{.language-html}
 
 
 
@@ -58,14 +58,14 @@ Example: {.marker}
 
 ```html
 <form>
-  <input type="email" />
+  <input type="email">
   <button type="reset">Reset</button>
 </form>
 ```
 
 An analog of the "input" element: {.marker}  
 
-`<input type="reset" value="Reset" />`{.language-html}  
+`<input type="reset" value="Reset">`{.language-html}  
 
 
 ##### `<button>` vs `<input type="...">`
