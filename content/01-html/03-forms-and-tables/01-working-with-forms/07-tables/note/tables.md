@@ -89,34 +89,21 @@ Example: {.marker}
 
 Rendered: {.marker}  
 
-<table>
-
-<style>
-table {
-  border-collapse: collapse;
-  width: 100%;
-}
-th, td {
-  border: 1px solid #ccc;
-  padding: 8px;
-}
-</style>
-
-<thead>
-<tr>
-  <th scope="col">Name</th>
-  <th scope="col">Age</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-  <th scope="row">Anna</th>
-  <td>30</td>
-</tr>
-<tr>
-  <th scope="row">Ilya</th>
-  <td>25</td>
-</tr>
-</tbody>
-
+<table style="border-collapse: collapse; width: 100%;">
+  <thead>
+    <tr>
+      <th scope="col" style="border: 1px solid #ccc; padding: 8px;">Name</th>
+      <th scope="col" style="border: 1px solid #ccc; padding: 8px;">Age</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row" style="border: 1px solid #ccc; padding: 8px;">Anna</th>
+      <td style="border: 1px solid #ccc; padding: 8px;">30</td>
+    </tr>
+    <tr>
+      <th scope="row" style="border: 1px solid #ccc; padding: 8px;">Ilya</th>
+      <td style="border: 1px solid #ccc; padding: 8px;">25</td>
+    </tr>
+  </tbody>
 </table>

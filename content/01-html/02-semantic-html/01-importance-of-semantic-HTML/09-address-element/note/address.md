@@ -28,7 +28,6 @@ Example: {.marker}
 
 ```html
 <address>
-  <h2>Company Name</h2>
   <p>
     1234 Elm Street<br />
     Springfield, IL 62701<br />
@@ -41,7 +40,6 @@ Example: {.marker}
 Rendered: {.marker}  
 
 <address>
-  <h4>Company Name</h4>
   <p>
     1234 Elm Street<br />
     Springfield, IL 62701<br />
@@ -64,7 +62,7 @@ Email Links: {.marker}
 
 Use `mailto:` to open email clients:  
 
-`<a href="mailto:user@example.com">Email</a>` {language-html}  
+`<a href="mailto:user@example.com">Email</a>`{.language-html}  
 
 ⚠️ Can be used by spammers (visible in source)
 

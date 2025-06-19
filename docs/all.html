@@ -1339,7 +1339,6 @@ Better than generic <code>&lt;div&gt;</code> for contact blocks.</p>
 </ul>
 <p class="marker">Example:</p>
 <pre><code class="language-html">&lt;address&gt;
-  &lt;h2&gt;Company Name&lt;/h2&gt;
   &lt;p&gt;
     1234 Elm Street&lt;br /&gt;
     Springfield, IL 62701&lt;br /&gt;
@@ -1351,7 +1350,6 @@ Better than generic <code>&lt;div&gt;</code> for contact blocks.</p>
 </code></pre>
 <p class="marker">Rendered:</p>
 <address>
-  <h4>Company Name</h4>
   <p>
     1234 Elm Street<br />
     Springfield, IL 62701<br />
@@ -1366,7 +1364,7 @@ Better than generic <code>&lt;div&gt;</code> for contact blocks.</p>
 <code>&lt;a href=&quot;tel:+1234567890&quot;&gt;Call us&lt;/a&gt;</code></p>
 <p class="marker">Email Links:</p>
 <p>Use <code>mailto:</code> to open email clients:</p>
-<p language-html=""><code>&lt;a href=&quot;mailto:user@example.com&quot;&gt;Email&lt;/a&gt;</code></p>
+<p><code class="language-html">&lt;a href=&quot;mailto:user@example.com&quot;&gt;Email&lt;/a&gt;</code></p>
 <p>⚠️ Can be used by spammers (visible in source)</p>
 <h5>Other Links</h5>
 <p>You can include links to social profiles or websites inside <code>&lt;address&gt;</code>.</p>
@@ -2218,7 +2216,7 @@ Avoid using tables for layout — that’s outdated and should be done with <str
   &lt;/tbody&gt;
   &lt;tfoot&gt;
     &lt;tr&gt;
-      &lt;th scope=&quot;row&quot;&gt;signatures&lt;/th&gt;
+      &lt;th scope=&quot;row&quot;&gt;Signatures&lt;/th&gt;
       &lt;td&gt;&lt;/td&gt;
       &lt;td&gt;&lt;/td&gt;
     &lt;/tr&gt;
@@ -2270,33 +2268,23 @@ Avoid using tables for layout — that’s outdated and should be done with <str
 <li>Keep structure <strong>logical and simple</strong></li>
 </ul>
 <p class="marker">Rendered:</p>
-<table>
-<style>
-table {
-  border-collapse: collapse;
-  width: 100%;
-}
-th, td {
-  border: 1px solid #ccc;
-  padding: 8px;
-}
-</style>
-<thead>
-<tr>
-  <th scope="col">Name</th>
-  <th scope="col">Age</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-  <th scope="row">Anna</th>
-  <td>30</td>
-</tr>
-<tr>
-  <th scope="row">Ilya</th>
-  <td>25</td>
-</tr>
-</tbody>
+<table style="border-collapse: collapse; width: 100%;">
+  <thead>
+    <tr>
+      <th scope="col" style="border: 1px solid #ccc; padding: 8px;">Name</th>
+      <th scope="col" style="border: 1px solid #ccc; padding: 8px;">Age</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row" style="border: 1px solid #ccc; padding: 8px;">Anna</th>
+      <td style="border: 1px solid #ccc; padding: 8px;">30</td>
+    </tr>
+    <tr>
+      <th scope="row" style="border: 1px solid #ccc; padding: 8px;">Ilya</th>
+      <td style="border: 1px solid #ccc; padding: 8px;">25</td>
+    </tr>
+  </tbody>
 </table>
 </article>
   
