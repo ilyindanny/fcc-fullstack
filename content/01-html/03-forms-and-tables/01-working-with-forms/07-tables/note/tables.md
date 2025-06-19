@@ -8,26 +8,26 @@ Use `<table>` only for **tabular data** — data that’s organized in rows and 
 Avoid using tables for layout — that’s outdated and should be done with **CSS Grid** or **Flexbox**.
 
 
-##### Structure
+Example: {.marker}  
 
 ```html
 <table>
   <thead>
     <tr>
-      <th>...</th>
+      <th scope="col">Name</th>
+      <th scope="col">Age</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>...</th>
-      <td>...</td>
+      <th scope="row">Anna</th>
+      <td>30</td>
+    </tr>
+    <tr>
+      <th scope="row">Ilya</th>
+      <td>25</td>
     </tr>
   </tbody>
-  <tfoot>
-    <tr>
-      <td colspan="2">...</td>
-    </tr>
-  </tfoot>
 </table>
 ```
 
@@ -80,43 +80,6 @@ Avoid using tables for layout — that’s outdated and should be done with **CS
 - Keep structure **logical and simple**
 
 
-Example: {.marker}  
-
-```html
-<table>
-  <thead>
-    <tr>
-      <th scope="col">Name</th>
-      <th scope="col">Age</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">Anna</th>
-      <td>30</td>
-    </tr>
-    <tr>
-      <th scope="row">Ilya</th>
-      <td>25</td>
-    </tr>
-  </tbody>
-</table>
-```
-
-Example of basic styling with CSS: {.marker}  
-
-```css
-table {
-  border-collapse: collapse;
-  width: 100%;
-}
-th, td {
-  border: 1px solid #ccc;
-  padding: 8px;
-}
-```
-
-
 Rendered: {.marker}  
 
 <table>
@@ -150,6 +113,3 @@ th, td {
 </tbody>
 
 </table>
-
-
-

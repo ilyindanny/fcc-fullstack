@@ -2198,24 +2198,24 @@ autocomplete="email" />
     <article><h4>Tables</h4>
 <p>Use <code>&lt;table&gt;</code> only for <strong>tabular data</strong> — data that’s organized in rows and columns.<br>
 Avoid using tables for layout — that’s outdated and should be done with <strong>CSS Grid</strong> or <strong>Flexbox</strong>.</p>
-<h5>Structure</h5>
+<p class="marker">Example:</p>
 <pre><code class="language-html">&lt;table&gt;
   &lt;thead&gt;
     &lt;tr&gt;
-      &lt;th&gt;...&lt;/th&gt;
+      &lt;th scope=&quot;col&quot;&gt;Name&lt;/th&gt;
+      &lt;th scope=&quot;col&quot;&gt;Age&lt;/th&gt;
     &lt;/tr&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;th&gt;...&lt;/th&gt;
-      &lt;td&gt;...&lt;/td&gt;
+      &lt;th scope=&quot;row&quot;&gt;Anna&lt;/th&gt;
+      &lt;td&gt;30&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th scope=&quot;row&quot;&gt;Ilya&lt;/th&gt;
+      &lt;td&gt;25&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
-  &lt;tfoot&gt;
-    &lt;tr&gt;
-      &lt;td colspan=&quot;2&quot;&gt;...&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tfoot&gt;
 &lt;/table&gt;
 </code></pre>
 <ul>
@@ -2262,36 +2262,6 @@ Avoid using tables for layout — that’s outdated and should be done with <str
 <li>Avoid overusing <code>rowspan</code> / <code>colspan</code> — it complicates accessibility</li>
 <li>Keep structure <strong>logical and simple</strong></li>
 </ul>
-<p class="marker">Example:</p>
-<pre><code class="language-html">&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th scope=&quot;col&quot;&gt;Name&lt;/th&gt;
-      &lt;th scope=&quot;col&quot;&gt;Age&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;th scope=&quot;row&quot;&gt;Anna&lt;/th&gt;
-      &lt;td&gt;30&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;th scope=&quot;row&quot;&gt;Ilya&lt;/th&gt;
-      &lt;td&gt;25&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-</code></pre>
-<p class="marker">Example of basic styling with CSS:</p>
-<pre><code class="language-css">table {
-  border-collapse: collapse;
-  width: 100%;
-}
-th, td {
-  border: 1px solid #ccc;
-  padding: 8px;
-}
-</code></pre>
 <p class="marker">Rendered:</p>
 <table>
 <style>
