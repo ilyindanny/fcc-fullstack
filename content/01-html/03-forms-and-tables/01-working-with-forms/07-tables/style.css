@@ -1,0 +1,43 @@
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+/* Общие стили для всех ячеек */
+th,
+td {
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  text-align: left;
+}
+
+/* Зелёный фон и жирный текст для первой строки (thead) */
+thead th {
+  background-color: #e0f5e0;
+  font-weight: bold;
+}
+
+/* Зелёный фон и жирный текст для первой колонки */
+thead th:first-child,
+tbody th,
+tfoot th:first-child {
+  background-color: #e0f5e0;
+  font-weight: bold;
+}
+
+/* Сиреневый фон футера */
+tfoot {
+  background-color: #f0e6ff;
+}
+
+/* Серая горизонтальная линия под первой строкой */
+thead tr {
+  border-bottom: 3px solid #888;
+}
+
+/* Серая вертикальная линия после первой колонки — по всей таблице */
+thead th:nth-child(2),
+tbody td:nth-child(2),
+tfoot td:nth-child(2) {
+  border-left: 3px solid #888;
+}

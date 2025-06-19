@@ -3,92 +3,164 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Form States</title>
+  <title>Validation</title>
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/prism.css">
 </head>
 <body>
 
   <main>
-    <article><h4>Form States</h4>
-<h5>Default state</h5>
+    <article><h4>Client-side Validation</h4>
 <ul>
-<li>Initial state when a form control is rendered.</li>
-<li>Editable, focusable, and included in form submission.</li>
+<li>Checks form data <em>before</em> submission.</li>
+<li>Runs in the browser (on the client side).</li>
+<li>Improves UX and prevents invalid data from being submitted.</li>
+<li>Does <strong>not</strong> replace server-side validation (security is always server-side).</li>
 </ul>
-<h5>Focused state</h5>
+<h4>Main Validation Attributes</h4>
+<h5><code>required</code></h5>
+<p>Ensures the field must be filled:</p>
+<p><code class="language-html">&lt;input type=&quot;email&quot; required /&gt;</code></p>
+<h5><code>type=&quot;...&quot;</code></h5>
+<p>Some input types include built-in validation:</p>
+<pre><code class="language-html">&lt;input type=&quot;email&quot; /&gt;      &lt;!-- basic email format check --&gt;
+&lt;input type=&quot;url&quot; /&gt;        &lt;!-- basic URL format --&gt;
+&lt;input type=&quot;tel&quot; /&gt;        &lt;!-- no validation by default --&gt;
+&lt;input type=&quot;password&quot; /&gt;   &lt;!-- input hidden --&gt;
+</code></pre>
+<h5><code>minlength</code>, <code>maxlength</code></h5>
+<p>Set minimum and maximum number of characters:</p>
+<p><code class="language-html">&lt;input minlength=&quot;4&quot; maxlength=&quot;64&quot; /&gt;</code></p>
+<h5><code>pattern</code></h5>
+<p>Regex-based validation:</p>
+<p><code class="language-html">&lt;input type=&quot;text&quot; pattern=&quot;\d{3}-\d{3}&quot; /&gt;</code></p>
+<h5><code>min</code>, <code>max</code></h5>
+<p>Define numeric/date boundaries:</p>
+<pre><code class="language-html">&lt;input type=&quot;number&quot; min=&quot;1&quot; max=&quot;10&quot; /&gt;
+&lt;input type=&quot;date&quot; min=&quot;2020-01-01&quot; max=&quot;2030-01-01&quot; /&gt;
+</code></pre>
+<h5><code>step</code></h5>
+<p>Specify step intervals for number/date/range:</p>
+<p><code class="language-html">&lt;input type=&quot;number&quot; step=&quot;0.01&quot; /&gt;</code></p>
+<h5><code>autocomplete</code></h5>
+<p>Not a validation attribute, but enhances UX by suggesting previously entered values:</p>
+<p><code class="language-html">&lt;input name=&quot;email&quot; autocomplete=&quot;email&quot; /&gt;</code></p>
+<h4>Form- and Button-level Attributes</h4>
+<h5><code>novalidate</code></h5>
+<p>Disables validation for the entire form:</p>
+<p><code class="language-html">&lt;form novalidate&gt;</code></p>
+<h5><code>formnovalidate</code></h5>
+<p>Disables validation only for a specific submit button:</p>
+<p><code class="language-html">&lt;button type=&quot;submit&quot; formnovalidate&gt;Cancel&lt;/button&gt;</code></p>
+<h4>Browser Behavior</h4>
 <ul>
-<li>Triggered when a user clicks or tabs into a form control.</li>
-<li>Browsers often show a blue outline or border.</li>
-<li>Can be styled via <code>input:focus</code>.</li>
-</ul>
-<h5>Disabled state</h5>
+<li>On invalid input:
 <ul>
-<li>Set using the <code>disabled</code> attribute.</li>
-<li>Cannot be edited, copied or focused.</li>
-<li>Excluded from form submission.</li>
-<li>Can be styled via <code>input:disabled</code>.</li>
+<li>Form submission is <strong>blocked</strong>.</li>
+<li>Invalid fields are <strong>highlighted</strong>.</li>
+<li>Default error messages are shown.</li>
 </ul>
-<p class="marker">Example:</p>
-<p><code class="language-html">&lt;input disabled type=&quot;email&quot;&gt;</code></p>
-<p class="marker">Rendered <code>disabled</code> form:</p>
-<input disabled type="email" name="email" placeholder="example@mail.com">
-<h5>Readonly state</h5>
+</li>
+<li>Pseudo-classes:
 <ul>
-<li>Set with the <code>readonly</code> attribute.</li>
-<li>Cannot be edited, <strong>but</strong> can still be focused.</li>
-<li>Included in form submission.</li>
-<li>Can be styled via <code>input[readonly]</code> attribute.</li>
+<li><code>:valid</code>, <code>:invalid</code> — useful for styling feedback.</li>
 </ul>
-<p class="marker">Example:</p>
-<p><code class="language-html">&lt;input readonly type=&quot;email&quot;&gt;</code></p>
-<p class="marker">Rendered <code>readonly</code> form:</p>
-<input readonly type="email" name="email" value="example@email.com">
-<h5>Invalid state</h5>
-<ul>
-<li>Triggered when input fails native validation (e.g. required, pattern, type mismatch).</li>
-<li>Shown automatically by the browser.</li>
-<li>Can be styled with <code>input:invalid</code>.</li>
+</li>
 </ul>
-<h5>Valid state</h5>
-<ul>
-<li>Input meets all native validation criteria.</li>
-<li>Can be styled via <code>input:valid</code>.</li>
-</ul>
-<h5>Hover state</h5>
-<ul>
-<li>When the user moves the mouse pointer over the element.</li>
-<li>Commonly used for visual feedback.</li>
-<li>Can be styled with <code>input:hover</code>.</li>
-</ul>
-<h5>Active state</h5>
-<ul>
-<li>Active while the element is being clicked (mouse button down).</li>
-<li>Good for button feedback.</li>
-<li>Can be styled with <code>button:active</code>.</li>
-</ul>
-<h5>Focus-visible (accessibility enhancement)</h5>
-<ul>
-<li><code>:focus-visible</code> only applies when focus was given via keyboard.</li>
-<li>Improves UX by avoiding unwanted outlines on mouse click.</li>
-<li>Can be styled with <code>input:focus-visible</code>.</li>
-</ul>
-<h5>Notes</h5>
-<ul>
-<li><code>readonly</code> allows copying but not editing.</li>
-<li><code>disabled</code> makes the field entirely inert and skipped in submission.</li>
-<li><code>:invalid</code> and <code>:valid</code> help with visual form validation.</li>
-<li><code>:focus-visible</code> is a best practice for accessibility (keyboard navigation).</li>
-<li>Combining these states in CSS allows for detailed form interaction design.</li>
-</ul>
+<h5>JavaScript API</h5>
+<h5>Check form validity:</h5>
+<p><code class="language-js">form.checkValidity(); // returns true or false</code></p>
+<h5>Trigger native error message:</h5>
+<p><code class="language-js">input.reportValidity(); // shows default validation popup</code></p>
+<h5>Custom validation with JS:</h5>
+<pre><code class="language-js">input.addEventListener(&quot;invalid&quot;, e =&gt; {
+  e.preventDefault();
+  alert(&quot;Custom validation message&quot;);
+});
+</code></pre>
+<p class="marker">Examples:</p>
+<h5>Basic email validation:</h5>
+<pre><code class="language-html">&lt;form&gt;
+  &lt;label&gt;Email:&lt;/label&gt;
+  &lt;input type=&quot;email&quot; required /&gt;
+  &lt;button type=&quot;submit&quot;&gt;Submit&lt;/button&gt;
+&lt;/form&gt;
+</code></pre>
+<h5>Email with length limits:</h5>
+<pre><code class="language-html">&lt;input
+  type=&quot;email&quot;
+  required
+  minlength=&quot;4&quot;
+  maxlength=&quot;64&quot;
+/&gt;
+</code></pre>
+<h5>Pattern-matching:</h5>
+<p><code class="language-html">&lt;input type=&quot;text&quot; pattern=&quot;\d{3}-\d{3}&quot; /&gt;</code></p>
+<h5>Numeric range with step:</h5>
+<p><code class="language-html">&lt;input type=&quot;number&quot; min=&quot;0&quot; max=&quot;100&quot; step=&quot;5&quot; /&gt;</code></p>
+<h5>Submit button bypassing validation:</h5>
+<p><code class="language-html">&lt;button type=&quot;submit&quot; formnovalidate&gt;Cancel&lt;/button&gt;</code></p>
+<h5>JS form validation:</h5>
+<pre><code class="language-js">const form = document.querySelector(&quot;form&quot;);
+
+if (form.checkValidity()) {
+  // proceed with submission
+} else {
+  form.reportValidity(); // show error messages
+}
+</code></pre>
+<p class="marker">Rendered examples:</p>
+<form action="#" onsubmit="return false">
+<label for="required">required:</label>
+<input required id="required" type="text" name="form" />
+<br />
+<p><label for="password">password:</label>
+<input required id="password" type="password" name="form" />
+<br /></p>
+<p><label for="length">tel (min 5 - max 9):</label>
+<input
+required
+id="length"
+type="tel"
+name="form"
+minlength="5"
+maxlength="9" />
+<br /></p>
+<p><label for="pattern">pattern &quot;000-000&quot;:</label>
+<input
+required
+id="pattern"
+type="text"
+name="form"
+pattern="\d{3}-\d{3}" />
+<br /></p>
+<p><label for="minmax">min-max (1-10):</label>
+<input
+required
+id="minmax"
+type="number"
+name="form"
+min="1"
+max="10" />
+<br /></p>
+<p><label for="autocom">Autocomplete email:</label>
+<input
+required
+id="autocom"
+type="email"
+name="form"
+autocomplete="email" />
+<br /></p>
+<input type="submit" value="Submit" />
+</form>
 </article>
   </main> 
 	
     <section class="navigation">
       <nav class="lesson-nav">
-        <a class="prev" href="lesson-0041.html">&larr; Validation</a>
+        <a class="prev" href="lesson-0041.html">&larr; Button Element</a>
         <a class="home" href="../index.html">Home</a>
-        <a class="next" href="lesson-0043.html">CSS example &rarr;</a>
+        <a class="next" href="lesson-0043.html">Form States &rarr;</a>
       </nav>
     </section>
   

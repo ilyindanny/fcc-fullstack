@@ -176,16 +176,24 @@
             "filename": "lesson-0039.html"
           },
           {
-            "title": "Button Element",
+            "title": "Label Element",
             "filename": "lesson-0040.html"
           },
           {
-            "title": "Validation",
+            "title": "Button Element",
             "filename": "lesson-0041.html"
           },
           {
-            "title": "Form States",
+            "title": "Validation",
             "filename": "lesson-0042.html"
+          },
+          {
+            "title": "Form States",
+            "filename": "lesson-0043.html"
+          },
+          {
+            "title": "Tables",
+            "filename": "lesson-0044.html"
           }
         ]
       }
@@ -201,7 +209,7 @@
         "lessons": [
           {
             "title": "CSS example",
-            "filename": "lesson-0043.html"
+            "filename": "lesson-0045.html"
           }
         ]
       }
