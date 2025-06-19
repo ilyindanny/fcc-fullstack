@@ -194,6 +194,10 @@
           {
             "title": "Tables",
             "filename": "lesson-0044.html"
+          },
+          {
+            "title": "Validators",
+            "filename": "lesson-0045.html"
           }
         ]
       }
@@ -209,7 +213,7 @@
         "lessons": [
           {
             "title": "CSS example",
-            "filename": "lesson-0045.html"
+            "filename": "lesson-0046.html"
           }
         ]
       }

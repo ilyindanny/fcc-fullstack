@@ -1,28 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CSS example</title>
-  <link rel="stylesheet" href="../css/style.css">
-  <link rel="stylesheet" href="../css/prism.css">
-</head>
-<body>
-
-  <main>
-    <article><h4>Comming Soon</h4>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Validators</title>
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="../css/prism.css">
+    </head>
+    <body>
+        <main>
+            <article id="lesson-0045"><h2>Validators</h2>
+<ul>
+<li>
+<p><strong>HTML is forgiving</strong>: Browsers auto-correct common mistakes (e.g. missing closing tags), but this can lead to unexpected rendering.</p>
+</li>
+<li>
+<p><strong>Validators catch structural errors</strong>: They check your HTML against the official specifications to ensure correctness and predictability.</p>
+</li>
+<li>
+<p><strong>Common mistake example</strong>:</p>
+<pre><code class="language-html">&lt;h2&gt;Missing closing tag
+&lt;p&gt;This paragraph might be treated as part of the heading!&lt;/p&gt;
+</code></pre>
+</li>
+<li>
+<p><strong>Benefits</strong>:</p>
+<ul>
+<li>Cleaner, more reliable HTML</li>
+<li>Better accessibility and cross-browser consistency</li>
+<li>Easier code reviews and maintenance</li>
+</ul>
+</li>
+<li>
+<p><strong>Popular tools</strong>:</p>
+<ul>
+<li><a href="https://validator.w3.org">W3C Validator</a></li>
+<li><a href="https://jsonformatter.org/html-validator">HTML Validator at jsonformatter.org</a></li>
+</ul>
+</li>
+<li>
+<p><strong>Pro tip</strong>: Even if the browser “accepts” your code, a validator helps you understand what’s <em>correct</em> vs what’s just <em>tolerated</em>.</p>
+</li>
+</ul>
 </article>
-  </main> 
-	
+        </main>
+        
     <section class="navigation">
       <nav class="lesson-nav">
         <a class="prev" href="lesson-0044.html">&larr; Tables</a>
         <a class="home" href="../index.html">Home</a>
-        <span class="empty"></span>
+        <a class="next" href="lesson-0046.html">CSS example &rarr;</a>
       </nav>
     </section>
   
-	
-	<script src="../js/prism.js"></script>
-</body>
+
+        <script src="../js/prism.js"></script>
+    </body>
 </html>

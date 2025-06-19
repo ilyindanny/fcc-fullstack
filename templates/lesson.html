@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ title }}</title>
-  <link rel="stylesheet" href="../css/style.css">
-  <link rel="stylesheet" href="../css/prism.css">
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{ title }}</title>
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="../css/prism.css">
+    </head>
+    <body>
+        <main>
+            <article id="lesson-{{ lessonId }}">
+				{{ content }}
+			</article>
+        </main>
+        {{ navigation }}
 
-  <main>
-    <article>
-      {{ content }}
-    </article>
-  </main> 
-	{{ navigation }}
-	
-	<script src="../js/prism.js"></script>
-</body>
+        <script src="../js/prism.js"></script>
+    </body>
 </html>

@@ -72,9 +72,7 @@ function generateAllContentAndLessons() {
         const inner = match ? match[1] : '[no content]';
 
         lessons += `
-          <article id="${anchorId}">
             ${inner}
-          </article>
           <hr class="lesson-divider">
         `;
       });
