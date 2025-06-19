@@ -28,6 +28,13 @@ Example: {.marker}
       <td>25</td>
     </tr>
   </tbody>
+  <tfoot>
+    <tr>
+      <th scope="row">Signatures</th>
+      <td></td>
+      <td></td>
+    </tr>
+  </tfoot>
 </table>
 ```
 

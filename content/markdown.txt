@@ -41,6 +41,8 @@ code
 
 | A | B | — table  
 |---|---|  
-| 1 | 2 |  
+| 1 | 2 |
+{.data-table}
+
 
 <p class="note">HTML</p> — inline HTML (if `html: true` is enabled)
