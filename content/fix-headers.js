@@ -89,3 +89,5 @@ updateMarkdownHeaders(startDirectory).then(() => {
 }).catch(err => {
   console.error('Произошла общая ошибка:', err);
 });
+
+require('./fix-void-elements.js');

@@ -3,113 +3,91 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Tables</title>
+        <title>Form States</title>
         <link rel="stylesheet" href="../css/style.css">
         <link rel="stylesheet" href="../css/prism.css">
     </head>
     <body>
         <main>
-            <article id="lesson-0044"><h4>Tables</h4>
-<p>Use <code>&lt;table&gt;</code> only for <strong>tabular data</strong> — data that’s organized in rows and columns.<br>
-Avoid using tables for layout — that’s outdated and should be done with <strong>CSS Grid</strong> or <strong>Flexbox</strong>.</p>
+            <article id="lesson-0044"><h4>Form States</h4>
+<h5>Default state</h5>
+<ul>
+<li>Initial state when a form control is rendered.</li>
+<li>Editable, focusable, and included in form submission.</li>
+</ul>
+<h5>Focused state</h5>
+<ul>
+<li>Triggered when a user clicks or tabs into a form control.</li>
+<li>Browsers often show a blue outline or border.</li>
+<li>Can be styled via <code>input:focus</code>.</li>
+</ul>
+<h5>Disabled state</h5>
+<ul>
+<li>Set using the <code>disabled</code> attribute.</li>
+<li>Cannot be edited, copied or focused.</li>
+<li>Excluded from form submission.</li>
+<li>Can be styled via <code>input:disabled</code>.</li>
+</ul>
 <p class="marker">Example:</p>
-<pre><code class="language-html">&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th scope=&quot;col&quot;&gt;Name&lt;/th&gt;
-      &lt;th scope=&quot;col&quot;&gt;Age&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;th scope=&quot;row&quot;&gt;Anna&lt;/th&gt;
-      &lt;td&gt;30&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;th scope=&quot;row&quot;&gt;Ilya&lt;/th&gt;
-      &lt;td&gt;25&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-  &lt;tfoot&gt;
-    &lt;tr&gt;
-      &lt;th scope=&quot;row&quot;&gt;Signatures&lt;/th&gt;
-      &lt;td&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tfoot&gt;
-&lt;/table&gt;
-</code></pre>
+<p><code class="language-html">&lt;input disabled type=&quot;email&quot;&gt;</code></p>
+<p class="marker">Rendered <code>disabled</code> form:</p>
+<input disabled type="email" name="email" placeholder="example@mail.com">
+<h5>Readonly state</h5>
 <ul>
-<li><code>&lt;table&gt;</code> — main container</li>
-<li><code>&lt;thead&gt;</code> — header section</li>
-<li><code>&lt;tbody&gt;</code> — main data</li>
-<li><code>&lt;tfoot&gt;</code> — footer (totals, notes)</li>
-<li><code>&lt;tr&gt;</code> — table row</li>
-<li><code>&lt;th&gt;</code> — header cell (bold, centered by default)</li>
-<li><code>&lt;td&gt;</code> — data cell</li>
+<li>Set with the <code>readonly</code> attribute.</li>
+<li>Cannot be edited, <strong>but</strong> can still be focused.</li>
+<li>Included in form submission.</li>
+<li>Can be styled via <code>input[readonly]</code> attribute.</li>
 </ul>
-<h5>Table Attributes</h5>
-<h6>General</h6>
+<p class="marker">Example:</p>
+<p><code class="language-html">&lt;input readonly type=&quot;email&quot;&gt;</code></p>
+<p class="marker">Rendered <code>readonly</code> form:</p>
+<input readonly type="email" name="email" value="example@email.com">
+<h5>Invalid state</h5>
 <ul>
-<li><code>id</code>, <code>class</code>, <code>style</code> — standard HTML attributes</li>
-<li>Prefer CSS over inline styles</li>
+<li>Triggered when input fails native validation (e.g. required, pattern, type mismatch).</li>
+<li>Shown automatically by the browser.</li>
+<li>Can be styled with <code>input:invalid</code>.</li>
 </ul>
-<h6><code>&lt;table&gt;</code></h6>
+<h5>Valid state</h5>
 <ul>
-<li><code>summary</code>, <code>border</code>, <code>width</code> — obsolete</li>
-<li>Use CSS for layout and borders</li>
+<li>Input meets all native validation criteria.</li>
+<li>Can be styled via <code>input:valid</code>.</li>
 </ul>
-<h6><code>&lt;th&gt;</code>, <code>&lt;td&gt;</code></h6>
+<h5>Hover state</h5>
 <ul>
-<li><code>colspan=&quot;n&quot;</code> — merge horizontally</li>
-<li><code>rowspan=&quot;n&quot;</code> — merge vertically</li>
-<li><code>headers=&quot;id1 id2&quot;</code> — reference related headers</li>
-<li><code>scope=&quot;col&quot;</code> / <code>&quot;row&quot;</code> — define the direction of header</li>
-<li><code>abbr=&quot;...&quot;</code> — short label for screen readers or narrow screens</li>
+<li>When the user moves the mouse pointer over the element.</li>
+<li>Commonly used for visual feedback.</li>
+<li>Can be styled with <code>input:hover</code>.</li>
 </ul>
-<pre><code class="language-html">&lt;th scope=&quot;row&quot;&gt;Name&lt;/th&gt;
-&lt;td&gt;Anna&lt;/td&gt;
-</code></pre>
-<h6>ARIA</h6>
+<h5>Active state</h5>
 <ul>
-<li><code>aria-label=&quot;...&quot;</code> — label for assistive tech</li>
-<li><code>aria-hidden=&quot;true&quot;</code> — hide element from screen readers</li>
-<li><code>role=&quot;presentation&quot;</code> — mark as visual-only (use with caution)</li>
+<li>Active while the element is being clicked (mouse button down).</li>
+<li>Good for button feedback.</li>
+<li>Can be styled with <code>button:active</code>.</li>
 </ul>
-<h5>Semantic and Accessible Tables</h5>
+<h5>Focus-visible (accessibility enhancement)</h5>
 <ul>
-<li>Use <code>&lt;th&gt;</code> for actual headers</li>
-<li>Use <code>scope</code> instead of <code>headers</code> where possible</li>
-<li>Avoid overusing <code>rowspan</code> / <code>colspan</code> — it complicates accessibility</li>
-<li>Keep structure <strong>logical and simple</strong></li>
+<li><code>:focus-visible</code> only applies when focus was given via keyboard.</li>
+<li>Improves UX by avoiding unwanted outlines on mouse click.</li>
+<li>Can be styled with <code>input:focus-visible</code>.</li>
 </ul>
-<p class="marker">Rendered:</p>
-<table style="border-collapse: collapse; width: 100%;">
-  <thead>
-    <tr>
-      <th scope="col" style="border: 1px solid #ccc; padding: 8px;">Name</th>
-      <th scope="col" style="border: 1px solid #ccc; padding: 8px;">Age</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row" style="border: 1px solid #ccc; padding: 8px;">Anna</th>
-      <td style="border: 1px solid #ccc; padding: 8px;">30</td>
-    </tr>
-    <tr>
-      <th scope="row" style="border: 1px solid #ccc; padding: 8px;">Ilya</th>
-      <td style="border: 1px solid #ccc; padding: 8px;">25</td>
-    </tr>
-  </tbody>
-</table>
+<h5>Notes</h5>
+<ul>
+<li><code>readonly</code> allows copying but not editing.</li>
+<li><code>disabled</code> makes the field entirely inert and skipped in submission.</li>
+<li><code>:invalid</code> and <code>:valid</code> help with visual form validation.</li>
+<li><code>:focus-visible</code> is a best practice for accessibility (keyboard navigation).</li>
+<li>Combining these states in CSS allows for detailed form interaction design.</li>
+</ul>
 </article>
         </main>
         
     <section class="navigation">
       <nav class="lesson-nav">
-        <a class="prev" href="lesson-0043.html">&larr; Form States</a>
+        <a class="prev" href="lesson-0043.html">&larr; Validation</a>
         <a class="home" href="../index.html">Home</a>
-        <a class="next" href="lesson-0045.html">Validators &rarr;</a>
+        <a class="next" href="lesson-0045.html">Tables &rarr;</a>
       </nav>
     </section>
   

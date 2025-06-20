@@ -3,53 +3,113 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Validators</title>
+        <title>Tables</title>
         <link rel="stylesheet" href="../css/style.css">
         <link rel="stylesheet" href="../css/prism.css">
     </head>
     <body>
         <main>
-            <article id="lesson-0045"><h4>Validators</h4>
-<ul>
-<li>
-<p><strong>HTML is forgiving</strong>: Browsers auto-correct common mistakes (e.g. missing closing tags), but this can lead to unexpected rendering.</p>
-</li>
-<li>
-<p><strong>Validators catch structural errors</strong>: They check your HTML against the official specifications to ensure correctness and predictability.</p>
-</li>
-</ul>
-<p class="marker">Common mistake example:</p>
-<pre><code class="language-html">&lt;h2&gt;Missing closing tag
-&lt;p&gt;This paragraph might be treated as part of the heading!&lt;/p&gt;
+            <article id="lesson-0045"><h4>Tables</h4>
+<p>Use <code>&lt;table&gt;</code> only for <strong>tabular data</strong> — data that’s organized in rows and columns.<br>
+Avoid using tables for layout — that’s outdated and should be done with <strong>CSS Grid</strong> or <strong>Flexbox</strong>.</p>
+<p class="marker">Example:</p>
+<pre><code class="language-html">&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th scope=&quot;col&quot;&gt;Name&lt;/th&gt;
+      &lt;th scope=&quot;col&quot;&gt;Age&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th scope=&quot;row&quot;&gt;Anna&lt;/th&gt;
+      &lt;td&gt;30&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th scope=&quot;row&quot;&gt;Ilya&lt;/th&gt;
+      &lt;td&gt;25&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+  &lt;tfoot&gt;
+    &lt;tr&gt;
+      &lt;th scope=&quot;row&quot;&gt;Signatures&lt;/th&gt;
+      &lt;td&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tfoot&gt;
+&lt;/table&gt;
 </code></pre>
 <ul>
-<li>
-<p><strong>Benefits</strong>:</p>
+<li><code>&lt;table&gt;</code> — main container</li>
+<li><code>&lt;thead&gt;</code> — header section</li>
+<li><code>&lt;tbody&gt;</code> — main data</li>
+<li><code>&lt;tfoot&gt;</code> — footer (totals, notes)</li>
+<li><code>&lt;tr&gt;</code> — table row</li>
+<li><code>&lt;th&gt;</code> — header cell (bold, centered by default)</li>
+<li><code>&lt;td&gt;</code> — data cell</li>
+</ul>
+<h5>Table Attributes</h5>
+<h6>General</h6>
 <ul>
-<li>Cleaner, more reliable HTML</li>
-<li>Better accessibility and cross-browser consistency</li>
-<li>Easier code reviews and maintenance</li>
+<li><code>id</code>, <code>class</code>, <code>style</code> — standard HTML attributes</li>
+<li>Prefer CSS over inline styles</li>
 </ul>
-</li>
-<li>
-<p><strong>Popular tools</strong>:</p>
+<h6><code>&lt;table&gt;</code></h6>
 <ul>
-<li><a href="https://validator.w3.org">W3C Validator</a></li>
-<li><a href="https://jsonformatter.org/html-validator">HTML Validator at jsonformatter.org</a></li>
+<li><code>summary</code>, <code>border</code>, <code>width</code> — obsolete</li>
+<li>Use CSS for layout and borders</li>
 </ul>
-</li>
-<li>
-<p><strong>Pro tip</strong>: Even if the browser &quot;accepts&quot; your code, a validator helps you understand what’s <em>correct</em> vs what’s just <em>tolerated</em>.</p>
-</li>
+<h6><code>&lt;th&gt;</code>, <code>&lt;td&gt;</code></h6>
+<ul>
+<li><code>colspan=&quot;n&quot;</code> — merge horizontally</li>
+<li><code>rowspan=&quot;n&quot;</code> — merge vertically</li>
+<li><code>headers=&quot;id1 id2&quot;</code> — reference related headers</li>
+<li><code>scope=&quot;col&quot;</code> / <code>&quot;row&quot;</code> — define the direction of header</li>
+<li><code>abbr=&quot;...&quot;</code> — short label for screen readers or narrow screens</li>
 </ul>
+<pre><code class="language-html">&lt;th scope=&quot;row&quot;&gt;Name&lt;/th&gt;
+&lt;td&gt;Anna&lt;/td&gt;
+</code></pre>
+<h6>ARIA</h6>
+<ul>
+<li><code>aria-label=&quot;...&quot;</code> — label for assistive tech</li>
+<li><code>aria-hidden=&quot;true&quot;</code> — hide element from screen readers</li>
+<li><code>role=&quot;presentation&quot;</code> — mark as visual-only (use with caution)</li>
+</ul>
+<h5>Semantic and Accessible Tables</h5>
+<ul>
+<li>Use <code>&lt;th&gt;</code> for actual headers</li>
+<li>Use <code>scope</code> instead of <code>headers</code> where possible</li>
+<li>Avoid overusing <code>rowspan</code> / <code>colspan</code> — it complicates accessibility</li>
+<li>Keep structure <strong>logical and simple</strong></li>
+</ul>
+<p class="marker">Rendered:</p>
+<table style="border-collapse: collapse; width: 100%;">
+  <thead>
+    <tr>
+      <th scope="col" style="border: 1px solid #ccc; padding: 8px;">Name</th>
+      <th scope="col" style="border: 1px solid #ccc; padding: 8px;">Age</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row" style="border: 1px solid #ccc; padding: 8px;">Anna</th>
+      <td style="border: 1px solid #ccc; padding: 8px;">30</td>
+    </tr>
+    <tr>
+      <th scope="row" style="border: 1px solid #ccc; padding: 8px;">Ilya</th>
+      <td style="border: 1px solid #ccc; padding: 8px;">25</td>
+    </tr>
+  </tbody>
+</table>
 </article>
         </main>
         
     <section class="navigation">
       <nav class="lesson-nav">
-        <a class="prev" href="lesson-0044.html">&larr; Tables</a>
+        <a class="prev" href="lesson-0044.html">&larr; Form States</a>
         <a class="home" href="../index.html">Home</a>
-        <a class="next" href="lesson-0046.html">CSS example &rarr;</a>
+        <a class="next" href="lesson-0046.html">Validators &rarr;</a>
       </nav>
     </section>
   

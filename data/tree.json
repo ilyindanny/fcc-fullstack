@@ -180,24 +180,32 @@
             "filename": "lesson-0040.html"
           },
           {
-            "title": "Button Element",
+            "title": "Value Attribute",
             "filename": "lesson-0041.html"
           },
           {
-            "title": "Validation",
+            "title": "Button Element",
             "filename": "lesson-0042.html"
           },
           {
-            "title": "Form States",
+            "title": "Validation",
             "filename": "lesson-0043.html"
           },
           {
-            "title": "Tables",
+            "title": "Form States",
             "filename": "lesson-0044.html"
           },
           {
-            "title": "Validators",
+            "title": "Tables",
             "filename": "lesson-0045.html"
+          },
+          {
+            "title": "Validators",
+            "filename": "lesson-0046.html"
+          },
+          {
+            "title": "DevTools",
+            "filename": "lesson-0047.html"
           }
         ]
       }
@@ -213,7 +221,7 @@
         "lessons": [
           {
             "title": "CSS example",
-            "filename": "lesson-0046.html"
+            "filename": "lesson-0048.html"
           }
         ]
       }
