@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>freeCodeCamp Survey Form</title>
+    <meta name="description" content="freeCodeCamp Survey Form" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <main>
+      <h1 id="title">freeCodeCamp Survey Form</h1>
+      <p id="description">Thank you for taking the time to help us improve the platform</p>
+
+      <form id="survey-form">
+        <label id="name-label" for="name">Name:</label>
+        <input
+          required
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Ex. John Doe" />
+        <br />
+
+        <label id="email-label" for="email">Email:</label>
+        <input
+          required
+          type="email"
+          id="email"
+          name="email"
+          placeholder="example@email.com" />
+        <br />
+
+        <label id="number-label" for="number">Age (optional):</label>
+        <input
+          type="number"
+          id="number"
+          name="age"
+          min="3"
+          max="100"
+          placeholder="Age" />
+        <br /><br />
+
+        <label for="dropdown">Which option best describes your current role?</label>
+        <select id="dropdown" name="dropdown">
+          <option disabled selected value="select">Select Current Role</option>
+          <option value="student">Student</option>
+          <option value="full-time">Full Time Job</option>
+          <option value="part-time">Part Time Job</option>
+          <option value="not-say">Prefer Not To Say</option>
+          <option value="other">Other</option>
+        </select>
+        <br /><br />
+
+        <fieldset>
+          <legend>Would you recommend freeCodeCamp to a friend?</legend>
+
+          <label for="yes-option">Definitely</label>
+          <input type="radio" id="yes-option" name="recommend" value="definitely" checked />
+
+          <label for="maybe-option">Maybe</label>
+          <input type="radio" id="maybe-option" name="recommend" value="maybe" />
+
+          <label for="not-sure-option">Not sure</label>
+          <input type="radio" id="not-sure-option" name="recommend" value="not-sure" />
+        </fieldset>
+
+        <fieldset>
+          <legend>What would you like to see improved? (Check all that apply)</legend>
+
+          <label for="frontend">Front-end Projects</label>
+          <input type="checkbox" id="frontend" name="improvement" value="frontend" />
+
+          <label for="backend">Back-end Projects</label>
+          <input type="checkbox" id="backend" name="improvement" value="backend" />
+
+          <label for="data-vis">Data Visualization</label>
+          <input type="checkbox" id="data-vis" name="improvement" value="data-vis" />
+
+          <label for="wiki">Wiki</label>
+          <input type="checkbox" id="wiki" name="improvement" value="wiki" />
+
+          <label for="forum">Forum</label>
+          <input type="checkbox" id="forum" name="improvement" value="forum" />
+        </fieldset>
+
+        <label for="comments">Any comments or suggestions?</label>
+        <br />
+        <textarea id="comments" name="comments" rows="4" cols="40"></textarea>
+        <br /><br />
+
+        <button type="submit" id="submit">Submit</button>
+      </form>
+    </main>
+  </body>
+</html>

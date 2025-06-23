@@ -3,90 +3,21 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Value Attribute</title>
+        <title>Size Attribute</title>
         <link rel="stylesheet" href="../css/style.css">
         <link rel="stylesheet" href="../css/prism.css">
     </head>
     <body>
         <main>
-            <article id="lesson-0041"><h4>Value Attribute in Forms</h4>
-<p>The <code>value</code> attribute defines the data submitted to the server. Its meaning depends on the element:</p>
+            <article id="lesson-0041"><h4>Size Attribute (inside <code>&lt;input&gt;</code>)</h4>
 <ul>
-<li><code>input</code>: content or state</li>
-<li><code>textarea</code>: uses inner content, not <code>value</code></li>
-<li><code>option</code>: submitted when selected</li>
-<li><code>button</code>: action name if clicked</li>
-<li><code>submit/reset</code>: optional identifier (if <code>name</code> is set)</li>
+<li>Specifies the <strong>visible width</strong> of the input field in <strong>number of characters</strong>.</li>
+<li>Applicable to input types: <code>text</code>, <code>search</code>, <code>url</code>, <code>tel</code>, <code>email</code>, <code>password</code>.</li>
+<li><strong>Default value</strong>: <code>size=&quot;20&quot;</code>.</li>
+<li><strong>Does not limit</strong> the number of characters a user can enter — use <code>maxlength</code> for that.</li>
+<li>Can be overridden with CSS using <code>width</code>.</li>
+<li>Useful for controlling input field width without relying on CSS.</li>
 </ul>
-<h5>Submission Rules</h5>
-<p>Only elements with a <code>name</code> are submitted. If no <code>value</code> is defined, some types default to <code>&quot;on&quot;</code> (e.g., checkbox, radio).</p>
-<h5>Radio Buttons</h5>
-<ul>
-<li>Must share the same <code>name</code></li>
-<li>Only one selected value is sent</li>
-<li>Always set <code>value</code> to distinguish options</li>
-</ul>
-<p><code class="language-html">&lt;input type=&quot;radio&quot; name=&quot;color&quot; value=&quot;green&quot;&gt;</code></p>
-<ul>
-<li>Submits: <code>color=green</code></li>
-<li>Without <code>value</code>: <code>color=on</code> (useless)</li>
-</ul>
-<h5>Checkboxes</h5>
-<ol>
-<li>Unique <code>name</code> (boolean flag)</li>
-</ol>
-<p><code class="language-html">&lt;input type=&quot;checkbox&quot; name=&quot;subscribe&quot;&gt;</code></p>
-<ul>
-<li>Checked - <code>subscribe=on</code></li>
-<li>Unchecked - not submitted</li>
-<li><code>value</code> optional</li>
-</ul>
-<ol start="2">
-<li>Grouped <code>name</code> (multi-choice)</li>
-</ol>
-<pre><code class="language-html">&lt;input type=&quot;checkbox&quot; name=&quot;fruit&quot; value=&quot;apple&quot;&gt;
-&lt;input type=&quot;checkbox&quot; name=&quot;fruit&quot; value=&quot;banana&quot;&gt;
-</code></pre>
-<ul>
-<li>Submits: <code>fruit=apple</code>, <code>fruit=banana</code></li>
-<li><code>value</code> required</li>
-</ul>
-<h5>Select &amp; Option</h5>
-<pre><code class="language-html">&lt;select name=&quot;size&quot;&gt;
-  &lt;option value=&quot;M&quot;&gt;Medium&lt;/option&gt;
-&lt;/select&gt;
-</code></pre>
-<ul>
-<li>Submits: <code>size=M</code></li>
-<li>Without <code>value</code>: label text is used</li>
-</ul>
-<h5>Buttons</h5>
-<p><code class="language-html">&lt;button type=&quot;submit&quot; name=&quot;action&quot; value=&quot;save&quot;&gt;Save&lt;/button&gt;</code></p>
-<p>Only the clicked button submits its <code>name=value</code>.<br>
-Essential when multiple actions exist.</p>
-<h5>Key Points</h5>
-<ul>
-<li>Radios and grouped checkboxes require <code>value</code></li>
-<li>Unique checkboxes default to <code>&quot;on&quot;</code></li>
-<li>No <code>name</code> - not submitted, even if <code>value</code> is set</li>
-</ul>
-<pre><code class="language-html">&lt;input type=&quot;text&quot; value=&quot;invisible&quot;&gt;
-&lt;!-- Not submitted (no name) --&gt;
-</code></pre>
-<h5>Example Payload</h5>
-<pre><code class="language-html">&lt;form&gt;
-  &lt;input type=&quot;radio&quot; name=&quot;color&quot; value=&quot;red&quot; checked&gt;
-  &lt;input type=&quot;checkbox&quot; name=&quot;subscribe&quot; checked&gt;
-  &lt;input type=&quot;checkbox&quot; name=&quot;fruit&quot; value=&quot;apple&quot; checked&gt;
-  &lt;button type=&quot;submit&quot; name=&quot;action&quot; value=&quot;save&quot;&gt;Save&lt;/button&gt;
-&lt;/form&gt;
-</code></pre>
-<p>Submits:</p>
-<pre><code class="language-bash">color=red
-subscribe=on
-fruit=apple
-action=save
-</code></pre>
 </article>
         </main>
         
@@ -94,7 +25,7 @@ action=save
       <nav class="lesson-nav">
         <a class="prev" href="lesson-0040.html">&larr; Label Element</a>
         <a class="home" href="../index.html">Home</a>
-        <a class="next" href="lesson-0042.html">Button Element &rarr;</a>
+        <a class="next" href="lesson-0042.html">Value Attribute &rarr;</a>
       </nav>
     </section>
   
