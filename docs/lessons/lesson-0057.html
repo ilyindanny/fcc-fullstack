@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Accessibility Checklist</title>
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="../css/prism.css">
+    </head>
+    <body>
+        <main>
+            <article id="lesson-0057"><h2>Accessibility Checklist</h2>
+<h3>1. Semantic HTML Structure</h3>
+<ul>
+<li><strong>Use semantic elements</strong> (<code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;footer&gt;</code>, etc.)
+<ul>
+<li>Helps screen readers understand the content structure.</li>
+<li>Avoid <code>&lt;div&gt;</code> and <code>&lt;span&gt;</code> when a semantic tag exists.</li>
+</ul>
+</li>
+<li><strong>Use heading elements (<code>&lt;h1&gt;</code>–<code>&lt;h6&gt;</code>) in proper order</strong>
+<ul>
+<li>Only one <code>&lt;h1&gt;</code> per page.</li>
+<li>Use heading levels according to the document structure, without skipping levels.</li>
+</ul>
+</li>
+</ul>
+<h3>2. Text Alternatives for Non-Text Content</h3>
+<ul>
+<li><strong>Provide <code>alt</code> attributes for all images</strong>
+<ul>
+<li>Describes the image for users who can't see it.</li>
+<li>Use <code>alt=&quot;&quot;</code> for purely decorative images.</li>
+</ul>
+</li>
+</ul>
+<h3>3. Forms</h3>
+<ul>
+<li><strong>Every form input should have a <code>&lt;label&gt;</code></strong>
+<ul>
+<li>Use <code>for</code> and <code>id</code>, or nest the input inside the label.</li>
+</ul>
+</li>
+<li><strong>Use <code>fieldset</code> and <code>legend</code> for grouped inputs</strong>
+<ul>
+<li>Especially useful for radio buttons and checkboxes.</li>
+</ul>
+</li>
+</ul>
+<h3>4. Keyboard Navigation</h3>
+<ul>
+<li><strong>All interactive elements must be reachable via keyboard</strong>
+<ul>
+<li>Make sure elements like <code>&lt;a&gt;</code>, <code>&lt;button&gt;</code>, <code>&lt;input&gt;</code> are focusable.</li>
+<li>Avoid using <code>&lt;div&gt;</code> or <code>&lt;span&gt;</code> as interactive elements without adding <code>tabindex</code> and <code>role</code>.</li>
+</ul>
+</li>
+</ul>
+<h3>5. Use ARIA Attributes Only When Necessary</h3>
+<ul>
+<li><strong>ARIA should supplement, not replace, native HTML semantics</strong>
+<ul>
+<li>For example, use <code>role=&quot;button&quot;</code> and <code>aria-expanded=&quot;true|false&quot;</code> only when creating custom interactive components.</li>
+<li>Prefer semantic HTML over ARIA whenever possible.</li>
+</ul>
+</li>
+</ul>
+<h3>6. Focus Management</h3>
+<ul>
+<li><strong>Users should always know where their focus is</strong>
+<ul>
+<li>Provide visible <code>:focus</code> styles for all focusable elements.</li>
+<li>On modal open, move focus to the modal’s first interactive element or heading.</li>
+</ul>
+</li>
+</ul>
+<h3>7. Color and Contrast</h3>
+<ul>
+<li><strong>Text must have sufficient contrast with background</strong>
+<ul>
+<li>Minimum ratio: 4.5:1 for normal text, 3:1 for large text.</li>
+<li>Use tools like WebAIM Contrast Checker to test your colors.</li>
+</ul>
+</li>
+</ul>
+<h3>8. Responsive Design and Zoom</h3>
+<ul>
+<li><strong>Allow page zoom on mobile</strong>
+<ul>
+<li>Don’t use <code>user-scalable=no</code> in the viewport meta tag.</li>
+</ul>
+</li>
+<li><strong>Use relative units (<code>rem</code>, <code>em</code>) instead of <code>px</code></strong>
+<ul>
+<li>Ensures better scalability for different user settings.</li>
+</ul>
+</li>
+</ul>
+<h3>9. Accessible Names and Roles</h3>
+<ul>
+<li><strong>All interactive elements must have a clear name</strong>
+<ul>
+<li>Use visible text like <code>&lt;button&gt;Submit&lt;/button&gt;</code>, or <code>aria-label=&quot;Submit form&quot;</code> for custom elements.</li>
+<li>Screen readers rely on these labels to describe actions.</li>
+</ul>
+</li>
+</ul>
+<h3>10. Accessibility Testing</h3>
+<h4>Tools</h4>
+<ul>
+<li><strong>Google Lighthouse</strong> (built into Chrome/Edge DevTools)</li>
+<li><strong>axe DevTools</strong> (Chrome/Edge extension)</li>
+<li><strong>WAVE</strong> (online or extension)</li>
+<li><strong>Screen Reader Testing</strong>:
+<ul>
+<li>VoiceOver (macOS/iOS)</li>
+<li>Narrator (Windows)</li>
+<li>NVDA (Windows)</li>
+<li>TalkBack (Android)</li>
+</ul>
+</li>
+</ul>
+<h4>Manual Testing</h4>
+<ul>
+<li>Navigate the entire site using only the <code>Tab</code> key</li>
+<li>Use a screen reader to verify content order and descriptions</li>
+<li>Zoom text or page to 200% and test usability</li>
+</ul>
+<h3>Final Recommendations</h3>
+<ul>
+<li>Start with proper semantic HTML; it covers most accessibility needs.</li>
+<li>Think from the perspective of users with impairments.</li>
+<li>Audit your work incrementally, not just at the end.</li>
+<li>Do not treat accessibility as optional or something to “add later.”</li>
+<li>When possible, test on real devices and with real users.</li>
+</ul>
+</article>
+        </main>
+        
+    <section class="navigation">
+      <nav class="lesson-nav">
+        <a class="prev" href="lesson-0056.html">&larr; Accessibility Tools</a>
+        <a class="home" href="../index.html">Home</a>
+        <a class="next" href="lesson-0058.html">CSS example &rarr;</a>
+      </nav>
+    </section>
+  
+
+        <script src="../js/prism.js"></script>
+    </body>
+</html>

@@ -3,74 +3,53 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>DevTools</title>
+        <title>Validators</title>
         <link rel="stylesheet" href="../css/style.css">
         <link rel="stylesheet" href="../css/prism.css">
     </head>
     <body>
         <main>
-            <article id="lesson-0048"><h4>DevTools</h4>
-<p>Modern browsers include powerful developer tools (DevTools) that help developers inspect, debug, and improve web pages. These tools provide direct access to the HTML structure, CSS rules, network activity, and JavaScript behavior on a live page. Becoming comfortable with DevTools is essential for real-world debugging and front-end development.</p>
-<h5>Console</h5>
+            <article id="lesson-0048"><h4>Validators</h4>
 <ul>
-<li>Displays JavaScript errors and warnings.</li>
-<li>Allows you to run JavaScript code directly in the browser.</li>
-<li>Useful for testing functions, checking variables, and logging output.</li>
-<li>Supports special variables like <code>$0</code> (last selected element) and <code>console.table()</code> for quick visualization.</li>
+<li>
+<p><strong>HTML is forgiving</strong>: Browsers auto-correct common mistakes (e.g. missing closing tags), but this can lead to unexpected rendering.</p>
+</li>
+<li>
+<p><strong>Validators catch structural errors</strong>: They check your HTML against the official specifications to ensure correctness and predictability.</p>
+</li>
 </ul>
-<h5>Elements</h5>
+<p class="marker">Common mistake example:</p>
+<pre><code class="language-html">&lt;h2&gt;Missing closing tag
+&lt;p&gt;This paragraph might be treated as part of the heading!&lt;/p&gt;
+</code></pre>
 <ul>
-<li>Lets you inspect and edit the live HTML and DOM tree.</li>
-<li>You can view and modify CSS styles directly and see the effects instantly.</li>
-<li>Helps to identify overridden, inherited, or missing styles.</li>
-<li>Useful for temporary layout fixes or trying new styles on the fly.</li>
+<li>
+<p><strong>Benefits</strong>:</p>
+<ul>
+<li>Cleaner, more reliable HTML</li>
+<li>Better accessibility and cross-browser consistency</li>
+<li>Easier code reviews and maintenance</li>
 </ul>
-<h5>Network</h5>
+</li>
+<li>
+<p><strong>Popular tools</strong>:</p>
 <ul>
-<li>Tracks all files and resources loaded by the page.</li>
-<li>Helps detect failed requests (like 404 or 500 errors).</li>
-<li>Filters by request type (XHR, CSS, JS, Fonts, etc.).</li>
-<li>Useful for checking API requests, payloads, and response headers.</li>
+<li><a href="https://validator.w3.org">W3C Validator</a></li>
+<li><a href="https://jsonformatter.org/html-validator">HTML Validator at jsonformatter.org</a></li>
 </ul>
-<h5>Sources</h5>
-<ul>
-<li>Displays all loaded JavaScript and source maps.</li>
-<li>Allows you to set breakpoints and step through JavaScript execution.</li>
-<li>Shows the call stack and current scope variables.</li>
-<li>Crucial for debugging complex logic.</li>
-</ul>
-<h5>Application (or Storage)</h5>
-<ul>
-<li>Shows data stored in localStorage, sessionStorage, cookies, and IndexedDB.</li>
-<li>Lets you read, edit, or clear storage manually.</li>
-<li>Useful for debugging login sessions, tokens, and persisted UI states.</li>
-</ul>
-<h5>Lighthouse (Chrome)</h5>
-<ul>
-<li>Runs performance, accessibility, SEO, and best practices audits.</li>
-<li>Offers actionable insights to improve loading speed and user experience.</li>
-<li>Generates a detailed report with scores and suggestions.</li>
-</ul>
-<h5>Accessibility</h5>
-<ul>
-<li>Displays accessibility tree, ARIA roles, and focus paths.</li>
-<li>Helps ensure your site is usable with screen readers and keyboard navigation.</li>
-</ul>
-<h5>Why DevTools Matter</h5>
-<ul>
-<li>Real-time debugging saves hours of guessing.</li>
-<li>You can test changes immediately without editing source files.</li>
-<li>Understanding browser behavior is key to building resilient UIs.</li>
-<li>DevTools are essential for any serious front-end or full-stack developer.l-stack developer.</li>
+</li>
+<li>
+<p><strong>Pro tip</strong>: Even if the browser &quot;accepts&quot; your code, a validator helps you understand what’s <em>correct</em> vs what’s just <em>tolerated</em>.</p>
+</li>
 </ul>
 </article>
         </main>
         
     <section class="navigation">
       <nav class="lesson-nav">
-        <a class="prev" href="lesson-0047.html">&larr; Validators</a>
+        <a class="prev" href="lesson-0047.html">&larr; Tables</a>
         <a class="home" href="../index.html">Home</a>
-        <a class="next" href="lesson-0049.html">CSS example &rarr;</a>
+        <a class="next" href="lesson-0049.html">DevTools &rarr;</a>
       </nav>
     </section>
   

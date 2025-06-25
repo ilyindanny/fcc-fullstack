@@ -3,20 +3,124 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Size Attribute</title>
+        <title>ARIA Labels</title>
         <link rel="stylesheet" href="../css/style.css">
         <link rel="stylesheet" href="../css/prism.css">
     </head>
     <body>
         <main>
-            <article id="lesson-0041"><h4>Size Attribute (inside <code>&lt;input&gt;</code>)</h4>
+            <article id="lesson-0041"><h4>ARIA Labels</h4>
+<p>ARIA (Accessible Rich Internet Applications) attributes help make web content accessible to users with disabilities, especially those who rely on screen readers. The most commonly used ARIA labeling attributes are:</p>
+<hr>
+<h5>1. Aria-label</h5>
+<p><strong>What it does</strong>:<br>
+Provides an explicit label to an element.</p>
+<p><strong>Value</strong>:<br>
+A plain string of text.</p>
+<p><strong>Use when</strong>:</p>
 <ul>
-<li>Specifies the <strong>visible width</strong> of the input field in <strong>number of characters</strong>.</li>
-<li>Applicable to input types: <code>text</code>, <code>search</code>, <code>url</code>, <code>tel</code>, <code>email</code>, <code>password</code>.</li>
-<li><strong>Default value</strong>: <code>size=&quot;20&quot;</code>.</li>
-<li><strong>Does not limit</strong> the number of characters a user can enter — use <code>maxlength</code> for that.</li>
-<li>Can be overridden with CSS using <code>width</code>.</li>
-<li>Useful for controlling input field width without relying on CSS.</li>
+<li>The element has no visible label.</li>
+<li>You want to override the visible label with something clearer or more concise.</li>
+<li>You are using icon-only buttons or elements without readable text.</li>
+</ul>
+<p class="marker">Example:</p>
+<pre><code class="language-html">&lt;button aria-label=&quot;Close modal&quot;&gt;
+  &lt;svg aria-hidden=&quot;true&quot;&gt;...&lt;/svg&gt;
+&lt;/button&gt;
+</code></pre>
+<p>Screen reader will announce: “Close modal”.</p>
+<h5>2. Aria-labelledby</h5>
+<p><strong>What it does</strong>:<br>
+Uses the text content of one or more referenced elements (by ID) as the accessible name.</p>
+<p><strong>Value</strong>:<br>
+One or more space-separated element IDs.</p>
+<p><strong>Use when</strong>:</p>
+<ul>
+<li>There is visible text you want to use as a label.</li>
+<li>You want to label an element using other existing DOM elements.</li>
+<li>You are labeling containers like <code>&lt;section&gt;</code>, <code>&lt;form&gt;</code>, <code>&lt;fieldset&gt;</code>, or custom widgets.</li>
+</ul>
+<p class="marker">Example:</p>
+<pre><code class="language-html">&lt;section id=&quot;about&quot; aria-labelledby=&quot;about-heading&quot;&gt;
+  &lt;h2 id=&quot;about-heading&quot;&gt;About Us&lt;/h2&gt;
+  &lt;p&gt;We are a team of...&lt;/p&gt;
+&lt;/section&gt;
+</code></pre>
+<p>Screen reader will announce: “Region, About Us”.</p>
+<h5>3. Aria-describedby</h5>
+<p><strong>What it does</strong>:<br>
+Provides additional descriptive text, usually read after the label.</p>
+<p><strong>Value</strong>:<br>
+One or more space-separated element IDs.</p>
+<p><strong>Use when</strong>:</p>
+<ul>
+<li>You want to add helper text, tooltips, or instructions.</li>
+<li>You have validation messages or context-sensitive help.</li>
+<li>You want to include supplementary info that is not the core label.</li>
+</ul>
+<p class="marker">Example:</p>
+<pre><code class="language-html">&lt;label for=&quot;email&quot;&gt;Email&lt;/label&gt;
+&lt;input id=&quot;email&quot; aria-describedby=&quot;email-help&quot;&gt;
+&lt;p id=&quot;email-help&quot;&gt;We'll never share your email address.&lt;/p&gt;
+</code></pre>
+<p>Screen reader says:<br>
+“Email, edit text. We’ll never share your email address.”</p>
+<h5>Summary of When to Use Each Attribute</h5>
+<ul>
+<li>
+<p>Use <code>aria-label</code> when:</p>
+<ul>
+<li>No visible text label exists.</li>
+<li>You want to override the visible label with custom text.</li>
+<li>You have an icon-only button or input.</li>
+</ul>
+</li>
+<li>
+<p>Use <code>aria-labelledby</code> when:</p>
+<ul>
+<li>A visible heading, label, or group of elements can serve as the label.</li>
+<li>You want to reuse existing content in the DOM for naming.</li>
+<li>You’re labeling containers like sections, forms, or widgets.</li>
+</ul>
+</li>
+<li>
+<p>Use <code>aria-describedby</code> when:</p>
+<ul>
+<li>You have extra information, like helper text or hints.</li>
+<li>You want to provide additional instructions or error messages.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h5>Best Practices</h5>
+<ul>
+<li>Do not use both <code>aria-label</code> and <code>aria-labelledby</code> on the same element.</li>
+<li><code>aria-labelledby</code> takes precedence over <code>aria-label</code> if both are used.</li>
+<li>Use <code>aria-describedby</code> only for additional info, not for main identification.</li>
+<li>Prefer native HTML elements (<code>&lt;label&gt;</code>, <code>&lt;fieldset&gt;</code>, <code>&lt;legend&gt;</code>, etc.) when possible.</li>
+<li>Always test your accessibility implementation with screen readers.</li>
+</ul>
+<hr>
+<h5>Use with Structural Elements</h5>
+<p class="marker">For <code>&lt;section&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;aside&gt;</code>:</p>
+<pre><code class="language-html">&lt;section aria-labelledby=&quot;contact-heading&quot;&gt;
+  &lt;h2 id=&quot;contact-heading&quot;&gt;Contact Information&lt;/h2&gt;
+&lt;/section&gt;
+</code></pre>
+<p>This provides a clear name for the section and improves navigation for screen reader users.</p>
+<p class="marker">For Custom Components or Widgets:</p>
+<pre><code class="language-html">&lt;div role=&quot;dialog&quot; aria-labelledby=&quot;dialog-title&quot; aria-describedby=&quot;dialog-desc&quot;&gt;
+  &lt;h2 id=&quot;dialog-title&quot;&gt;Delete Item&lt;/h2&gt;
+  &lt;p id=&quot;dialog-desc&quot;&gt;Are you sure you want to delete this item?&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+<p>This describes both the purpose and the content of the dialog in a way screen readers can understand.</p>
+<hr>
+<h5>Recommended Reading</h5>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA">MDN Web Docs: ARIA</a></li>
+<li><a href="https://www.w3.org/WAI/ARIA/apg/">WAI-ARIA Authoring Practices Guide</a></li>
+<li><a href="https://dequeuniversity.com/">Deque University – Screen Reader Testing</a></li>
 </ul>
 </article>
         </main>
@@ -25,7 +129,7 @@
       <nav class="lesson-nav">
         <a class="prev" href="lesson-0040.html">&larr; Label Element</a>
         <a class="home" href="../index.html">Home</a>
-        <a class="next" href="lesson-0042.html">Value Attribute &rarr;</a>
+        <a class="next" href="lesson-0042.html">Size Attribute &rarr;</a>
       </nav>
     </section>
   

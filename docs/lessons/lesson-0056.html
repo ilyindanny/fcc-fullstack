@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Accessibility Tools</title>
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="../css/prism.css">
+    </head>
+    <body>
+        <main>
+            <article id="lesson-0056"><h2>Accessibility Auditing Tools</h2>
+<h3>Importance of Accessibility</h3>
+<p>Accessibility is a crucial yet often overlooked aspect of web development and digital content creation. It ensures that websites and applications can be used by everyone, including people with visual, auditory, motor, or cognitive disabilities.</p>
+<h3>Role of Auditing Tools</h3>
+<p>Accessibility auditing tools are applications and extensions that automate the checking of digital content for accessibility compliance. They analyze HTML, CSS, JavaScript, and other components to identify errors and flag potential issues affecting users with disabilities.</p>
+<p>However, it is important to understand that:</p>
+<ul>
+<li>Automated tools typically detect only about 30-40% of all accessibility issues.</li>
+<li>Many problems require manual testing and evaluation using real assistive technologies and involvement of users with disabilities.</li>
+<li>Therefore, automated testing is only the first step, not a complete solution.</li>
+</ul>
+<h3>Overview of Popular and Free Tools</h3>
+<h4>Google Lighthouse</h4>
+<ul>
+<li>Integrated into Chrome DevTools (F12 → Lighthouse tab).</li>
+<li>Allows checking accessibility, SEO, performance, and best practices.</li>
+<li>Works for both live and local websites.</li>
+<li>Provides an accessibility score and detailed recommendations.</li>
+<li>Also available as a web version (pagespeed.web.dev), which does not support local sites.</li>
+<li>Supported in Chromium-based browsers (Chrome, Edge).</li>
+</ul>
+<h4>WAVE (Web Accessibility Evaluation Tool)</h4>
+<ul>
+<li>Available as a Chrome and Firefox extension, and as an online tool.</li>
+<li>Analyzes pages and visually highlights errors, warnings, contrast issues, ARIA usage.</li>
+<li>Useful for quick visual accessibility overviews.</li>
+</ul>
+<h4>IBM Equal Accessibility Checker</h4>
+<ul>
+<li>Chrome and Firefox extension.</li>
+<li>Scans websites and generates detailed reports.</li>
+<li>Allows exporting reports as XLS and HTML files for easy documentation.</li>
+<li>Provides advanced analysis capabilities.</li>
+</ul>
+<h4>Axe DevTools (Deque)</h4>
+<ul>
+<li>One of the best Chromium-based browser extensions.</li>
+<li>Offers clear, step-by-step recommendations and explanations.</li>
+<li>Widely used by accessibility professionals.</li>
+<li>Supports integration with CI/CD pipelines and automated testing.</li>
+</ul>
+<h4>Screen Readers</h4>
+<ul>
+<li>Essential part of manual accessibility testing.</li>
+<li>VoiceOver (macOS/iOS), Narrator (Windows), TalkBack (Android) allow checking how content is perceived by visually impaired users.</li>
+<li>It is recommended to test sites using these tools to detect navigation and reading issues.</li>
+</ul>
+<h3>Using Microsoft Edge</h3>
+<ul>
+<li>Edge is a Chromium-based browser fully compatible with Chrome tools (Lighthouse, Axe, WAVE, etc.).</li>
+<li>It can be used as the main browser for accessibility auditing, especially if you work on Windows.</li>
+<li>All extensions and DevTools used in Chrome work in Edge as well.</li>
+</ul>
+<h3>Practical Tips and Recommendations</h3>
+<ul>
+<li>Do not rely solely on automated scores; perfect scores do not guarantee 100% accessibility.</li>
+<li>Automated tools can produce false positives or miss complex semantic and contextual issues.</li>
+<li>Plan accessibility audits as part of the entire development lifecycle: from design, through development, to testing and maintenance.</li>
+<li>Using semantic markup, proper ARIA attributes, and accessible UI components significantly reduces detected issues.</li>
+<li>Running checks in DevTools during local development enables quick fixes.</li>
+<li>Regularly test your site with screen readers and other assistive technologies to understand real user experience.</li>
+<li>Document found issues to track progress and manage fixes.</li>
+<li>Use a combination of several tools for broader coverage.</li>
+</ul>
+<h3>Summary</h3>
+<p>Accessibility auditing tools are indispensable helpers for improving digital product accessibility, but they are only part of a comprehensive process. To build a truly accessible website, combine:</p>
+<ul>
+<li>proper design and semantics,</li>
+<li>correct ARIA usage,</li>
+<li>automated testing,</li>
+<li>manual testing with assistive technologies,</li>
+<li>involvement of real users with disabilities (if possible).</li>
+</ul>
+<p>ilities (if possible).</p>
+</article>
+        </main>
+        
+    <section class="navigation">
+      <nav class="lesson-nav">
+        <a class="prev" href="lesson-0055.html">&larr; Voice Recognition</a>
+        <a class="home" href="../index.html">Home</a>
+        <a class="next" href="lesson-0057.html">Accessibility Checklist &rarr;</a>
+      </nav>
+    </section>
+  
+
+        <script src="../js/prism.js"></script>
+    </body>
+</html>

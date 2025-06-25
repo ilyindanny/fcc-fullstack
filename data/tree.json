@@ -180,36 +180,78 @@
             "filename": "lesson-0040.html"
           },
           {
-            "title": "Size Attribute",
+            "title": "ARIA Labels",
             "filename": "lesson-0041.html"
           },
           {
-            "title": "Value Attribute",
+            "title": "Size Attribute",
             "filename": "lesson-0042.html"
           },
           {
-            "title": "Button Element",
+            "title": "Value Attribute",
             "filename": "lesson-0043.html"
           },
           {
-            "title": "Validation",
+            "title": "Button Element",
             "filename": "lesson-0044.html"
           },
           {
-            "title": "Form States",
+            "title": "Validation",
             "filename": "lesson-0045.html"
           },
           {
-            "title": "Tables",
+            "title": "Form States",
             "filename": "lesson-0046.html"
           },
           {
-            "title": "Validators",
+            "title": "Tables",
             "filename": "lesson-0047.html"
           },
           {
-            "title": "DevTools",
+            "title": "Validators",
             "filename": "lesson-0048.html"
+          },
+          {
+            "title": "DevTools",
+            "filename": "lesson-0049.html"
+          }
+        ]
+      },
+      {
+        "title": "Accessibility",
+        "order": 4,
+        "lessons": [
+          {
+            "title": "What Is Accessibility?",
+            "filename": "lesson-0050.html"
+          },
+          {
+            "title": "Screen Readers",
+            "filename": "lesson-0051.html"
+          },
+          {
+            "title": "Braille Keyboard",
+            "filename": "lesson-0052.html"
+          },
+          {
+            "title": "Untitled",
+            "filename": "lesson-0053.html"
+          },
+          {
+            "title": "Magnifiers",
+            "filename": "lesson-0054.html"
+          },
+          {
+            "title": "Voice Recognition",
+            "filename": "lesson-0055.html"
+          },
+          {
+            "title": "Accessibility Tools",
+            "filename": "lesson-0056.html"
+          },
+          {
+            "title": "Accessibility Checklist",
+            "filename": "lesson-0057.html"
           }
         ]
       }
@@ -225,7 +267,7 @@
         "lessons": [
           {
             "title": "CSS example",
-            "filename": "lesson-0049.html"
+            "filename": "lesson-0058.html"
           }
         ]
       }
